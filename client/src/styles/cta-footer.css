@@ -1,0 +1,8 @@
+/* CTA and Footer */
+#contact { background: #fff; }
+.cta-box { background: linear-gradient(120deg, var(--brand-600), var(--brand)); border-radius: var(--radius); }
+.cta-box .btn { border-radius: 999px; }
+
+footer { background: #fff; }
+footer .nav .nav-link { color: var(--muted); }
+footer .nav .nav-link:hover { color: var(--brand); }

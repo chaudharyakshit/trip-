@@ -1,0 +1,5 @@
+/* Utilities and helper classes */
+
+.bg-cover { background-size: cover; background-position: center; }
+.opacity-90 { opacity: .9; }
+.rounded-4 { border-radius: var(--radius) !important; }

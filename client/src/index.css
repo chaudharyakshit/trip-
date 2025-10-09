@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --brand-primary: 231 148 29; /* #E7941D */
+    --brand-secondary: 43 123 185; /* #2B7BB9 */
+  }
+  html, body { @apply bg-white text-slate-800; }
+}
+
+@layer components {
+  .btn-brand { @apply inline-flex items-center justify-center px-5 py-2.5 rounded-full text-white bg-[color:rgb(var(--brand-primary))] hover:bg-orange-600 shadow-soft transition; }
+  .btn-outline-brand { @apply inline-flex items-center justify-center px-5 py-2.5 rounded-full text-[color:rgb(var(--brand-primary))] border border-[color:rgb(var(--brand-primary))] hover:bg-[color:rgb(var(--brand-primary))] hover:text-white transition; }
+  .section-title { @apply text-3xl md:text-4xl font-bold; }
+  .glass { @apply bg-white/70 backdrop-blur-md border border-white/40 shadow-soft; }
+}
+
+/* Fancy animated gradient helpers */
+.bg-hero-gradient { @apply bg-gradient-to-br from-[color:rgb(var(--brand-secondary))] via-blue-400 to-[color:rgb(var(--brand-primary))]; }
+
+.blob { @apply absolute w-72 h-72 rounded-full opacity-25 blur-3xl; }
+.blob-orange { @apply bg-[color:rgb(var(--brand-primary))] animate-blob; }
+.blob-blue { @apply bg-[color:rgb(var(--brand-secondary))] animate-blob; }
+
+/* Swiper arrow styling to match circular pills */
+.swiper-button-next, .swiper-button-prev {
+  width: 44px; height: 44px;
+  border-radius: 9999px;
+  background: rgba(255,255,255,0.9);
+  box-shadow: 0 10px 20px -10px rgba(0,0,0,0.4);
+  border: 1px solid rgba(0,0,0,0.08);
+}
+.swiper-button-next:after, .swiper-button-prev:after {
+  font-size: 16px; color: #0f172a; /* slate-900 */
+}
+/* Position arrows mid-vertical inset with slight horizontal offset */
+.swiper-button-prev { left: 12px; }
+.swiper-button-next { right: 12px; }
+
+/* Hero category pill buttons */
+.hero-pills { @apply fixed md:absolute left-1/2 -translate-x-1/2 bottom-4 z-20 flex gap-2; }
+.hero-pill { @apply inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white text-slate-800 border border-slate-200 shadow-soft; }
+.hero-pill--active { @apply bg-[color:rgb(var(--brand-secondary))] text-white; }

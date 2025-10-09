@@ -1,0 +1,7 @@
+/* Destinations section */
+#destinations { background: #fff; }
+.destination-card { border: 1px solid rgba(0,0,0,.06); border-radius: var(--radius); overflow: hidden; }
+.destination-card .ratio { border-top-left-radius: var(--radius); border-top-right-radius: var(--radius); }
+.destination-card .card-body { padding: 14px 16px; }
+.destination-card .card-title { font-weight: 600; }
+.destination-card .card-text { color: var(--muted); }

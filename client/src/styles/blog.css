@@ -1,0 +1,8 @@
+/* Blog/News section */
+#blog { background: #f8fafc; }
+#blog .card { border: 1px solid rgba(0,0,0,.06); border-radius: var(--radius); overflow: hidden; }
+#blog .card .ratio { border-top-left-radius: var(--radius); border-top-right-radius: var(--radius); }
+#blog .card-body { padding: 16px; }
+#blog h6 { font-weight: 600; }
+#blog .btn-link { color: var(--brand); text-decoration: none; }
+#blog .btn-link:hover { text-decoration: underline; }

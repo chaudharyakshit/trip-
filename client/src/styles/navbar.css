@@ -1,0 +1,4 @@
+/* Navbar */
+.navbar .nav-link { color: var(--text); }
+.navbar .nav-link:hover { color: var(--brand); }
+.navbar .navbar-toggler { border: none; }

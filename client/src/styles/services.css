@@ -1,0 +1,6 @@
+/* Services section */
+#services { background: #f8fafc; }
+.icon-card { background: var(--surface); border: 1px solid rgba(0,0,0,.06); border-radius: var(--radius); padding: 24px; text-align: center; height: 100%; }
+.icon-card .icon-wrap { width: 56px; height: 56px; display: grid; place-items: center; margin: 0 auto 10px; border-radius: 50%; background: var(--brand-50); color: var(--brand); font-size: 22px; }
+.icon-card h6 { font-weight: 600; margin-top: 6px; }
+.icon-card p { color: var(--muted); }
