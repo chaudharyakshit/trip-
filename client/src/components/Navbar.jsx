@@ -8,12 +8,12 @@ export default function Navbar() {
   const [loginStage, setLoginStage] = useState('initial') // 'initial' | 'chooseRole'
 
   const Menu = () => (
-    <ul className="flex flex-col md:flex-row md:items-center gap-4 md:gap-10 lg:gap-12 font-bold text-[16px] md:text-[17px] tracking-tight">
+    <ul className="flex flex-col md:flex-row md:items-center gap-3 md:gap-8 lg:gap-10 font-semibold text-[14px] md:text-[15px] tracking-tight">
       <li>
         <a className="text-orange-500 transition-colors duration-300 py-2 pb-3 border-b-4 border-orange-500" href="#home">Home</a>
       </li>
       <li className="relative group">
-        <a className="flex items-center gap-2 text-slate-900 hover:text-blue-600 transition-colors duration-300 py-2 pb-3 border-b-4 border-transparent group-hover:border-blue-600" href="#destinations">
+        <a className="flex items-center gap-2 text-slate-900 hover:text-orange-600 transition-colors duration-300 py-2 pb-3 border-b-4 border-transparent group-hover:border-orange-600" href="#destinations">
           Destination
           <svg className="w-8 h-8 transition-transform duration-300 group-hover:rotate-180" viewBox="0 0 20 20" fill="currentColor">
             <path d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.167l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.24 4.5a.75.75 0 0 1-1.08 0l-4.24-4.5a.75.75 0 0 1 .02-1.06Z"/>
@@ -26,7 +26,7 @@ export default function Navbar() {
         </div>
       </li>
       <li className="relative group">
-        <a className="flex items-center gap-2 text-slate-900 hover:text-blue-600 transition-colors duration-300 py-2 pb-3 border-b-4 border-transparent group-hover:border-blue-600" href="#services">
+        <a className="flex items-center gap-2 text-slate-900 hover:text-orange-600 transition-colors duration-300 py-2 pb-3 border-b-4 border-transparent group-hover:border-orange-600" href="#services">
           Travel Package
           <svg className="w-8 h-8 transition-transform duration-300 group-hover:rotate-180" viewBox="0 0 20 20" fill="currentColor">
             <path d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.167l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.24 4.5a.75.75 0 0 1-1.08 0l-4.24-4.5a.75.75 0 0 1 .02-1.06Z"/>
@@ -39,7 +39,7 @@ export default function Navbar() {
         </div>
       </li>
       <li className="relative group">
-        <a className="flex items-center gap-2 text-slate-900 hover:text-blue-600 transition-colors duration-300 py-2 pb-3 border-b-4 border-transparent group-hover:border-blue-600" href="#">
+        <a className="flex items-center gap-2 text-slate-900 hover:text-orange-600 transition-colors duration-300 py-2 pb-3 border-b-4 border-transparent group-hover:border-orange-600" href="#">
           Visa
           <svg className="w-8 h-8" viewBox="0 0 20 20" fill="currentColor">
             <path d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.167l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.24 4.5a.75.75 0 0 1-1.08 0l-4.24-4.5a.75.75 0 0 1 .02-1.06Z"/>
@@ -47,7 +47,7 @@ export default function Navbar() {
         </a>
       </li>
       <li className="relative group">
-        <a className="flex items-center gap-2 text-slate-900 hover:text-blue-600 transition-colors duration-300 py-2 pb-3 border-b-4 border-transparent group-hover:border-blue-600" href="#blog">
+        <a className="flex items-center gap-2 text-slate-900 hover:text-orange-600 transition-colors duration-300 py-2 pb-3 border-b-4 border-transparent group-hover:border-orange-600" href="#blog">
           Pages
           <svg className="w-8 h-8 transition-transform duration-300 group-hover:rotate-180" viewBox="0 0 20 20" fill="currentColor">
             <path d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.167l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.24 4.5a.75.75 0 0 1-1.08 0l-4.24-4.5a.75.75 0 0 1 .02-1.06Z"/>
@@ -60,13 +60,13 @@ export default function Navbar() {
         </div>
       </li>
       <li>
-        <a className="text-slate-900 hover:text-blue-600 transition-colors duration-300 py-2 pb-3 border-b-4 border-transparent hover:border-blue-600" href="#contact">Contact</a>
+        <a className="text-slate-900 hover:text-orange-600 transition-colors duration-300 py-2 pb-3 border-b-4 border-transparent hover:border-orange-600" href="#contact">Contact</a>
       </li>
     </ul>
   )
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-md">
+    <header className="navbar sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-md">
       <div className="w-full pl-3 pr-6 md:pl-4 md:pr-8 lg:pl-6 lg:pr-10">
         <nav className="h-28 grid grid-cols-[auto_1fr_auto] items-center w-full">
           {/* Logo */}
@@ -80,22 +80,17 @@ export default function Navbar() {
             </div>
           </div>
 
-          <div className="hidden md:flex items-center gap-6 lg:gap-8 ml-auto">
-            {/* Contact pill */}
-            <div className="hidden lg:flex items-center">
-              <a href={`tel:${phone}`} className="inline-flex items-center gap-4 rounded-full border border-slate-200 bg-white px-7 py-3 shadow hover:shadow-md transition-all">
-                <div className="flex flex-col leading-tight text-right pr-4 border-r border-slate-200">
-                  <span className="text-[12px] font-semibold uppercase tracking-wide text-slate-700">Need Help?</span>
-                  <span className="text-[11px] text-slate-500">24/7 Support</span>
-                </div>
-                <div className="inline-flex items-center gap-2.5 pl-4 text-slate-900 font-semibold">
-                  <svg className="w-7 h-7" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M2.01 6.03c-.12-1.1.78-2.03 1.89-2.03H7c.9 0 1.67.6 1.9 1.46l.7 2.62a2 2 0 0 1-.5 1.9l-1.2 1.2a15.05 15.05 0 0 0 6.02 6.02l1.2-1.2a2 2 0 0 1 1.9-.5l2.62.7c.86.23 1.46 1 1.46 1.9v3.1c0 1.11-.93 2.01-2.03 1.89A20 20 0 0 1 2.01 6.03Z"/>
-                  </svg>
-                  <span className="text-[15px] font-bold tracking-wide">+91 86079 98882</span>
-                </div>
-              </a>
-            </div>
+          <div className="hidden md:flex items-center gap-4 lg:gap-6 ml-auto">
+            {/* Compact phone button */}
+            <a
+              href={`tel:${phone}`}
+              className="hidden lg:inline-flex items-center gap-2 h-10 px-4 rounded-full border border-slate-300 bg-white text-slate-900 text-sm font-semibold shadow hover:bg-slate-50 transition-colors"
+            >
+              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M2.01 6.03c-.12-1.1.78-2.03 1.89-2.03H7c.9 0 1.67.6 1.9 1.46l.7 2.62a2 2 0 0 1-.5 1.9l-1.2 1.2a15.05 15.05 0 0 0 6.02 6.02l1.2-1.2a2 2 0 0 1 1.9-.5l2.62.7c.86.23 1.46 1 1.46 1.9v3.1c0 1.11-.93 2.01-2.03 1.89A20 20 0 0 1 2.01 6.03Z"/>
+              </svg>
+              <span className="tracking-wide">+91 86079 98882</span>
+            </a>
 
             {/* Search icon only */}
             <button

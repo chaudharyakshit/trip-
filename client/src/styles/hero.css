@@ -1,4 +1,4 @@
-/* Hero section */
+Hero section
 .hero { position: relative; min-height: 80vh; display: flex; align-items: center; }
 .hero-bg { position: absolute; inset: 0; background: linear-gradient(120deg, rgba(2,132,199,.85), rgba(14,165,233,.6)), url('/assets/images/hero.jpg') center/cover no-repeat; }
 .hero .container { position: relative; z-index: 1; }

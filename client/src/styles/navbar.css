@@ -1,4 +1,12 @@
 /* Navbar */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+.navbar { font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+
 .navbar .nav-link { color: var(--text); }
 .navbar .nav-link:hover { color: var(--brand); }
 .navbar .navbar-toggler { border: none; }
+
+/* Align hover underline accent like the reference */
+.navbar .menu-underline { border-bottom-width: 4px; border-color: transparent; }
+.navbar .menu-underline:hover { border-color: var(--brand); }
