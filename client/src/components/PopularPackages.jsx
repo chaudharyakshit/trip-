@@ -4,6 +4,7 @@ import { Autoplay, Pagination } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/pagination'
 
+
 const Card = ({ image, title, region, days, price, badge }) => (
   <div className="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden">
     <div className="relative group">
@@ -52,9 +53,30 @@ const Card = ({ image, title, region, days, price, badge }) => (
 export default function PopularPackages() {
   return (
     <section className="relative py-14 md:py-20 bg-[radial-gradient(1200px_600px_at_50%_-200px,rgba(43,123,185,0.15),transparent_60%)]">
+      {/* Background elements */}
+      <div className="absolute inset-0 -z-10 overflow-hidden">
+        {/* Left parachute */}
+        <div className="absolute left-0 top-1/4 animate-bounce">
+  <img src="../assets/parachute.svg" alt="Parachute" className="w-24 h-24" />
+</div>
+        
+        {/* Right rotating circle */}
+        <div className="absolute right-0 top-1/3 animate-spin">
+          <svg className="w-20 h-20" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="40" stroke="#10B981" strokeWidth="3" fill="none" opacity="0.7"/>
+            <circle cx="50" cy="50" r="30" stroke="#10B981" strokeWidth="2" fill="none" opacity="0.5"/>
+            <circle cx="50" cy="50" r="20" stroke="#10B981" strokeWidth="1" fill="none" opacity="0.3"/>
+          </svg>
+        </div>
+
+        {/* Background pattern */}
+        <div className="w-full h-full opacity-10 bg-[linear-gradient(45deg,transparent_49%,#3B82F6_49%,#3B82F6_51%,transparent_51%)] bg-[length:10px_10px]" />
+      </div>
+
       <div className="absolute inset-0 -z-10">
         <div className="w-full h-full opacity-[0.5] bg-[url('data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 1440 320\'><path fill=\'%23edf2f7\' fill-opacity=\'1\' d=\'M0,224L120,192C240,160,480,96,720,112C960,128,1200,224,1320,272L1440,320L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z\'></path></svg>')] bg-cover" />
       </div>
+      
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-8 md:mb-12">
           <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900">Popular Package</h2>
@@ -75,7 +97,7 @@ export default function PopularPackages() {
           className="pb-10"
         >
           <SwiperSlide>
-            <Card image="https://images.unsplash.com/photo-1544551763-7ef42086eaff?q=80&w=1600&auto=format&fit=crop" title="Backwaters & Beaches" region="Kerala, India" days="03 Days/02 Nights" price={199} />
+            <Card image="https://images.unsplash.com/photo-1537996194471-e657df975ab4?q=80&w=1600&auto=format&fit=crop" title="Backwaters & Beaches" region="Kerala, India" days="03 Days/02 Nights" price={199} />
           </SwiperSlide>
           <SwiperSlide>
             <Card image="https://images.unsplash.com/photo-1537996194471-e657df975ab4?q=80&w=1600&auto=format&fit=crop" title="Norway Northern Lights" region="Norway" days="07 Days" price={89} badge="Hot Sale!" />
@@ -94,5 +116,3 @@ export default function PopularPackages() {
     </section>
   )
 }
-
-

@@ -1,4 +1,136 @@
-/* Testimonials section */
-#testimonials { background: #fff; }
-.review-card { background: var(--surface); border: 1px solid rgba(0,0,0,.06); border-radius: var(--radius); padding: 16px; height: 100%; }
-.avatar { width: 36px; height: 36px; border-radius: 50%; object-fit: cover; }
+.testimonials {
+  background: #f9fbff;
+  text-align: center;
+  padding: 80px 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+}
+
+.subheading {
+  color: #555;
+  margin: 10px auto 40px;
+  max-width: 600px;
+}
+
+.testimonial-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.card {
+  background: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 16px;
+  padding: 25px;
+  width: 300px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.rating-stars {
+  color: #ffa500;
+  font-size: 1.2rem;
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #666;
+  margin-top: 10px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  gap: 10px;
+}
+
+.profile img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.profile h4 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.profile p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+/* Reviews Section */
+.reviews {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  margin-top: 30px;
+}
+
+.review-item {
+  text-align: center;
+}
+
+.platform {
+  font-weight: 600;
+  color: #0077ff;
+}
+
+.stars {
+  color: #ffa500;
+  font-weight: bold;
+}
+
+/* Stats Section */
+.stats-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  background: linear-gradient(135deg, #0077ff, #00aaff);
+  color: white;
+  margin-top: 60px;
+  padding: 40px 20px;
+  border-radius: 20px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.stat h3 {
+  font-size: 1.8rem;
+  margin: 5px 0;
+}
+
+.stat p {
+  font-size: 0.95rem;
+}

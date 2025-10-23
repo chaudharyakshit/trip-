@@ -39,14 +39,6 @@ export default function Navbar() {
         </div>
       </li>
       <li className="relative group">
-        <a className="flex items-center gap-2 text-slate-900 hover:text-orange-600 transition-colors duration-300 py-2 pb-3 border-b-4 border-transparent group-hover:border-orange-600" href="#">
-          Visa
-          <svg className="w-8 h-8" viewBox="0 0 20 20" fill="currentColor">
-            <path d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.167l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.24 4.5a.75.75 0 0 1-1.08 0l-4.24-4.5a.75.75 0 0 1 .02-1.06Z"/>
-          </svg>
-        </a>
-      </li>
-      <li className="relative group">
         <a className="flex items-center gap-2 text-slate-900 hover:text-orange-600 transition-colors duration-300 py-2 pb-3 border-b-4 border-transparent group-hover:border-orange-600" href="#blog">
           Pages
           <svg className="w-8 h-8 transition-transform duration-300 group-hover:rotate-180" viewBox="0 0 20 20" fill="currentColor">

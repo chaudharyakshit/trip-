@@ -1,0 +1,403 @@
+.gallery-section {
+  padding: 120px 0;
+  background: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.gallery-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.gallery-content {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 80px;
+  align-items: start;
+}
+
+/* Left Content Styles */
+.text-content {
+  padding-top: 20px;
+}
+
+.gallery-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #000000;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  letter-spacing: -0.5px;
+}
+
+.gallery-subtitle {
+  font-size: 1.1rem;
+  color: #666666;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  font-weight: 400;
+  max-width: 400px;
+}
+
+.book-btn {
+  background: #000000;
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 50px;
+  display: block;
+}
+
+.book-btn:hover {
+  background: #333333;
+  transform: translateY(-2px);
+}
+
+.stats-container {
+  margin-bottom: 40px;
+}
+
+.stat-item {
+  text-align: left;
+}
+
+.stat-number {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000000;
+  line-height: 1;
+  margin-bottom: 8px;
+  font-feature-settings: 'tnum';
+  font-variant-numeric: tabular-nums;
+  left: 750px;
+  position: relative;
+}
+
+.stat-label {
+  font-size: 1rem;
+  color: #666666;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+    left: 750px;
+  position: relative;
+}
+
+/* Collage Styles */
+.collage-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  height: 600px;
+}
+
+.collage-column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.collage-column:nth-child(1) {
+  justify-content: space-between;
+}
+
+.collage-column:nth-child(2) {
+  justify-content: space-between;
+}
+
+.collage-column:nth-child(3) {
+  justify-content: flex-start;
+}
+
+/* Different Collage Item Shapes */
+.collage-item {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #f5f5f5;
+}
+
+.collage-item.vertical-large {
+  height: 380px;
+  flex: 0 0 auto;
+}
+
+.collage-item.vertical-small {
+  height: 200px;
+  flex: 0 0 auto;
+}
+
+.collage-item.horizontal {
+  height: 120px;
+  flex: 0 0 auto;
+}
+
+.collage-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.collage-item:hover {
+  transform: translateY(-4px);
+}
+
+.collage-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Image Overlay */
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.6) 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: 16px;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.collage-item:hover .image-overlay {
+  opacity: 1;
+}
+
+.image-overlay span {
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* Lightbox Styles */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: -50px;
+  right: 0;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.lightbox-nav {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.lightbox-nav:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.lightbox-image-container {
+  position: relative;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.lightbox-image-container img {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  display: block;
+}
+
+.lightbox-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.lightbox-info h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .gallery-container {
+    padding: 0 30px;
+  }
+  
+  .gallery-content {
+    gap: 60px;
+  }
+  
+  .gallery-title {
+    font-size: 2.5rem;
+  }
+  
+  .collage-container {
+    height: 500px;
+    gap: 12px;
+  }
+  
+  .collage-item.vertical-large {
+    height: 320px;
+  }
+  
+  .collage-item.vertical-small {
+    height: 160px;
+  }
+  
+  .collage-item.horizontal {
+    height: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-section {
+    padding: 80px 0;
+  }
+  
+  .gallery-content {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  
+  .text-content {
+    text-align: center;
+    padding-top: 0;
+  }
+  
+  .gallery-subtitle {
+    max-width: none;
+  }
+  
+  .book-btn {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .stat-item {
+    text-align: center;
+  }
+  
+  .collage-container {
+    grid-template-columns: 1fr;
+    height: auto;
+    gap: 12px;
+  }
+  
+  .collage-column {
+    gap: 12px;
+  }
+  
+  .collapse-item {
+    height: 200px !important;
+  }
+  
+  .lightbox-content {
+    flex-direction: column;
+    max-width: 95vw;
+  }
+  
+  .lightbox-nav {
+    position: absolute;
+    bottom: -70px;
+  }
+  
+  .lightbox-nav.prev {
+    left: 25%;
+  }
+  
+  .lightbox-nav.next {
+    right: 25%;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-container {
+    padding: 0 20px;
+  }
+  
+  .gallery-title {
+    font-size: 2rem;
+  }
+  
+  .stat-number {
+    font-size: 2.8rem;
+  }
+  
+  .book-btn {
+    width: 100%;
+  }
+  
+  .collage-container {
+    gap: 10px;
+  }
+  
+  .collage-column {
+    gap: 10px;
+  }
+}

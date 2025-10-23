@@ -1,39 +1,105 @@
-import React from 'react'
+import React from 'react';
+import '../styles/footer.css';
 
-export default function ContactFooter() {
-  const year = new Date().getFullYear()
-  const phone = '+918607998882'
-  const whatsapp = 'https://wa.me/918607998882'
+const Footer = () => {
   return (
-    <>
-      <section id="contact" className="py-14">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="rounded-3xl bg-gradient-to-br from-[color:rgb(var(--brand-secondary))] to-[color:rgb(var(--brand-primary))] text-white p-6 md:p-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 shadow-soft">
-            <div>
-              <h3 className="m-0 font-bold text-2xl">Ready to plan your dream trip?</h3>
-              <p className="m-0 text-white/90">Talk to an IndiasGoTrip expert today.</p>
+    <footer className="footer">
+      <div className="footer-container">
+        <div className="footer-section">
+          <h3 className="footer-title">To More Inquiry</h3>
+          <p className="footer-text">Don't hesitate Call to Goffy.</p>
+          <div className="contact-info">
+            <div className="contact-item">
+              <i className="fas fa-phone-alt"></i>
+              <span>+1 (555) 123-4567</span>
             </div>
-            <div className="flex gap-3">
-              <a href={whatsapp} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-white text-slate-800 hover:bg-slate-100 transition">WhatsApp</a>
-              <a href={`tel:${phone}`} className="inline-flex items-center justify-center px-5 py-2.5 rounded-full border border-white/80 hover:bg-white/10 transition">Call us</a>
+            <div className="contact-item">
+              <i className="fas fa-envelope"></i>
+              <span>info@goffytravel.com</span>
             </div>
           </div>
         </div>
-      </section>
-
-      <footer className="py-6 border-t border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-3">
-          <div className="flex items-center gap-2">
-            <img src="/assets/images/logo.png" alt="IndiasGoTrip" className="h-7 w-auto" />
-            <span className="text-sm text-slate-500">&copy; {year} IndiasGoTrip. All rights reserved.</span>
-          </div>
-          <ul className="flex items-center gap-4 text-sm">
-            <li><a className="text-slate-500 hover:text-slate-700" href="#">Privacy</a></li>
-            <li><a className="text-slate-500 hover:text-slate-700" href="#">Terms</a></li>
-            <li><a className="text-slate-500 hover:text-slate-700" href={`tel:${phone}`}>Call: +91 86079 98882</a></li>
+        
+        <div className="footer-section">
+          <h3 className="footer-title">Top Destination</h3>
+          <ul className="footer-list">
+            <li>Maldives Tour</li>
+            <li>Bali, Indonesia Tour</li>
+            <li>Thailand Tour</li>
+            <li>Philippines Tour</li>
+            <li>Hawaii, USA Tour</li>
+            <li>Switzerland Tour</li>
+            <li>New Zealand Tour</li>
+            <li>Costa Rica Tour</li>
+            <li>Peru (Machu Picchu)</li>
+            <li>Paris, France Tour</li>
+            <li>Rome, Italy Tour</li>
           </ul>
         </div>
-      </footer>
-    </>
-  )
-}
+        
+        <div className="footer-section">
+          <h3 className="footer-title">Popular Search</h3>
+          <ul className="footer-list">
+            <li>Adventure</li>
+            <li>Hiking & Trekking</li>
+            <li>Holiday Packages</li>
+            <li>Flights And Hotels</li>
+            <li>Honeymoon Trip</li>
+            <li>Bali Vacation Package</li>
+            <li>Desert Safari</li>
+            <li>Last-Minute Deals</li>
+            <li>Summer Vacation</li>
+            <li>Wildlife Safari</li>
+            <li>Dubai Luxury Tours</li>
+          </ul>
+        </div>
+        
+        <div className="footer-section">
+          <h3 className="footer-title">Resources</h3>
+          <ul className="footer-list">
+            <li>About Goffy</li>
+            <li>Health & Safety Measure</li>
+            <li>Visa Processing</li>
+            <li>Customize Tour</li>
+            <li>Travel Inspirations</li>
+            <li>Traveler Reviews</li>
+            <li>Terms & Condition</li>
+            <li>Sitemap</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div className="footer-bottom">
+        <div className="footer-address">
+          <h4>Goffy Travel Agency</h4>
+          <p>Styline Plaza, 5th Floor, 123 Main Street</p>
+          <p>Los Angeles, CA 95001, USA</p>
+        </div>
+        
+        <div className="social-links">
+          <a href="#" aria-label="Facebook">
+            <i className="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" aria-label="Twitter">
+            <i className="fab fa-twitter"></i>
+          </a>
+          <a href="#" aria-label="Instagram">
+            <i className="fab fa-instagram"></i>
+          </a>
+          <a href="#" aria-label="LinkedIn">
+            <i className="fab fa-linkedin-in"></i>
+          </a>
+          <a href="#" aria-label="YouTube">
+            <i className="fab fa-youtube"></i>
+          </a>
+        </div>
+        
+        <div className="footer-copyright">
+          <p>&copy; {new Date().getFullYear()} Goffy Travel Agency. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
