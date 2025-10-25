@@ -1,26 +1,104 @@
-import React from 'react'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Autoplay, Pagination } from 'swiper/modules'
-import 'swiper/css'
-import 'swiper/css/pagination'
+import React, { useRef, useEffect } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
 
+const Card = ({ image, title, region, days, price, badge }) => {
+  const imgRef = useRef(null)
+  const boxRef = useRef(null)
+  const ZOOM_SCALE = 1.6
+  const TRANSITION_IN = 'transform 140ms ease-out, transform-origin 80ms linear'
+  const TRANSITION_OUT = 'transform 140ms ease-in'
 
-const Card = ({ image, title, region, days, price, badge }) => (
-  <div className="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden">
-    <div className="relative group">
-      <img src={image} alt={title} className="w-full h-56 object-cover" />
-      {/* Mirror open hover effect */}
-      <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute inset-y-0 left-0 w-1/2 bg-white/20 backdrop-blur-[1px] translate-x-0 group-hover:-translate-x-full transition-transform duration-500"></div>
-        <div className="absolute inset-y-0 right-0 w-1/2 bg-white/20 backdrop-blur-[1px] -translate-x-0 group-hover:translate-x-full transition-transform duration-500"></div>
-      </div>
+  const handleEnter = () => {
+    if (imgRef.current) {
+      imgRef.current.style.transition = TRANSITION_IN
+      imgRef.current.style.transform = `scale(${ZOOM_SCALE})`
+      imgRef.current.style.willChange = 'transform'
+    }
+  }
+
+  const handleMove = (e) => {
+    if (!boxRef.current || !imgRef.current) return
+    const rect = boxRef.current.getBoundingClientRect()
+    const x = ((e.clientX - rect.left) / rect.width) * 100
+    const y = ((e.clientY - rect.top) / rect.height) * 100
+    imgRef.current.style.transformOrigin = `${x}% ${y}%`
+  }
+
+  const handleLeave = () => {
+    if (imgRef.current) {
+      imgRef.current.style.transition = TRANSITION_OUT
+      imgRef.current.style.transformOrigin = '50% 50%'
+      imgRef.current.style.transform = 'scale(1)'
+      imgRef.current.style.willChange = 'auto'
+    }
+  }
+
+  const handleTouchStart = (e) => {
+    if (!boxRef.current || !imgRef.current) return
+    const t = e.touches && e.touches[0]
+    if (!t) return
+    const rect = boxRef.current.getBoundingClientRect()
+    const x = ((t.clientX - rect.left) / rect.width) * 100
+    const y = ((t.clientY - rect.top) / rect.height) * 100
+    imgRef.current.style.transition = TRANSITION_IN
+    imgRef.current.style.transform = `scale(${ZOOM_SCALE})`
+    imgRef.current.style.transformOrigin = `${x}% ${y}%`
+    imgRef.current.style.willChange = 'transform'
+  }
+
+  const handleTouchMove = (e) => {
+    if (!boxRef.current || !imgRef.current) return
+    const t = e.touches && e.touches[0]
+    if (!t) return
+    const rect = boxRef.current.getBoundingClientRect()
+    const x = ((t.clientX - rect.left) / rect.width) * 100
+    const y = ((t.clientY - rect.top) / rect.height) * 100
+    imgRef.current.style.transformOrigin = `${x}% ${y}%`
+  }
+
+  const handleTouchEnd = () => {
+    if (imgRef.current) {
+      imgRef.current.style.transition = TRANSITION_OUT
+      imgRef.current.style.transformOrigin = '50% 50%'
+      imgRef.current.style.transform = 'scale(1)'
+      imgRef.current.style.willChange = 'auto'
+    }
+  }
+
+  return (
+    <div className="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden">
+      <div className="relative group">
+        <div className="px-5 pt-5">
+          <div
+            ref={boxRef}
+            onMouseEnter={handleEnter}
+            onMouseMove={handleMove}
+            onMouseLeave={handleLeave}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+            className="h-48 w-full overflow-hidden rounded-2xl"
+          >
+            <img
+              ref={imgRef}
+              loading="lazy"
+              src={image}
+              alt={title}
+              className="w-full h-full object-cover select-none"
+              draggable={false}
+            />
+          </div>
+        </div>
       {badge && (
         <span className="absolute top-3 right-3 inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-red-500 text-white shadow">
           {badge}
         </span>
       )}
-    </div>
-    <div className="p-5">
+      </div>
+      <div className="p-5">
       <h3 className="text-xl font-bold text-slate-900 mb-2">{title}</h3>
       <div className="flex items-center gap-4 text-slate-600 text-sm mb-4">
         <span className="inline-flex items-center gap-1">
@@ -46,19 +124,24 @@ const Card = ({ image, title, region, days, price, badge }) => (
         <span className="inline-flex items-center gap-1"><svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 9.5 8.5 3 11l6.5 2.5L12 20l2.5-6.5L21 11l-6.5-2.5L12 2Z"/></svg> Experience</span>
         <span className="inline-flex items-center gap-1"><svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16v4H4V4Zm0 6h16v10H4V10Z"/></svg> Inclusion</span>
       </div>
+      </div>
     </div>
-  </div>
-)
+  )
+}
 
 export default function PopularPackages() {
+  useEffect(() => {
+    // No extra JS needed for pan-zoom hover; handled per-card.
+  }, []);
+
   return (
     <section className="relative py-14 md:py-20 bg-[radial-gradient(1200px_600px_at_50%_-200px,rgba(43,123,185,0.15),transparent_60%)]">
       {/* Background elements */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
         {/* Left parachute */}
         <div className="absolute left-0 top-1/4 animate-bounce">
-  <img src="../assets/parachute.svg" alt="Parachute" className="w-24 h-24" />
-</div>
+          <img src="../assets/parachute.svg" alt="Parachute" className="w-24 h-24" />
+        </div>
         
         {/* Right rotating circle */}
         <div className="absolute right-0 top-1/3 animate-spin">

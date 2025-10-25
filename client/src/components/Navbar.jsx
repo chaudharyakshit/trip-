@@ -8,14 +8,14 @@ export default function Navbar() {
   const [loginStage, setLoginStage] = useState('initial') // 'initial' | 'chooseRole'
 
   const Menu = () => (
-    <ul className="flex flex-col md:flex-row md:items-center gap-3 md:gap-8 lg:gap-10 font-semibold text-[14px] md:text-[15px] tracking-tight">
+    <ul className="flex flex-col md:flex-row md:items-center gap-3 md:gap-6 lg:gap-8 font-semibold text-[14px] md:text-[15px] tracking-tight">
       <li>
         <a className="text-orange-500 transition-colors duration-300 py-2 pb-3 border-b-4 border-orange-500" href="#home">Home</a>
       </li>
       <li className="relative group">
-        <a className="flex items-center gap-2 text-slate-900 hover:text-orange-600 transition-colors duration-300 py-2 pb-3 border-b-4 border-transparent group-hover:border-orange-600" href="#destinations">
+        <a className="flex items-center gap-1.5 md:gap-2 text-slate-900 hover:text-orange-600 transition-colors duration-300 py-2 pb-3 border-b-4 border-transparent group-hover:border-orange-600 whitespace-nowrap" href="#destinations">
           Destination
-          <svg className="w-8 h-8 transition-transform duration-300 group-hover:rotate-180" viewBox="0 0 20 20" fill="currentColor">
+          <svg className="w-6 h-6 md:w-7 md:h-7 transition-transform duration-300 group-hover:rotate-180" viewBox="0 0 20 20" fill="currentColor">
             <path d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.167l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.24 4.5a.75.75 0 0 1-1.08 0l-4.24-4.5a.75.75 0 0 1 .02-1.06Z"/>
           </svg>
         </a>
@@ -26,9 +26,9 @@ export default function Navbar() {
         </div>
       </li>
       <li className="relative group">
-        <a className="flex items-center gap-2 text-slate-900 hover:text-orange-600 transition-colors duration-300 py-2 pb-3 border-b-4 border-transparent group-hover:border-orange-600" href="#services">
-          Travel Package
-          <svg className="w-8 h-8 transition-transform duration-300 group-hover:rotate-180" viewBox="0 0 20 20" fill="currentColor">
+        <a className="flex items-center gap-1.5 md:gap-2 text-slate-900 hover:text-orange-600 transition-colors duration-300 py-2 pb-3 border-b-4 border-transparent group-hover:border-orange-600 whitespace-nowrap" href="#services">
+          <span className="whitespace-nowrap">Travel Package</span>
+          <svg className="w-6 h-6 md:w-7 md:h-7 transition-transform duration-300 group-hover:rotate-180" viewBox="0 0 20 20" fill="currentColor">
             <path d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.167l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.24 4.5a.75.75 0 0 1-1.08 0l-4.24-4.5a.75.75 0 0 1 .02-1.06Z"/>
           </svg>
         </a>
@@ -39,9 +39,9 @@ export default function Navbar() {
         </div>
       </li>
       <li className="relative group">
-        <a className="flex items-center gap-2 text-slate-900 hover:text-orange-600 transition-colors duration-300 py-2 pb-3 border-b-4 border-transparent group-hover:border-orange-600" href="#blog">
+        <a className="flex items-center gap-1.5 md:gap-2 text-slate-900 hover:text-orange-600 transition-colors duration-300 py-2 pb-3 border-b-4 border-transparent group-hover:border-orange-600 whitespace-nowrap" href="#blog">
           Pages
-          <svg className="w-8 h-8 transition-transform duration-300 group-hover:rotate-180" viewBox="0 0 20 20" fill="currentColor">
+          <svg className="w-6 h-6 md:w-7 md:h-7 transition-transform duration-300 group-hover:rotate-180" viewBox="0 0 20 20" fill="currentColor">
             <path d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.167l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.24 4.5a.75.75 0 0 1-1.08 0l-4.24-4.5a.75.75 0 0 1 .02-1.06Z"/>
           </svg>
         </a>
@@ -60,14 +60,14 @@ export default function Navbar() {
   return (
     <header className="navbar sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-md">
       <div className="w-full pl-3 pr-6 md:pl-4 md:pr-8 lg:pl-6 lg:pr-10">
-        <nav className="h-28 grid grid-cols-[auto_1fr_auto] items-center w-full">
+        <nav className="h-24 lg:h-28 grid grid-cols-[auto_1fr_auto] items-center w-full">
           {/* Logo */}
           <a className="flex items-center gap-3" href="#home" aria-label="IndiasGoTrip Home">
             <img src="/assets/images/Indiasgotrip-logo.png" alt="IndiasGoTrip" className="h-[72px] md:h-[80px] w-auto" />
           </a>
 
           <div className="hidden md:flex items-center justify-center">
-            <div className="px-4 lg:px-8">
+            <div className="px-3 lg:px-6">
               <Menu />
             </div>
           </div>
@@ -102,7 +102,7 @@ export default function Navbar() {
                 aria-haspopup="dialog"
                 aria-expanded={loginOpen}
                 onClick={() => { setLoginOpen((v) => !v); setLoginStage('initial') }}
-                className="inline-flex items-center justify-center h-12 px-8 rounded-full bg-slate-900 text-white hover:bg-black font-semibold text-base transition-all duration-300 shadow-lg hover:shadow-xl"
+                className="inline-flex items-center justify-center h-12 px-8 rounded-full bg-[color:rgb(var(--brand-secondary))] text-white hover:brightness-110 font-semibold text-base transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 <svg className="w-7 h-7 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>

@@ -1,42 +1,72 @@
-import React from 'react';
+import React, { useRef } from 'react';
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
-const DestinationCard = ({ image, title, tours }) => (
-  <div className="bg-white rounded-xl shadow-lg border border-slate-200 overflow-hidden group cursor-pointer relative w-64 h-80">
-    <div className="relative h-60 w-full overflow-hidden">
-      <img 
-        src={image} 
-        alt={title} 
-        className="w-full h-full object-cover"
-      />
-      
-      {/* Glass overlay that opens diagonally from both corners on hover */}
-      <div className="absolute inset-0 overflow-hidden">
-        {/* Top-left diagonal glass */}
-        <div className="absolute top-0 left-0 w-full h-full bg-white/30 backdrop-blur-sm 
-          transition-all duration-500 ease-out 
-          group-hover:-translate-x-full group-hover:-translate-y-full group-hover:opacity-0
-          transform origin-top-left"></div>
-        
-        {/* Bottom-right diagonal glass */}
-        <div className="absolute top-0 left-0 w-full h-full bg-white/30 backdrop-blur-sm 
-          transition-all duration-500 ease-out 
-          group-hover:translate-x-full group-hover:translate-y-full group-hover:opacity-0
-          transform origin-bottom-right"></div>
+const DestinationCard = ({ image, title, tours }) => {
+  const imgRef = useRef(null)
+  const boxRef = useRef(null)
+  const ZOOM_SCALE = 1.6
+  const TRANSITION_IN = 'transform 140ms ease-out, transform-origin 80ms linear'
+  const TRANSITION_OUT = 'transform 140ms ease-in'
+
+  const enter = () => {
+    if (imgRef.current) {
+      imgRef.current.style.transition = TRANSITION_IN
+      imgRef.current.style.transform = `scale(${ZOOM_SCALE})`
+      imgRef.current.style.willChange = 'transform'
+    }
+  }
+  const move = (e) => {
+    if (!boxRef.current || !imgRef.current) return
+    const rect = boxRef.current.getBoundingClientRect()
+    const clientX = e.touches ? e.touches[0].clientX : e.clientX
+    const clientY = e.touches ? e.touches[0].clientY : e.clientY
+    const x = ((clientX - rect.left) / rect.width) * 100
+    const y = ((clientY - rect.top) / rect.height) * 100
+    imgRef.current.style.transformOrigin = `${x}% ${y}%`
+  }
+  const leave = () => {
+    if (imgRef.current) {
+      imgRef.current.style.transition = TRANSITION_OUT
+      imgRef.current.style.transformOrigin = '50% 50%'
+      imgRef.current.style.transform = 'scale(1)'
+      imgRef.current.style.willChange = 'auto'
+    }
+  }
+
+  return (
+    <div className="bg-white rounded-xl shadow-lg border border-slate-200 cursor-pointer relative w-64 h-80">
+      <div
+        ref={boxRef}
+        className="relative h-60 w-full overflow-hidden rounded-t-xl"
+        onMouseEnter={enter}
+        onMouseMove={move}
+        onMouseLeave={leave}
+        onTouchStart={(e) => { enter(); move(e) }}
+        onTouchMove={move}
+        onTouchEnd={leave}
+      >
+        <img
+          ref={imgRef}
+          src={image}
+          alt={title}
+          className="w-full h-full object-cover select-none"
+          draggable={false}
+        />
+      </div>
+      <div className="p-5 h-20 flex flex-col justify-center">
+        <h3 className="text-lg font-bold text-slate-900 mb-1">{title}</h3>
+        <p className="text-slate-600 text-sm">Tours ({tours})</p>
       </div>
     </div>
-    
-    <div className="p-5 h-20 flex flex-col justify-center">
-      <h3 className="text-lg font-bold text-slate-900 mb-1">{title}</h3>
-      <p className="text-slate-600 text-sm">Tours ({tours})</p>
-    </div>
-  </div>
-);
+  )
+}
 
 export default function TopDestinations() {
+
   const destinations = [
     {
       image: "https://images.unsplash.com/photo-1586769852836-bc069f74e9e2?q=80&w=1600&auto=format&fit=crop",
@@ -69,6 +99,8 @@ export default function TopDestinations() {
       tours: 8
     }
   ];
+
+  // No extra effects required; pan-zoom handled per card
 
   return (
     <section className="py-14 md:py-20 bg-white">

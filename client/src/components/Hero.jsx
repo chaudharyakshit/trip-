@@ -61,10 +61,10 @@ export default function Hero() {
             <path d="M3 11V6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v5h-2V8H5v3H3Zm0 2h18v6a1 1 0 0 1-1 1h-4v-3H8v3H4a1 1 0 0 1-1-1v-6Z"/>
           </svg>
         );
-      case 'Visa':
+      case 'Bus':
         return (
           <svg className="tab-icon" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M4 3h10a2 2 0 0 1 2 2v2h4v12a2 2 0 0 1-2 2H8v-2h10V9h-2v2H4V5a2 2 0 0 1 2-2Zm0 6h10V5H6v4Zm1 11a3 3 0 1 1 6 0H5Z"/>
+            <path d="M6 3a4 4 0 0 0-4 4v7.5A2.5 2.5 0 0 0 4.5 17v2.25a.75.75 0 0 0 1.5 0V17h12v2.25a.75.75 0 0 0 1.5 0V17A2.5 2.5 0 0 0 22 14.5V7a4 4 0 0 0-4-4H6Zm0 1.5h12A2.5 2.5 0 0 1 20.5 7v3.5H3.5V7A2.5 2.5 0 0 1 6 4.5ZM6.75 14a1.25 1.25 0 1 0 0 2.5A1.25 1.25 0 0 0 6.75 14Zm10.5 0A1.25 1.25 0 1 0 17.25 16.5 1.25 1.25 0 0 0 17.25 14Z"/>
           </svg>
         );
       case 'Experience':
@@ -203,7 +203,7 @@ export default function Hero() {
             <div className="search-panel">
               {/* Tabs */}
               <div className="tabs-container">
-                {['Tours','Hotels','Visa','Experience'].map((t) => (
+                {['Tours','Hotels','Bus','Experience'].map((t) => (
                   <button
                     key={t}
                     type="button"
