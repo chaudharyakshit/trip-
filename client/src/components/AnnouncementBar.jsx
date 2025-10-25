@@ -3,9 +3,9 @@ import React, { useEffect, useState } from 'react'
 export default function AnnouncementBar() {
   const [index, setIndex] = useState(0)
   const messages = [
-    '“Discover India, Your Way — with IndiasGo Trip”',
-    'Find perfect destinations, best deals, and unforgettable experiences — all in one place. 👉 “Your Journey Begins Here 🚀”',
-    '👉 “Explore the Colors of India with IndiasGo Trip”',
+    'One‑Click Booking — up to FLAT 30% off on Honeymoon Tours',
+    'Customize your trip plan and get special discounts instantly',
+    'Enjoy family holiday packages with flexible payment options',
   ]
 
   // autoplay rotation

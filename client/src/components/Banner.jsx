@@ -1,7 +1,5 @@
 import React from 'react';
-import '../styles/banner.css';
-// Import your background image
-import bannerBackground from '../../public/assets/images/banner.png';
+import '../styles/Banner.css';
 
 const Banner = () => {
   return (
@@ -9,7 +7,7 @@ const Banner = () => {
       <div className="banner-content">
         <div className="parachute-section">
           <img 
-            src="../assets/parachute.svg" 
+            src="/assets/parachute.svg" 
             alt="Parachute" 
             className="parachute-image"
           />

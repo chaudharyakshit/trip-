@@ -1,21 +1,21 @@
 import React from 'react';
-import '../styles/footer.css';
+import '../styles/Footer.css';
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer id="contact" className="footer">
       <div className="footer-container">
         <div className="footer-section">
-          <h3 className="footer-title">To More Inquiry</h3>
-          <p className="footer-text">Don't hesitate Call to Goffy.</p>
+          <h3 className="footer-title">Need Help?</h3>
+          <p className="footer-text">Don't hesitate — call IndiasGoTrip.</p>
           <div className="contact-info">
             <div className="contact-item">
               <i className="fas fa-phone-alt"></i>
-              <span>+1 (555) 123-4567</span>
+              <span>+91 86079 98882</span>
             </div>
             <div className="contact-item">
               <i className="fas fa-envelope"></i>
-              <span>info@goffytravel.com</span>
+              <span>hello@indiasgotrip.com</span>
             </div>
           </div>
         </div>
@@ -57,7 +57,7 @@ const Footer = () => {
         <div className="footer-section">
           <h3 className="footer-title">Resources</h3>
           <ul className="footer-list">
-            <li>About Goffy</li>
+            <li>About IndiasGoTrip</li>
             <li>Health & Safety Measure</li>
             <li>Visa Processing</li>
             <li>Customize Tour</li>
@@ -71,9 +71,9 @@ const Footer = () => {
       
       <div className="footer-bottom">
         <div className="footer-address">
-          <h4>Goffy Travel Agency</h4>
-          <p>Styline Plaza, 5th Floor, 123 Main Street</p>
-          <p>Los Angeles, CA 95001, USA</p>
+          <h4>IndiasGoTrip</h4>
+          <p>123 MG Road</p>
+          <p>New Delhi, India</p>
         </div>
         
         <div className="social-links">
@@ -95,7 +95,7 @@ const Footer = () => {
         </div>
         
         <div className="footer-copyright">
-          <p>&copy; {new Date().getFullYear()} Goffy Travel Agency. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} IndiasGoTrip. All rights reserved.</p>
         </div>
       </div>
     </footer>

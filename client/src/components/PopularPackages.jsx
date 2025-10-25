@@ -135,7 +135,7 @@ export default function PopularPackages() {
   }, []);
 
   return (
-    <section className="relative py-14 md:py-20 bg-[radial-gradient(1200px_600px_at_50%_-200px,rgba(43,123,185,0.15),transparent_60%)]">
+    <section className="relative mt-24 md:mt-36 lg:mt-44 py-14 md:py-20 bg-[radial-gradient(1200px_600px_at_50%_-200px,rgba(43,123,185,0.15),transparent_60%)]">
       {/* Background elements */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
         {/* Left parachute */}

@@ -1,17 +1,17 @@
 .banner-container {
-  width: calc(100% - 250px); /* 40px margin on each side */
+  width: calc(100% - 250px);
   height: 400px;
   background: 
     linear-gradient(90deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.2) 100%),
-    url('../assets/images/banner.png') center/cover no-repeat;
+    url('/assets/images/banner.png') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 70px 80px; /* 40px margin on left and right */
+  margin: 70px 80px;
   border-radius: 12px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
   position: relative;
-    object-fit: contain;
+  object-fit: contain;
   overflow: hidden;
   left: 40px;
 }

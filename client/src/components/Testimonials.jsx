@@ -24,7 +24,7 @@ const Testimonials = () => {
   }, [count]);
 
   return (
-    <section className="testimonials">
+    <section id="testimonials" className="testimonials">
       <h2 className="heading">Hear It from Travelers</h2>
       <p className="subheading">
         We go beyond just booking trips—we create unforgettable travel

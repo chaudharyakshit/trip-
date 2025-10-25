@@ -103,7 +103,7 @@ export default function TopDestinations() {
   // No extra effects required; pan-zoom handled per card
 
   return (
-    <section className="py-14 md:py-20 bg-white">
+    <section id="destinations" className="py-14 md:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900">Top Destinations</h2>

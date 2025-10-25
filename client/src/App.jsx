@@ -11,7 +11,7 @@ import Testimonials from './components/Testimonials.jsx'
 import Blog from './components/Blog.jsx'
 import ContactFooter from './components/ContactFooter.jsx'
 import PopularPackages from './components/PopularPackages.jsx'
-import Onedaytrip from './components/onedaytrips.jsx'
+import OneDayTrips from './components/OneDayTrips.jsx'
 import Banner from './components/Banner.jsx'
 import Gallery from './components/Gallery.jsx'
 import TrustedCompanies from './components/TrustedCompanies.jsx'
@@ -29,15 +29,13 @@ function App() {
         <Destinations />
         <SmartServices />
         <Services />
-        <Onedaytrip />
+        <OneDayTrips />
         <Banner />
         <TrustedCompanies />
         <Blog />
-         <Testimonials />
+        <Testimonials />
         <Gallery />
         <ContactFooter />
-             
-
       </main>
     </>
   )

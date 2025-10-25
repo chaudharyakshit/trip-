@@ -1,5 +1,14 @@
 import React from "react";
-import "../styles/trustedCompanies.css";
+import "../styles/TrustedCompanies.css";
+
+const logos = [
+  "/assets/images/vistara.png",
+  "/assets/images/spicejet.png",
+  "/assets/images/taj.png",
+  "/assets/images/truejet.png",
+  "/assets/images/thelalit.png",
+  "/assets/images/sarovar.png",
+];
 
 const TrustedCompanies = () => {
   return (
@@ -8,21 +17,9 @@ const TrustedCompanies = () => {
 
       <div className="logo-slider">
         <div className="logo-track">
-          {/* Replace these image src with your own logo paths */}
-          <img src="../assets/images/vistara.png" alt="GoFly" />
-          <img src="../assets/images/spicejet.png" alt="Traverse" />
-          <img src="../assets/images/taj.png" alt="TripZone" />
-          <img src="../assets/images/truejet.png" alt="Borcelle" />
-          <img src="../assets/images/thelalit.png" alt="GoTrip" />
-          <img src="../assets/images/sarovar.png" alt="Travel" />
-
-          {/* Duplicate for infinite scroll effect */}
-            <img src="../assets/images/vistara.png" alt="GoFly" />
-          <img src="../assets/images/spicejet.png" alt="Traverse" />
-          <img src="../assets/images/taj.png" alt="TripZone" />
-          <img src="../assets/images/truejet.png" alt="Borcelle" />
-          <img src="../assets/images/thelalit.png" alt="GoTrip" />
-          <img src="../assets/images/sarovar.png" alt="Travel" />
+          {logos.concat(logos).map((src, i) => (
+            <img key={i} src={src} alt="Brand logo" onError={(e)=>{e.currentTarget.style.visibility='hidden'}} />
+          ))}
         </div>
       </div>
     </section>

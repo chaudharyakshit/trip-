@@ -14,6 +14,9 @@ export default function Hero() {
   const [showDateDropdown, setShowDateDropdown] = useState(false);
   const [showCategoryDropdown, setShowCategoryDropdown] = useState(false);
   
+  // Reveal search panel only after user starts scrolling
+  const [showPanel, setShowPanel] = useState(false);
+  
   const [selectedDestination, setSelectedDestination] = useState({ name: 'Bali Paradise', country: 'Indonesia' });
   const [selectedDate, setSelectedDate] = useState({ date: '21 October', day: 'Tuesday 2025' });
   const [selectedCategory, setSelectedCategory] = useState({ name: 'Family Tour', type: 'Category' });
@@ -89,6 +92,14 @@ export default function Hero() {
       }
     }
   }, [swiperRef]);
+
+  useEffect(() => {
+    const onScroll = () => setShowPanel(window.scrollY > 10);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
 
   const handleDestinationSelect = (destination) => {
     setSelectedDestination(destination);
@@ -198,8 +209,8 @@ export default function Hero() {
             </p>
           </div>
 
-          {/* Search panel */}
-          <div className="search-panel-container">
+          {/* Search panel (reveals after scroll) */}
+          <div className={`search-panel-container ${showPanel ? 'visible' : 'hidden'}`}>
             <div className="search-panel">
               {/* Tabs */}
               <div className="tabs-container">
@@ -357,6 +368,7 @@ export default function Hero() {
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>
