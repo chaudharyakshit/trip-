@@ -3,6 +3,10 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import { Link } from 'react-router-dom';
+import '../pages/inner-page1'
+
+
 
 const Card = ({ image, title, region, days, price, badge }) => {
   const imgRef = useRef(null)
@@ -111,15 +115,20 @@ const Card = ({ image, title, region, days, price, badge }) => {
         </span>
       </div>
       <div className="flex items-center justify-between">
-        <button className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-white bg-[color:rgb(var(--brand-secondary))] hover:brightness-110 font-semibold shadow">
-          Book Now
-          <svg className="w-4 h-4" viewBox="0 0 20 20" fill="currentColor"><path d="M10.75 3.75a.75.75 0 0 0-1.5 0v5.5H3.75a.75.75 0 0 0 0 1.5h5.5v5.5a.75.75 0 0 0 1.5 0v-5.5h5.5a.75.75 0 0 0 0-1.5h-5.5v-5.5Z"/></svg>
-        </button>
-        <div className="text-right">
-          <div className="text-slate-500 text-xs">Per Person</div>
-          <div className="text-2xl font-extrabold">${price}</div>
-        </div>
-      </div>
+  <Link to="/inner-page1">
+    <button className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-white bg-[color:rgb(var(--brand-secondary))] hover:brightness-110 font-semibold shadow">
+      Book Now
+      <svg className="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
+        <path d="M10.75 3.75a.75.75 0 0 0-1.5 0v5.5H3.75a.75.75 0 0 0 0 1.5h5.5v5.5a.75.75 0 0 0 1.5 0v-5.5h5.5a.75.75 0 0 0 0-1.5h-5.5v-5.5Z"/>
+      </svg>
+    </button>
+  </Link>
+  <div className="text-right">
+    <div className="text-slate-500 text-xs">Per Person</div>
+    <div className="text-2xl font-extrabold">${price}</div>
+  </div>
+</div>
+
       <div className="mt-4 flex items-center gap-6 text-slate-600 text-sm">
         <span className="inline-flex items-center gap-1"><svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 9.5 8.5 3 11l6.5 2.5L12 20l2.5-6.5L21 11l-6.5-2.5L12 2Z"/></svg> Experience</span>
         <span className="inline-flex items-center gap-1"><svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16v4H4V4Zm0 6h16v10H4V10Z"/></svg> Inclusion</span>

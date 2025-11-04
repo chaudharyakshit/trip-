@@ -1,9 +1,9 @@
 import React from 'react'
+import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar.jsx'
 import CursorFX from './components/CursorFX.jsx'
 import AnnouncementBar from './components/AnnouncementBar.jsx'
 import Hero from './components/Hero.jsx'
-// import FeatureStrip from './components/FeatureStrip.jsx'
 import Destinations from './components/Destinations.jsx'
 import Services from './components/Services.jsx'
 import SmartServices from './components/SmartServices.jsx'
@@ -15,9 +15,9 @@ import OneDayTrips from './components/OneDayTrips.jsx'
 import Banner from './components/Banner.jsx'
 import Gallery from './components/Gallery.jsx'
 import TrustedCompanies from './components/TrustedCompanies.jsx'
+import InnerPage1 from './pages/inner-page1.jsx'
 
-
-function App() {
+function HomePage() {
   return (
     <>
       <CursorFX />
@@ -38,6 +38,16 @@ function App() {
         <ContactFooter />
       </main>
     </>
+  )
+}
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/inner-page1" element={<InnerPage1 />} />
+      {/* Add more routes as needed */}
+    </Routes>
   )
 }
 
