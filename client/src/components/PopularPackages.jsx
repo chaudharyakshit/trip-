@@ -4,11 +4,47 @@ import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Link } from 'react-router-dom';
-import '../pages/inner-page1'
 
+// Destination to route mapping based on your PDF
+const destinationRoutes = {
+  "Jaipur, Rajasthan": "jaipur",
+  "Agra, Uttar Pradesh": "agra", 
+  "Goa": "goa",
+  "Kerala (Munnar & Alleppey)": "kerala",
+  "Delhi": "delhi",
+  "Mumbai, Maharashtra": "mumbai",
+  "Udaipur, Rajasthan": "udaipur",
+  "Varanasi, Uttar Pradesh": "varanasi",
+  "Rishikesh, Uttarakhand": "rishikesh",
+  "Shimla, Himachal Pradesh": "shimla",
+  "Ladakh, Jammu & Kashmir": "ladakh",
+  "Darjeeling, West Bengal": "darjeeling",
+  "Amritsar, Punjab": "amritsar",
+  "Hampi, Karnataka": "hampi",
+  "Mysore, Karnataka": "mysore",
+  "Coorg, Karnataka": "coorg",
+  "Khajuraho, Madhya Pradesh": "khajuraho",
+  "Konark, Odisha": "konark",
+  "Rann of Kutch, Gujarat": "kutch",
+  "Sikkim (Gangtok)": "sikkim",
+  "Pushkar, Rajasthan": "pushkar",
+  "Mahabalipuram, Tamil Nadu": "mahabalipuram",
+  "Ajanta & Ellora Caves, Maharashtra": "ajanta-ellora",
+  "Pune, Maharashtra": "pune",
+  "Auli, Uttarakhand": "auli"
+};
 
+// Sample images for each destination (you'll replace these with actual images)
+const destinationImages = {
+  "Jaipur, Rajasthan": "https://images.unsplash.com/photo-1534751516642-a1af1ef26a56?q=80&w=1600&auto=format&fit=crop",
+  "Agra, Uttar Pradesh": "https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&w=1600&auto=format&fit=crop",
+  "Goa": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?q=80&w=1600&auto=format&fit=crop",
+  "Kerala (Munnar & Alleppey)": "https://images.unsplash.com/photo-1580052614386-6b4573a0d0d5?q=80&w=1600&auto=format&fit=crop",
+  "Delhi": "https://images.unsplash.com/photo-1587474260584-136574528ed5?q=80&w=1600&auto=format&fit=crop",
+  // Add more images for other destinations...
+};
 
-const Card = ({ image, title, region, days, price, badge }) => {
+const Card = ({ image, title, region, days, price, badge, destination }) => {
   const imgRef = useRef(null)
   const boxRef = useRef(null)
   const ZOOM_SCALE = 1.6
@@ -72,6 +108,9 @@ const Card = ({ image, title, region, days, price, badge }) => {
     }
   }
 
+  // Get the route for this destination
+  const destinationRoute = destinationRoutes[destination] || "destination";
+
   return (
     <div className="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden">
       <div className="relative group">
@@ -96,49 +135,94 @@ const Card = ({ image, title, region, days, price, badge }) => {
             />
           </div>
         </div>
-      {badge && (
-        <span className="absolute top-3 right-3 inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-red-500 text-white shadow">
-          {badge}
-        </span>
-      )}
+        {badge && (
+          <span className="absolute top-3 right-3 inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-red-500 text-white shadow">
+            {badge}
+          </span>
+        )}
       </div>
       <div className="p-5">
-      <h3 className="text-xl font-bold text-slate-900 mb-2">{title}</h3>
-      <div className="flex items-center gap-4 text-slate-600 text-sm mb-4">
-        <span className="inline-flex items-center gap-1">
-          <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7Zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5Z"/></svg>
-          {region}
-        </span>
-        <span className="inline-flex items-center gap-1">
-          <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M7 2a1 1 0 0 1 1 1v1h8V3a1 1 0 1 1 2 0v1h1a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1V3a1 1 0 0 1 1-1Zm12 9H5v7h14v-7Z"/></svg>
-          {days}
-        </span>
-      </div>
-      <div className="flex items-center justify-between">
-  <Link to="/inner-page1">
-    <button className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-white bg-[color:rgb(var(--brand-secondary))] hover:brightness-110 font-semibold shadow">
-      Book Now
-      <svg className="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
-        <path d="M10.75 3.75a.75.75 0 0 0-1.5 0v5.5H3.75a.75.75 0 0 0 0 1.5h5.5v5.5a.75.75 0 0 0 1.5 0v-5.5h5.5a.75.75 0 0 0 0-1.5h-5.5v-5.5Z"/>
-      </svg>
-    </button>
-  </Link>
-  <div className="text-right">
-    <div className="text-slate-500 text-xs">Per Person</div>
-    <div className="text-2xl font-extrabold">${price}</div>
-  </div>
-</div>
-
-      <div className="mt-4 flex items-center gap-6 text-slate-600 text-sm">
-        <span className="inline-flex items-center gap-1"><svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 9.5 8.5 3 11l6.5 2.5L12 20l2.5-6.5L21 11l-6.5-2.5L12 2Z"/></svg> Experience</span>
-        <span className="inline-flex items-center gap-1"><svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16v4H4V4Zm0 6h16v10H4V10Z"/></svg> Inclusion</span>
-      </div>
+        <h3 className="text-xl font-bold text-slate-900 mb-2">{title}</h3>
+        <div className="flex items-center gap-4 text-slate-600 text-sm mb-4">
+          <span className="inline-flex items-center gap-1">
+            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7Zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5Z"/></svg>
+            {region}
+          </span>
+          <span className="inline-flex items-center gap-1">
+            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M7 2a1 1 0 0 1 1 1v1h8V3a1 1 0 1 1 2 0v1h1a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1V3a1 1 0 0 1 1-1Zm12 9H5v7h14v-7Z"/></svg>
+            {days}
+          </span>
+        </div>
+        <div className="flex items-center justify-between">
+          <Link to={`/destination/${destinationRoute}`}>
+            <button className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-white bg-[color:rgb(var(--brand-secondary))] hover:brightness-110 font-semibold shadow">
+              Book Now
+              <svg className="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M10.75 3.75a.75.75 0 0 0-1.5 0v5.5H3.75a.75.75 0 0 0 0 1.5h5.5v5.5a.75.75 0 0 0 1.5 0v-5.5h5.5a.75.75 0 0 0 0-1.5h-5.5v-5.5Z"/>
+              </svg>
+            </button>
+          </Link>
+          <div className="text-right">
+            <div className="text-slate-500 text-xs">Per Person</div>
+            <div className="text-2xl font-extrabold">${price}</div>
+          </div>
+        </div>
+        <div className="mt-4 flex items-center gap-6 text-slate-600 text-sm">
+          <span className="inline-flex items-center gap-1"><svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 9.5 8.5 3 11l6.5 2.5L12 20l2.5-6.5L21 11l-6.5-2.5L12 2Z"/></svg> Experience</span>
+          <span className="inline-flex items-center gap-1"><svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16v4H4V4Zm0 6h16v10H4V10Z"/></svg> Inclusion</span>
+        </div>
       </div>
     </div>
   )
 }
 
 export default function PopularPackages() {
+  // Sample package data based on your PDF destinations
+  const packages = [
+    {
+      destination: "Jaipur, Rajasthan",
+      title: "Royal Rajasthan Experience",
+      region: "Rajasthan, India", 
+      days: "04 Days/03 Nights",
+      price: 299,
+      image: "https://images.unsplash.com/photo-1603262110263-fb0112e7cc33?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8amFpcHVyfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=600https://images.unsplash.com/photo-1534751516642-a1af1ef26a56?q=80&w=1600&auto=format&fit=crop"
+    },
+    {
+      destination: "Agra, Uttar Pradesh", 
+      title: "Taj Mahal Wonder",
+      region: "Uttar Pradesh, India",
+      days: "03 Days/02 Nights",
+      price: 199,
+      image: "https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&w=1600&auto=format&fit=crop",
+      badge: "Popular"
+    },
+    {
+      destination: "Goa",
+      title: "Goa Beach Paradise",
+      region: "Goa, India",
+      days: "05 Days/04 Nights", 
+      price: 349,
+      image: "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?q=80&w=1600&auto=format&fit=crop"
+    },
+    {
+      destination: "Kerala (Munnar & Alleppey)",
+      title: "Kerala Backwaters",
+      region: "Kerala, India",
+      days: "06 Days/05 Nights",
+      price: 399,
+      image: "https://media.istockphoto.com/id/472909442/photo/backwaters-of-kerala.jpg?s=2048x2048&w=is&k=20&c=ruTvmL4tcs9TlSvAmrWGQYJY-xYfnGuMOrCup0VRpwU="
+    },
+    {
+      destination: "Ladakh, Jammu & Kashmir",
+      title: "Ladakh Adventure",
+      region: "Jammu & Kashmir, India", 
+      days: "07 Days/06 Nights",
+      price: 499,
+      image: "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?q=80&w=1600&auto=format&fit=crop",
+      badge: "Adventure"
+    }
+  ];
+
   useEffect(() => {
     // No extra JS needed for pan-zoom hover; handled per-card.
   }, []);
@@ -171,8 +255,8 @@ export default function PopularPackages() {
       
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-8 md:mb-12">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900">Popular Package</h2>
-          <p className="mt-3 text-slate-600 max-w-2xl mx-auto">A curated list of the most popular travel packages based on different destinations.</p>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900">Popular Indian Destinations</h2>
+          <p className="mt-3 text-slate-600 max-w-2xl mx-auto">Explore the most visited and beautiful places in India with our curated packages.</p>
         </div>
 
         <Swiper
@@ -188,21 +272,19 @@ export default function PopularPackages() {
           }}
           className="pb-10"
         >
-          <SwiperSlide>
-            <Card image="https://images.unsplash.com/photo-1537996194471-e657df975ab4?q=80&w=1600&auto=format&fit=crop" title="Backwaters & Beaches" region="Kerala, India" days="03 Days/02 Nights" price={199} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Card image="https://images.unsplash.com/photo-1537996194471-e657df975ab4?q=80&w=1600&auto=format&fit=crop" title="Norway Northern Lights" region="Norway" days="07 Days" price={89} badge="Hot Sale!" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Card image="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?q=80&w=1600&auto=format&fit=crop" title="Rome, Florence & Venice" region="Europe" days="03 Days/02 Nights" price={49} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Card image="https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?q=80&w=1600&auto=format&fit=crop" title="Bali Adventure" region="Indonesia" days="05 Days" price={129} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Card image="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1600&auto=format&fit=crop" title="Swiss Alps Escape" region="Switzerland" days="06 Days" price={239} />
-          </SwiperSlide>
+          {packages.map((pkg, index) => (
+            <SwiperSlide key={index}>
+              <Card 
+                image={pkg.image}
+                title={pkg.title}
+                region={pkg.region}
+                days={pkg.days}
+                price={pkg.price}
+                badge={pkg.badge}
+                destination={pkg.destination}
+              />
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
     </section>

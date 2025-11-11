@@ -2,10 +2,23 @@ import React from 'react'
 
 export default function Blog() {
   const posts = [
-    { title: 'Best time to visit Kerala', text: 'Weather, seasons, and festivals to plan your perfect trip.', img: '/assets/images/blog/blog1.jpg' },
-    { title: 'Goa beyond beaches', text: 'Hidden gems, spice farms, and local cuisine.', img: '/assets/images/blog/blog2.jpg' },
-    { title: 'Packing for the Himalayas', text: 'Essentials for high-altitude adventures.', img: '/assets/images/blog/blog3.jpg' },
-  ]
+  { 
+    title: 'Best time to visit Kerala', 
+    text: 'Weather, seasons, and festivals to plan your perfect trip.', 
+    img: 'https://media.istockphoto.com/id/472909442/photo/backwaters-of-kerala.jpg?s=2048x2048&w=is&k=20&c=ruTvmL4tcs9TlSvAmrWGQYJY-xYfnGuMOrCup0VRpwU=' 
+  },
+  { 
+    title: 'Goa beyond beaches', 
+    text: 'Hidden gems, spice farms, and local cuisine.', 
+    img: 'https://images.unsplash.com/photo-1614082242765-7c98ca0f3df3?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Z29hfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=600' 
+  },
+  { 
+    title: 'Packing for the Himalayas', 
+    text: 'Essentials for high-altitude adventures.', 
+    img: 'https://images.unsplash.com/photo-1662448747251-d3c79fdb7875?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGhpbWFsYXlzfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=600' 
+  },
+];
+
    return (
     <section id="blog" className="py-14 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4">

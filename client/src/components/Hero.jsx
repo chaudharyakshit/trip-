@@ -198,7 +198,7 @@ export default function Hero() {
       {/* Foreground content */}
       <div className="foreground-content">
         <div className="content-wrapper">
-          <div className="text-content">
+          {/* <div className="text-content">
             <h1 className="main-heading">
               Plan Your Trip,
               <br />
@@ -207,7 +207,7 @@ export default function Hero() {
             <p className="sub-heading">
               Perfect for customized travel experiences—tailored flights, stays, and tours just for you.
             </p>
-          </div>
+          </div> */}
 
           {/* Search panel (reveals after scroll) */}
           <div className={`search-panel-container ${showPanel ? 'visible' : 'hidden'}`}>

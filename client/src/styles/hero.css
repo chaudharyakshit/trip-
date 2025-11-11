@@ -181,7 +181,7 @@
 .search-panel-container {
   position: absolute;
   left: 50%;
-  bottom: -140px; /* Further outside */
+  bottom: 50px; /* Further outside */
   transform: translate(-50%, 0);
   width: 100%;
   padding: 0 20px;

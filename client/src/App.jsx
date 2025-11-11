@@ -17,6 +17,33 @@ import Gallery from './components/Gallery.jsx'
 import TrustedCompanies from './components/TrustedCompanies.jsx'
 import InnerPage1 from './pages/inner-page1.jsx'
 
+// Import all destination pages
+import JaipurPage from './pages/destinations/JaipurPage.jsx'
+import AgraPage from './pages/destinations/AgraPage.jsx'
+import GoaPage from './pages/destinations/GoaPage.jsx'
+import KeralaPage from './pages/destinations/KeralaPage.jsx'
+import DelhiPage from './pages/destinations/DelhiPage.jsx'
+import MumbaiPage from './pages/destinations/MumbaiPage.jsx'
+import UdaipurPage from './pages/destinations/UdaipurPage.jsx'
+import VaranasiPage from './pages/destinations/VaranasiPage.jsx'
+// import RishikeshPage from './pages/destinations/RishikeshPage.jsx'
+// import ShimlaPage from './pages/destinations/ShimlaPage.jsx'
+// import LadakhPage from './pages/destinations/LadakhPage.jsx'
+// import DarjeelingPage from './pages/destinations/DarjeelingPage.jsx'
+// import AmritsarPage from './pages/destinations/AmritsarPage.jsx'
+// import HampiPage from './pages/destinations/HampiPage.jsx'
+// import MysorePage from './pages/destinations/MysorePage.jsx'
+// import CoorgPage from './pages/destinations/CoorgPage.jsx'
+// import KhajurahoPage from './pages/destinations/KhajurahoPage.jsx'
+// import KonarkPage from './pages/destinations/KonarkPage.jsx'
+// import KutchPage from './pages/destinations/KutchPage.jsx'
+// import SikkimPage from './pages/destinations/SikkimPage.jsx'
+// import PushkarPage from './pages/destinations/PushkarPage.jsx'
+// import MahabalipuramPage from './pages/destinations/MahabalipuramPage.jsx'
+// import AjantaElloraPage from './pages/destinations/AjantaElloraPage.jsx'
+// import PunePage from './pages/destinations/PunePage.jsx'
+// import AuliPage from './pages/destinations/AuliPage.jsx'
+
 function HomePage() {
   return (
     <>
@@ -46,7 +73,33 @@ function App() {
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/inner-page1" element={<InnerPage1 />} />
-      {/* Add more routes as needed */}
+      
+      {/* Destination Routes */}
+      <Route path="/destination/jaipur" element={<JaipurPage />} />
+      <Route path="/destination/agra" element={<AgraPage />} />
+      <Route path="/destination/goa" element={<GoaPage />} />
+      <Route path="/destination/kerala" element={<KeralaPage />} />
+      <Route path="/destination/delhi" element={<DelhiPage />} />
+      <Route path="/destination/mumbai" element={<MumbaiPage />} />
+      <Route path="/destination/udaipur" element={<UdaipurPage />} />
+      <Route path="/destination/varanasi" element={<VaranasiPage />} />
+      {/* // <Route path="/destination/rishikesh" element={<RishikeshPage />} />
+      // <Route path="/destination/shimla" element={<ShimlaPage />} />
+      // <Route path="/destination/ladakh" element={<LadakhPage />} />
+      // <Route path="/destination/darjeeling" element={<DarjeelingPage />} />
+      // <Route path="/destination/amritsar" element={<AmritsarPage />} />
+      // <Route path="/destination/hampi" element={<HampiPage />} />
+      // <Route path="/destination/mysore" element={<MysorePage />} />
+      // <Route path="/destination/coorg" element={<CoorgPage />} />
+      // <Route path="/destination/khajuraho" element={<KhajurahoPage />} />
+      // <Route path="/destination/konark" element={<KonarkPage />} />
+      // <Route path="/destination/kutch" element={<KutchPage />} />
+      // <Route path="/destination/sikkim" element={<SikkimPage />} />
+      // <Route path="/destination/pushkar" element={<PushkarPage />} />
+      // <Route path="/destination/mahabalipuram" element={<MahabalipuramPage />} />
+      // <Route path="/destination/ajanta-ellora" element={<AjantaElloraPage />} />
+      // <Route path="/destination/pune" element={<PunePage />} />
+      // <Route path="/destination/auli" element={<AuliPage />} />  */}
     </Routes>
   )
 }
