@@ -44,6 +44,12 @@ import VaranasiPage from './pages/destinations/VaranasiPage.jsx'
 // import PunePage from './pages/destinations/PunePage.jsx'
 // import AuliPage from './pages/destinations/AuliPage.jsx'
 
+//import all packages 
+
+import JaipurPackage from './pages/packages/jaipur.jsx'
+import DelhiPackage from './pages/packages/delhi.jsx'
+import DehradunPackage from './pages/packages/dehradun.jsx'
+
 function HomePage() {
   return (
     <>
@@ -100,6 +106,12 @@ function App() {
       // <Route path="/destination/ajanta-ellora" element={<AjantaElloraPage />} />
       // <Route path="/destination/pune" element={<PunePage />} />
       // <Route path="/destination/auli" element={<AuliPage />} />  */}
+
+
+      // Package Routes
+      <Route path="/packages/jaipur" element={<JaipurPackage />} />
+      <Route path="/packages/delhi" element={<DelhiPackage />} />
+      <Route path="/packages/dehradun" element={<DehradunPackage />} />
     </Routes>
   )
 }

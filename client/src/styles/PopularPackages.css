@@ -167,6 +167,8 @@
   animation: backgroundMove 20s linear infinite;
 }
 
+
+
 @keyframes backgroundMove {
   0% {
     background-position: 0 0;
@@ -186,3 +188,4 @@
     font-size: 2rem;
   }
 }
+

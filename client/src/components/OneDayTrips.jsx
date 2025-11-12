@@ -3,10 +3,10 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, Pagination } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/pagination'
+import { useNavigate } from 'react-router-dom'
 
-
-const Card = ({ image, title, region, days, price, badge }) => (
-  <div className="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden">
+const Card = ({ image, title, region, days, price, badge, onClick }) => (
+  <div className="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden cursor-pointer" onClick={onClick}>
     <div className="relative group">
       <img src={image} alt={title} className="w-full h-56 object-cover" />
       {/* Mirror open hover effect */}
@@ -33,7 +33,7 @@ const Card = ({ image, title, region, days, price, badge }) => (
         </span>
       </div>
       <div className="flex items-center justify-between">
-        <button className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-white bg-[color:rgb(var(--brand-secondary))] hover:brightness-110 font-semibold shadow">
+        <button className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-white bg-blue-600 hover:bg-blue-700 font-semibold shadow transition-colors">
           Book Now
           <svg className="w-4 h-4" viewBox="0 0 20 20" fill="currentColor"><path d="M10.75 3.75a.75.75 0 0 0-1.5 0v5.5H3.75a.75.75 0 0 0 0 1.5h5.5v5.5a.75.75 0 0 0 1.5 0v-5.5h5.5a.75.75 0 0 0 0-1.5h-5.5v-5.5Z"/></svg>
         </button>
@@ -51,14 +51,69 @@ const Card = ({ image, title, region, days, price, badge }) => (
 )
 
 export default function PopularPackages() {
+  const navigate = useNavigate();
+
+  const packages = [
+    {
+      id: 'delhi',
+      image: "https://images.unsplash.com/photo-1587474260584-136574528ed5?q=80&w=1600&auto=format&fit=crop",
+      title: "Historic Delhi Tour",
+      region: "Delhi, India",
+      days: "02 Days/01 Night",
+      price: 99,
+      badge: "Popular"
+    },
+    {
+      id: 'mumbai',
+      image: "https://images.unsplash.com/photo-1562976540-1502c2145186?q=80&w=1600&auto=format&fit=crop",
+      title: "Mumbai City Experience",
+      region: "Mumbai, India",
+      days: "03 Days/02 Nights",
+      price: 149,
+      badge: "Bestseller"
+    },
+    {
+      id: 'agra',
+      image: "https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&w=1600&auto=format&fit=crop",
+      title: "Taj Mahal Special",
+      region: "Agra, India",
+      days: "01 Day Tour",
+      price: 79,
+      badge: "Must Visit"
+    },
+    {
+      id: 'jaipur',
+      image: "https://s7ap1.scene7.com/is/image/incredibleindia/hawa-mahal-jaipur-rajasthan-city-1-hero?qlt=82&ts=1742200253577",
+      title: "Pink City Heritage",
+      region: "Jaipur, India",
+      days: "02 Days/01 Night",
+      price: 119,
+      badge: "Cultural"
+    },
+    {
+      id: 'dehradun',
+      image: "https://s7ap1.scene7.com/is/image/incredibleindia/mountains-dehradun-uttrakhand-city-1-hero?qlt=82&ts=1742155351343",
+      title: "Dehradun Hill Station",
+      region: "Dehradun, India",
+      days: "03 Days/02 Nights",
+      price: 139,
+      badge: "Nature"
+    }
+  ];
+
+  const handleCardClick = (packageId) => {
+    // Navigate to individual package page using React Router
+    navigate(`/packages/${packageId}`);
+  };
+
   return (
     <section className="relative py-14 md:py-20 bg-[radial-gradient(1200px_600px_at_50%_-200px,rgba(43,123,185,0.15),transparent_60%)]">
       {/* Background elements */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
         {/* Left parachute */}
         <div className="absolute left-0 top-1/4 animate-bounce">
-  <img src="../assets/parachute.svg" alt="Parachute" className="w-24 h-24" />
-</div>
+          <img src="/assets/parachute.svg" alt="Parachute" className="w-24 h-24" />
+        </div>
         
         {/* Right rotating circle */}
         <div className="absolute right-0 top-1/3 animate-spin">
@@ -80,7 +135,7 @@ export default function PopularPackages() {
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-8 md:mb-12">
           <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900">One Day Trips</h2>
-          <p className="mt-3 text-slate-600 max-w-2xl mx-auto">A curated list of the most popular travel packages based on different destinations.</p>
+          <p className="mt-3 text-slate-600 max-w-2xl mx-auto">Explore the rich cultural heritage and breathtaking landscapes of India's most iconic destinations.</p>
         </div>
 
         <Swiper
@@ -96,21 +151,19 @@ export default function PopularPackages() {
           }}
           className="pb-10"
         >
-          <SwiperSlide>
-            <Card image="https://images.unsplash.com/photo-1537996194471-e657df975ab4?q=80&w=1600&auto=format&fit=crop" title="Backwaters & Beaches" region="Kerala, India" days="03 Days/02 Nights" price={199} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Card image="https://images.unsplash.com/photo-1537996194471-e657df975ab4?q=80&w=1600&auto=format&fit=crop" title="Norway Northern Lights" region="Norway" days="07 Days" price={89} badge="Hot Sale!" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Card image="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?q=80&w=1600&auto=format&fit=crop" title="Rome, Florence & Venice" region="Europe" days="03 Days/02 Nights" price={49} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Card image="https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?q=80&w=1600&auto=format&fit=crop" title="Bali Adventure" region="Indonesia" days="05 Days" price={129} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Card image="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1600&auto=format&fit=crop" title="Swiss Alps Escape" region="Switzerland" days="06 Days" price={239} />
-          </SwiperSlide>
+          {packages.map((pkg) => (
+            <SwiperSlide key={pkg.id}>
+              <Card 
+                image={pkg.image}
+                title={pkg.title}
+                region={pkg.region}
+                days={pkg.days}
+                price={pkg.price}
+                badge={pkg.badge}
+                onClick={() => handleCardClick(pkg.id)}
+              />
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
     </section>
