@@ -153,7 +153,7 @@
 /* Background line animation */
 .packages-container::before {
   content: '';
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -162,8 +162,8 @@
     linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
     linear-gradient(#eee .1em, transparent .1em);
   background-size: 100% 1.2em;
-  z-index: -1;
-  opacity: 0.1;
+  z-index: -0;
+  opacity: 0.15;
   animation: backgroundMove 20s linear infinite;
 }
 

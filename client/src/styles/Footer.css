@@ -1,6 +1,9 @@
 .footer {
-  background-image: url(../../public/assets/images/footer-image.png), linear-gradient(180deg, #110F0F 0%, #110F0F 100%);
-  color: #333;
+  background-image: url(/assets/images/bg.png), linear-gradient(180deg, rgba(17, 15, 15, 0.85) 0%, rgba(17, 15, 15, 0.85) 100%);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #ffffff;
   padding: 40px 0 20px;
   font-family: 'Arial', sans-serif;
   border-top: 1px solid #e9ecef;
@@ -16,7 +19,7 @@
 }
 
 .footer-section h3.footer-title {
-  color: #2c3e50;
+  color: #ffffff;
   font-size: 18px;
   margin-bottom: 20px;
   position: relative;
@@ -36,6 +39,7 @@
 .footer-text {
   margin-bottom: 15px;
   line-height: 1.6;
+  color: #e0e0e0;
 }
 
 .contact-info {
@@ -65,6 +69,7 @@
   margin-bottom: 10px;
   cursor: pointer;
   transition: color 0.3s, padding-left 0.3s;
+  color: #cccccc;
 }
 
 .footer-list li:hover {
@@ -88,14 +93,14 @@
 }
 
 .footer-address h4 {
-  color: #2c3e50;
+  color: #ffffff;
   margin-bottom: 10px;
   font-size: 18px;
 }
 
 .footer-address p {
   margin: 5px 0;
-  color: #666;
+  color: #cccccc;
 }
 
 .social-links {
@@ -124,7 +129,7 @@
 }
 
 .footer-copyright {
-  color: #666;
+  color: #aaaaaa;
   font-size: 14px;
 }
 

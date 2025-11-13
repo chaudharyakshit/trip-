@@ -1,5 +1,11 @@
 .testimonials {
-  background: #f9fbff;
+  /* Background image with slight dark overlay for contrast */
+  background-image: linear-gradient(rgba(118,179,219, 0.8), rgba(130,154,208, 0.8)), url('/assets/images/testenomial bg.png');
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #305b5f;
   text-align: center;
   padding: 80px 20px;
   font-family: "Poppins", sans-serif;
@@ -8,11 +14,11 @@
 .heading {
   font-size: 2rem;
   font-weight: 700;
-  color: #222;
+  color: #ffffff;
 }
 
 .subheading {
-  color: #555;
+  color: rgba(255,255,255,0.9);
   margin: 10px auto 40px;
   max-width: 600px;
 }
@@ -39,14 +45,15 @@
 }
 
 .rating-stars {
-  color: #ffa500;
+  color: #ffc107;
   font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  gap: 4px;
 }
 
 .card h3 {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-top: 10px;
+  display: none;
 }
 
 .card p {
@@ -69,22 +76,20 @@
 }
 
 .profile h4 {
-  margin: 0;
-  font-size: 1rem;
-  font-weight: 600;
+  display: none;
 }
 
-.profile p {
-  margin: 0;
-  font-size: 0.85rem;
-  color: #777;
+.profile span {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 500;
 }
 
 /* Reviews Section */
 .reviews {
   display: flex;
   justify-content: center;
-  gap: 80px;
+  gap: 60px;
   margin-top: 30px;
 }
 
@@ -93,13 +98,36 @@
 }
 
 .platform {
-  font-weight: 600;
+  font-weight: 700;
   color: #0077ff;
+  font-size: 0.95rem;
+  margin-bottom: 5px;
 }
 
-.stars {
-  color: #ffa500;
-  font-weight: bold;
+.stars-rating {
+  display: flex;
+  justify-content: center;
+  gap: 2px;
+  color: #ffc107;
+  font-size: 1rem;
+  margin-bottom: 3px;
+}
+
+.half-star {
+  font-size: 0.8rem;
+}
+
+.rating-value {
+  font-weight: 700;
+  font-size: 1rem;
+  margin: 3px 0;
+  color: #ffffff;
+}
+
+.review-count {
+  font-size: 0.85rem;
+  color: #ffffff;
+  margin: 0;
 }
 
 /* Stats Section */
@@ -108,11 +136,13 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 40px;
-  background: linear-gradient(135deg, #0077ff, #00aaff);
-  color: white;
+  background: #fff;
+color: #305b5f;
   margin-top: 60px;
   padding: 40px 20px;
   border-radius: 20px;
+}.stats-section {
+  margin: 40px 30px 0 30px;
 }
 
 .stat {

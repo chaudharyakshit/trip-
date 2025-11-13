@@ -195,8 +195,29 @@ export default function TopDestinations() {
   ];
 
   return (
-    <section id="destinations" className="py-14 md:py-20 bg-gradient-to-br from-slate-50 to-blue-50">
-      <div className="max-w-7xl mx-auto px-4">
+    <section id="destinations" className="py-14 md:py-20 relative overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src="/assets/images/bg4.png" 
+          alt="background" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/90 to-white/95"></div>
+      </div>
+
+      {/* Decorative SVGs */}
+      <div className="absolute top-10 left-10 z-10 opacity-30 animate-pulse">
+        <img src="/assets/parachute.svg" alt="decoration" className="w-24 h-24" />
+      </div>
+      <div className="absolute bottom-20 right-12 z-10 opacity-25 animate-bounce" style={{animationDelay: '0.5s'}}>
+        <img src="/assets/images/ring.svg" alt="decoration" className="w-32 h-32" />
+      </div>
+      <div className="absolute top-1/2 right-20 z-10 opacity-20">
+        <img src="/assets/images/passport.svg" alt="decoration" className="w-28 h-28" />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 relative z-20">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">Top Indian Destinations</h2>
           <p className="text-slate-600 max-w-2xl mx-auto text-lg">

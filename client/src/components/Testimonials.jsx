@@ -33,59 +33,44 @@ const Testimonials = () => {
 
       <div className="testimonial-cards">
         <div className="card">
-          <div className="rating-stars">⭐⭐⭐⭐⭐</div>
-          <h3>Great Experience!</h3>
+          <div className="rating-stars"><FaStar /><FaStar /><FaStar /><FaStar /><FaStar /></div>
           <p>
-            Thanks to their expert planning, our Dubai vacation was seamless.
-            Every detail was handled with care.
+            Thanks to their expert planning, our Dubai vacation was seamless. Every detail was handled with care.
           </p>
           <div className="profile">
             <img
               src="https://randomuser.me/api/portraits/women/44.jpg"
-              alt="Selina"
+              alt="Dimple"
             />
-            <div>
-              <h4>Selina Henry</h4>
-              <p>GoFly Traveler</p>
-            </div>
+            <span>Dimple</span>
           </div>
         </div>
 
         <div className="card">
-          <div className="rating-stars">⭐⭐⭐⭐⭐</div>
-          <h3>Great Visitors Venue!</h3>
+          <div className="rating-stars"><FaStar /><FaStar /><FaStar /><FaStar /><FaStar /></div>
           <p>
-            We had an incredible Europe tour! The itinerary, bookings, and
-            support were all professionally managed.
+            We had an incredible Europe tour! The itinerary, bookings, and support were all professionally managed.
           </p>
           <div className="profile">
             <img
               src="https://randomuser.me/api/portraits/men/45.jpg"
-              alt="Michael"
+              alt="vinay"
             />
-            <div>
-              <h4>Michael D Linda</h4>
-              <p>GoFly Traveler</p>
-            </div>
+            <span>vinay</span>
           </div>
         </div>
 
         <div className="card">
-          <div className="rating-stars">⭐⭐⭐⭐⭐</div>
-          <h3>Fantastic Service!</h3>
+          <div className="rating-stars"><FaStar /><FaStar /><FaStar /><FaStar /><FaStar /></div>
           <p>
-            Our trip to Bali was unforgettable! Everything was perfectly
-            organized by the agency from start to finish.
+            Our trip to Bali was unforgettable! Everything was perfectly organized by the agency from start to finish.
           </p>
           <div className="profile">
             <img
               src="https://randomuser.me/api/portraits/men/33.jpg"
-              alt="Amber"
+              alt="Akshit"
             />
-            <div>
-              <h4>Amber Lashley</h4>
-              <p>GoFly Traveler</p>
-            </div>
+            <span>Akshit</span>
           </div>
         </div>
       </div>
@@ -93,30 +78,38 @@ const Testimonials = () => {
       <div className="reviews">
         <div className="review-item">
           <p className="platform">Trustpilot</p>
-          <p className="stars">4.5 ⭐⭐⭐⭐☆</p>
-          <p>(2K reviews)</p>
+          <div className="stars-rating">
+            <FaStar /><FaStar /><FaStar /><FaStar />
+            <span className="half-star">☆</span>
+          </div>
+          <p className="rating-value">4.5</p>
+          <p className="review-count">(2K reviews)</p>
         </div>
         <div className="review-item">
           <p className="platform">Tripadvisor</p>
-          <p className="stars">4.5 ⭐⭐⭐⭐☆</p>
-          <p>Reviews</p>
+          <div className="stars-rating">
+            <FaStar /><FaStar /><FaStar /><FaStar />
+            <span className="half-star">☆</span>
+          </div>
+          <p className="rating-value">4.5</p>
+          <p className="review-count">Reviews</p>
         </div>
       </div>
 
       <div className="stats-section">
         <div className="stat">
           <FaGlobe className="icon" />
-          <h3>{count.tour}K+</h3>
+          <h3>100K+</h3>
           <p>Tour Completed</p>
         </div>
         <div className="stat">
           <FaUserFriends className="icon" />
-          <h3>{count.experience}+</h3>
+          <h3>100+</h3>
           <p>Travel Experience</p>
         </div>
         <div className="stat">
           <FaSmile className="icon" />
-          <h3>{count.happy}+</h3>
+          <h3>100+</h3>
           <p>Happy Traveler</p>
         </div>
         <div className="stat">

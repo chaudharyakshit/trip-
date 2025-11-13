@@ -77,20 +77,14 @@ const Footer = () => {
         </div>
         
         <div className="social-links">
-          <a href="#" aria-label="Facebook">
+          <a href="https://www.facebook.com/share/17fuQ8xYnP/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
             <i className="fab fa-facebook-f"></i>
           </a>
-          <a href="#" aria-label="Twitter">
-            <i className="fab fa-twitter"></i>
-          </a>
-          <a href="#" aria-label="Instagram">
+          <a href="https://www.instagram.com/indiasgotrip/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
             <i className="fab fa-instagram"></i>
           </a>
-          <a href="#" aria-label="LinkedIn">
+          <a href="https://www.linkedin.com/company/indiasgo1/?viewAsMember=true" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <i className="fab fa-linkedin-in"></i>
-          </a>
-          <a href="#" aria-label="YouTube">
-            <i className="fab fa-youtube"></i>
           </a>
         </div>
         

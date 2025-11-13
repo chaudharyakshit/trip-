@@ -58,42 +58,48 @@ export default function PopularPackages() {
 
   return (
     <section className="relative py-20 overflow-hidden">
-      {/* === Animated Background === */}
-      <div className="absolute inset-0 -z-10 overflow-hidden bg-gradient-to-b from-blue-50 via-white to-blue-100">
-        {/* Subtle grid lines */}
-        <div className="absolute inset-0 opacity-[0.05] animate-[bgScroll_25s_linear_infinite] bg-[linear-gradient(90deg,transparent_95%,#3B82F6_95%),linear-gradient(transparent_95%,#3B82F6_95%)] bg-[size:30px_30px]" />
-
-        {/* Floating Plane */}
-        <img
-          src="https://cdn-icons-png.flaticon.com/512/869/869636.png"
-          alt="plane"
-          className="absolute top-12 left-10 w-12 h-12 opacity-60 animate-[floatSlow_8s_ease-in-out_infinite]"
+      {/* === Background Image with Strong Overlay === */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src="/assets/images/bg4.png" 
+          alt="background" 
+          className="w-full h-full object-cover brightness-110 saturate-125"
         />
+        <div className="absolute inset-0 z-0 bg-gradient-to-br from-[#b3d9ff]/60 via-[#d9ecff]/50 to-[#ffffff]/50"></div>
 
-        {/* Palm Tree */}
-        <img
-          src="https://cdn-icons-png.flaticon.com/512/854/854878.png"
-          alt="palm"
-          className="absolute bottom-20 left-1/4 w-16 h-16 opacity-40 animate-[sway_7s_ease-in-out_infinite]"
+      </div>
+
+      {/* === Decorative SVGs with High Visibility === */}
+      {/* Parachute - Top Left */}
+      <div className="absolute top-8 left-6 z-10">
+        <img 
+          src="/assets/parachute.svg" 
+          alt="parachute" 
+          className="w-40 h-40 opacity-85 drop-shadow-2xl animate-float"
         />
+      </div>
 
-        {/* Hot Air Balloon */}
-        <img
-          src="https://cdn-icons-png.flaticon.com/512/869/869869.png"
-          alt="balloon"
-          className="absolute top-1/3 right-20 w-14 h-14 opacity-50 animate-[floatSlow_9s_ease-in-out_infinite]"
+      {/* Ring/Lifebuoy - Bottom Right */}
+      <div className="absolute bottom-10 left-9 z-30">
+
+        <img 
+          src="/assets/images/ring.svg" 
+          alt="ring" 
+          className="w-30 h-30 opacity-90 drop-shadow-2xl animate-bounce-slow"
         />
+      </div>
 
-        {/* Compass */}
-        <img
-          src="https://cdn-icons-png.flaticon.com/512/201/201623.png"
-          alt="compass"
-          className="absolute bottom-10 right-10 w-20 h-20 opacity-30 animate-[rotateSlow_40s_linear_infinite]"
+      {/* Passport - Top Right */}
+      <div className="absolute top-16 right-12 z-10">
+        <img 
+          src="/assets/images/passport.svg" 
+          alt="passport" 
+          className="w-36 h-36 opacity-75 drop-shadow-2xl animate-pulse"
         />
       </div>
 
       {/* === Section Content === */}
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4 relative z-20">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
             Popular Indian Destinations
@@ -152,7 +158,7 @@ export default function PopularPackages() {
         </Swiper>
       </div>
 
-      {/* === Tailwind Animations === */}
+      {/* === Custom Animations === */}
       <style jsx>{`
         @keyframes floatSlow {
           0%, 100% {
@@ -185,6 +191,12 @@ export default function PopularPackages() {
           100% {
             background-position: 0 200%;
           }
+        }
+        .animate-float {
+          animation: floatSlow 6s ease-in-out infinite;
+        }
+        .animate-bounce-slow {
+          animation: bounce 3s ease-in-out infinite;
         }
       `}</style>
     </section>
