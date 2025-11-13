@@ -40,30 +40,25 @@
 
 .bg-plane, .bg-parachute {
   position: absolute;
-  opacity:0.2;
+  opacity:0.5;
   fill: #ff6b35; /* Orange color */
 }
 
 .bg-plane-1 {
   top: 20%;
   left: 5%;
-  width: 60px;
-  animation: float 8s ease-in-out infinite;
+  width: 80px;
+  animation: float 3s ease-in-out infinite;
 }
 
 .bg-plane-2 {
-  bottom: 25%;
+  bottom: 15%;
   right: 8%;
   width: 80px;
-  animation: float 10s ease-in-out infinite reverse;
+  animation: float 3s ease-in-out infinite reverse;
 }
 
-.bg-parachute-1 {
-  top: 60%;
-  left: -1w;
-  width: 50px;
-  animation: float 12s ease-in-out infinite 1s;
-}
+
 
 @keyframes float {
   0%, 100% { transform: translateY(0) rotate(0deg); }
@@ -131,31 +126,28 @@
   z-index: -1;
   opacity: 0;
   transition: opacity 0.3s ease;
-}
+} 
 
-.logo-circle:hover {
+ .logo-circle:hover {
   transform: translateY(-5px) scale(1.05);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-}
+} 
 
-.logo-circle:hover::before {
-  opacity: 1;
-}
 
 .logo-circle img {
   width: 80px;
-  height: 80px;
+  height: 90px;
   object-fit: contain;
-  filter: grayscale(100%);
+  /* filter: grayscale(100%); */
   opacity: 0.8;
   transition: all 0.3s ease;
 }
 
-.logo-circle:hover img {
+/* .logo-circle:hover img {
   filter: grayscale(0%);
   opacity: 1;
   transform: scale(1.1);
-}
+} */
 
 /* Smooth Scroll Animation */
 @keyframes scroll {

@@ -1,23 +1,23 @@
-// pages/destinations/MumbaiPage.jsx
+// pages/destinations/AgraPage.jsx
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../../components/Navbar.jsx";
 import CursorFX from "../../components/CursorFX.jsx";
 
-const MumbaiPackage = () => {
+const AgraPackage = () => {
   const slides = [
-     "../../../public/assets/packages-images/mumbai-1.png",
-    "../../../public/assets/packages-images/mumbai-2.png",
-    "../../../public/assets/packages-images/mumbai-3.png",
+    "../../../public/assets/packages-images/agra1.png",
+    "../../../public/assets/packages-images/agra2.png",
+    "../../../public/assets/packages-images/agra3.png",
   ];
 
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
-    const slideTimer = setInterval(() => {
+    const timer = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
     }, 3000);
-    return () => clearInterval(slideTimer);
+    return () => clearInterval(timer);
   }, [slides.length]);
 
   return (
@@ -26,6 +26,7 @@ const MumbaiPackage = () => {
       <Navbar />
 
       <div className="min-h-screen bg-gray-50 pt-0">
+        {/* HERO SECTION */}
         <section className="relative h-[500px] overflow-hidden">
           {slides.map((img, index) => (
             <div
@@ -34,67 +35,90 @@ const MumbaiPackage = () => {
                 index === current ? "opacity-100" : "opacity-0"
               }`}
             >
-              <img src={img} alt={`Mumbai ${index + 1}`} className="w-full h-full object-cover" />
+              <img
+                src={img}
+                alt={`Agra ${index + 1}`}
+                className="w-full h-full object-cover"
+              />
               <div className="absolute inset-0 bg-black bg-opacity-30"></div>
             </div>
           ))}
 
-          <div className="absolute inset-0 flex items-center justify-center text-center text-white z-10">
+          {/* Hero Text */}
+          <div className="absolute inset-0 flex items-center justify-center text-white text-center z-10">
             <div>
-              <h1 className="text-5xl font-bold mb-4 drop-shadow-lg">Mumbai, Maharashtra</h1>
-              <p className="text-xl drop-shadow-md">The City of Dreams — Where Culture Meets Coastline</p>
+              <h1 className="text-5xl font-bold mb-4 drop-shadow-lg">
+                Agra, Uttar Pradesh
+              </h1>
+              <p className="text-xl drop-shadow-md">
+                Home of the Majestic Taj Mahal
+              </p>
             </div>
           </div>
 
+          {/* Indicators */}
           <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex gap-2 z-20">
             {slides.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrent(index)}
-                className={`w-3 h-3 rounded-full ${index === current ? "bg-white" : "bg-gray-400"}`}
-              />
+                className={`w-3 h-3 rounded-full ${
+                  index === current ? "bg-white" : "bg-gray-400"
+                }`}
+              ></button>
             ))}
           </div>
         </section>
 
+        {/* CONTENT SECTION */}
         <section className="max-w-6xl mx-auto px-4 py-12">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {/* MAIN CONTENT */}
             <div className="lg:col-span-2">
               <div className="bg-white rounded-2xl shadow-lg p-8">
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">About Mumbai</h2>
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                  About Agra
+                </h2>
                 <p className="text-gray-700 mb-6">
-                  Mumbai, India’s financial capital, is known for its vibrant nightlife, colonial architecture,
-                  coastal charm, and Bollywood glamour. A city that never sleeps and welcomes everyone.
+                  Agra, located on the banks of the Yamuna River, is a city steeped in history and Mughal architecture. 
+                  It is most famous for the Taj Mahal, one of the Seven Wonders of the World, but also boasts incredible UNESCO sites 
+                  and vibrant culture.
                 </p>
 
                 <h3 className="text-2xl font-semibold mb-4">Highlights</h3>
                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
                   {[
-                    "Gateway of India - Iconic monument",
-                    "Marine Drive - Queen’s Necklace view",
-                    "Elephanta Caves - Ancient rock-cut temples",
-                    "Colaba Causeway - Shopping street",
-                    "Bandra-Worli Sea Link - Engineering marvel",
+                    "Taj Mahal — Symbol of eternal love",
+                    "Agra Fort — UNESCO World Heritage Fort",
+                    "Mehtab Bagh — Taj view sunset point",
+                    "Fatehpur Sikri — Historic Mughal capital",
+                    "Itimad-ud-Daulah — Baby Taj monument",
                   ].map((item, i) => (
                     <li key={i} className="flex items-center gap-3">
-                      <span className="w-2 h-2 bg-amber-500 rounded-full" />
+                      <span className="w-2 h-2 bg-amber-500 rounded-full"></span>
                       {item}
                     </li>
                   ))}
                 </ul>
 
-                <h3 className="text-2xl font-semibold mb-4">Best Time to Visit</h3>
-                <p className="text-gray-700 mb-6">November to February - Ideal weather for exploration</p>
+                <h3 className="text-2xl font-semibold mb-4">
+                  Best Time to Visit
+                </h3>
+                <p className="text-gray-700 mb-6">
+                  November to March — Perfect weather for exploring monuments
+                </p>
 
                 <h3 className="text-2xl font-semibold mb-4">Package Details</h3>
                 <div className="bg-amber-50 border border-amber-200 rounded-xl p-6">
                   <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                     <div>
-                      <h4 className="text-xl font-bold text-gray-900">Mumbai Explorer Package</h4>
-                      <p className="text-gray-700">03 Days / 02 Nights</p>
+                      <h4 className="text-xl font-bold text-gray-900">
+                        Agra Taj Mahal Tour
+                      </h4>
+                      <p className="text-gray-700">02 Days / 01 Night</p>
                     </div>
                     <div className="text-right">
-                      <div className="text-3xl font-bold text-amber-600">$279</div>
+                      <div className="text-3xl font-bold text-amber-600">$199</div>
                       <p className="text-gray-600 text-sm">per person</p>
                     </div>
                   </div>
@@ -111,33 +135,48 @@ const MumbaiPackage = () => {
               </div>
             </div>
 
+            {/* SIDEBAR */}
             <div className="space-y-6">
               <div className="bg-white rounded-2xl shadow-lg p-6">
                 <h3 className="text-xl font-bold mb-4">Quick Info</h3>
                 <div className="space-y-3">
                   <div className="flex justify-between">
                     <span className="text-gray-600">Pickup:</span>
-                    <span className="font-semibold">Mumbai Airport / Station</span>
+                    <span className="font-semibold">
+                      Agra Airport / Agra Cantt Station
+                    </span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-gray-600">Check-in:</span>
-                    <span className="font-semibold">Sea-facing Hotels / City Resorts</span>
+                    <span className="font-semibold">
+                      Luxury & Heritage Hotels
+                    </span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-gray-600">Duration:</span>
-                    <span className="font-semibold">3 Days</span>
+                    <span className="font-semibold">1–2 Days</span>
                   </div>
                 </div>
               </div>
 
+              {/* Continue Journey */}
               <div className="bg-white rounded-2xl shadow-lg p-6">
                 <h3 className="text-xl font-bold mb-4">Continue Your Journey</h3>
-                <Link to="/destination/dehradun" className="block bg-gray-100 hover:bg-gray-200 rounded-xl p-4 transition-colors">
+                <Link
+                  to="/destination/jaipur"
+                  className="block bg-gray-100 hover:bg-gray-200 rounded-xl p-4 transition-colors"
+                >
                   <div className="flex items-center gap-4">
-                    <img src="/assets/packages-images/dehradun1.png" alt="Dehradun" className="w-16 h-16 rounded-lg object-cover" />
+                    <img
+                      src="/assets/packages-images/jaipur1.png"
+                      alt="Jaipur"
+                      className="w-16 h-16 rounded-lg object-cover"
+                    />
                     <div>
-                      <h4 className="font-semibold">Dehradun, Uttarakhand</h4>
-                      <p className="text-sm text-gray-600">Gateway to the Himalayas</p>
+                      <h4 className="font-semibold">Jaipur, Rajasthan</h4>
+                      <p className="text-sm text-gray-600">
+                        Royal Heritage Experience
+                      </p>
                     </div>
                   </div>
                 </Link>
@@ -150,4 +189,4 @@ const MumbaiPackage = () => {
   );
 };
 
-export default MumbaiPackage;
+export default AgraPackage;

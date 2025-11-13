@@ -49,6 +49,8 @@ import VaranasiPage from './pages/destinations/VaranasiPage.jsx'
 import JaipurPackage from './pages/packages/jaipur.jsx'
 import DelhiPackage from './pages/packages/delhi.jsx'
 import DehradunPackage from './pages/packages/dehradun.jsx'
+import AgraPackage from './pages/packages/agra.jsx'
+import MumbaiPackage from './pages/packages/Mumbai.jsx' 
 
 function HomePage() {
   return (
@@ -112,6 +114,8 @@ function App() {
       <Route path="/packages/jaipur" element={<JaipurPackage />} />
       <Route path="/packages/delhi" element={<DelhiPackage />} />
       <Route path="/packages/dehradun" element={<DehradunPackage />} />
+      <Route path="/packages/agra" element={<AgraPackage />} />
+      <Route path="/packages/mumbai" element={<MumbaiPackage />} />
     </Routes>
   )
 }

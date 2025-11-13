@@ -1,5 +1,5 @@
 .footer {
-  background-color: #f8f9fa;
+  background-image: url(../../public/assets/images/footer-image.png), linear-gradient(180deg, #110F0F 0%, #110F0F 100%);
   color: #333;
   padding: 40px 0 20px;
   font-family: 'Arial', sans-serif;

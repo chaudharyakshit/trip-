@@ -56,7 +56,7 @@ export default function PopularPackages() {
   const packages = [
     {
       id: 'delhi',
-      image: "https://images.unsplash.com/photo-1587474260584-136574528ed5?q=80&w=1600&auto=format&fit=crop",
+      image: "../../../public/assets/card-images/Delhi.png",
       title: "Historic Delhi Tour",
       region: "Delhi, India",
       days: "02 Days/01 Night",
@@ -65,7 +65,7 @@ export default function PopularPackages() {
     },
     {
       id: 'mumbai',
-      image: "https://images.unsplash.com/photo-1562976540-1502c2145186?q=80&w=1600&auto=format&fit=crop",
+      image: "../../../public/assets/card-images/Mumbai.png",
       title: "Mumbai City Experience",
       region: "Mumbai, India",
       days: "03 Days/02 Nights",
@@ -74,7 +74,7 @@ export default function PopularPackages() {
     },
     {
       id: 'agra',
-      image: "https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&w=1600&auto=format&fit=crop",
+      image: "../../../public/assets/card-images/Agra.png",
       title: "Taj Mahal Special",
       region: "Agra, India",
       days: "01 Day Tour",
@@ -83,7 +83,7 @@ export default function PopularPackages() {
     },
     {
       id: 'jaipur',
-      image: "https://s7ap1.scene7.com/is/image/incredibleindia/hawa-mahal-jaipur-rajasthan-city-1-hero?qlt=82&ts=1742200253577",
+      image: "../../../public/assets/card-images/jaipur.png",
       title: "Pink City Heritage",
       region: "Jaipur, India",
       days: "02 Days/01 Night",

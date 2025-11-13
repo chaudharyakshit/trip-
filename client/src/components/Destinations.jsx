@@ -56,7 +56,7 @@ const DestinationCard = ({ image, title, tours }) => {
           draggable={false}
         />
       </div>
-      <div className="p-5 h-20 flex flex-col justify-center">
+      <div className="p h-20 flex flex-col justify-center">
         <h3 className="text-lg font-bold text-slate-900 mb-1">{title}</h3>
         <p className="text-slate-600 text-sm">Tours ({tours})</p>
       </div>
@@ -123,7 +123,7 @@ export default function TopDestinations() {
       tours: 10
     },
     {
-      image: "../../../assets/card-images/Darjeeling.png",
+      image: "../../../assets/card-images/darjeeling.png",
       title: "Darjeeling, West Bengal",
       tours: 12
     },
@@ -133,7 +133,7 @@ export default function TopDestinations() {
       tours: 14
     },
     {
-      image: "../../../assets/card-images/Hampi.png",
+      image: "../../../assets/card-images/Hampi,-Karnataka.png",
       title: "Hampi, Karnataka",
       tours: 9
     },
@@ -143,12 +143,12 @@ export default function TopDestinations() {
       tours: 11
     },
     {
-      image: "../../../assets/card-images/Coorg.png",
+      image: "../../../assets/card-images/Coorg,-Karnataka.png",
       title: "Coorg, Karnataka",
       tours: 8
     },
     {
-      image: "../../../assets/card-images/Khajuraho.png",
+      image: "../../../assets/card-images/Khajuraho,-Madhya-Pradesh.png",
       title: "Khajuraho, Madhya Pradesh",
       tours: 7
     },
@@ -158,7 +158,7 @@ export default function TopDestinations() {
       tours: 6
     },
     {
-      image: "../../../assets/card-images/Rann-Of-Kutch,-Gujarat.png",
+      image: "../../../assets/card-images/Rann.png",
       title: "Rann of Kutch, Gujarat",
       tours: 8
     },
@@ -178,17 +178,17 @@ export default function TopDestinations() {
       tours: 7
     },
     {
-      image: "../../../assets/card-images/Ajanta-& Ellora-Caves",
+      image: "../../../assets/card-images/Ajanta.png",
       title: "Ajanta & Ellora Caves",
       tours: 8
     },
     {
-      image: "https://images.unsplash.com/photo-1713761525604-45384322feae?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cHVuZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60",
+      image: "../../../assets/card-images/Pune,-Maharashtra.png",
       title: "Pune, Maharashtra",
       tours: 15
     },
     {
-      image: "https://images.unsplash.com/photo-1618661057370-7cf87dfad271?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXVsaXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60",
+      image: "../../../assets/card-images/Auli,-Uttarakhand.png",
       title: "Auli, Uttarakhand",
       tours: 6
     }
@@ -254,7 +254,7 @@ export default function TopDestinations() {
         {/* View All Button */}
         <div className="text-center mt-12">
           <button className="bg-slate-900 hover:bg-slate-800 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
-            View All 25 Destinations
+            View All Destinations
           </button>
         </div>
       </div>

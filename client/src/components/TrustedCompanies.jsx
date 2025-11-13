@@ -21,9 +21,9 @@ const TrustedCompanies = () => {
         <svg className="bg-plane bg-plane-2" viewBox="0 0 24 24">
           <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
         </svg>
-        <svg className="bg-parachute bg-parachute-1" viewBox="0 0 24 24">
+        {/* <svg className="bg-parachute bg-parachute-1" viewBox="0 0 24 24">
           <path d="M20 9c0 1.38-1.12 2.5-2.5 2.5S15 10.38 15 9s1.12-2.5 2.5-2.5S20 7.62 20 9zm-2.5-1c-.55 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1zm-8.5 1c0 1.38-1.12 2.5-2.5 2.5S4 10.38 4 9s1.12-2.5 2.5-2.5S9 7.62 9 9zm-2.5-1c-.55 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1zm4.5 6l-2-5-2 5h4z"/>
-        </svg>
+        </svg> */}
       </div>
 
       <h2>Trusted by Leading Travel Companies</h2>
