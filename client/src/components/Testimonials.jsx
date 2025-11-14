@@ -1,121 +1,184 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "../styles/testimonials.css";
 import { FaStar, FaUserFriends, FaSmile, FaGlobe } from "react-icons/fa";
 
 const Testimonials = () => {
-  const [count, setCount] = useState({ tour: 0, experience: 0, happy: 0 });
-
-  // Animate count-up when in view
-  useEffect(() => {
-    const handleScroll = () => {
-      const stats = document.querySelector(".stats-section");
-      const rect = stats.getBoundingClientRect();
-      if (rect.top < window.innerHeight && count.tour === 0) {
-        let i = 0;
-        const interval = setInterval(() => {
-          i += 1;
-          setCount({ tour: i, experience: i, happy: i });
-          if (i >= 100) clearInterval(interval);
-        }, 20);
-      }
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [count]);
-
   return (
-    <section id="testimonials" className="testimonials">
-      <h2 className="heading">Hear It from Travelers</h2>
-      <p className="subheading">
-        We go beyond just booking trips—we create unforgettable travel
-        experiences that match your dreams!
-      </p>
-
-      <div className="testimonial-cards">
-        <div className="card">
-          <div className="rating-stars"><FaStar /><FaStar /><FaStar /><FaStar /><FaStar /></div>
+    <section id="testimonials" className="testimonials-section">
+      <div className="testimonials-container">
+        <div className="testimonials-header">
+          <h2>Hear It from Travelers</h2>
           <p>
-            Thanks to their expert planning, our Dubai vacation was seamless. Every detail was handled with care.
+            We go beyond just booking trips -- we create unforgettable travel
+            experiences that match your dreams!
           </p>
-          <div className="profile">
-            <img
-              src="https://randomuser.me/api/portraits/women/44.jpg"
-              alt="Dimple"
-            />
-            <span>Dimple</span>
-          </div>
         </div>
 
-        <div className="card">
-          <div className="rating-stars"><FaStar /><FaStar /><FaStar /><FaStar /><FaStar /></div>
-          <p>
-            We had an incredible Europe tour! The itinerary, bookings, and support were all professionally managed.
-          </p>
-          <div className="profile">
-            <img
-              src="https://randomuser.me/api/portraits/men/45.jpg"
-              alt="vinay"
-            />
-            <span>vinay</span>
-          </div>
+        {/* Testimonial cards */}
+        <div className="testimonial-cards">
+          <article className="testimonial-card">
+            <div className="card-stars">
+              <FaStar />
+              <FaStar />
+              <FaStar />
+              <FaStar />
+              <FaStar />
+            </div>
+            <p className="card-text">
+              Thanks to their expert planning, our Dubai vacation was seamless.
+              Every detail was handled with care.
+            </p>
+            <div className="card-footer">
+              <img
+                src="https://randomuser.me/api/portraits/women/44.jpg"
+                alt="Dimple"
+                className="avatar"
+              />
+              <div>
+                <div className="name">Dimple</div>
+                <div className="role">GoFly Traveler</div>
+              </div>
+            </div>
+            <div className="card-rating-badge">
+              <span className="rating-brand">Trustpilot</span>
+              <div className="rating-stars">
+                <FaStar />
+                <FaStar />
+                <FaStar />
+                <FaStar />
+                <span className="half-star">☆</span>
+              </div>
+              <div className="rating-score">
+                <span className="score">4.5</span>
+                <span className="meta">(2K reviews)</span>
+              </div>
+            </div>
+          </article>
+
+          <article className="testimonial-card">
+            <div className="card-stars">
+              <FaStar />
+              <FaStar />
+              <FaStar />
+              <FaStar />
+              <FaStar />
+            </div>
+            <p className="card-text">
+              We had an incredible Europe tour! The itinerary, bookings, and
+              support were all professionally managed.
+            </p>
+            <div className="card-footer">
+              <img
+                src="https://randomuser.me/api/portraits/men/45.jpg"
+                alt="Vinay"
+                className="avatar"
+              />
+              <div>
+                <div className="name">Vinay</div>
+                <div className="role">GoFly Traveler</div>
+              </div>
+            </div>
+            <div className="card-rating-badge">
+              <span className="rating-brand">Tripadvisor</span>
+              <div className="rating-stars">
+                <FaStar />
+                <FaStar />
+                <FaStar />
+                <FaStar />
+                <span className="half-star">☆</span>
+              </div>
+              <div className="rating-score">
+                <span className="score">4.5</span>
+                <span className="meta">(2K reviews)</span>
+              </div>
+            </div>
+          </article>
+
+          <article className="testimonial-card">
+            <div className="card-stars">
+              <FaStar />
+              <FaStar />
+              <FaStar />
+              <FaStar />
+              <FaStar />
+            </div>
+            <p className="card-text">
+              Our trip to Bali was unforgettable. Everything was perfectly
+              organized from start to finish.
+            </p>
+            <div className="card-footer">
+              <img
+                src="https://randomuser.me/api/portraits/men/33.jpg"
+                alt="Akshit"
+                className="avatar"
+              />
+              <div>
+                <div className="name">Akshit</div>
+                <div className="role">GoFly Traveler</div>
+              </div>
+            </div>
+            <div className="card-rating-badge">
+              <span className="rating-brand">Trustpilot</span>
+              <div className="rating-stars">
+                <FaStar />
+                <FaStar />
+                <FaStar />
+                <FaStar />
+                <span className="half-star">☆</span>
+              </div>
+              <div className="rating-score">
+                <span className="score">4.5</span>
+                <span className="meta">Reviews</span>
+              </div>
+            </div>
+          </article>
         </div>
 
-        <div className="card">
-          <div className="rating-stars"><FaStar /><FaStar /><FaStar /><FaStar /><FaStar /></div>
-          <p>
-            Our trip to Bali was unforgettable! Everything was perfectly organized by the agency from start to finish.
-          </p>
-          <div className="profile">
-            <img
-              src="https://randomuser.me/api/portraits/men/33.jpg"
-              alt="Akshit"
-            />
-            <span>Akshit</span>
+        {/* Stats row */}
+        <div className="stats-row">
+          <div className="stat-item">
+            <div className="stat-content">
+              <div className="stat-icon">
+                <FaGlobe />
+              </div>
+              <div>
+                <div className="stat-value">26K+</div>
+                <div className="stat-label">Tour Completed</div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-
-      <div className="reviews">
-        <div className="review-item">
-          <p className="platform">Trustpilot</p>
-          <div className="stars-rating">
-            <FaStar /><FaStar /><FaStar /><FaStar />
-            <span className="half-star">☆</span>
+          <div className="stat-item">
+            <div className="stat-content">
+              <div className="stat-icon">
+                <FaUserFriends />
+              </div>
+              <div>
+                <div className="stat-value">12+</div>
+              </div>
+            </div>
           </div>
-          <p className="rating-value">4.5</p>
-          <p className="review-count">(2K reviews)</p>
-        </div>
-        <div className="review-item">
-          <p className="platform">Tripadvisor</p>
-          <div className="stars-rating">
-            <FaStar /><FaStar /><FaStar /><FaStar />
-            <span className="half-star">☆</span>
+          <div className="stat-item">
+            <div className="stat-content">
+              <div className="stat-icon">
+                <FaSmile />
+              </div>
+              <div>
+                <div className="stat-value">20+</div>
+                <div className="stat-label">Happy Traveler</div>
+              </div>
+            </div>
           </div>
-          <p className="rating-value">4.5</p>
-          <p className="review-count">Reviews</p>
-        </div>
-      </div>
-
-      <div className="stats-section">
-        <div className="stat">
-          <FaGlobe className="icon" />
-          <h3>100K+</h3>
-          <p>Tour Completed</p>
-        </div>
-        <div className="stat">
-          <FaUserFriends className="icon" />
-          <h3>100+</h3>
-          <p>Travel Experience</p>
-        </div>
-        <div className="stat">
-          <FaSmile className="icon" />
-          <h3>100+</h3>
-          <p>Happy Traveler</p>
-        </div>
-        <div className="stat">
-          <FaSmile className="icon" />
-          <h3>2%</h3>
-          <p>Retention Rate</p>
+          <div className="stat-item">
+            <div className="stat-content">
+              <div className="stat-icon">
+                <FaSmile />
+              </div>
+              <div>
+                <div className="stat-value">98%</div>
+                <div className="stat-label">Retention Rate</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

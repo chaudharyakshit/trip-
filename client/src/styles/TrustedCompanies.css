@@ -40,7 +40,7 @@
 
 .bg-plane, .bg-parachute {
   position: absolute;
-  opacity:0.5;
+  opacity: 0.9;
   fill: #ff6b35; /* Orange color */
 }
 

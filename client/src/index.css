@@ -10,7 +10,7 @@
     --brand-primary: 231 148 29; /* #E7941D */
     --brand-secondary: 43 123 185; /* #2B7BB9 */
   }
-  html, body { @apply bg-white text-slate-800; }
+  html, body { @apply bg-white text-slate-800 overflow-x-hidden; }
 }
 
 @layer components {

@@ -1,0 +1,87 @@
+.topbar {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: stretch;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* Each item as a card/row */
+.contact-card {
+  display: flex;
+  align-items: center;
+  padding: 8px 14px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.08);
+  text-decoration: none;
+  color: #0f172a;
+  min-width: 220px;
+}
+
+.contact-card:hover {
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.12);
+  transform: translateY(-1px);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+/* Circular icon */
+.icon-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.icon-circle svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Colors per type */
+.icon-circle.whatsapp {
+  background: #25d366;
+}
+
+.icon-circle.mail {
+  background: #f97316;
+}
+
+.icon-circle.inquiry {
+  background: #ef4444;
+}
+
+/* Text block */
+.contact-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.contact-text .label {
+  font-size: 12px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.contact-text .value {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+}
+
+@media (max-width: 768px) {
+  .topbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .contact-card {
+    width: 100%;
+  }
+}

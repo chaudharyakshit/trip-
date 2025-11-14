@@ -1,166 +1,218 @@
-.testimonials {
-  /* Background image with slight dark overlay for contrast */
-  background-image: linear-gradient(rgba(118,179,219, 0.8), rgba(130,154,208, 0.8)), url('/assets/images/testenomial bg.png');
-
+.testimonials-section {
+  min-height: 90vh;
+  padding: 96px 16px 112px;
+  /* Soft blue vertical gradient + grid watermark with more visible BG */
+  background-image: linear-gradient(
+      to bottom,
+      rgba(232, 242, 255, 0.48) 0%,
+      rgba(212, 230, 255, 0.45) 45%,
+      rgba(255, 255, 255, 0.55) 100%
+    ),
+    url("/assets/images/home2-testimonial-bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  color: #305b5f;
-  text-align: center;
-  padding: 80px 20px;
   font-family: "Poppins", sans-serif;
-}
-
-.heading {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #ffffff;
-}
-
-.subheading {
-  color: rgba(255,255,255,0.9);
-  margin: 10px auto 40px;
-  max-width: 600px;
-}
-
-.testimonial-cards {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 25px;
+  align-items: center;
+}
+
+.testimonials-container {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.testimonials-header {
+  text-align: center;
   margin-bottom: 40px;
 }
 
-.card {
-  background: white;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-  border-radius: 16px;
-  padding: 25px;
-  width: 300px;
-  transition: transform 0.3s ease;
+.testimonials-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0f172a;
 }
 
-.card:hover {
-  transform: translateY(-5px);
+.testimonials-header p {
+  font-size: 0.9rem;
+  color: #64748b;
+  max-width: 640px;
+  margin: 8px auto 0;
+}
+
+/* Testimonial cards */
+.testimonial-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.testimonial-card {
+  flex: 1 1 320px;
+  min-width: 320px;
+  max-width: 360px;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 24px 24px 24px;
+  border: 1px solid #e2e8f0;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.card-stars {
+  color: #fbbf24;
+  display: flex;
+  justify-content: flex-start;
+  gap: 4px;
+  font-size: 1rem;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #1e293b;
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #0f172a;
+}
+
+.role {
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+/* Per-card rating badge */
+.card-rating-badge {
+  margin-top: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+}
+
+.rating-brand {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #0f172a;
 }
 
 .rating-stars {
-  color: #ffc107;
-  font-size: 1.2rem;
-  display: flex;
-  justify-content: center;
-  gap: 4px;
-}
-
-.card h3 {
-  display: none;
-}
-
-.card p {
-  font-size: 0.95rem;
-  color: #666;
-  margin-top: 10px;
-}
-
-.profile {
   display: flex;
   align-items: center;
-  margin-top: 15px;
-  gap: 10px;
-}
-
-.profile img {
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-}
-
-.profile h4 {
-  display: none;
-}
-
-.profile span {
-  font-size: 0.9rem;
-  color: #666;
-  font-weight: 500;
-}
-
-/* Reviews Section */
-.reviews {
-  display: flex;
-  justify-content: center;
-  gap: 60px;
-  margin-top: 30px;
-}
-
-.review-item {
-  text-align: center;
-}
-
-.platform {
-  font-weight: 700;
-  color: #0077ff;
-  font-size: 0.95rem;
-  margin-bottom: 5px;
-}
-
-.stars-rating {
-  display: flex;
-  justify-content: center;
   gap: 2px;
-  color: #ffc107;
-  font-size: 1rem;
-  margin-bottom: 3px;
+  font-size: 0.9rem;
+  color: #22c55e;
 }
 
 .half-star {
   font-size: 0.8rem;
 }
 
-.rating-value {
-  font-weight: 700;
-  font-size: 1rem;
-  margin: 3px 0;
-  color: #ffffff;
+.rating-score {
+  font-size: 0.8rem;
+  color: #64748b;
 }
 
-.review-count {
-  font-size: 0.85rem;
-  color: #ffffff;
-  margin: 0;
+.rating-score .score {
+  font-weight: 600;
+  color: #0f172a;
+  margin-right: 4px;
 }
 
-/* Stats Section */
-.stats-section {
+/* Stats row (flat, 4 columns like reference) */
+.stats-row {
+  margin-top: 72px;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid #e5e7eb;
+}
+
+.stat-item {
+  background: #ffffff;
+  padding: 32px 40px;
+  border-right: 1px solid #e5e7eb;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 40px;
-  background: #fff;
-color: #305b5f;
-  margin-top: 60px;
-  padding: 40px 20px;
-  border-radius: 20px;
-}.stats-section {
-  margin: 40px 30px 0 30px;
-}
-
-.stat {
-  display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
-.icon {
-  font-size: 2rem;
-  margin-bottom: 10px;
+.stat-item:last-child {
+  border-right: none;
 }
 
-.stat h3 {
-  font-size: 1.8rem;
-  margin: 5px 0;
+.stat-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
-.stat p {
+.stat-icon {
+  font-size: 32px;
+  line-height: 1;
+  color: #00a86b;
+}
+
+.stat-value {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 2px;
+}
+
+.stat-label {
   font-size: 0.95rem;
+  color: #64748b;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .stats-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .testimonials-section {
+    min-height: auto;
+    padding: 60px 16px 80px;
+  }
+}
+
+@media (max-width: 640px) {
+  .testimonial-cards {
+    gap: 16px;
+  }
+
+  .testimonial-card {
+    max-width: 100%;
+  }
+
+  .stats-row {
+    grid-template-columns: 1fr;
+  }
 }

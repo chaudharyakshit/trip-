@@ -59,7 +59,8 @@ export default function PopularPackages() {
   return (
     <section className="relative py-20 overflow-hidden">
       {/* === Background Image with Strong Overlay === */}
-      <div className="absolute inset-0 z-0">
+   <div className="absolute inset-0 z-[1]">
+
         <img 
           src="/assets/images/bg4.png" 
           alt="background" 
@@ -75,17 +76,18 @@ export default function PopularPackages() {
         <img 
           src="/assets/parachute.svg" 
           alt="parachute" 
-          className="w-40 h-40 opacity-85 drop-shadow-2xl animate-float"
+          className="w-32 h-32 opacity-100 drop-shadow-2xl animate-float"
         />
       </div>
 
       {/* Ring/Lifebuoy - Bottom Right */}
-      <div className="absolute bottom-10 left-9 z-30">
+   <div className="absolute bottom-0 left-9 z-40">
+
 
         <img 
           src="/assets/images/ring.svg" 
           alt="ring" 
-          className="w-30 h-30 opacity-90 drop-shadow-2xl animate-bounce-slow"
+          className="w-28 h-28 opacity-100 drop-shadow-2xl animate-bounce-slow"
         />
       </div>
 
@@ -94,7 +96,7 @@ export default function PopularPackages() {
         <img 
           src="/assets/images/passport.svg" 
           alt="passport" 
-          className="w-36 h-36 opacity-75 drop-shadow-2xl animate-pulse"
+          className="w-32 h-32 opacity-100 drop-shadow-2xl animate-pulse"
         />
       </div>
 
@@ -197,6 +199,9 @@ export default function PopularPackages() {
         }
         .animate-bounce-slow {
           animation: bounce 3s ease-in-out infinite;
+        }
+        img {
+          image-rendering: -webkit-optimize-contrast;
         }
       `}</style>
     </section>

@@ -1,11 +1,12 @@
 .banner-container {
-  width: calc(100% - 250px);
+  /* Make banner use full available width and center it so poster is fully visible */
+  width: 100%;
+  max-width: 1200px;
   height: 400px;
-  margin: 70px 80px;
+  margin: 70px auto;
   border-radius: 12px;
   position: relative;
   overflow: hidden;
-  left: 40px;
 }
 
 .slides-wrapper {

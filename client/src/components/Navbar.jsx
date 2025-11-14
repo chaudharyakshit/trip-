@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Topbar from './Topbar'
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
@@ -73,16 +74,22 @@ export default function Navbar() {
           </div>
 
           <div className="hidden md:flex items-center gap-4 lg:gap-6 ml-auto">
-            {/* Compact phone button */}
-            <a
-              href={`tel:${phone}`}
-              className="hidden lg:inline-flex items-center gap-2 h-10 px-4 rounded-full border border-slate-300 bg-white text-slate-900 text-sm font-semibold shadow hover:bg-slate-50 transition-colors"
-            >
-              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M2.01 6.03c-.12-1.1.78-2.03 1.89-2.03H7c.9 0 1.67.6 1.9 1.46l.7 2.62a2 2 0 0 1-.5 1.9l-1.2 1.2a15.05 15.05 0 0 0 6.02 6.02l1.2-1.2a2 2 0 0 1 1.9-.5l2.62.7c.86.23 1.46 1 1.46 1.9v3.1c0 1.11-.93 2.01-2.03 1.89A20 20 0 0 1 2.01 6.03Z"/>
-              </svg>
-              <span className="tracking-wide">+91 86079 98882</span>
-            </a>
+            {/* Phone contact dropdown on hover */}
+            <div className="relative hidden md:block group">
+              <button
+                type="button"
+                className="inline-flex items-center gap-2 h-10 px-4 rounded-full border border-slate-300 bg-white text-slate-900 text-sm font-semibold shadow hover:bg-slate-50 transition-colors"
+              >
+                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M2.01 6.03c-.12-1.1.78-2.03 1.89-2.03H7c.9 0 1.67.6 1.9 1.46l.7 2.62a2 2 0 0 1-.5 1.9l-1.2 1.2a15.05 15.05 0 0 0 6.02 6.02l1.2-1.2a2 2 0 0 1 1.9-.5l2.62.7c.86.23 1.46 1 1.46 1.9v3.1c0 1.11-.93 2.01-2.03 1.89A20 20 0 0 1 2.01 6.03Z" />
+                </svg>
+                <span className="tracking-wide">+91 86079 98882</span>
+              </button>
+
+              <div className="absolute right-0 mt-3 z-40 hidden group-hover:block">
+                <Topbar />
+              </div>
+            </div>
 
             {/* Search icon only */}
             <button

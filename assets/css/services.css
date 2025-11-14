@@ -1,0 +1,80 @@
+/* Services Section - Fully Responsive */
+#services {
+  padding: 60px 0;
+}
+
+.icon-card {
+  text-align: center;
+  padding: 30px 20px;
+  background: white;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.icon-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.icon-wrap {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--brand-primary), #f5a623);
+  border-radius: 50%;
+  font-size: 32px;
+  color: white;
+}
+
+.icon-card h6 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--text-dark);
+}
+
+.icon-card p {
+  font-size: 0.9rem;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Responsive optimizations */
+@media (max-width: 575.98px) {
+  #services {
+    padding: 40px 0;
+  }
+
+  .icon-card {
+    padding: 24px 16px;
+  }
+
+  .icon-wrap {
+    width: 60px;
+    height: 60px;
+    font-size: 28px;
+    margin-bottom: 16px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  #services {
+    padding: 50px 0;
+  }
+}
+
+@media (min-width: 992px) {
+  #services {
+    padding: 80px 0;
+  }
+
+  .icon-wrap {
+    width: 80px;
+    height: 80px;
+    font-size: 36px;
+  }
+}

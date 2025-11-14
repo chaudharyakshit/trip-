@@ -1,0 +1,15 @@
+IndiasGoTrip Logo Placeholder
+
+For the static HTML landing page, you need to add a logo image at:
+assets/images/logo.png
+
+Recommended size: 200x60 pixels (or similar aspect ratio)
+Format: PNG with transparent background
+
+The logo should represent IndiasGoTrip brand with:
+- India theme elements (maybe an outline of India or iconic monuments)
+- Travel/tourism elements (plane, compass, etc.)
+- Brand colors: Orange (#E7941D) and Blue (#2B7BB9)
+
+For now, the page will display without the logo image.
+You can also use text-only branding by removing the img tag from index.html.

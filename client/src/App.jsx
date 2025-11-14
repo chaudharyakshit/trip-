@@ -12,6 +12,7 @@ import Blog from './components/Blog.jsx'
 import ContactFooter from './components/ContactFooter.jsx'
 import PopularPackages from './components/PopularPackages.jsx'
 import OneDayTrips from './components/OneDayTrips.jsx'
+import AwardSection from './components/AwardSection.jsx'
 import Banner from './components/Banner.jsx'
 import Gallery from './components/Gallery.jsx'
 import TrustedCompanies from './components/TrustedCompanies.jsx'
@@ -65,8 +66,10 @@ function HomePage() {
         <SmartServices />
         <Services />
         <OneDayTrips />
-        <Banner />
+        <AwardSection />
+        {/* Swapped order: show TrustedCompanies before the poster banner */}
         <TrustedCompanies />
+        <Banner />
         <Blog />
         <Testimonials />
         <Gallery />

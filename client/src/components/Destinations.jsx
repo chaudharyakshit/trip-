@@ -207,13 +207,13 @@ export default function TopDestinations() {
       </div>
 
       {/* Decorative SVGs */}
-      <div className="absolute top-10 left-10 z-10 opacity-30 animate-pulse">
+      <div className="absolute top-10 left-10 z-10 opacity-100 drop-shadow-2xl animate-pulse">
         <img src="/assets/parachute.svg" alt="decoration" className="w-24 h-24" />
       </div>
-      <div className="absolute bottom-20 right-12 z-10 opacity-25 animate-bounce" style={{animationDelay: '0.5s'}}>
+      <div className="absolute bottom-20 right-12 z-10 opacity-100 drop-shadow-2xl animate-bounce" style={{ animationDelay: '0.5s' }}>
         <img src="/assets/images/ring.svg" alt="decoration" className="w-32 h-32" />
       </div>
-      <div className="absolute top-1/2 right-20 z-10 opacity-20">
+      <div className="absolute top-1/2 right-20 z-10 opacity-100 drop-shadow-2xl">
         <img src="/assets/images/passport.svg" alt="decoration" className="w-28 h-28" />
       </div>
 

@@ -1,0 +1,131 @@
+/* Hero Section - Fully Responsive */
+.hero {
+  min-height: 500px;
+  padding: 40px 0;
+  position: relative;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--brand-secondary) 0%, #1e5a8e 50%, var(--brand-primary) 100%);
+  z-index: -1;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.hero .lead {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.hero .list-unstyled {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.hero .list-unstyled li {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 16px;
+  margin-bottom: 8px;
+}
+
+/* Booking Card */
+.booking-card {
+  background: white;
+  border-radius: 16px;
+  margin-top: 30px;
+}
+
+.booking-card h5 {
+  color: var(--text-dark);
+}
+
+.booking-card .form-label {
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+  color: var(--text-dark);
+}
+
+.booking-card .form-control,
+.booking-card .form-select {
+  padding: 10px 14px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.booking-card .form-control:focus,
+.booking-card .form-select:focus {
+  border-color: var(--brand-primary);
+  box-shadow: 0 0 0 0.2rem rgba(231, 148, 29, 0.25);
+}
+
+/* Mobile optimizations */
+@media (max-width: 767.98px) {
+  .hero {
+    min-height: auto;
+    padding: 30px 0;
+  }
+
+  .hero h1 {
+    font-size: 1.75rem;
+  }
+
+  .hero .lead {
+    font-size: 1rem;
+  }
+
+  .booking-card {
+    margin-top: 30px;
+    padding: 24px !important;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .hero {
+    min-height: 550px;
+  }
+
+  .hero h1 {
+    font-size: 2.25rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+  .hero {
+    min-height: 600px;
+    padding: 60px 0;
+  }
+
+  .hero h1 {
+    font-size: 2.75rem;
+  }
+
+  .hero .lead {
+    font-size: 1.25rem;
+  }
+
+  .booking-card {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+}
