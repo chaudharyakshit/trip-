@@ -6,21 +6,21 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import CursorFX from "../../components/CursorFX.jsx";
 
-// Import images for Goa
-import goa1 from '/assets/destination-images/Goa1.webp';
-import goa2 from '/assets/destination-images/Goa2.webp';
-import goa3 from '/assets/destination-images/Goa3.webp';
+// Import images for Darjeeling
+import darjeeling1 from '/assets/destination-images/Darjeeling1.webp';
+import darjeeling2 from '/assets/destination-images/Darjeeling2.webp';
+import darjeeling3 from '/assets/destination-images/Darjeeling3.webp';
 
 import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-const GoaPage = () => {
+const DarjeelingPage = () => {
   const [selectedDate, setSelectedDate] = useState('');
   const [travelers, setTravelers] = useState(1);
 
-  const goaImages = [goa1, goa2, goa3];
+  const darjeelingImages = [darjeeling1, darjeeling2, darjeeling3];
 
   return (
     <div className="inner-page">
@@ -36,12 +36,12 @@ const GoaPage = () => {
           loop={true}
           className="hero-slider"
         >
-          {goaImages.map((img, index) => (
+          {darjeelingImages.map((img, index) => (
             <SwiperSlide key={index}>
               <div className="hero-slide">
                 <img
                   src={img}
-                  alt={`Goa ${index + 1}`}
+                  alt={`Darjeeling ${index + 1}`}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -58,13 +58,13 @@ const GoaPage = () => {
             <section className="about-section">
               <h2>About Tour Package</h2>
               <p>
-                Goa, India's beach paradise, offers a perfect blend of sun, sand, and sea with a rich Portuguese heritage. From pristine beaches and vibrant nightlife to ancient churches and spice plantations, this coastal state provides an unforgettable tropical getaway experience.
+                Darjeeling, the "Queen of the Himalayas" and famous for its aromatic tea plantations, offers a charming hill station experience with breathtaking views of Kanchenjunga. With its colonial-era architecture, UNESCO World Heritage toy train, and vibrant Buddhist culture, this picturesque town provides a perfect blend of natural beauty, heritage, and cultural richness in the Eastern Himalayas.
               </p>
               
               <div className="package-details">
                 <div className="detail-item">
                   <span className="label">Accommodation</span>
-                  <span className="value">Beach Resort</span>
+                  <span className="value">Heritage Hotel & Resort</span>
                 </div>
                 <div className="detail-item">
                   <span className="label">Meals</span>
@@ -72,31 +72,31 @@ const GoaPage = () => {
                 </div>
                 <div className="detail-item">
                   <span className="label">Transportation</span>
-                  <span className="value">Bike, Car, Boat</span>
+                  <span className="value">Toy Train, Car, Cable Car</span>
                 </div>
                 <div className="detail-item">
                   <span className="label">Group Size</span>
-                  <span className="value">10-20</span>
+                  <span className="value">10-18</span>
                 </div>
                 <div className="detail-item">
                   <span className="label">Language</span>
-                  <span className="value">English, Hindi, Konkani</span>
+                  <span className="value">English, Hindi, Nepali</span>
                 </div>
                 <div className="detail-item">
                   <span className="label">Activities</span>
-                  <span className="value">Water Sports, Dolphin Watch</span>
+                  <span className="value">Tea Tasting, Toy Train</span>
                 </div>
                 <div className="detail-item">
                   <span className="label">Age Range</span>
-                  <span className="value">18-45 (Year)</span>
+                  <span className="value">18-60 (Year)</span>
                 </div>
                 <div className="detail-item">
                   <span className="label">Season</span>
-                  <span className="value">Winter Season</span>
+                  <span className="value">Spring & Autumn</span>
                 </div>
                 <div className="detail-item">
                   <span className="label">Category</span>
-                  <span className="value">Beach, Adventure</span>
+                  <span className="value">Hill Station, Tea, Heritage</span>
                 </div>
               </div>
             </section>
@@ -106,18 +106,18 @@ const GoaPage = () => {
               <h2>Explore Locations</h2>
               <div className="locations-grid">
                 <div className="location-card">
-                  <div className="location-icon">🏖️</div>
-                  <h3>Calangute Beach</h3>
-                  <span className="duration">(02 Days)</span>
-                </div>
-                <div className="location-card">
-                  <div className="location-icon">⛪</div>
-                  <h3>Old Goa Churches</h3>
+                  <div className="location-icon">🚂</div>
+                  <h3>Toy Train</h3>
                   <span className="duration">(01 Days)</span>
                 </div>
                 <div className="location-card">
-                  <div className="location-icon">🚤</div>
-                  <h3>Dolphin Trip</h3>
+                  <div className="location-icon">🌅</div>
+                  <h3>Tiger Hill</h3>
+                  <span className="duration">(01 Days)</span>
+                </div>
+                <div className="location-card">
+                  <div className="location-icon">🍃</div>
+                  <h3>Tea Gardens</h3>
                   <span className="duration">(01 Days)</span>
                 </div>
               </div>
@@ -129,23 +129,23 @@ const GoaPage = () => {
               <div className="highlights-list">
                 <div className="highlight-item">
                   <span className="check">✓</span>
-                  Calangute & Baga Beaches – Sunbathing and water sports
+                  Tiger Hill Sunrise – Spectacular view of Kanchenjunga and Everest range
                 </div>
                 <div className="highlight-item">
                   <span className="check">✓</span>
-                  Basilica of Bom Jesus – UNESCO World Heritage Site
+                  Darjeeling Himalayan Railway – UNESCO World Heritage toy train ride
                 </div>
                 <div className="highlight-item">
                   <span className="check">✓</span>
-                  Dolphin Watching – Morning boat trip to spot dolphins
+                  Tea Plantation Tour – Visit famous tea estates and learn tea processing
                 </div>
                 <div className="highlight-item">
                   <span className="check">✓</span>
-                  Anjuna Flea Market – Shopping and local crafts
+                  Peace Pagoda – Japanese Buddhist temple with panoramic mountain views
                 </div>
                 <div className="highlight-item">
                   <span className="check">✓</span>
-                  Portuguese Heritage Walk – Explore Old Goa architecture
+                  Batasia Loop – Spiral railway with war memorial and garden
                 </div>
               </div>
             </section>
@@ -155,8 +155,8 @@ const GoaPage = () => {
               <h2>Tour Itinerary</h2>
               <div className="itinerary-list">
                 <div className="departure-point">
-                  <span className="location">North Goa, India</span>
-                  <span className="time">Departure: 8:00 am - 8:30am</span>
+                  <span className="location">Darjeeling, West Bengal</span>
+                  <span className="time">Departure: 4:00 am - 4:30am</span>
                 </div>
                 
                 <div className="day-item completed">
@@ -164,7 +164,7 @@ const GoaPage = () => {
                     <span className="day-number">Day-01</span>
                     <span className="day-status">✓</span>
                   </div>
-                  <h4>Calangute Beach – Water sports and beach activities</h4>
+                  <h4>Tiger Hill Sunrise – Kanchenjunga and Everest viewing</h4>
                 </div>
 
                 <div className="day-item completed">
@@ -172,7 +172,7 @@ const GoaPage = () => {
                     <span className="day-number">Day-02</span>
                     <span className="day-status">✓</span>
                   </div>
-                  <h4>Baga Beach – Nightlife and beach shacks</h4>
+                  <h4>Toy Train Journey – UNESCO heritage railway experience</h4>
                 </div>
 
                 <div className="day-item completed">
@@ -180,11 +180,11 @@ const GoaPage = () => {
                     <span className="day-number">Day-03</span>
                     <span className="day-status">✓</span>
                   </div>
-                  <h4>Anjuna Flea Market – Shopping and local culture</h4>
+                  <h4>Tea Estate Visit – Plantation tour and tea tasting session</h4>
                 </div>
 
                 <div className="departure-point">
-                  <span className="location">Old Goa</span>
+                  <span className="location">Darjeeling Town</span>
                   <span className="time">Departure: 9:00 am - 9:30am</span>
                 </div>
 
@@ -193,7 +193,7 @@ const GoaPage = () => {
                     <span className="day-number">Day-04</span>
                     <span className="day-status">✓</span>
                   </div>
-                  <h4>Basilica of Bom Jesus – Heritage and history tour</h4>
+                  <h4>Peace Pagoda & Monasteries – Buddhist temples and gardens</h4>
                 </div>
 
                 <div className="day-item completed">
@@ -201,7 +201,15 @@ const GoaPage = () => {
                     <span className="day-number">Day-05</span>
                     <span className="day-status">✓</span>
                   </div>
-                  <h4>Dolphin Trip – Morning cruise and water activities</h4>
+                  <h4>Local Markets – Mall Road shopping and local cuisine</h4>
+                </div>
+
+                <div className="day-item completed">
+                  <div className="day-header">
+                    <span className="day-number">Day-06</span>
+                    <span className="day-status">✓</span>
+                  </div>
+                  <h4>Batasia Loop & Zoo – Railway spiral and Himalayan wildlife</h4>
                 </div>
               </div>
             </section>
@@ -212,8 +220,8 @@ const GoaPage = () => {
             <div className="booking-widget">
               <div className="price-section">
                 <div className="price-row">
-                  <div className="original-price">$599</div>
-                  <div className="current-price">$499</div>
+                  <div className="original-price">$699</div>
+                  <div className="current-price">$599</div>
                 </div>
                 <div className="price-label">Per Person</div>
               </div>
@@ -285,9 +293,9 @@ const GoaPage = () => {
             </div>
           </div>
         </div>
-       
+     
       </div>
- <Footer/>
+   <Footer/>
       <style jsx>{`
         .inner-page {
           min-height: 100vh;
@@ -900,4 +908,4 @@ const GoaPage = () => {
   );
 };
 
-export default GoaPage;
+export default DarjeelingPage;

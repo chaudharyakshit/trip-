@@ -6,21 +6,21 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import CursorFX from "../../components/CursorFX.jsx";
 
-// Import images for Goa
-import goa1 from '/assets/destination-images/Goa1.webp';
-import goa2 from '/assets/destination-images/Goa2.webp';
-import goa3 from '/assets/destination-images/Goa3.webp';
+// Import images for Sikkim
+import sikkim1 from '/assets/destination-images/Sikkim (Gangtok)1.webp';
+import sikkim2 from '/assets/destination-images/Sikkim (Gangtok)2.webp';
+import sikkim3 from '/assets/destination-images/Sikkim (Gangtok)3.webp';
 
 import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-const GoaPage = () => {
+const SikkimPage = () => {
   const [selectedDate, setSelectedDate] = useState('');
   const [travelers, setTravelers] = useState(1);
 
-  const goaImages = [goa1, goa2, goa3];
+  const sikkimImages = [sikkim1, sikkim2, sikkim3];
 
   return (
     <div className="inner-page">
@@ -36,12 +36,12 @@ const GoaPage = () => {
           loop={true}
           className="hero-slider"
         >
-          {goaImages.map((img, index) => (
+          {sikkimImages.map((img, index) => (
             <SwiperSlide key={index}>
               <div className="hero-slide">
                 <img
                   src={img}
-                  alt={`Goa ${index + 1}`}
+                  alt={`Sikkim ${index + 1}`}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -58,13 +58,13 @@ const GoaPage = () => {
             <section className="about-section">
               <h2>About Tour Package</h2>
               <p>
-                Goa, India's beach paradise, offers a perfect blend of sun, sand, and sea with a rich Portuguese heritage. From pristine beaches and vibrant nightlife to ancient churches and spice plantations, this coastal state provides an unforgettable tropical getaway experience.
+                Sikkim, nestled in the Eastern Himalayas, is a paradise of pristine natural beauty, ancient monasteries, and rich Buddhist culture. Known for its breathtaking landscapes, from the majestic Kanchenjunga peak to lush valleys and glacial lakes, Sikkim offers an unforgettable Himalayan experience. Explore vibrant Buddhist monasteries, trek through rhododendron forests, and immerse yourself in the unique blend of Tibetan, Nepalese, and Lepcha cultures in this enchanting mountain state.
               </p>
               
               <div className="package-details">
                 <div className="detail-item">
                   <span className="label">Accommodation</span>
-                  <span className="value">Beach Resort</span>
+                  <span className="value">4 Star Hotel & Homestay</span>
                 </div>
                 <div className="detail-item">
                   <span className="label">Meals</span>
@@ -72,7 +72,7 @@ const GoaPage = () => {
                 </div>
                 <div className="detail-item">
                   <span className="label">Transportation</span>
-                  <span className="value">Bike, Car, Boat</span>
+                  <span className="value">Car, Jeep</span>
                 </div>
                 <div className="detail-item">
                   <span className="label">Group Size</span>
@@ -80,23 +80,23 @@ const GoaPage = () => {
                 </div>
                 <div className="detail-item">
                   <span className="label">Language</span>
-                  <span className="value">English, Hindi, Konkani</span>
+                  <span className="value">English, Hindi, Nepali</span>
                 </div>
                 <div className="detail-item">
                   <span className="label">Activities</span>
-                  <span className="value">Water Sports, Dolphin Watch</span>
+                  <span className="value">Trekking, Monastery Visits</span>
                 </div>
                 <div className="detail-item">
                   <span className="label">Age Range</span>
-                  <span className="value">18-45 (Year)</span>
+                  <span className="value">18-60 (Year)</span>
                 </div>
                 <div className="detail-item">
                   <span className="label">Season</span>
-                  <span className="value">Winter Season</span>
+                  <span className="value">Spring & Autumn</span>
                 </div>
                 <div className="detail-item">
                   <span className="label">Category</span>
-                  <span className="value">Beach, Adventure</span>
+                  <span className="value">Adventure, Cultural, Nature</span>
                 </div>
               </div>
             </section>
@@ -106,19 +106,19 @@ const GoaPage = () => {
               <h2>Explore Locations</h2>
               <div className="locations-grid">
                 <div className="location-card">
-                  <div className="location-icon">🏖️</div>
-                  <h3>Calangute Beach</h3>
+                  <div className="location-icon">🏔️</div>
+                  <h3>Tsomgo Lake</h3>
+                  <span className="duration">(01 Days)</span>
+                </div>
+                <div className="location-card">
+                  <div className="location-icon">🕌</div>
+                  <h3>Rumtek Monastery</h3>
+                  <span className="duration">(01 Days)</span>
+                </div>
+                <div className="location-card">
+                  <div className="location-icon">🌿</div>
+                  <h3>Yumthang Valley</h3>
                   <span className="duration">(02 Days)</span>
-                </div>
-                <div className="location-card">
-                  <div className="location-icon">⛪</div>
-                  <h3>Old Goa Churches</h3>
-                  <span className="duration">(01 Days)</span>
-                </div>
-                <div className="location-card">
-                  <div className="location-icon">🚤</div>
-                  <h3>Dolphin Trip</h3>
-                  <span className="duration">(01 Days)</span>
                 </div>
               </div>
             </section>
@@ -129,23 +129,23 @@ const GoaPage = () => {
               <div className="highlights-list">
                 <div className="highlight-item">
                   <span className="check">✓</span>
-                  Calangute & Baga Beaches – Sunbathing and water sports
+                  Tsomgo Lake – Sacred glacial lake at 12,400 feet altitude
                 </div>
                 <div className="highlight-item">
                   <span className="check">✓</span>
-                  Basilica of Bom Jesus – UNESCO World Heritage Site
+                  Rumtek Monastery – One of Buddhism's most important monasteries
                 </div>
                 <div className="highlight-item">
                   <span className="check">✓</span>
-                  Dolphin Watching – Morning boat trip to spot dolphins
+                  Yumthang Valley – Valley of Flowers with hot springs
                 </div>
                 <div className="highlight-item">
                   <span className="check">✓</span>
-                  Anjuna Flea Market – Shopping and local crafts
+                  Nathula Pass – Historic Indo-China border at 14,140 feet
                 </div>
                 <div className="highlight-item">
                   <span className="check">✓</span>
-                  Portuguese Heritage Walk – Explore Old Goa architecture
+                  Sikkimese Cuisine – Authentic momos, thukpa and local delicacies
                 </div>
               </div>
             </section>
@@ -155,8 +155,8 @@ const GoaPage = () => {
               <h2>Tour Itinerary</h2>
               <div className="itinerary-list">
                 <div className="departure-point">
-                  <span className="location">North Goa, India</span>
-                  <span className="time">Departure: 8:00 am - 8:30am</span>
+                  <span className="location">Gangtok, Sikkim</span>
+                  <span className="time">Departure: 7:00 am - 7:30am</span>
                 </div>
                 
                 <div className="day-item completed">
@@ -164,7 +164,7 @@ const GoaPage = () => {
                     <span className="day-number">Day-01</span>
                     <span className="day-status">✓</span>
                   </div>
-                  <h4>Calangute Beach – Water sports and beach activities</h4>
+                  <h4>Gangtok City Tour – Explore capital city and local markets</h4>
                 </div>
 
                 <div className="day-item completed">
@@ -172,7 +172,7 @@ const GoaPage = () => {
                     <span className="day-number">Day-02</span>
                     <span className="day-status">✓</span>
                   </div>
-                  <h4>Baga Beach – Nightlife and beach shacks</h4>
+                  <h4>Tsomgo Lake & Nathula Pass – High altitude lakes and borders</h4>
                 </div>
 
                 <div className="day-item completed">
@@ -180,12 +180,12 @@ const GoaPage = () => {
                     <span className="day-number">Day-03</span>
                     <span className="day-status">✓</span>
                   </div>
-                  <h4>Anjuna Flea Market – Shopping and local culture</h4>
+                  <h4>Rumtek Monastery – Buddhist spiritual experience</h4>
                 </div>
 
                 <div className="departure-point">
-                  <span className="location">Old Goa</span>
-                  <span className="time">Departure: 9:00 am - 9:30am</span>
+                  <span className="location">North Sikkim</span>
+                  <span className="time">Departure: 6:30 am - 7:00am</span>
                 </div>
 
                 <div className="day-item completed">
@@ -193,7 +193,7 @@ const GoaPage = () => {
                     <span className="day-number">Day-04</span>
                     <span className="day-status">✓</span>
                   </div>
-                  <h4>Basilica of Bom Jesus – Heritage and history tour</h4>
+                  <h4>Yumthang Valley – Flower valley and natural hot springs</h4>
                 </div>
 
                 <div className="day-item completed">
@@ -201,7 +201,7 @@ const GoaPage = () => {
                     <span className="day-number">Day-05</span>
                     <span className="day-status">✓</span>
                   </div>
-                  <h4>Dolphin Trip – Morning cruise and water activities</h4>
+                  <h4>Local Culture – Traditional Sikkimese food and handicrafts</h4>
                 </div>
               </div>
             </section>
@@ -212,8 +212,8 @@ const GoaPage = () => {
             <div className="booking-widget">
               <div className="price-section">
                 <div className="price-row">
-                  <div className="original-price">$599</div>
-                  <div className="current-price">$499</div>
+                  <div className="original-price">$649</div>
+                  <div className="current-price">$549</div>
                 </div>
                 <div className="price-label">Per Person</div>
               </div>
@@ -287,7 +287,8 @@ const GoaPage = () => {
         </div>
        
       </div>
- <Footer/>
+      <Footer/>
+
       <style jsx>{`
         .inner-page {
           min-height: 100vh;
@@ -900,4 +901,4 @@ const GoaPage = () => {
   );
 };
 
-export default GoaPage;
+export default SikkimPage;

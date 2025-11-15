@@ -6,21 +6,21 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import CursorFX from "../../components/CursorFX.jsx";
 
-// Import images for Goa
-import goa1 from '/assets/destination-images/Goa1.webp';
-import goa2 from '/assets/destination-images/Goa2.webp';
-import goa3 from '/assets/destination-images/Goa3.webp';
+// Import images for Coorg
+import coorg1 from '/assets/destination-images/Coorg1.webp';
+import coorg2 from '/assets/destination-images/Coorg2.webp';
+import coorg3 from '/assets/destination-images/Coorg3.webp';
 
 import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-const GoaPage = () => {
+const CoorgPage = () => {
   const [selectedDate, setSelectedDate] = useState('');
   const [travelers, setTravelers] = useState(1);
 
-  const goaImages = [goa1, goa2, goa3];
+  const coorgImages = [coorg1, coorg2, coorg3];
 
   return (
     <div className="inner-page">
@@ -36,12 +36,12 @@ const GoaPage = () => {
           loop={true}
           className="hero-slider"
         >
-          {goaImages.map((img, index) => (
+          {coorgImages.map((img, index) => (
             <SwiperSlide key={index}>
               <div className="hero-slide">
                 <img
                   src={img}
-                  alt={`Goa ${index + 1}`}
+                  alt={`Coorg ${index + 1}`}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -58,13 +58,13 @@ const GoaPage = () => {
             <section className="about-section">
               <h2>About Tour Package</h2>
               <p>
-                Goa, India's beach paradise, offers a perfect blend of sun, sand, and sea with a rich Portuguese heritage. From pristine beaches and vibrant nightlife to ancient churches and spice plantations, this coastal state provides an unforgettable tropical getaway experience.
+                Coorg, often called the 'Scotland of India', is a picturesque hill station nestled in the Western Ghats of Karnataka. Known for its lush coffee plantations, misty hills, and rich Kodava culture, Coorg offers a perfect escape into nature. From exploring sprawling estates and waterfalls to experiencing local traditions and cuisine, this serene destination provides an unforgettable experience of natural beauty and cultural heritage.
               </p>
               
               <div className="package-details">
                 <div className="detail-item">
                   <span className="label">Accommodation</span>
-                  <span className="value">Beach Resort</span>
+                  <span className="value">4 Star Resort</span>
                 </div>
                 <div className="detail-item">
                   <span className="label">Meals</span>
@@ -72,7 +72,7 @@ const GoaPage = () => {
                 </div>
                 <div className="detail-item">
                   <span className="label">Transportation</span>
-                  <span className="value">Bike, Car, Boat</span>
+                  <span className="value">Car, Jeep</span>
                 </div>
                 <div className="detail-item">
                   <span className="label">Group Size</span>
@@ -80,15 +80,15 @@ const GoaPage = () => {
                 </div>
                 <div className="detail-item">
                   <span className="label">Language</span>
-                  <span className="value">English, Hindi, Konkani</span>
+                  <span className="value">English, Hindi, Kannada</span>
                 </div>
                 <div className="detail-item">
                   <span className="label">Activities</span>
-                  <span className="value">Water Sports, Dolphin Watch</span>
+                  <span className="value">Plantation Tour, Trekking</span>
                 </div>
                 <div className="detail-item">
                   <span className="label">Age Range</span>
-                  <span className="value">18-45 (Year)</span>
+                  <span className="value">18-60 (Year)</span>
                 </div>
                 <div className="detail-item">
                   <span className="label">Season</span>
@@ -96,7 +96,7 @@ const GoaPage = () => {
                 </div>
                 <div className="detail-item">
                   <span className="label">Category</span>
-                  <span className="value">Beach, Adventure</span>
+                  <span className="value">Nature, Adventure, Cultural</span>
                 </div>
               </div>
             </section>
@@ -106,18 +106,18 @@ const GoaPage = () => {
               <h2>Explore Locations</h2>
               <div className="locations-grid">
                 <div className="location-card">
-                  <div className="location-icon">🏖️</div>
-                  <h3>Calangute Beach</h3>
-                  <span className="duration">(02 Days)</span>
-                </div>
-                <div className="location-card">
-                  <div className="location-icon">⛪</div>
-                  <h3>Old Goa Churches</h3>
+                  <div className="location-icon">🏞️</div>
+                  <h3>Abbey Falls</h3>
                   <span className="duration">(01 Days)</span>
                 </div>
                 <div className="location-card">
-                  <div className="location-icon">🚤</div>
-                  <h3>Dolphin Trip</h3>
+                  <div className="location-icon">⛰️</div>
+                  <h3>Raja's Seat</h3>
+                  <span className="duration">(01 Days)</span>
+                </div>
+                <div className="location-card">
+                  <div className="location-icon">🏛️</div>
+                  <h3>Madikeri Fort</h3>
                   <span className="duration">(01 Days)</span>
                 </div>
               </div>
@@ -129,23 +129,23 @@ const GoaPage = () => {
               <div className="highlights-list">
                 <div className="highlight-item">
                   <span className="check">✓</span>
-                  Calangute & Baga Beaches – Sunbathing and water sports
+                  Coffee Plantation Tour – Explore aromatic coffee estates and learn about coffee making
                 </div>
                 <div className="highlight-item">
                   <span className="check">✓</span>
-                  Basilica of Bom Jesus – UNESCO World Heritage Site
+                  Abbey Falls – Majestic waterfall amidst coffee and spice plantations
                 </div>
                 <div className="highlight-item">
                   <span className="check">✓</span>
-                  Dolphin Watching – Morning boat trip to spot dolphins
+                  Raja's Seat – Breathtaking sunset point with panoramic valley views
                 </div>
                 <div className="highlight-item">
                   <span className="check">✓</span>
-                  Anjuna Flea Market – Shopping and local crafts
+                  Tibetan Monastery – Peaceful Golden Temple with Buddhist culture
                 </div>
                 <div className="highlight-item">
                   <span className="check">✓</span>
-                  Portuguese Heritage Walk – Explore Old Goa architecture
+                  Coorg Cuisine – Authentic Kodava food and local coffee tasting
                 </div>
               </div>
             </section>
@@ -155,8 +155,8 @@ const GoaPage = () => {
               <h2>Tour Itinerary</h2>
               <div className="itinerary-list">
                 <div className="departure-point">
-                  <span className="location">North Goa, India</span>
-                  <span className="time">Departure: 8:00 am - 8:30am</span>
+                  <span className="location">Coorg, Karnataka</span>
+                  <span className="time">Departure: 6:00 am - 6:30am</span>
                 </div>
                 
                 <div className="day-item completed">
@@ -164,7 +164,7 @@ const GoaPage = () => {
                     <span className="day-number">Day-01</span>
                     <span className="day-status">✓</span>
                   </div>
-                  <h4>Calangute Beach – Water sports and beach activities</h4>
+                  <h4>Arrival & Coffee Plantation Tour – Introduction to Coorg's coffee culture</h4>
                 </div>
 
                 <div className="day-item completed">
@@ -172,7 +172,7 @@ const GoaPage = () => {
                     <span className="day-number">Day-02</span>
                     <span className="day-status">✓</span>
                   </div>
-                  <h4>Baga Beach – Nightlife and beach shacks</h4>
+                  <h4>Abbey Falls & Raja's Seat – Natural wonders and sunset views</h4>
                 </div>
 
                 <div className="day-item completed">
@@ -180,12 +180,12 @@ const GoaPage = () => {
                     <span className="day-number">Day-03</span>
                     <span className="day-status">✓</span>
                   </div>
-                  <h4>Anjuna Flea Market – Shopping and local culture</h4>
+                  <h4>Trekking & Tibetan Monastery – Adventure and spiritual experience</h4>
                 </div>
 
                 <div className="departure-point">
-                  <span className="location">Old Goa</span>
-                  <span className="time">Departure: 9:00 am - 9:30am</span>
+                  <span className="location">Madikeri Town</span>
+                  <span className="time">Departure: 10:00 am - 10:30am</span>
                 </div>
 
                 <div className="day-item completed">
@@ -193,7 +193,7 @@ const GoaPage = () => {
                     <span className="day-number">Day-04</span>
                     <span className="day-status">✓</span>
                   </div>
-                  <h4>Basilica of Bom Jesus – Heritage and history tour</h4>
+                  <h4>Local Markets – Shopping for coffee, spices and handicrafts</h4>
                 </div>
 
                 <div className="day-item completed">
@@ -201,7 +201,7 @@ const GoaPage = () => {
                     <span className="day-number">Day-05</span>
                     <span className="day-status">✓</span>
                   </div>
-                  <h4>Dolphin Trip – Morning cruise and water activities</h4>
+                  <h4>Kodava Culture – Traditional cuisine and cultural immersion</h4>
                 </div>
               </div>
             </section>
@@ -285,9 +285,9 @@ const GoaPage = () => {
             </div>
           </div>
         </div>
-       
+        <Footer/>
       </div>
- <Footer/>
+
       <style jsx>{`
         .inner-page {
           min-height: 100vh;
@@ -900,4 +900,4 @@ const GoaPage = () => {
   );
 };
 
-export default GoaPage;
+export default CoorgPage;

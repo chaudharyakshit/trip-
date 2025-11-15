@@ -6,21 +6,21 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import CursorFX from "../../components/CursorFX.jsx";
 
-// Import images for Goa
-import goa1 from '/assets/destination-images/Goa1.webp';
-import goa2 from '/assets/destination-images/Goa2.webp';
-import goa3 from '/assets/destination-images/Goa3.webp';
+// Import images for Ajanta Ellora
+import ajanta1 from '/assets/destination-images/Ajanta & Ellora Caves, Maharashtra1.webp';
+import ajanta2 from '/assets/destination-images/Ajanta & Ellora Caves, Maharashtra2.webp';
+import ajanta3 from '/assets/destination-images/Ajanta & Ellora Caves, Maharashtra3.webp';
 
 import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-const GoaPage = () => {
+const AjantaElloraPage = () => {
   const [selectedDate, setSelectedDate] = useState('');
   const [travelers, setTravelers] = useState(1);
 
-  const goaImages = [goa1, goa2, goa3];
+  const ajantaImages = [ajanta1, ajanta2, ajanta3];
 
   return (
     <div className="inner-page">
@@ -36,12 +36,12 @@ const GoaPage = () => {
           loop={true}
           className="hero-slider"
         >
-          {goaImages.map((img, index) => (
+          {ajantaImages.map((img, index) => (
             <SwiperSlide key={index}>
               <div className="hero-slide">
                 <img
                   src={img}
-                  alt={`Goa ${index + 1}`}
+                  alt={`Ajanta Ellora ${index + 1}`}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -58,13 +58,13 @@ const GoaPage = () => {
             <section className="about-section">
               <h2>About Tour Package</h2>
               <p>
-                Goa, India's beach paradise, offers a perfect blend of sun, sand, and sea with a rich Portuguese heritage. From pristine beaches and vibrant nightlife to ancient churches and spice plantations, this coastal state provides an unforgettable tropical getaway experience.
+                Ajanta and Ellora, UNESCO World Heritage Sites in Maharashtra, represent the pinnacle of ancient Indian rock-cut architecture and art. The Ajanta Caves feature exquisite Buddhist paintings and sculptures dating from 2nd century BCE, while the Ellora Caves showcase magnificent Hindu, Buddhist, and Jain temples carved from solid rock between the 6th and 10th centuries. These architectural marvels, particularly the massive Kailasa Temple at Ellora, demonstrate extraordinary craftsmanship and spiritual devotion that has endured for centuries.
               </p>
               
               <div className="package-details">
                 <div className="detail-item">
                   <span className="label">Accommodation</span>
-                  <span className="value">Beach Resort</span>
+                  <span className="value">4 Star Hotel</span>
                 </div>
                 <div className="detail-item">
                   <span className="label">Meals</span>
@@ -72,7 +72,7 @@ const GoaPage = () => {
                 </div>
                 <div className="detail-item">
                   <span className="label">Transportation</span>
-                  <span className="value">Bike, Car, Boat</span>
+                  <span className="value">Car, Bus</span>
                 </div>
                 <div className="detail-item">
                   <span className="label">Group Size</span>
@@ -80,23 +80,23 @@ const GoaPage = () => {
                 </div>
                 <div className="detail-item">
                   <span className="label">Language</span>
-                  <span className="value">English, Hindi, Konkani</span>
+                  <span className="value">English, Hindi, Marathi</span>
                 </div>
                 <div className="detail-item">
                   <span className="label">Activities</span>
-                  <span className="value">Water Sports, Dolphin Watch</span>
+                  <span className="value">Cave Exploration, Temple Tours</span>
                 </div>
                 <div className="detail-item">
                   <span className="label">Age Range</span>
-                  <span className="value">18-45 (Year)</span>
+                  <span className="value">18-60 (Year)</span>
                 </div>
                 <div className="detail-item">
                   <span className="label">Season</span>
-                  <span className="value">Winter Season</span>
+                  <span className="value">Winter Season (Oct-Mar)</span>
                 </div>
                 <div className="detail-item">
                   <span className="label">Category</span>
-                  <span className="value">Beach, Adventure</span>
+                  <span className="value">Historical, Architectural, Spiritual</span>
                 </div>
               </div>
             </section>
@@ -106,18 +106,18 @@ const GoaPage = () => {
               <h2>Explore Locations</h2>
               <div className="locations-grid">
                 <div className="location-card">
-                  <div className="location-icon">🏖️</div>
-                  <h3>Calangute Beach</h3>
+                  <div className="location-icon">🕍</div>
+                  <h3>Ajanta Caves</h3>
                   <span className="duration">(02 Days)</span>
                 </div>
                 <div className="location-card">
-                  <div className="location-icon">⛪</div>
-                  <h3>Old Goa Churches</h3>
-                  <span className="duration">(01 Days)</span>
+                  <div className="location-icon">🏛️</div>
+                  <h3>Ellora Caves</h3>
+                  <span className="duration">(02 Days)</span>
                 </div>
                 <div className="location-card">
-                  <div className="location-icon">🚤</div>
-                  <h3>Dolphin Trip</h3>
+                  <div className="location-icon">🕌</div>
+                  <h3>Kailasa Temple</h3>
                   <span className="duration">(01 Days)</span>
                 </div>
               </div>
@@ -129,23 +129,23 @@ const GoaPage = () => {
               <div className="highlights-list">
                 <div className="highlight-item">
                   <span className="check">✓</span>
-                  Calangute & Baga Beaches – Sunbathing and water sports
+                  Ajanta Caves – Ancient Buddhist paintings and rock-cut monasteries
                 </div>
                 <div className="highlight-item">
                   <span className="check">✓</span>
-                  Basilica of Bom Jesus – UNESCO World Heritage Site
+                  Ellora Caves – Hindu, Buddhist and Jain temples in rock
                 </div>
                 <div className="highlight-item">
                   <span className="check">✓</span>
-                  Dolphin Watching – Morning boat trip to spot dolphins
+                  Kailasa Temple – World's largest monolithic rock excavation
                 </div>
                 <div className="highlight-item">
                   <span className="check">✓</span>
-                  Anjuna Flea Market – Shopping and local crafts
+                  Ancient Frescoes – Well-preserved 2000-year-old paintings
                 </div>
                 <div className="highlight-item">
                   <span className="check">✓</span>
-                  Portuguese Heritage Walk – Explore Old Goa architecture
+                  Architectural Marvels – Engineering wonders of ancient India
                 </div>
               </div>
             </section>
@@ -155,8 +155,8 @@ const GoaPage = () => {
               <h2>Tour Itinerary</h2>
               <div className="itinerary-list">
                 <div className="departure-point">
-                  <span className="location">North Goa, India</span>
-                  <span className="time">Departure: 8:00 am - 8:30am</span>
+                  <span className="location">Aurangabad, Maharashtra</span>
+                  <span className="time">Departure: 6:00 am - 6:30am</span>
                 </div>
                 
                 <div className="day-item completed">
@@ -164,7 +164,7 @@ const GoaPage = () => {
                     <span className="day-number">Day-01</span>
                     <span className="day-status">✓</span>
                   </div>
-                  <h4>Calangute Beach – Water sports and beach activities</h4>
+                  <h4>Ajanta Caves – Buddhist rock-cut caves and ancient paintings</h4>
                 </div>
 
                 <div className="day-item completed">
@@ -172,7 +172,7 @@ const GoaPage = () => {
                     <span className="day-number">Day-02</span>
                     <span className="day-status">✓</span>
                   </div>
-                  <h4>Baga Beach – Nightlife and beach shacks</h4>
+                  <h4>Ellora Caves – Multi-religious rock-cut architecture</h4>
                 </div>
 
                 <div className="day-item completed">
@@ -180,12 +180,12 @@ const GoaPage = () => {
                     <span className="day-number">Day-03</span>
                     <span className="day-status">✓</span>
                   </div>
-                  <h4>Anjuna Flea Market – Shopping and local culture</h4>
+                  <h4>Kailasa Temple – Magnificent monolithic Shiva temple</h4>
                 </div>
 
                 <div className="departure-point">
-                  <span className="location">Old Goa</span>
-                  <span className="time">Departure: 9:00 am - 9:30am</span>
+                  <span className="location">Ellora Complex</span>
+                  <span className="time">Departure: 8:00 am - 8:30am</span>
                 </div>
 
                 <div className="day-item completed">
@@ -193,7 +193,7 @@ const GoaPage = () => {
                     <span className="day-number">Day-04</span>
                     <span className="day-status">✓</span>
                   </div>
-                  <h4>Basilica of Bom Jesus – Heritage and history tour</h4>
+                  <h4>Detailed Cave Exploration – In-depth study of sculptures</h4>
                 </div>
 
                 <div className="day-item completed">
@@ -201,7 +201,7 @@ const GoaPage = () => {
                     <span className="day-number">Day-05</span>
                     <span className="day-status">✓</span>
                   </div>
-                  <h4>Dolphin Trip – Morning cruise and water activities</h4>
+                  <h4>Local Heritage – Marathi culture and traditional cuisine</h4>
                 </div>
               </div>
             </section>
@@ -212,8 +212,8 @@ const GoaPage = () => {
             <div className="booking-widget">
               <div className="price-section">
                 <div className="price-row">
-                  <div className="original-price">$599</div>
-                  <div className="current-price">$499</div>
+                  <div className="original-price">$569</div>
+                  <div className="current-price">$469</div>
                 </div>
                 <div className="price-label">Per Person</div>
               </div>
@@ -900,4 +900,4 @@ const GoaPage = () => {
   );
 };
 
-export default GoaPage;
+export default AjantaElloraPage;

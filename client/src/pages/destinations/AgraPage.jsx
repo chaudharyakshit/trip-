@@ -285,8 +285,9 @@ const AgraPage = () => {
             </div>
           </div>
         </div>
-        <Footer/>
+       
       </div>
+       <Footer/>
 
       <style jsx>{`
         .inner-page {

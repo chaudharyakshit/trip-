@@ -124,15 +124,15 @@ export default function PopularPackages() {
     price: 199,
     image: "../../../assets/card-images/Amritsar.png"
   },
-  {
-    slug: "hampi",
-    destination: "Hampi, Karnataka",
-    title: "Heritage Ruins Tour",
-    region: "Karnataka, India",
-    days: "03 Days/02 Nights",
-    price: 249,
-    image: "../../../assets/card-images/Hampi,-Karnataka.png"
-  },
+  // {
+  //   slug: "hampi",
+  //   destination: "Hampi, Karnataka",
+  //   title: "Heritage Ruins Tour",
+  //   region: "Karnataka, India",
+  //   days: "03 Days/02 Nights",
+  //   price: 249,
+  //   image: "../../../assets/card-images/Hampi,-Karnataka.png"
+  // },
   // {
   //   slug: "mysore",
   //   destination: "Mysore, Karnataka",
@@ -169,15 +169,15 @@ export default function PopularPackages() {
     price: 239,
     image: "../../../assets/card-images/Konark,-Odisha.png"
   },
-  // {
-  //   slug: "kutch",
-  //   destination: "Rann of Kutch, Gujarat",
-  //   title: "White Desert Festival",
-  //   region: "Gujarat, India",
-  //   days: "04 Days/03 Nights",
-  //   price: 349,
-  //   image: "../../../assets/card-images/Kutch.png"
-  // },
+  {
+    slug: "kutch",
+    destination: "Rann of Kutch, Gujarat",
+    title: "White Desert Festival",
+    region: "Gujarat, India",
+    days: "04 Days/03 Nights",
+    price: 349,
+    image: "../../../assets/card-images/Rann.png"
+  },
   {
     slug: "sikkim",
     destination: "Sikkim (Gangtok)",

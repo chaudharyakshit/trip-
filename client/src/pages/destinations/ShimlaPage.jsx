@@ -6,21 +6,21 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import CursorFX from "../../components/CursorFX.jsx";
 
-// Import images for Goa
-import goa1 from '/assets/destination-images/Goa1.webp';
-import goa2 from '/assets/destination-images/Goa2.webp';
-import goa3 from '/assets/destination-images/Goa3.webp';
+// Import images for Shimla
+import shimla1 from '/assets/destination-images/Shimla1.webp';
+import shimla2 from '/assets/destination-images/Shimla2.webp';
+import shimla3 from '/assets/destination-images/Shimla3.webp';
 
 import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-const GoaPage = () => {
+const ShimlaPage = () => {
   const [selectedDate, setSelectedDate] = useState('');
   const [travelers, setTravelers] = useState(1);
 
-  const goaImages = [goa1, goa2, goa3];
+  const shimlaImages = [shimla1, shimla2, shimla3];
 
   return (
     <div className="inner-page">
@@ -36,12 +36,12 @@ const GoaPage = () => {
           loop={true}
           className="hero-slider"
         >
-          {goaImages.map((img, index) => (
+          {shimlaImages.map((img, index) => (
             <SwiperSlide key={index}>
               <div className="hero-slide">
                 <img
                   src={img}
-                  alt={`Goa ${index + 1}`}
+                  alt={`Shimla ${index + 1}`}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -58,13 +58,13 @@ const GoaPage = () => {
             <section className="about-section">
               <h2>About Tour Package</h2>
               <p>
-                Goa, India's beach paradise, offers a perfect blend of sun, sand, and sea with a rich Portuguese heritage. From pristine beaches and vibrant nightlife to ancient churches and spice plantations, this coastal state provides an unforgettable tropical getaway experience.
+                Shimla, the "Queen of Hill Stations" and former summer capital of British India, offers a perfect escape into the majestic Himalayas. With its colonial architecture, scenic toy train rides, pine-clad valleys, and pleasant climate, this charming hill station provides a nostalgic journey through history amidst breathtaking mountain landscapes and old-world charm.
               </p>
               
               <div className="package-details">
                 <div className="detail-item">
                   <span className="label">Accommodation</span>
-                  <span className="value">Beach Resort</span>
+                  <span className="value">Heritage Hotel & Resort</span>
                 </div>
                 <div className="detail-item">
                   <span className="label">Meals</span>
@@ -72,7 +72,7 @@ const GoaPage = () => {
                 </div>
                 <div className="detail-item">
                   <span className="label">Transportation</span>
-                  <span className="value">Bike, Car, Boat</span>
+                  <span className="value">Toy Train, Car, Cable Car</span>
                 </div>
                 <div className="detail-item">
                   <span className="label">Group Size</span>
@@ -80,23 +80,23 @@ const GoaPage = () => {
                 </div>
                 <div className="detail-item">
                   <span className="label">Language</span>
-                  <span className="value">English, Hindi, Konkani</span>
+                  <span className="value">English, Hindi, Pahari</span>
                 </div>
                 <div className="detail-item">
                   <span className="label">Activities</span>
-                  <span className="value">Water Sports, Dolphin Watch</span>
+                  <span className="value">Toy Train, Trekking, Shopping</span>
                 </div>
                 <div className="detail-item">
                   <span className="label">Age Range</span>
-                  <span className="value">18-45 (Year)</span>
+                  <span className="value">18-60 (Year)</span>
                 </div>
                 <div className="detail-item">
                   <span className="label">Season</span>
-                  <span className="value">Winter Season</span>
+                  <span className="value">Summer & Winter</span>
                 </div>
                 <div className="detail-item">
                   <span className="label">Category</span>
-                  <span className="value">Beach, Adventure</span>
+                  <span className="value">Hill Station, Heritage, Family</span>
                 </div>
               </div>
             </section>
@@ -106,18 +106,18 @@ const GoaPage = () => {
               <h2>Explore Locations</h2>
               <div className="locations-grid">
                 <div className="location-card">
-                  <div className="location-icon">🏖️</div>
-                  <h3>Calangute Beach</h3>
-                  <span className="duration">(02 Days)</span>
-                </div>
-                <div className="location-card">
-                  <div className="location-icon">⛪</div>
-                  <h3>Old Goa Churches</h3>
+                  <div className="location-icon">🚂</div>
+                  <h3>Toy Train Ride</h3>
                   <span className="duration">(01 Days)</span>
                 </div>
                 <div className="location-card">
-                  <div className="location-icon">🚤</div>
-                  <h3>Dolphin Trip</h3>
+                  <div className="location-icon">🛍️</div>
+                  <h3>Mall Road</h3>
+                  <span className="duration">(01 Days)</span>
+                </div>
+                <div className="location-card">
+                  <div className="location-icon">⛰️</div>
+                  <h3>Kufri Hills</h3>
                   <span className="duration">(01 Days)</span>
                 </div>
               </div>
@@ -129,23 +129,23 @@ const GoaPage = () => {
               <div className="highlights-list">
                 <div className="highlight-item">
                   <span className="check">✓</span>
-                  Calangute & Baga Beaches – Sunbathing and water sports
+                  Kalka-Shimla Toy Train – UNESCO World Heritage mountain railway journey
                 </div>
                 <div className="highlight-item">
                   <span className="check">✓</span>
-                  Basilica of Bom Jesus – UNESCO World Heritage Site
+                  The Ridge & Christ Church – Colonial architecture and panoramic views
                 </div>
                 <div className="highlight-item">
                   <span className="check">✓</span>
-                  Dolphin Watching – Morning boat trip to spot dolphins
+                  Mall Road Shopping – British-era promenade with local crafts and woolens
                 </div>
                 <div className="highlight-item">
                   <span className="check">✓</span>
-                  Anjuna Flea Market – Shopping and local crafts
+                  Kufri Adventure – Snow activities and Himalayan Nature Park visit
                 </div>
                 <div className="highlight-item">
                   <span className="check">✓</span>
-                  Portuguese Heritage Walk – Explore Old Goa architecture
+                  Jakhoo Temple – Ancient Hanuman temple with panoramic city views
                 </div>
               </div>
             </section>
@@ -155,7 +155,7 @@ const GoaPage = () => {
               <h2>Tour Itinerary</h2>
               <div className="itinerary-list">
                 <div className="departure-point">
-                  <span className="location">North Goa, India</span>
+                  <span className="location">Shimla, Himachal Pradesh</span>
                   <span className="time">Departure: 8:00 am - 8:30am</span>
                 </div>
                 
@@ -164,7 +164,7 @@ const GoaPage = () => {
                     <span className="day-number">Day-01</span>
                     <span className="day-status">✓</span>
                   </div>
-                  <h4>Calangute Beach – Water sports and beach activities</h4>
+                  <h4>Colonial Heritage – The Ridge, Christ Church & Scandal Point</h4>
                 </div>
 
                 <div className="day-item completed">
@@ -172,7 +172,7 @@ const GoaPage = () => {
                     <span className="day-number">Day-02</span>
                     <span className="day-status">✓</span>
                   </div>
-                  <h4>Baga Beach – Nightlife and beach shacks</h4>
+                  <h4>Toy Train Experience – Kalka to Shimla UNESCO railway journey</h4>
                 </div>
 
                 <div className="day-item completed">
@@ -180,11 +180,11 @@ const GoaPage = () => {
                     <span className="day-number">Day-03</span>
                     <span className="day-status">✓</span>
                   </div>
-                  <h4>Anjuna Flea Market – Shopping and local culture</h4>
+                  <h4>Mall Road Exploration – Shopping, cafes and British architecture</h4>
                 </div>
 
                 <div className="departure-point">
-                  <span className="location">Old Goa</span>
+                  <span className="location">Kufri Hills</span>
                   <span className="time">Departure: 9:00 am - 9:30am</span>
                 </div>
 
@@ -193,7 +193,7 @@ const GoaPage = () => {
                     <span className="day-number">Day-04</span>
                     <span className="day-status">✓</span>
                   </div>
-                  <h4>Basilica of Bom Jesus – Heritage and history tour</h4>
+                  <h4>Kufri Adventure – Snow sports and Himalayan Nature Park</h4>
                 </div>
 
                 <div className="day-item completed">
@@ -201,7 +201,15 @@ const GoaPage = () => {
                     <span className="day-number">Day-05</span>
                     <span className="day-status">✓</span>
                   </div>
-                  <h4>Dolphin Trip – Morning cruise and water activities</h4>
+                  <h4>Jakhoo Temple & Cable Car – Temple visit and mountain views</h4>
+                </div>
+
+                <div className="day-item completed">
+                  <div className="day-header">
+                    <span className="day-number">Day-06</span>
+                    <span className="day-status">✓</span>
+                  </div>
+                  <h4>Local Culture – Himachali cuisine and cultural evening</h4>
                 </div>
               </div>
             </section>
@@ -212,8 +220,8 @@ const GoaPage = () => {
             <div className="booking-widget">
               <div className="price-section">
                 <div className="price-row">
-                  <div className="original-price">$599</div>
-                  <div className="current-price">$499</div>
+                  <div className="original-price">$649</div>
+                  <div className="current-price">$549</div>
                 </div>
                 <div className="price-label">Per Person</div>
               </div>
@@ -287,7 +295,8 @@ const GoaPage = () => {
         </div>
        
       </div>
- <Footer/>
+       <Footer/>
+
       <style jsx>{`
         .inner-page {
           min-height: 100vh;
@@ -900,4 +909,4 @@ const GoaPage = () => {
   );
 };
 
-export default GoaPage;
+export default ShimlaPage;

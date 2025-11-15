@@ -284,9 +284,9 @@ const JaipurPage = () => {
             </div>
           </div>
         </div>
-        <Footer/>
+      
       </div>
-
+  <Footer/>
       <style jsx>{`
         .inner-page {
           min-height: 100vh;

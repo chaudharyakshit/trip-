@@ -6,21 +6,21 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import CursorFX from "../../components/CursorFX.jsx";
 
-// Import images for Goa
-import goa1 from '/assets/destination-images/Goa1.webp';
-import goa2 from '/assets/destination-images/Goa2.webp';
-import goa3 from '/assets/destination-images/Goa3.webp';
+// Import images for Kutch
+import kutch1 from '/assets/destination-images/Rann of Kutch, Gujarat.webp';
+import kutch2 from '/assets/destination-images/Rann of Kutch, Gujarat1.webp';
+import kutch3 from '/assets/destination-images/Rann of Kutch, Gujarat2.webp';
 
 import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-const GoaPage = () => {
+const KutchPage = () => {
   const [selectedDate, setSelectedDate] = useState('');
   const [travelers, setTravelers] = useState(1);
 
-  const goaImages = [goa1, goa2, goa3];
+  const kutchImages = [kutch1, kutch2, kutch3];
 
   return (
     <div className="inner-page">
@@ -36,12 +36,12 @@ const GoaPage = () => {
           loop={true}
           className="hero-slider"
         >
-          {goaImages.map((img, index) => (
+          {kutchImages.map((img, index) => (
             <SwiperSlide key={index}>
               <div className="hero-slide">
                 <img
                   src={img}
-                  alt={`Goa ${index + 1}`}
+                  alt={`Kutch ${index + 1}`}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -58,13 +58,13 @@ const GoaPage = () => {
             <section className="about-section">
               <h2>About Tour Package</h2>
               <p>
-                Goa, India's beach paradise, offers a perfect blend of sun, sand, and sea with a rich Portuguese heritage. From pristine beaches and vibrant nightlife to ancient churches and spice plantations, this coastal state provides an unforgettable tropical getaway experience.
+                Kutch, India's largest district, is a land of stark beauty and vibrant culture known for its white salt desert, traditional handicrafts, and rich heritage. The Great Rann of Kutch transforms into a magical white landscape during winter, while the region's colorful villages showcase exquisite embroidery, bandhani textiles, and metalwork. From the spectacular Rann Utsav to ancient forts and wildlife sanctuaries, Kutch offers a unique blend of natural wonders and cultural experiences.
               </p>
               
               <div className="package-details">
                 <div className="detail-item">
                   <span className="label">Accommodation</span>
-                  <span className="value">Beach Resort</span>
+                  <span className="value">4 Star Resort & Tents</span>
                 </div>
                 <div className="detail-item">
                   <span className="label">Meals</span>
@@ -72,7 +72,7 @@ const GoaPage = () => {
                 </div>
                 <div className="detail-item">
                   <span className="label">Transportation</span>
-                  <span className="value">Bike, Car, Boat</span>
+                  <span className="value">Car, Jeep</span>
                 </div>
                 <div className="detail-item">
                   <span className="label">Group Size</span>
@@ -80,23 +80,23 @@ const GoaPage = () => {
                 </div>
                 <div className="detail-item">
                   <span className="label">Language</span>
-                  <span className="value">English, Hindi, Konkani</span>
+                  <span className="value">English, Hindi, Gujarati</span>
                 </div>
                 <div className="detail-item">
                   <span className="label">Activities</span>
-                  <span className="value">Water Sports, Dolphin Watch</span>
+                  <span className="value">Desert Safari, Cultural Shows</span>
                 </div>
                 <div className="detail-item">
                   <span className="label">Age Range</span>
-                  <span className="value">18-45 (Year)</span>
+                  <span className="value">18-60 (Year)</span>
                 </div>
                 <div className="detail-item">
                   <span className="label">Season</span>
-                  <span className="value">Winter Season</span>
+                  <span className="value">Winter Season (Oct-Mar)</span>
                 </div>
                 <div className="detail-item">
                   <span className="label">Category</span>
-                  <span className="value">Beach, Adventure</span>
+                  <span className="value">Cultural, Adventure, Nature</span>
                 </div>
               </div>
             </section>
@@ -106,18 +106,18 @@ const GoaPage = () => {
               <h2>Explore Locations</h2>
               <div className="locations-grid">
                 <div className="location-card">
-                  <div className="location-icon">🏖️</div>
-                  <h3>Calangute Beach</h3>
+                  <div className="location-icon">🏜️</div>
+                  <h3>Great Rann of Kutch</h3>
                   <span className="duration">(02 Days)</span>
                 </div>
                 <div className="location-card">
-                  <div className="location-icon">⛪</div>
-                  <h3>Old Goa Churches</h3>
+                  <div className="location-icon">🕌</div>
+                  <h3>Kutch Desert Wildlife Sanctuary</h3>
                   <span className="duration">(01 Days)</span>
                 </div>
                 <div className="location-card">
-                  <div className="location-icon">🚤</div>
-                  <h3>Dolphin Trip</h3>
+                  <div className="location-icon">🏰</div>
+                  <h3>Prag Mahal & Aina Mahal</h3>
                   <span className="duration">(01 Days)</span>
                 </div>
               </div>
@@ -129,23 +129,23 @@ const GoaPage = () => {
               <div className="highlights-list">
                 <div className="highlight-item">
                   <span className="check">✓</span>
-                  Calangute & Baga Beaches – Sunbathing and water sports
+                  Great Rann of Kutch – Vast white salt desert under moonlight
                 </div>
                 <div className="highlight-item">
                   <span className="check">✓</span>
-                  Basilica of Bom Jesus – UNESCO World Heritage Site
+                  Rann Utsav – Cultural festival with traditional music and dance
                 </div>
                 <div className="highlight-item">
                   <span className="check">✓</span>
-                  Dolphin Watching – Morning boat trip to spot dolphins
+                  Kutch Handicrafts – Famous embroidery, bandhani and silver work
                 </div>
                 <div className="highlight-item">
                   <span className="check">✓</span>
-                  Anjuna Flea Market – Shopping and local crafts
+                  Kala Dungar – Highest point in Kutch with panoramic views
                 </div>
                 <div className="highlight-item">
                   <span className="check">✓</span>
-                  Portuguese Heritage Walk – Explore Old Goa architecture
+                  Traditional Cuisine – Authentic Kutchi food and local delicacies
                 </div>
               </div>
             </section>
@@ -155,8 +155,8 @@ const GoaPage = () => {
               <h2>Tour Itinerary</h2>
               <div className="itinerary-list">
                 <div className="departure-point">
-                  <span className="location">North Goa, India</span>
-                  <span className="time">Departure: 8:00 am - 8:30am</span>
+                  <span className="location">Kutch, Gujarat</span>
+                  <span className="time">Departure: 6:00 am - 6:30am</span>
                 </div>
                 
                 <div className="day-item completed">
@@ -164,7 +164,7 @@ const GoaPage = () => {
                     <span className="day-number">Day-01</span>
                     <span className="day-status">✓</span>
                   </div>
-                  <h4>Calangute Beach – Water sports and beach activities</h4>
+                  <h4>Great Rann of Kutch – White desert exploration and sunset</h4>
                 </div>
 
                 <div className="day-item completed">
@@ -172,7 +172,7 @@ const GoaPage = () => {
                     <span className="day-number">Day-02</span>
                     <span className="day-status">✓</span>
                   </div>
-                  <h4>Baga Beach – Nightlife and beach shacks</h4>
+                  <h4>Rann Utsav – Cultural festival experience and traditional shows</h4>
                 </div>
 
                 <div className="day-item completed">
@@ -180,12 +180,12 @@ const GoaPage = () => {
                     <span className="day-number">Day-03</span>
                     <span className="day-status">✓</span>
                   </div>
-                  <h4>Anjuna Flea Market – Shopping and local culture</h4>
+                  <h4>Handicraft Villages – Visit to Bhujodi and nearby craft centers</h4>
                 </div>
 
                 <div className="departure-point">
-                  <span className="location">Old Goa</span>
-                  <span className="time">Departure: 9:00 am - 9:30am</span>
+                  <span className="location">Bhuj City</span>
+                  <span className="time">Departure: 8:00 am - 8:30am</span>
                 </div>
 
                 <div className="day-item completed">
@@ -193,7 +193,7 @@ const GoaPage = () => {
                     <span className="day-number">Day-04</span>
                     <span className="day-status">✓</span>
                   </div>
-                  <h4>Basilica of Bom Jesus – Heritage and history tour</h4>
+                  <h4>Prag Mahal & Aina Mahal – Historic palaces and architecture</h4>
                 </div>
 
                 <div className="day-item completed">
@@ -201,7 +201,7 @@ const GoaPage = () => {
                     <span className="day-number">Day-05</span>
                     <span className="day-status">✓</span>
                   </div>
-                  <h4>Dolphin Trip – Morning cruise and water activities</h4>
+                  <h4>Kutch Desert Wildlife Sanctuary – Flamingo watching and nature</h4>
                 </div>
               </div>
             </section>
@@ -212,8 +212,8 @@ const GoaPage = () => {
             <div className="booking-widget">
               <div className="price-section">
                 <div className="price-row">
-                  <div className="original-price">$599</div>
-                  <div className="current-price">$499</div>
+                  <div className="original-price">$579</div>
+                  <div className="current-price">$479</div>
                 </div>
                 <div className="price-label">Per Person</div>
               </div>
@@ -285,9 +285,9 @@ const GoaPage = () => {
             </div>
           </div>
         </div>
-       
+        <Footer/>
       </div>
- <Footer/>
+
       <style jsx>{`
         .inner-page {
           min-height: 100vh;
@@ -900,4 +900,4 @@ const GoaPage = () => {
   );
 };
 
-export default GoaPage;
+export default KutchPage;

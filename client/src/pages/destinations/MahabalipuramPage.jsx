@@ -6,21 +6,21 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import CursorFX from "../../components/CursorFX.jsx";
 
-// Import images for Goa
-import goa1 from '/assets/destination-images/Goa1.webp';
-import goa2 from '/assets/destination-images/Goa2.webp';
-import goa3 from '/assets/destination-images/Goa3.webp';
+// Import images for Mahabalipuram
+import mahabalipuram1 from '/assets/destination-images/Mahabalipuram, Tamil Nadu1.webp';
+import mahabalipuram2 from '/assets/destination-images/Mahabalipuram, Tamil Nadu2.webp';
+import mahabalipuram3 from '/assets/destination-images/Mahabalipuram, Tamil Nadu3.webp';
 
 import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-const GoaPage = () => {
+const MahabalipuramPage = () => {
   const [selectedDate, setSelectedDate] = useState('');
   const [travelers, setTravelers] = useState(1);
 
-  const goaImages = [goa1, goa2, goa3];
+  const mahabalipuramImages = [mahabalipuram1, mahabalipuram2, mahabalipuram3];
 
   return (
     <div className="inner-page">
@@ -36,12 +36,12 @@ const GoaPage = () => {
           loop={true}
           className="hero-slider"
         >
-          {goaImages.map((img, index) => (
+          {mahabalipuramImages.map((img, index) => (
             <SwiperSlide key={index}>
               <div className="hero-slide">
                 <img
                   src={img}
-                  alt={`Goa ${index + 1}`}
+                  alt={`Mahabalipuram ${index + 1}`}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -58,13 +58,13 @@ const GoaPage = () => {
             <section className="about-section">
               <h2>About Tour Package</h2>
               <p>
-                Goa, India's beach paradise, offers a perfect blend of sun, sand, and sea with a rich Portuguese heritage. From pristine beaches and vibrant nightlife to ancient churches and spice plantations, this coastal state provides an unforgettable tropical getaway experience.
+                Mahabalipuram, a UNESCO World Heritage Site, is an ancient port city on the Coromandel Coast of Tamil Nadu, renowned for its magnificent 7th and 8th-century Hindu monuments. This historic town showcases the pinnacle of Pallava art and architecture with its spectacular rock-cut temples, intricate stone carvings, and majestic shore temple. From the famous Arjuna's Penance to the beautiful coastal scenery, Mahabalipuram offers a fascinating journey into India's rich cultural heritage and architectural brilliance.
               </p>
               
               <div className="package-details">
                 <div className="detail-item">
                   <span className="label">Accommodation</span>
-                  <span className="value">Beach Resort</span>
+                  <span className="value">4 Star Beach Resort</span>
                 </div>
                 <div className="detail-item">
                   <span className="label">Meals</span>
@@ -72,7 +72,7 @@ const GoaPage = () => {
                 </div>
                 <div className="detail-item">
                   <span className="label">Transportation</span>
-                  <span className="value">Bike, Car, Boat</span>
+                  <span className="value">Car, Auto</span>
                 </div>
                 <div className="detail-item">
                   <span className="label">Group Size</span>
@@ -80,23 +80,23 @@ const GoaPage = () => {
                 </div>
                 <div className="detail-item">
                   <span className="label">Language</span>
-                  <span className="value">English, Hindi, Konkani</span>
+                  <span className="value">English, Hindi, Tamil</span>
                 </div>
                 <div className="detail-item">
                   <span className="label">Activities</span>
-                  <span className="value">Water Sports, Dolphin Watch</span>
+                  <span className="value">Temple Tours, Beach Visits</span>
                 </div>
                 <div className="detail-item">
                   <span className="label">Age Range</span>
-                  <span className="value">18-45 (Year)</span>
+                  <span className="value">18-60 (Year)</span>
                 </div>
                 <div className="detail-item">
                   <span className="label">Season</span>
-                  <span className="value">Winter Season</span>
+                  <span className="value">Winter Season (Oct-Mar)</span>
                 </div>
                 <div className="detail-item">
                   <span className="label">Category</span>
-                  <span className="value">Beach, Adventure</span>
+                  <span className="value">Historical, Architectural, Cultural</span>
                 </div>
               </div>
             </section>
@@ -106,18 +106,18 @@ const GoaPage = () => {
               <h2>Explore Locations</h2>
               <div className="locations-grid">
                 <div className="location-card">
-                  <div className="location-icon">🏖️</div>
-                  <h3>Calangute Beach</h3>
-                  <span className="duration">(02 Days)</span>
-                </div>
-                <div className="location-card">
-                  <div className="location-icon">⛪</div>
-                  <h3>Old Goa Churches</h3>
+                  <div className="location-icon">🏛️</div>
+                  <h3>Shore Temple</h3>
                   <span className="duration">(01 Days)</span>
                 </div>
                 <div className="location-card">
-                  <div className="location-icon">🚤</div>
-                  <h3>Dolphin Trip</h3>
+                  <div className="location-icon">🗿</div>
+                  <h3>Arjuna's Penance</h3>
+                  <span className="duration">(01 Days)</span>
+                </div>
+                <div className="location-card">
+                  <div className="location-icon">🏰</div>
+                  <h3>Pancha Rathas</h3>
                   <span className="duration">(01 Days)</span>
                 </div>
               </div>
@@ -129,23 +129,23 @@ const GoaPage = () => {
               <div className="highlights-list">
                 <div className="highlight-item">
                   <span className="check">✓</span>
-                  Calangute & Baga Beaches – Sunbathing and water sports
+                  Shore Temple – UNESCO site with stunning seaside architecture
                 </div>
                 <div className="highlight-item">
                   <span className="check">✓</span>
-                  Basilica of Bom Jesus – UNESCO World Heritage Site
+                  Arjuna's Penance – World's largest open-air rock relief
                 </div>
                 <div className="highlight-item">
                   <span className="check">✓</span>
-                  Dolphin Watching – Morning boat trip to spot dolphins
+                  Pancha Rathas – Five monolithic rock-cut temples
                 </div>
                 <div className="highlight-item">
                   <span className="check">✓</span>
-                  Anjuna Flea Market – Shopping and local crafts
+                  Krishna's Butter Ball – Mysterious balancing rock
                 </div>
                 <div className="highlight-item">
                   <span className="check">✓</span>
-                  Portuguese Heritage Walk – Explore Old Goa architecture
+                  Traditional Stone Carving – Live demonstrations of ancient craft
                 </div>
               </div>
             </section>
@@ -155,8 +155,8 @@ const GoaPage = () => {
               <h2>Tour Itinerary</h2>
               <div className="itinerary-list">
                 <div className="departure-point">
-                  <span className="location">North Goa, India</span>
-                  <span className="time">Departure: 8:00 am - 8:30am</span>
+                  <span className="location">Mahabalipuram, Tamil Nadu</span>
+                  <span className="time">Departure: 7:00 am - 7:30am</span>
                 </div>
                 
                 <div className="day-item completed">
@@ -164,7 +164,7 @@ const GoaPage = () => {
                     <span className="day-number">Day-01</span>
                     <span className="day-status">✓</span>
                   </div>
-                  <h4>Calangute Beach – Water sports and beach activities</h4>
+                  <h4>Shore Temple & Beach – UNESCO World Heritage site exploration</h4>
                 </div>
 
                 <div className="day-item completed">
@@ -172,7 +172,7 @@ const GoaPage = () => {
                     <span className="day-number">Day-02</span>
                     <span className="day-status">✓</span>
                   </div>
-                  <h4>Baga Beach – Nightlife and beach shacks</h4>
+                  <h4>Arjuna's Penance – Ancient rock-cut marvels and sculptures</h4>
                 </div>
 
                 <div className="day-item completed">
@@ -180,12 +180,12 @@ const GoaPage = () => {
                     <span className="day-number">Day-03</span>
                     <span className="day-status">✓</span>
                   </div>
-                  <h4>Anjuna Flea Market – Shopping and local culture</h4>
+                  <h4>Pancha Rathas & Krishna's Butter Ball – Architectural wonders</h4>
                 </div>
 
                 <div className="departure-point">
-                  <span className="location">Old Goa</span>
-                  <span className="time">Departure: 9:00 am - 9:30am</span>
+                  <span className="location">Mahabalipuram Town</span>
+                  <span className="time">Departure: 8:30 am - 9:00am</span>
                 </div>
 
                 <div className="day-item completed">
@@ -193,7 +193,7 @@ const GoaPage = () => {
                     <span className="day-number">Day-04</span>
                     <span className="day-status">✓</span>
                   </div>
-                  <h4>Basilica of Bom Jesus – Heritage and history tour</h4>
+                  <h4>Stone Carving Workshops – Traditional craft demonstrations</h4>
                 </div>
 
                 <div className="day-item completed">
@@ -201,7 +201,7 @@ const GoaPage = () => {
                     <span className="day-number">Day-05</span>
                     <span className="day-status">✓</span>
                   </div>
-                  <h4>Dolphin Trip – Morning cruise and water activities</h4>
+                  <h4>Local Culture – Tamil cuisine and cultural experiences</h4>
                 </div>
               </div>
             </section>
@@ -212,8 +212,8 @@ const GoaPage = () => {
             <div className="booking-widget">
               <div className="price-section">
                 <div className="price-row">
-                  <div className="original-price">$599</div>
-                  <div className="current-price">$499</div>
+                  <div className="original-price">$539</div>
+                  <div className="current-price">$439</div>
                 </div>
                 <div className="price-label">Per Person</div>
               </div>
@@ -285,9 +285,9 @@ const GoaPage = () => {
             </div>
           </div>
         </div>
-       
+        
       </div>
- <Footer/>
+<Footer/>
       <style jsx>{`
         .inner-page {
           min-height: 100vh;
@@ -900,4 +900,4 @@ const GoaPage = () => {
   );
 };
 
-export default GoaPage;
+export default MahabalipuramPage;

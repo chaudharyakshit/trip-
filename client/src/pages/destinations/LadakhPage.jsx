@@ -6,21 +6,21 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import CursorFX from "../../components/CursorFX.jsx";
 
-// Import images for Goa
-import goa1 from '/assets/destination-images/Goa1.webp';
-import goa2 from '/assets/destination-images/Goa2.webp';
-import goa3 from '/assets/destination-images/Goa3.webp';
+// Import images for Ladakh
+import ladakh1 from '/assets/destination-images/Ladakh1.webp';
+import ladakh2 from '/assets/destination-images/Ladakh2.webp';
+import ladakh3 from '/assets/destination-images/Ladakh3.webp';
 
 import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-const GoaPage = () => {
+const LadakhPage = () => {
   const [selectedDate, setSelectedDate] = useState('');
   const [travelers, setTravelers] = useState(1);
 
-  const goaImages = [goa1, goa2, goa3];
+  const ladakhImages = [ladakh1, ladakh2, ladakh3];
 
   return (
     <div className="inner-page">
@@ -36,12 +36,12 @@ const GoaPage = () => {
           loop={true}
           className="hero-slider"
         >
-          {goaImages.map((img, index) => (
+          {ladakhImages.map((img, index) => (
             <SwiperSlide key={index}>
               <div className="hero-slide">
                 <img
                   src={img}
-                  alt={`Goa ${index + 1}`}
+                  alt={`Ladakh ${index + 1}`}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -58,45 +58,45 @@ const GoaPage = () => {
             <section className="about-section">
               <h2>About Tour Package</h2>
               <p>
-                Goa, India's beach paradise, offers a perfect blend of sun, sand, and sea with a rich Portuguese heritage. From pristine beaches and vibrant nightlife to ancient churches and spice plantations, this coastal state provides an unforgettable tropical getaway experience.
+                Ladakh, the "Land of High Passes" and one of the highest inhabited regions on Earth, offers an extraordinary adventure in the majestic Himalayas. With its breathtaking landscapes, ancient Buddhist monasteries, crystal-clear lakes, and rugged mountain terrain, this high-altitude desert provides an unforgettable journey through some of the most spectacular and remote landscapes in India.
               </p>
               
               <div className="package-details">
                 <div className="detail-item">
                   <span className="label">Accommodation</span>
-                  <span className="value">Beach Resort</span>
+                  <span className="value">Camp & Eco-Resort</span>
                 </div>
                 <div className="detail-item">
                   <span className="label">Meals</span>
-                  <span className="value">Breakfast & Dinner</span>
+                  <span className="value">All Meals Included</span>
                 </div>
                 <div className="detail-item">
                   <span className="label">Transportation</span>
-                  <span className="value">Bike, Car, Boat</span>
+                  <span className="value">4x4 Jeep, Bike</span>
                 </div>
                 <div className="detail-item">
                   <span className="label">Group Size</span>
-                  <span className="value">10-20</span>
+                  <span className="value">6-12</span>
                 </div>
                 <div className="detail-item">
                   <span className="label">Language</span>
-                  <span className="value">English, Hindi, Konkani</span>
+                  <span className="value">English, Hindi, Ladakhi</span>
                 </div>
                 <div className="detail-item">
                   <span className="label">Activities</span>
-                  <span className="value">Water Sports, Dolphin Watch</span>
+                  <span className="value">Trekking, Monastery Visits</span>
                 </div>
                 <div className="detail-item">
                   <span className="label">Age Range</span>
-                  <span className="value">18-45 (Year)</span>
+                  <span className="value">18-50 (Year)</span>
                 </div>
                 <div className="detail-item">
                   <span className="label">Season</span>
-                  <span className="value">Winter Season</span>
+                  <span className="value">Summer Months</span>
                 </div>
                 <div className="detail-item">
                   <span className="label">Category</span>
-                  <span className="value">Beach, Adventure</span>
+                  <span className="value">Adventure, Cultural, Extreme</span>
                 </div>
               </div>
             </section>
@@ -106,19 +106,19 @@ const GoaPage = () => {
               <h2>Explore Locations</h2>
               <div className="locations-grid">
                 <div className="location-card">
-                  <div className="location-icon">🏖️</div>
-                  <h3>Calangute Beach</h3>
+                  <div className="location-icon">🏔️</div>
+                  <h3>Pangong Lake</h3>
                   <span className="duration">(02 Days)</span>
                 </div>
                 <div className="location-card">
-                  <div className="location-icon">⛪</div>
-                  <h3>Old Goa Churches</h3>
-                  <span className="duration">(01 Days)</span>
+                  <div className="location-icon">🕌</div>
+                  <h3>Monasteries</h3>
+                  <span className="duration">(02 Days)</span>
                 </div>
                 <div className="location-card">
-                  <div className="location-icon">🚤</div>
-                  <h3>Dolphin Trip</h3>
-                  <span className="duration">(01 Days)</span>
+                  <div className="location-icon">🏜️</div>
+                  <h3>Nubra Valley</h3>
+                  <span className="duration">(02 Days)</span>
                 </div>
               </div>
             </section>
@@ -129,23 +129,23 @@ const GoaPage = () => {
               <div className="highlights-list">
                 <div className="highlight-item">
                   <span className="check">✓</span>
-                  Calangute & Baga Beaches – Sunbathing and water sports
+                  Pangong Lake – Famous blue lake that changes colors, featured in 3 Idiots
                 </div>
                 <div className="highlight-item">
                   <span className="check">✓</span>
-                  Basilica of Bom Jesus – UNESCO World Heritage Site
+                  Khardung La Pass – One of the world's highest motorable roads at 18,380 ft
                 </div>
                 <div className="highlight-item">
                   <span className="check">✓</span>
-                  Dolphin Watching – Morning boat trip to spot dolphins
+                  Nubra Valley – High altitude desert with sand dunes and double-humped camels
                 </div>
                 <div className="highlight-item">
                   <span className="check">✓</span>
-                  Anjuna Flea Market – Shopping and local crafts
+                  Ancient Monasteries – Thiksey, Hemis, and Diskit monasteries with rich heritage
                 </div>
                 <div className="highlight-item">
                   <span className="check">✓</span>
-                  Portuguese Heritage Walk – Explore Old Goa architecture
+                  Magnetic Hill – Optical illusion where vehicles appear to move uphill
                 </div>
               </div>
             </section>
@@ -155,8 +155,8 @@ const GoaPage = () => {
               <h2>Tour Itinerary</h2>
               <div className="itinerary-list">
                 <div className="departure-point">
-                  <span className="location">North Goa, India</span>
-                  <span className="time">Departure: 8:00 am - 8:30am</span>
+                  <span className="location">Leh, Ladakh</span>
+                  <span className="time">Departure: 6:00 am - 6:30am</span>
                 </div>
                 
                 <div className="day-item completed">
@@ -164,7 +164,7 @@ const GoaPage = () => {
                     <span className="day-number">Day-01</span>
                     <span className="day-status">✓</span>
                   </div>
-                  <h4>Calangute Beach – Water sports and beach activities</h4>
+                  <h4>Leh Acclimatization – Rest day and local market exploration</h4>
                 </div>
 
                 <div className="day-item completed">
@@ -172,7 +172,7 @@ const GoaPage = () => {
                     <span className="day-number">Day-02</span>
                     <span className="day-status">✓</span>
                   </div>
-                  <h4>Baga Beach – Nightlife and beach shacks</h4>
+                  <h4>Leh Palace & Monasteries – Thiksey and Shey Palace visit</h4>
                 </div>
 
                 <div className="day-item completed">
@@ -180,12 +180,12 @@ const GoaPage = () => {
                     <span className="day-number">Day-03</span>
                     <span className="day-status">✓</span>
                   </div>
-                  <h4>Anjuna Flea Market – Shopping and local culture</h4>
+                  <h4>Khardung La Pass – World's highest motorable road adventure</h4>
                 </div>
 
                 <div className="departure-point">
-                  <span className="location">Old Goa</span>
-                  <span className="time">Departure: 9:00 am - 9:30am</span>
+                  <span className="location">Nubra Valley</span>
+                  <span className="time">Departure: 7:00 am - 7:30am</span>
                 </div>
 
                 <div className="day-item completed">
@@ -193,7 +193,7 @@ const GoaPage = () => {
                     <span className="day-number">Day-04</span>
                     <span className="day-status">✓</span>
                   </div>
-                  <h4>Basilica of Bom Jesus – Heritage and history tour</h4>
+                  <h4>Nubra Valley – Sand dunes and double-humped camel safari</h4>
                 </div>
 
                 <div className="day-item completed">
@@ -201,7 +201,31 @@ const GoaPage = () => {
                     <span className="day-number">Day-05</span>
                     <span className="day-status">✓</span>
                   </div>
-                  <h4>Dolphin Trip – Morning cruise and water activities</h4>
+                  <h4>Diskit Monastery – Ancient monastery and giant Buddha statue</h4>
+                </div>
+
+                <div className="day-item completed">
+                  <div className="day-header">
+                    <span className="day-number">Day-06</span>
+                    <span className="day-status">✓</span>
+                  </div>
+                  <h4>Pangong Lake – Full day at the famous changing-color lake</h4>
+                </div>
+
+                <div className="day-item completed">
+                  <div className="day-header">
+                    <span className="day-number">Day-07</span>
+                    <span className="day-status">✓</span>
+                  </div>
+                  <h4>Magnetic Hill & Confluence – Optical illusion and river meeting point</h4>
+                </div>
+
+                <div className="day-item completed">
+                  <div className="day-header">
+                    <span className="day-number">Day-08</span>
+                    <span className="day-status">✓</span>
+                  </div>
+                  <h4>Hemis Monastery – Largest and richest monastery in Ladakh</h4>
                 </div>
               </div>
             </section>
@@ -212,8 +236,8 @@ const GoaPage = () => {
             <div className="booking-widget">
               <div className="price-section">
                 <div className="price-row">
-                  <div className="original-price">$599</div>
-                  <div className="current-price">$499</div>
+                  <div className="original-price">$1199</div>
+                  <div className="current-price">$999</div>
                 </div>
                 <div className="price-label">Per Person</div>
               </div>
@@ -285,9 +309,9 @@ const GoaPage = () => {
             </div>
           </div>
         </div>
-       
+        
       </div>
- <Footer/>
+<Footer/>
       <style jsx>{`
         .inner-page {
           min-height: 100vh;
@@ -900,4 +924,4 @@ const GoaPage = () => {
   );
 };
 
-export default GoaPage;
+export default LadakhPage;

@@ -8,8 +8,8 @@ import CursorFX from "../../components/CursorFX.jsx";
 
 // Import images for Kerala
 import kerala1 from '/assets/destination-images/Kerala.webp';
-import kerala2 from '/assets/destination-images/kerala2.png';
-import kerala3 from '/assets/destination-images/kerala3.png';
+import kerala2 from '/assets/destination-images/Kerala2.webp';
+import kerala3 from '/assets/destination-images/Kerala3.webp';
 
 import "swiper/css";
 import "swiper/css/autoplay";
@@ -293,9 +293,9 @@ const KeralaPage = () => {
             </div>
           </div>
         </div>
-        <Footer/>
+        
       </div>
-
+<Footer/>
       <style jsx>{`
         .inner-page {
           min-height: 100vh;
