@@ -158,35 +158,78 @@
   border-right: 1px solid #e5e7eb;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  gap: 24px;
 }
 
 .stat-item:last-child {
   border-right: none;
 }
 
-.stat-content {
+.stat-text-wrapper {
   display: flex;
-  align-items: center;
-  gap: 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
 }
 
 .stat-icon {
   font-size: 32px;
   line-height: 1;
-  color: #00a86b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-icon-circle {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.icon-svg {
+  width: 36px;
+  height: 36px;
+}
+
+.stat-icon-yellow {
+  background-color: #f59e0b;
+  color: #ffffff;
+}
+
+.stat-icon-orange {
+  background-color: #ea580c;
+  color: #ffffff;
+}
+
+.stat-icon-blue {
+  background-color: #3b82f6;
+  color: #ffffff;
+}
+
+.stat-icon-green {
+  background-color: #059669;
+  color: #ffffff;
 }
 
 .stat-value {
-  font-size: 1.6rem;
+  font-size: 2.25rem;
   font-weight: 700;
   color: #0f172a;
-  margin-bottom: 2px;
+  line-height: 1;
+  white-space: nowrap;
 }
 
-.stat-label {
-  font-size: 0.95rem;
-  color: #64748b;
+.testimonial-stat-label {
+  font-size: 0.875rem;
+  color: #0f172a;
+  font-weight: 500;
+  line-height: 1.2;
+  white-space: nowrap;
 }
 
 /* Responsive */

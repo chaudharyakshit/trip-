@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import Topbar from './Topbar'
 
 export default function Navbar() {
@@ -7,53 +7,71 @@ export default function Navbar() {
   const whatsapp = 'https://wa.me/918607998882'
   const [loginOpen, setLoginOpen] = useState(false)
   const [loginStage, setLoginStage] = useState('initial') // 'initial' | 'chooseRole'
+  const [contactOpen, setContactOpen] = useState(false)
+  const contactRef = useRef(null)
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (contactRef.current && !contactRef.current.contains(event.target)) {
+        setContactOpen(false)
+      }
+    }
+
+    if (contactOpen) {
+      document.addEventListener('mousedown', handleClickOutside)
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [contactOpen])
 
   const Menu = () => (
-    <ul className="flex flex-col md:flex-row md:items-center gap-3 md:gap-6 lg:gap-8 font-semibold text-[14px] md:text-[15px] tracking-tight">
+    <ul className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4 lg:gap-6 font-semibold text-[14px] md:text-[15px] tracking-tight">
       <li>
-        <a className="text-orange-500 transition-colors duration-300 py-2 pb-3 border-b-4 border-orange-500" href="#home">Home</a>
+        <a className="text-orange-500 transition-colors duration-300 py-2 pb-2.5 border-b-4 border-orange-500" href="#home">Home</a>
       </li>
       <li className="relative group">
-        <a className="flex items-center gap-1.5 md:gap-2 text-slate-900 hover:text-orange-600 transition-colors duration-300 py-2 pb-3 border-b-4 border-transparent group-hover:border-orange-600 whitespace-nowrap" href="#destinations">
+        <a className="flex items-center gap-1 md:gap-1.5 text-slate-900 hover:text-orange-600 transition-colors duration-300 py-2 pb-2.5 border-b-4 border-transparent group-hover:border-orange-600 whitespace-nowrap" href="#destinations">
           Destination
-          <svg className="w-6 h-6 md:w-7 md:h-7 transition-transform duration-300 group-hover:rotate-180" viewBox="0 0 20 20" fill="currentColor">
+          <svg className="w-4 h-4 md:w-[18px] md:h-[18px] transition-transform duration-300 group-hover:rotate-180" viewBox="0 0 20 20" fill="currentColor">
             <path d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.167l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.24 4.5a.75.75 0 0 1-1.08 0l-4.24-4.5a.75.75 0 0 1 .02-1.06Z"/>
           </svg>
         </a>
-        <div className="hidden group-hover:block absolute top-full left-0 bg-white shadow-lg rounded-xl p-4 min-w-[240px] border border-slate-200 mt-2">
-          <a className="block px-4 py-3 rounded-lg hover:bg-slate-50 transition-colors" href="#destinations">Popular</a>
-          <a className="block px-4 py-3 rounded-lg hover:bg-slate-50 transition-colors" href="#destinations">Mountains</a>
-          <a className="block px-4 py-3 rounded-lg hover:bg-slate-50 transition-colors" href="#destinations">Beaches</a>
+        <div className="hidden group-hover:block absolute top-full left-0 bg-white shadow-lg rounded-xl p-3 min-w-[200px] border border-slate-200 mt-2">
+          <a className="block px-3 py-2 text-sm rounded-lg hover:bg-slate-50 transition-colors" href="#destinations">Popular</a>
+          <a className="block px-3 py-2 text-sm rounded-lg hover:bg-slate-50 transition-colors" href="#destinations">Mountains</a>
+          <a className="block px-3 py-2 text-sm rounded-lg hover:bg-slate-50 transition-colors" href="#destinations">Beaches</a>
         </div>
       </li>
       <li className="relative group">
-        <a className="flex items-center gap-1.5 md:gap-2 text-slate-900 hover:text-orange-600 transition-colors duration-300 py-2 pb-3 border-b-4 border-transparent group-hover:border-orange-600 whitespace-nowrap" href="#services">
+        <a className="flex items-center gap-1 md:gap-1.5 text-slate-900 hover:text-orange-600 transition-colors duration-300 py-2 pb-2.5 border-b-4 border-transparent group-hover:border-orange-600 whitespace-nowrap" href="#services">
           <span className="whitespace-nowrap">Travel Package</span>
-          <svg className="w-6 h-6 md:w-7 md:h-7 transition-transform duration-300 group-hover:rotate-180" viewBox="0 0 20 20" fill="currentColor">
+          <svg className="w-4 h-4 md:w-[18px] md:h-[18px] transition-transform duration-300 group-hover:rotate-180" viewBox="0 0 20 20" fill="currentColor">
             <path d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.167l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.24 4.5a.75.75 0 0 1-1.08 0l-4.24-4.5a.75.75 0 0 1 .02-1.06Z"/>
           </svg>
         </a>
-        <div className="hidden group-hover:block absolute top-full left-0 bg-white shadow-lg rounded-xl p-4 min-w-[240px] border border-slate-200 mt-2">
-          <a className="block px-4 py-2.5 rounded-lg hover:bg-slate-50 transition-colors" href="#services">Tours</a>
-          <a className="block px-4 py-2.5 rounded-lg hover:bg-slate-50 transition-colors" href="#services">Hotels</a>
-          <a className="block px-4 py-2.5 rounded-lg hover:bg-slate-50 transition-colors" href="#services">Flights</a>
+        <div className="hidden group-hover:block absolute top-full left-0 bg-white shadow-lg rounded-xl p-3 min-w-[200px] border border-slate-200 mt-2">
+          <a className="block px-3 py-2 text-sm rounded-lg hover:bg-slate-50 transition-colors" href="#services">Tours</a>
+          <a className="block px-3 py-2 text-sm rounded-lg hover:bg-slate-50 transition-colors" href="#services">Hotels</a>
+          <a className="block px-3 py-2 text-sm rounded-lg hover:bg-slate-50 transition-colors" href="#services">Flights</a>
         </div>
       </li>
       <li className="relative group">
-        <a className="flex items-center gap-1.5 md:gap-2 text-slate-900 hover:text-orange-600 transition-colors duration-300 py-2 pb-3 border-b-4 border-transparent group-hover:border-orange-600 whitespace-nowrap" href="#blog">
+        <a className="flex items-center gap-1 md:gap-1.5 text-slate-900 hover:text-orange-600 transition-colors duration-300 py-2 pb-2.5 border-b-4 border-transparent group-hover:border-orange-600 whitespace-nowrap" href="#blog">
           Pages
-          <svg className="w-6 h-6 md:w-7 md:h-7 transition-transform duration-300 group-hover:rotate-180" viewBox="0 0 20 20" fill="currentColor">
+          <svg className="w-4 h-4 md:w-[18px] md:h-[18px] transition-transform duration-300 group-hover:rotate-180" viewBox="0 0 20 20" fill="currentColor">
             <path d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.167l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.24 4.5a.75.75 0 0 1-1.08 0l-4.24-4.5a.75.75 0 0 1 .02-1.06Z"/>
           </svg>
         </a>
-        <div className="hidden group-hover:block absolute top-full left-0 bg-white shadow-lg rounded-xl p-4 min-w-[240px] border border-slate-200 mt-2">
-          <a className="block px-4 py-2.5 rounded-lg hover:bg-slate-50 transition-colors" href="#blog">Blog</a>
-          <a className="block px-4 py-2.5 rounded-lg hover:bg-slate-50 transition-colors" href="#testimonials">Reviews</a>
-          <a className="block px-4 py-2.5 rounded-lg hover:bg-slate-50 transition-colors" href="#contact">Contact</a>
+        <div className="hidden group-hover:block absolute top-full left-0 bg-white shadow-lg rounded-xl p-3 min-w-[200px] border border-slate-200 mt-2">
+          <a className="block px-3 py-2 text-sm rounded-lg hover:bg-slate-50 transition-colors" href="#blog">Blog</a>
+          <a className="block px-3 py-2 text-sm rounded-lg hover:bg-slate-50 transition-colors" href="#testimonials">Reviews</a>
+          <a className="block px-3 py-2 text-sm rounded-lg hover:bg-slate-50 transition-colors" href="#contact">Contact</a>
         </div>
       </li>
       <li>
-        <a className="text-slate-900 hover:text-orange-600 transition-colors duration-300 py-2 pb-3 border-b-4 border-transparent hover:border-orange-600" href="#contact">Contact</a>
+        <a className="text-slate-900 hover:text-orange-600 transition-colors duration-300 py-2 pb-2.5 border-b-4 border-transparent hover:border-orange-600" href="#contact">Contact</a>
       </li>
     </ul>
   )
@@ -73,31 +91,38 @@ export default function Navbar() {
             </div>
           </div>
 
-          <div className="hidden md:flex items-center gap-4 lg:gap-6 ml-auto">
-            {/* Phone contact dropdown on hover */}
-            <div className="relative hidden md:block group">
-              <button
-                type="button"
-                className="inline-flex items-center gap-2 h-10 px-4 rounded-full border border-slate-300 bg-white text-slate-900 text-sm font-semibold shadow hover:bg-slate-50 transition-colors"
-              >
-                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+          <div className="hidden md:flex items-center gap-3 lg:gap-4 ml-auto">
+            {/* Phone contact dropdown - opens on click and stays open until closed */}
+            <div className="relative hidden md:flex items-center gap-2" ref={contactRef}>
+              <div className="flex items-center justify-center w-9 h-9 rounded-full bg-slate-100 border border-slate-200">
+                <svg className="w-4 h-4 text-slate-700" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M2.01 6.03c-.12-1.1.78-2.03 1.89-2.03H7c.9 0 1.67.6 1.9 1.46l.7 2.62a2 2 0 0 1-.5 1.9l-1.2 1.2a15.05 15.05 0 0 0 6.02 6.02l1.2-1.2a2 2 0 0 1 1.9-.5l2.62.7c.86.23 1.46 1 1.46 1.9v3.1c0 1.11-.93 2.01-2.03 1.89A20 20 0 0 1 2.01 6.03Z" />
                 </svg>
-                <span className="tracking-wide">+91 86079 98882</span>
+              </div>
+              
+              <button
+                type="button"
+                onClick={() => setContactOpen((prev) => !prev)}
+                className="flex flex-col items-end leading-tight cursor-pointer"
+              >
+                <span className="text-[11px] text-slate-600 font-medium">Need Help?</span>
+                <span className="text-sm font-semibold text-slate-900">+91 86079 98882</span>
               </button>
 
-              <div className="absolute right-0 mt-3 z-40 hidden group-hover:block">
-                <Topbar />
-              </div>
+              {contactOpen && (
+                <div className="absolute right-0 top-full mt-2 z-40">
+                  <Topbar />
+                </div>
+              )}
             </div>
 
             {/* Search icon only */}
             <button
               type="button"
               aria-label="Search"
-              className="hidden md:inline-flex items-center justify-center w-12 h-12 rounded-full bg-white border border-slate-300 text-slate-700 hover:bg-slate-50 hover:border-slate-400 shadow"
+              className="hidden md:inline-flex items-center justify-center w-10 h-10 rounded-full bg-white border border-slate-300 text-slate-700 hover:bg-slate-50 hover:border-slate-400 shadow"
             >
-              <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <circle cx="11" cy="11" r="8"/>
                 <path d="m21 21-3.5-3.5"/>
               </svg>
@@ -109,9 +134,9 @@ export default function Navbar() {
                 aria-haspopup="dialog"
                 aria-expanded={loginOpen}
                 onClick={() => { setLoginOpen((v) => !v); setLoginStage('initial') }}
-                className="inline-flex items-center justify-center h-12 px-8 rounded-full bg-[color:rgb(var(--brand-secondary))] text-white hover:brightness-110 font-semibold text-base transition-all duration-300 shadow-lg hover:shadow-xl"
+                className="inline-flex items-center justify-center h-10 px-6 rounded-full bg-[color:rgb(var(--brand-secondary))] text-white hover:brightness-110 font-semibold text-sm transition-all duration-300 shadow-lg hover:shadow-xl"
               >
-                <svg className="w-7 h-7 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
                 </svg>
                 Login

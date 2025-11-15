@@ -136,7 +136,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="hero-section">
+    <section id="home" className="hero-section">
       {/* Background slider */}
       <div className="background-slider">
         <Swiper

@@ -9,7 +9,7 @@ export default function Topbar() {
   return (
     <div className="topbar">
       {/* WhatsApp */}
-      <a href={whatsappLink} target="_blank" rel="noreferrer" className="contact-card">
+      <a href={whatsappLink} target="_blank" rel="noreferrer" className="contact-card contact-whatsapp">
         <div className="icon-circle whatsapp">
           <svg viewBox="0 0 32 32" aria-hidden="true">
             <path d="M19.11 17.49c-.29-.14-1.7-.84-1.96-.93-.26-.1-.45-.14-.64.14-.19.29-.73.93-.9 1.12-.17.19-.33.21-.62.07-.29-.14-1.24-.46-2.36-1.46-.87-.78-1.46-1.74-1.63-2.03-.17-.29-.02-.45.12-.59.12-.12.29-.31.43-.47.14-.17.19-.29.29-.48.1-.19.05-.36-.02-.5-.07-.14-.64-1.54-.88-2.11-.23-.55-.47-.48-.64-.49-.17 0-.36-.01-.55-.01-.19 0-.5.07-.76.36-.26.29-1 1-1 2.43 0 1.43 1.03 2.81 1.17 3 .14.19 2.03 3.1 4.92 4.34.69.3 1.23.48 1.65.62.69.22 1.32.19 1.82.12.56-.08 1.7-.69 1.94-1.37.24-.68.24-1.26.17-1.37-.07-.12-.26-.19-.55-.33z" />
@@ -23,7 +23,7 @@ export default function Topbar() {
       </a>
 
       {/* Mail Support */}
-      <a href={`mailto:${email}`} className="contact-card">
+      <a href={`mailto:${email}`} className="contact-card contact-mail">
         <div className="icon-circle mail">
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm0 2v.01L12 13l8-6.99V6H4Zm0 3.236V18h16V9.236l-7.386 6.189a2 2 0 0 1-2.228 0L4 9.236Z" />
@@ -36,7 +36,7 @@ export default function Topbar() {
       </a>
 
       {/* More Inquiry */}
-      <a href={`tel:${phoneNumber}`} className="contact-card">
+      <a href={`tel:${phoneNumber}`} className="contact-card contact-inquiry">
         <div className="icon-circle inquiry">
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M4 4h16a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-5.586L9 22.414 9.586 17H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z" />
