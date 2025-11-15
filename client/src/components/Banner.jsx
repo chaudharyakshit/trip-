@@ -3,6 +3,8 @@ import '../styles/Banner.css';
 
 const Banner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [touchStart, setTouchStart] = useState(null);
+  const [touchEnd, setTouchEnd] = useState(null);
 
   const slides = [
     {
@@ -26,7 +28,7 @@ const Banner = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 3000); // Change slide every 5 seconds
+    }, 3000); // Change slide every 3 seconds
 
     return () => clearInterval(interval);
   }, [slides.length]);
@@ -43,8 +45,40 @@ const Banner = () => {
     setCurrentSlide(index);
   };
 
+  // Touch handlers for mobile swipe
+  const minSwipeDistance = 50;
+
+  const onTouchStart = (e) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const onTouchMove = (e) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+
+    if (isLeftSwipe) {
+      nextSlide();
+    }
+    if (isRightSwipe) {
+      prevSlide();
+    }
+  };
+
   return (
-    <div className="banner-container">
+    <div 
+      className="banner-container"
+      onTouchStart={onTouchStart}
+      onTouchMove={onTouchMove}
+      onTouchEnd={onTouchEnd}
+    >
       {/* Slides */}
       <div className="slides-wrapper">
         {slides.map((slide, index) => (
@@ -52,7 +86,7 @@ const Banner = () => {
             key={index}
             className={`slide ${index === currentSlide ? 'active' : ''}`}
             style={{
-              backgroundImage: `linear-gradient(90deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.1) 100%), url(${slide.image})`
+              backgroundImage: `url(${slide.image})`
             }}
           >
             {/* <div className="banner-content">
@@ -78,29 +112,32 @@ const Banner = () => {
       </div>
 
       {/* Navigation Arrows */}
-      <button className="slide-arrow prev-arrow" onClick={prevSlide}>
+      <button 
+        className="slide-arrow prev-arrow" 
+        onClick={prevSlide}
+        aria-label="Previous slide"
+      >
         ‹
       </button>
-      <button className="slide-arrow next-arrow" onClick={nextSlide}>
+      <button 
+        className="slide-arrow next-arrow" 
+        onClick={nextSlide}
+        aria-label="Next slide"
+      >
         ›
       </button>
 
-      {/* Slide Indicators */}
-      {/* <div className="slide-indicators">
+      {/* Slide Indicators - Visible on mobile */}
+      <div className="slide-indicators">
         {slides.map((_, index) => (
           <button
             key={index}
             className={`indicator ${index === currentSlide ? 'active' : ''}`}
             onClick={() => goToSlide(index)}
+            aria-label={`Go to slide ${index + 1}`}
           />
         ))}
-      </div> */}
-
-      {/* Scroll indicator
-      <div className="scroll-indicator">
-        <span>Scroll to explore</span>
-        <div className="scroll-arrow"></div>
-      </div> */}
+      </div>
     </div>
   );
 };

@@ -17,10 +17,10 @@ import AwardSection from './components/AwardSection.jsx'
 import Banner from './components/Banner.jsx'
 import Gallery from './components/Gallery.jsx'
 import TrustedCompanies from './components/TrustedCompanies.jsx'
-import InnerPage1 from './pages/inner-page1.jsx'
+
 
 // Import all destination pages
-import JaipurPage from './pages/destinations/JaipurPage.jsx'
+import JaipurPage from './pages/destinations/jaipur-page.jsx'
 import AgraPage from './pages/destinations/AgraPage.jsx'
 import GoaPage from './pages/destinations/GoaPage.jsx'
 import KeralaPage from './pages/destinations/KeralaPage.jsx'
@@ -85,11 +85,11 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
-      <Route path="/inner-page1" element={<InnerPage1 />} />
+     
       
       {/* Destination Routes */}
-      <Route path="/destination/jaipur" element={<JaipurPage />} />
-      <Route path="/destination/agra" element={<AgraPage />} />
+      <Route path="/destination/jaipur-page" element={<JaipurPage />} />
+      <Route path="/destination/agra-page" element={<AgraPage />} />
       <Route path="/destination/goa" element={<GoaPage />} />
       <Route path="/destination/kerala" element={<KeralaPage />} />
       <Route path="/destination/delhi" element={<DelhiPage />} />
