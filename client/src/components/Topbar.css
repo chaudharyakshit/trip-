@@ -1,78 +1,98 @@
 .topbar {
   display: flex;
   flex-direction: column;
-  gap: 12px;
   align-items: stretch;
+  padding: 8px 0;
+  background: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  border: 1px solid #e2e8f0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  min-width: 260px;
 }
 
-/* Each item as a card/row */
+/* Compact white list with dividers between rows */
 .contact-card {
   display: flex;
   align-items: center;
-  padding: 8px 14px;
-  background: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.08);
+  padding: 10px 16px;
   text-decoration: none;
-  color: #0f172a;
-  min-width: 220px;
+  color: #1e293b;
+  background: transparent;
+  transition: background 0.15s ease;
+}
+
+.contact-card + .contact-card {
+  border-top: 1px solid #e5e7eb;
 }
 
 .contact-card:hover {
-  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.12);
-  transform: translateY(-1px);
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  background: #f8fafc;
 }
 
-/* Circular icon */
+/* Remove any colored backgrounds from card rows */
+.contact-whatsapp,
+.contact-mail,
+.contact-inquiry {
+  background: transparent;
+}
+
+.contact-whatsapp:hover,
+.contact-mail:hover,
+.contact-inquiry:hover {
+  background: #f8fafc;
+}
+
+/* Small circular colored icons (32px) */
 .icon-circle {
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ffffff;
-  margin-right: 10px;
+  margin-right: 12px;
   flex-shrink: 0;
+  color: #ffffff;
 }
 
 .icon-circle svg {
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
 }
 
-/* Colors per type */
+/* Icon colors matching reference */
 .icon-circle.whatsapp {
   background: #25d366;
 }
 
 .icon-circle.mail {
-  background: #f97316;
+  background: #ff8c2f;
 }
 
 .icon-circle.inquiry {
-  background: #ef4444;
+  background: #ff4b4b;
 }
 
-/* Text block */
+/* Text styling: gray label + dark value */
 .contact-text {
   display: flex;
   flex-direction: column;
-  line-height: 1.2;
+  gap: 1px;
+  line-height: 1.3;
 }
 
 .contact-text .label {
   font-size: 12px;
-  color: #6b7280;
+  color: #64748b;
   font-weight: 500;
 }
 
 .contact-text .value {
   font-size: 14px;
   font-weight: 600;
-  color: #111827;
+  color: #0f172a;
 }
 
 @media (max-width: 768px) {

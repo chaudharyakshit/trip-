@@ -56,7 +56,7 @@ const DestinationCard = ({ image, title, tours }) => {
           draggable={false}
         />
       </div>
-      <div className="p h-20 flex flex-col justify-center">
+      <div className="px-5 py-3 h-20 flex flex-col justify-center">
         <h3 className="text-lg font-bold text-slate-900 mb-1">{title}</h3>
         <p className="text-slate-600 text-sm">Tours ({tours})</p>
       </div>

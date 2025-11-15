@@ -9,8 +9,21 @@ export default function Services() {
   ]
 
   return (
-    <section id="services" className="py-14 bg-slate-50">
-      <div className="max-w-7xl mx-auto px-4">
+    <section
+      id="services"
+      className="py-14 md:py-20 relative overflow-hidden"
+    >
+      {/* Background Image (brighter version of Popular Destinations) */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src="/assets/images/bg4.png"
+          alt="background"
+          className="w-full h-full object-cover brightness-125 saturate-150"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#b3d9ff]/40 via-[#d9ecff]/30 to-white/40"></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 relative z-10">
         <div className="text-center mb-10">
           <h2 className="section-title">What we offer</h2>
           <p className="text-slate-500">Complete travel solutions tailored to you.</p>

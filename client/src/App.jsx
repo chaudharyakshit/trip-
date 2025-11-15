@@ -2,6 +2,7 @@ import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar.jsx'
 import CursorFX from './components/CursorFX.jsx'
+import ScrollToTop from './components/ScrollToTop.jsx'
 import AnnouncementBar from './components/AnnouncementBar.jsx'
 import Hero from './components/Hero.jsx'
 import Destinations from './components/Destinations.jsx'
@@ -57,6 +58,7 @@ function HomePage() {
   return (
     <>
       <CursorFX />
+      <ScrollToTop />
       <Navbar />
       <AnnouncementBar />
       <main>
