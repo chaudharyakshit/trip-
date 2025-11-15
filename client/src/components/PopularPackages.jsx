@@ -7,54 +7,235 @@ import { Link } from "react-router-dom";
 
 export default function PopularPackages() {
   const packages = [
-    {
-      destination: "Jaipur, Rajasthan",
-      title: "Royal Rajasthan Experience",
-      region: "Rajasthan, India",
-      days: "04 Days/03 Nights",
-      price: 299,
-      image:
-        "../../../assets/card-images/jaipur.png",
-    },
-    {
-      destination: "Agra, Uttar Pradesh",
-      title: "Taj Mahal Wonder",
-      region: "Uttar Pradesh, India",
-      days: "03 Days/02 Nights",
-      price: 199,
-      image:
-        "../../../assets/card-images/Agra.png",
-      badge: "Popular",
-    },
-    {
-      destination: "Goa",
-      title: "Goa Beach Paradise",
-      region: "Goa, India",
-      days: "05 Days/04 Nights",
-      price: 349,
-      image:
-        "../../../assets/card-images/Goa.png",
-    },
-    {
-      destination: "Kerala (Munnar & Alleppey)",
-      title: "Kerala Backwaters",
-      region: "Kerala, India",
-      days: "06 Days/05 Nights",
-      price: 399,
-      image:
-        "../../../assets/card-images/Kerala.png",
-    },
-    {
-      destination: "Ladakh, Jammu & Kashmir",
-      title: "Ladakh Adventure",
-      region: "Jammu & Kashmir, India",
-      days: "07 Days/06 Nights",
-      price: 499,
-      image:
-        "../../../assets/card-images/Ladakh.png",
-      badge: "Adventure",
-    },
-  ];
+  {
+    slug: "jaipur-page",
+    destination: "Jaipur, Rajasthan",
+    title: "Royal Rajasthan Experience",
+    region: "Rajasthan, India",
+    days: "04 Days/03 Nights",
+    price: 299,
+    image: "../../../assets/card-images/jaipur.png"
+  },
+  {
+    slug: "agra-page",
+    destination: "Agra, Uttar Pradesh",
+    title: "Taj Mahal Wonder",
+    region: "Uttar Pradesh, India",
+    days: "03 Days/02 Nights",
+    price: 199,
+    image: "../../../assets/card-images/Agra.png"
+  },
+  {
+    slug: "goa",
+    destination: "Goa",
+    title: "Goa Beach Paradise",
+    region: "Goa, India",
+    days: "05 Days/04 Nights",
+    price: 349,
+    image: "../../../assets/card-images/Goa.png"
+  },
+  {
+    slug: "kerala",
+    destination: "Kerala (Munnar & Alleppey)",
+    title: "Kerala Backwaters",
+    region: "Kerala, India",
+    days: "06 Days/05 Nights",
+    price: 399,
+    image: "../../../assets/card-images/Kerala.png"
+  },
+  {
+    slug: "delhi",
+    destination: "Delhi",
+    title: "Heritage Capital Tour",
+    region: "Delhi, India",
+    days: "03 Days/02 Nights",
+    price: 259,
+    image: "../../../assets/card-images/Delhi.png"
+  },
+  {
+    slug: "mumbai",
+    destination: "Mumbai, Maharashtra",
+    title: "City of Dreams Experience",
+    region: "Maharashtra, India",
+    days: "04 Days/03 Nights",
+    price: 329,
+    image: "../../../assets/card-images/Mumbai.png"
+  },
+  {
+    slug: "udaipur",
+    destination: "Udaipur, Rajasthan",
+    title: "City of Lakes Tour",
+    region: "Rajasthan, India",
+    days: "03 Days/02 Nights",
+    price: 279,
+    image: "../../../assets/card-images/udaipur.png"
+  },
+  {
+    slug: "varanasi",
+    destination: "Varanasi, Uttar Pradesh",
+    title: "Spiritual Ganga Tour",
+    region: "Uttar Pradesh, India",
+    days: "03 Days/02 Nights",
+    price: 249,
+    image: "../../../assets/card-images/Varanasi.png"
+  },
+  {
+    slug: "rishikesh",
+    destination: "Rishikesh, Uttarakhand",
+    title: "Yoga & Adventure Escape",
+    region: "Uttarakhand, India",
+    days: "03 Days/02 Nights",
+    price: 219,
+    image: "../../../assets/card-images/Rishikesh.png"
+  },
+  {
+    slug: "shimla",
+    destination: "Shimla, Himachal Pradesh",
+    title: "Queen of Hills Getaway",
+    region: "Himachal Pradesh, India",
+    days: "04 Days/03 Nights",
+    price: 289,
+    image: "../../../assets/card-images/Shimla.png"
+  },
+  {
+    slug: "ladakh",
+    destination: "Ladakh, Jammu & Kashmir",
+    title: "Ladakh Adventure",
+    region: "J&K, India",
+    days: "07 Days/06 Nights",
+    price: 499,
+    image: "../../../assets/card-images/Ladakh.png"
+  },
+  {
+    slug: "darjeeling",
+    destination: "Darjeeling, West Bengal",
+    title: "Tea Garden Retreat",
+    region: "West Bengal, India",
+    days: "04 Days/03 Nights",
+    price: 279,
+    image: "../../../assets/card-images/darjeeling.png"
+  },
+  {
+    slug: "amritsar",
+    destination: "Amritsar, Punjab",
+    title: "Golden Temple Journey",
+    region: "Punjab, India",
+    days: "02 Days/01 Night",
+    price: 199,
+    image: "../../../assets/card-images/Amritsar.png"
+  },
+  {
+    slug: "hampi",
+    destination: "Hampi, Karnataka",
+    title: "Heritage Ruins Tour",
+    region: "Karnataka, India",
+    days: "03 Days/02 Nights",
+    price: 249,
+    image: "../../../assets/card-images/Hampi,-Karnataka.png"
+  },
+  // {
+  //   slug: "mysore",
+  //   destination: "Mysore, Karnataka",
+  //   title: "Royal Mysore Tour",
+  //   region: "Karnataka, India",
+  //   days: "03 Days/02 Nights",
+  //   price: 229,
+  //   image: "../../../assets/card-images/Mysore.png"
+  // },
+  {
+    slug: "coorg",
+    destination: "Coorg, Karnataka",
+    title: "Coffee Hills Escape",
+    region: "Karnataka, India",
+    days: "03 Days/02 Nights",
+    price: 239,
+    image: "../../../assets/card-images/Coorg,-Karnataka.png"
+  },
+  {
+    slug: "khajuraho",
+    destination: "Khajuraho, Madhya Pradesh",
+    title: "Temple Art Tour",
+    region: "Madhya Pradesh, India",
+    days: "03 Days/02 Nights",
+    price: 259,
+    image: "../../../assets/card-images/Khajuraho,-Madhya-Pradesh.png"
+  },
+  {
+    slug: "konark",
+    destination: "Konark, Odisha",
+    title: "Sun Temple Heritage Tour",
+    region: "Odisha, India",
+    days: "03 Days/02 Nights",
+    price: 239,
+    image: "../../../assets/card-images/Konark,-Odisha.png"
+  },
+  // {
+  //   slug: "kutch",
+  //   destination: "Rann of Kutch, Gujarat",
+  //   title: "White Desert Festival",
+  //   region: "Gujarat, India",
+  //   days: "04 Days/03 Nights",
+  //   price: 349,
+  //   image: "../../../assets/card-images/Kutch.png"
+  // },
+  {
+    slug: "sikkim",
+    destination: "Sikkim (Gangtok)",
+    title: "Mystical Himalayan Tour",
+    region: "Sikkim, India",
+    days: "05 Days/04 Nights",
+    price: 399,
+    image: "../../../assets/card-images/Sikkim.png"
+  },
+  {
+    slug: "pushkar",
+    destination: "Pushkar, Rajasthan",
+    title: "Lake & Temple Tour",
+    region: "Rajasthan, India",
+    days: "02 Days/01 Night",
+    price: 189,
+    image: "../../../assets/card-images/Pushkar.png"
+  },
+  {
+    slug: "mahabalipuram",
+    destination: "Mahabalipuram, Tamil Nadu",
+    title: "Shore Temple Tour",
+    region: "Tamil Nadu, India",
+    days: "02 Days/01 Night",
+    price: 199,
+    image: "../../../assets/card-images/Mahabalipuram.png"
+  },
+  {
+    slug: "ajanta-ellora",
+    destination: "Ajanta & Ellora Caves",
+    title: "Ancient Caves Tour",
+    region: "Maharashtra, India",
+    days: "03 Days/02 Nights",
+    price: 259,
+    image: "../../../assets/card-images/Ajanta.png"
+  },
+  {
+    slug: "pune",
+    destination: "Pune, Maharashtra",
+    title: "Cultural Pune Tour",
+    region: "Maharashtra, India",
+    days: "02 Days/01 Night",
+    price: 179,
+    image: "../../../assets/card-images/Pune,-Maharashtra.png"
+  },
+  {
+    slug: "auli",
+    destination: "Auli, Uttarakhand",
+    title: "Skiing & Snow Adventure",
+    region: "Uttarakhand, India",
+    days: "04 Days/03 Nights",
+    price: 369,
+    image: "../../../assets/card-images/Auli,-Uttarakhand.png"
+  }
+];
+
+  
+  
 
   return (
     <section className="relative py-20 overflow-hidden">
@@ -140,11 +321,7 @@ export default function PopularPackages() {
                   <p className="text-sm text-slate-500 mb-2">{pkg.region}</p>
                   <p className="text-sm text-slate-500 mb-4">{pkg.days}</p>
                   <div className="flex items-center justify-between">
-                    <Link
-                      to={`/destination/${pkg.destination
-                        .toLowerCase()
-                        .replace(/\s+/g, "-")}`}
-                    >
+                    <Link to={`/destination/${pkg.slug}`}>
                       <button className="px-5 py-2.5 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-full font-semibold hover:scale-105 transition-transform">
                         Book Now
                       </button>

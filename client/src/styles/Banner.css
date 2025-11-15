@@ -4,15 +4,19 @@
   max-width: 1200px;
   height: 400px;
   margin: 70px auto;
+  padding: 0 20px;
   border-radius: 12px;
   position: relative;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .slides-wrapper {
   position: relative;
   width: 100%;
   height: 100%;
+  overflow: hidden;
+  border-radius: 12px;
 }
 
 .slide {
@@ -21,13 +25,35 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: center/cover no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
   transition: opacity 0.8s ease-in-out;
   border-radius: 12px;
+  min-height: 100%;
+  will-change: opacity;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Subtle gradient overlay for desktop - very light */
+@media (min-width: 769px) {
+  .slide::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0.03) 100%);
+    pointer-events: none;
+    border-radius: 12px;
+  }
 }
 
 .slide.active {
@@ -146,6 +172,8 @@
   display: flex;
   gap: 10px;
   z-index: 10;
+  padding: 0;
+  margin: 0;
 }
 
 .indicator {
@@ -231,13 +259,29 @@
   }
 }
 
+/* Large Desktop screens (1400px and above) */
+@media (min-width: 1400px) {
+  .banner-container {
+    max-width: 1400px;
+    height: 450px;
+  }
+}
+
+/* Desktop screens (1025px - 1399px) */
+@media (max-width: 1399px) {
+  .banner-container {
+    max-width: 1200px;
+  }
+}
+
 /* Tablet screens (768px - 1024px) */
 @media (max-width: 1024px) {
   .banner-container {
-    width: calc(100% - 100px);
-    height: 300px;
-    margin: 50px 50px;
-    left: 0;
+    width: 100%;
+    max-width: 100%;
+    height: 350px;
+    margin: 50px auto;
+    padding: 0 30px;
   }
 
   .banner-title {
@@ -249,19 +293,38 @@
   }
 
   .slide-arrow {
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     font-size: 1.5rem;
+  }
+
+  .prev-arrow {
+    left: 15px;
+  }
+
+  .next-arrow {
+    right: 15px;
+  }
+
+  .slide-indicators {
+    bottom: 15px;
   }
 }
 
 /* Mobile Landscape and smaller tablets (481px - 767px) */
 @media (max-width: 768px) {
   .banner-container {
-    width: calc(100% - 60px);
-    height: 250px;
-    margin: 40px 30px;
-    left: 0;
+    width: 100%;
+    max-width: 100%;
+    height: 350px;
+    margin: 30px auto;
+    padding: 0;
+    border-radius: 10px;
+  }
+
+  .slide {
+    background-size: cover;
+    background-position: center center;
     border-radius: 10px;
   }
 
@@ -289,9 +352,9 @@
   }
 
   .slide-arrow {
-    width: 35px;
-    height: 35px;
-    font-size: 1.2rem;
+    width: 40px;
+    height: 40px;
+    font-size: 1.3rem;
   }
 
   .prev-arrow {
@@ -301,17 +364,79 @@
   .next-arrow {
     right: 10px;
   }
+
+  .slide-indicators {
+    bottom: 12px;
+    gap: 8px;
+  }
+
+  .indicator {
+    width: 10px;
+    height: 10px;
+  }
 }
 
-/* Mobile screens (320px - 480px) */
-@media (max-width: 480px) {
+/* Mobile screens (481px - 600px) */
+@media (max-width: 600px) {
   .banner-container {
-    width: calc(100% - 40px);
-    height: 180px;
-    margin: 30px 20px;
-    left: 0;
+    width: 100%;
+    max-width: 100%;
+    height: 280px;
+    margin: 25px auto;
+    padding: 0;
     border-radius: 8px;
   }
+
+  .slide {
+    background-size: cover;
+    background-position: center center;
+    border-radius: 8px;
+  }
+
+  .slide-arrow {
+    width: 35px;
+    height: 35px;
+    font-size: 1.1rem;
+    opacity: 0.7;
+  }
+
+  .prev-arrow {
+    left: 8px;
+  }
+
+  .next-arrow {
+    right: 8px;
+  }
+
+  .slide-indicators {
+    bottom: 10px;
+    gap: 6px;
+  }
+
+  .indicator {
+    width: 8px;
+    height: 8px;
+    border-width: 1.5px;
+  }
+}
+
+/* Small Mobile screens (320px - 480px) */
+@media (max-width: 480px) {
+  .banner-container {
+    width: 100%;
+    max-width: 100%;
+    height: 250px;
+    margin: 15px auto;
+    padding: 0;
+    border-radius: 8px;
+  }
+
+  .slide {
+    background-size: cover;
+    background-position: center center;
+    border-radius: 8px;
+  }
+
 
   .banner-content {
     padding: 0 15px;
@@ -339,7 +464,18 @@
   }
 
   .slide-arrow {
-    display: none; /* Hide arrows on mobile */
+    display: none; /* Hide arrows on small mobile - use swipe instead */
+  }
+
+  .slide-indicators {
+    bottom: 8px;
+    gap: 5px;
+  }
+
+  .indicator {
+    width: 7px;
+    height: 7px;
+    border-width: 1px;
   }
 
   .scroll-indicator {
@@ -350,9 +486,18 @@
 /* Extra small mobile screens */
 @media (max-width: 320px) {
   .banner-container {
-    width: calc(100% - 30px);
-    height: 150px;
-    margin: 20px 15px;
+    width: 100%;
+    max-width: 100%;
+    height: 220px;
+    margin: 10px auto;
+    padding: 0;
+    border-radius: 6px;
+  }
+
+  .slide {
+    background-size: cover;
+    background-position: center center;
+    border-radius: 6px;
   }
 
   .banner-title {
@@ -367,5 +512,45 @@
     padding: 6px 16px;
     font-size: 0.75rem;
     width: 140px;
+  }
+
+  .slide-indicators {
+    bottom: 6px;
+    gap: 4px;
+  }
+
+  .indicator {
+    width: 6px;
+    height: 6px;
+  }
+}
+
+/* Landscape orientation for mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  .banner-container {
+    height: 300px;
+    margin: 15px auto;
+    padding: 0;
+  }
+
+  .slide {
+    background-size: cover;
+    background-position: center center;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .slide-arrow {
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  .slide-arrow:active {
+    background: rgba(255, 255, 255, 0.5);
+    transform: translateY(-50%) scale(0.95);
+  }
+
+  .indicator:active {
+    transform: scale(1.3);
   }
 }
