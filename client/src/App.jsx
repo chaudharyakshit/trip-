@@ -45,6 +45,7 @@ import MahabalipuramPage from './pages/destinations/MahabalipuramPage.jsx'
 import AjantaElloraPage from './pages/destinations/AjantaElloraPage.jsx'
 import PunePage from './pages/destinations/PunePage.jsx'
 import AuliPage from './pages/destinations/AuliPage.jsx'
+import AllDestinations from './pages/AllDestinations.jsx'
 
 //import all packages 
 
@@ -86,6 +87,8 @@ function App() {
     <Routes>
       <Route path="/" element={<HomePage />} />
      
+           <Route path="/destinations" element={<AllDestinations />} />
+
       
       {/* Destination Routes */}
       <Route path="/destination/jaipur-page" element={<JaipurPage />} />

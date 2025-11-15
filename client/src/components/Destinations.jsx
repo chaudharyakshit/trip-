@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
+import { Link } from 'react-router-dom';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
@@ -68,127 +69,127 @@ export default function TopDestinations() {
 
   const destinations = [
     {
-      image: "../../../assets/card-images/jaipur.png",
+      image: "/assets/card-images/jaipur.png",
       title: "Jaipur, Rajasthan",
       tours: 15
     },
     {
-      image: "../../../assets/card-images/Agra.png",
+      image: "/assets/card-images/Agra.png",
       title: "Agra, Uttar Pradesh",
       tours: 12
     },
     {
-      image: "../../../assets/card-images/Goa.png",
+      image: "/assets/card-images/Goa.png",
       title: "Goa",
       tours: 20
     },
     {
-      image: "../../../assets/card-images/Kerala.png",
+      image: "/assets/card-images/Kerala.png",
       title: "Kerala",
       tours: 18
     },
     {
-      image: "../../../assets/card-images/Delhi.png",
+      image: "/assets/card-images/Delhi.png",
       title: "Delhi",
       tours: 25
     },
     {
-      image: "../../../assets/card-images/Mumbai.png",
+      image: "/assets/card-images/Mumbai.png",
       title: "Mumbai, Maharashtra",
       tours: 22
     },
     {
-      image: "../../../assets/card-images/udaipur.png",
+      image: "/assets/card-images/udaipur.png",
       title: "Udaipur, Rajasthan",
       tours: 14
     },
     {
-      image: "../../../assets/card-images/Varanasi.png",
+      image: "/assets/card-images/Varanasi.png",
       title: "Varanasi, Uttar Pradesh",
       tours: 16
     },
     {
-      image: "../../../assets/card-images/Rishikesh.png",
+      image: "/assets/card-images/Rishikesh.png",
       title: "Rishikesh, Uttarakhand",
       tours: 13
     },
     {
-      image: "../../../assets/card-images/Shimla.png",
+      image: "/assets/card-images/Shimla.png",
       title: "Shimla, Himachal Pradesh",
       tours: 11
     },
     {
-      image: "../../../assets/card-images/Ladakh.png",
+      image: "/assets/card-images/Ladakh.png",
       title: "Ladakh, Jammu & Kashmir",
       tours: 10
     },
     {
-      image: "../../../assets/card-images/darjeeling.png",
+      image: "/assets/card-images/darjeeling.png",
       title: "Darjeeling, West Bengal",
       tours: 12
     },
     {
-      image: "../../../assets/card-images/Amritsar.png",
+      image: "/assets/card-images/Amritsar.png",
       title: "Amritsar, Punjab",
       tours: 14
     },
     {
-      image: "../../../assets/card-images/Hampi,-Karnataka.png",
+      image: "/assets/card-images/Hampi,-Karnataka.png",
       title: "Hampi, Karnataka",
       tours: 9
     },
     {
-      image: "../../../assets/card-images/Mysore.png",
+      image: "/assets/card-images/Mysore.png",
       title: "Mysore, Karnataka",
       tours: 11
     },
     {
-      image: "../../../assets/card-images/Coorg,-Karnataka.png",
+      image: "/assets/card-images/Coorg,-Karnataka.png",
       title: "Coorg, Karnataka",
       tours: 8
     },
     {
-      image: "../../../assets/card-images/Khajuraho,-Madhya-Pradesh.png",
+      image: "/assets/card-images/Khajuraho,-Madhya-Pradesh.png",
       title: "Khajuraho, Madhya Pradesh",
       tours: 7
     },
     {
-      image: "../../../assets/card-images/Konark,-Odisha.png",
+      image: "/assets/card-images/Konark,-Odisha.png",
       title: "Konark, Odisha",
       tours: 6
     },
     {
-      image: "../../../assets/card-images/Rann.png",
+      image: "/assets/card-images/Rann.png",
       title: "Rann of Kutch, Gujarat",
       tours: 8
     },
     {
-      image: "../../../assets/card-images/Sikkim.png",
+      image: "/assets/card-images/Sikkim.png",
       title: "Sikkim (Gangtok)",
       tours: 10
     },
     {
-      image: "../../../assets/card-images/Pushkar.png",
+      image: "/assets/card-images/Pushkar.png",
       title: "Pushkar, Rajasthan",
       tours: 9
     },
     {
-      image: "../../../assets/card-images/Mahabalipuram.png",
+      image: "/assets/card-images/Mahabalipuram.png",
       title: "Mahabalipuram, Tamil Nadu",
       tours: 7
     },
     {
-      image: "../../../assets/card-images/Ajanta.png",
+      image: "/assets/card-images/Ajanta.png",
       title: "Ajanta & Ellora Caves",
       tours: 8
     },
     {
-      image: "../../../assets/card-images/Pune,-Maharashtra.png",
+      image: "/assets/card-images/Pune,-Maharashtra.png",
       title: "Pune, Maharashtra",
       tours: 15
     },
     {
-      image: "../../../assets/card-images/Auli,-Uttarakhand.png",
+      image: "/assets/card-images/Auli,-Uttarakhand.png",
       title: "Auli, Uttarakhand",
       tours: 6
     }
@@ -274,11 +275,15 @@ export default function TopDestinations() {
 
         {/* View All Button */}
         <div className="text-center mt-12">
-          <button className="bg-slate-900 hover:bg-slate-800 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
+          <Link 
+            to="/destinations" 
+            className="bg-slate-900 hover:bg-slate-800 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg inline-block"
+          >
             View All Destinations
-          </button>
+          </Link>
         </div>
       </div>
+      
     </section>
   );
 }

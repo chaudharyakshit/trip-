@@ -14,8 +14,8 @@ export default function Hero() {
   const [showDateDropdown, setShowDateDropdown] = useState(false);
   const [showCategoryDropdown, setShowCategoryDropdown] = useState(false);
   
-  // Reveal search panel only after user starts scrolling
-  const [showPanel, setShowPanel] = useState(false);
+  // Always show search panel by default
+  const [showPanel, setShowPanel] = useState(true);
   
   const [selectedDestination, setSelectedDestination] = useState({ name: 'Bali Paradise', country: 'Indonesia' });
   const [selectedDate, setSelectedDate] = useState({ date: '21 October', day: 'Tuesday 2025' });
@@ -93,13 +93,13 @@ export default function Hero() {
     }
   }, [swiperRef]);
 
-  useEffect(() => {
-    const onScroll = () => setShowPanel(window.scrollY > 10);
-    onScroll();
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
-
+  // Remove the scroll effect that was hiding the panel
+  // useEffect(() => {
+  //   const onScroll = () => setShowPanel(window.scrollY > 10);
+  //   onScroll();
+  //   window.addEventListener('scroll', onScroll, { passive: true });
+  //   return () => window.removeEventListener('scroll', onScroll);
+  // }, []);
 
   const handleDestinationSelect = (destination) => {
     setSelectedDestination(destination);
@@ -198,18 +198,7 @@ export default function Hero() {
       {/* Foreground content */}
       <div className="foreground-content">
         <div className="content-wrapper">
-          {/* <div className="text-content">
-            <h1 className="main-heading">
-              Plan Your Trip,
-              <br />
-              Your Way.
-            </h1>
-            <p className="sub-heading">
-              Perfect for customized travel experiences—tailored flights, stays, and tours just for you.
-            </p>
-          </div> */}
-
-          {/* Search panel (reveals after scroll) */}
+          {/* Search panel (always visible) */}
           <div className={`search-panel-container ${showPanel ? 'visible' : 'hidden'}`}>
             <div className="search-panel">
               {/* Tabs */}
