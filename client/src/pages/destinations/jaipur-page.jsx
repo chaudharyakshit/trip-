@@ -4,11 +4,12 @@ import Navbar from '../../components/Navbar.jsx';
 import Footer from '../../components/ContactFooter.jsx';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
+import CursorFX from "../../components/CursorFX.jsx";
 
-// Import images
-import jaipur1 from '../../../public/assets/package-images/jaipur1.png';
-import jaipur2 from '../../../public/assets/package-images/jaipur2.png';
-import jaipur3 from '../../../public/assets/package-images/jaipur3.png';
+// Import images - Corrected paths (remove "public" from the path)
+import jaipur1 from '/assets/packages-images/jaipur1.png';
+import jaipur2 from '/assets/packages-images/jaipur2.png';
+import jaipur3 from '/assets/packages-images/jaipur3.png';
 
 import "swiper/css";
 import "swiper/css/autoplay";
@@ -19,32 +20,13 @@ const JaipurPage = () => {
   const [selectedDate, setSelectedDate] = useState('');
   const [travelers, setTravelers] = useState(1);
 
+  const jaipurImages = [jaipur1, jaipur2, jaipur3];
+
   return (
     <div className="inner-page">
       {/* Custom Navbar */}
-      <header className="header">
-        <div className="nav-wrapper">
-          <div className="logo">
-            <h2>IndiasgoTrip</h2>
-          </div>
-          
-          <nav className="nav">
-            <Link to="/" className="active">Home</Link>
-            <Link to="/destinations">Destination</Link>
-            <Link to="/packages">Travel Package</Link>
-            <Link to="/pages">Pages</Link>
-            <Link to="/contact">Contact</Link>
-          </nav>
-
-          <div className="header-actions">
-            <div className="whatsapp">
-              <span>+91860799882</span>
-            </div>
-            <button className="login-btn">Login</button>
-          </div>
-        </div>
-      </header>
-      
+        <CursorFX />
+      <Navbar />
       {/* Hero Section with Slider - Full Width */}
       <section className="hero-section">
         <Swiper
@@ -53,32 +35,17 @@ const JaipurPage = () => {
           loop={true}
           className="hero-slider"
         >
-          <SwiperSlide>
-            <div
-              className="hero-slide"
-              style={{
-                backgroundImage: `url(${jaipur1})`,
-              }}
-            />
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <div
-              className="hero-slide"
-              style={{
-                backgroundImage: `url(${jaipur2})`,
-              }}
-            />
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <div
-              className="hero-slide"
-              style={{
-                backgroundImage: `url(${jaipur3})`,
-              }}
-            />
-          </SwiperSlide>
+          {jaipurImages.map((img, index) => (
+            <SwiperSlide key={index}>
+              <div className="hero-slide">
+                <img
+                  src={img}
+                  alt={`Jaipur ${index + 1}`}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </SwiperSlide>
+          ))}
         </Swiper>
       </section>
 
@@ -424,12 +391,21 @@ const JaipurPage = () => {
         .hero-slide {
           width: 100%;
           height: 500px;
-          background-size: cover;
-          background-position: center;
-          background-repeat: no-repeat;
           display: flex;
           align-items: center;
           justify-content: center;
+        }
+
+        .w-full {
+          width: 100%;
+        }
+
+        .h-full {
+          height: 100%;
+        }
+
+        .object-cover {
+          object-fit: cover;
         }
 
         /* Main Content */
