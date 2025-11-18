@@ -28,7 +28,7 @@ export default function Services() {
           <h2 className="section-title">What we offer</h2>
           <p className="text-slate-500">Complete travel solutions tailored to you.</p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 reveal">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 reveal">
           {items.map((item) => (
             <div key={item.title} className="hover-lift rounded-3xl border border-slate-200 bg-white p-6 text-center shadow-soft hover:shadow-lg transition">
               <div className="mx-auto mb-3 h-20 w-20 rounded-full bg-gradient-to-br from-[color:rgb(var(--brand-secondary))]/15 via-white to-[color:rgb(var(--brand-primary))]/25 grid place-items-center overflow-hidden">

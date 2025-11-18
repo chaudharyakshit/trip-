@@ -15,6 +15,7 @@ import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "../../styles/destination-mobile-fix.css";
 
 const MahabalipuramPage = () => {
   const [selectedDate, setSelectedDate] = useState('');
@@ -211,11 +212,9 @@ const MahabalipuramPage = () => {
           <div className="right-column">
             <div className="booking-widget">
               <div className="price-section">
-                <div className="price-row">
-                  <div className="original-price">₹13475</div>
-                  <div className="current-price">₹10975</div>
-                </div>
-                <div className="price-label">Per Person</div>
+                <a href="https://wa.me/918607998882?text=Hi, I'm interested in this tour package. Please share the pricing details." target="_blank" className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold text-lg transition-colors inline-block text-center w-full">
+                  Price on Request
+                </a>
               </div>
 
               <div className="guarantees">
@@ -411,7 +410,7 @@ const MahabalipuramPage = () => {
 
         /* Main Content */
         .main-content {
-          padding: 60px 0;
+          padding: 20px 0;
         }
 
         .content-grid {
@@ -816,7 +815,7 @@ const MahabalipuramPage = () => {
           .nav-wrapper {
             flex-direction: column;
             gap: 15px;
-            padding: 15px 20px;
+            padding: 10px 15px;
           }
 
           .nav {
@@ -831,11 +830,15 @@ const MahabalipuramPage = () => {
           }
 
           .hero-section {
-            height: 400px;
+            height: 250px;
           }
 
           .hero-slide {
-            height: 400px;
+            height: 250px;
+          }
+
+          .main-content {
+            padding: 20px 0;
           }
 
           .package-details {
@@ -859,15 +862,29 @@ const MahabalipuramPage = () => {
           .header {
             position: relative;
           }
+
+          .left-column section {
+            margin-bottom: 15px;
+            padding: 20px;
+          }
         }
 
         @media (max-width: 480px) {
           .hero-section {
-            height: 300px;
+            height: 200px;
           }
 
           .hero-slide {
-            height: 300px;
+            height: 200px;
+          }
+
+          .main-content {
+            padding: 15px 0;
+          }
+
+          .left-column section {
+            margin-bottom: 10px;
+            padding: 15px;
           }
 
           .current-price {

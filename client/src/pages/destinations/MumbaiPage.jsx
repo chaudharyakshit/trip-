@@ -15,6 +15,7 @@ import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "../../styles/destination-mobile-fix.css";
 
 const MumbaiPage = () => {
   const [selectedDate, setSelectedDate] = useState('');
@@ -211,11 +212,9 @@ const MumbaiPage = () => {
           <div className="right-column">
             <div className="booking-widget">
               <div className="price-section">
-                <div className="price-row">
-                  <div className="original-price">₹18725</div>
-                  <div className="current-price">₹16225</div>
-                </div>
-                <div className="price-label">Per Person</div>
+                <a href="https://wa.me/918607998882?text=Hi, I'm interested in the Mumbai tour package. Please share the pricing details." target="_blank" className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold text-lg transition-colors inline-block text-center w-full">
+                  Price on Request
+                </a>
               </div>
 
               <div className="guarantees">
@@ -392,7 +391,7 @@ const MumbaiPage = () => {
 
         .hero-slide {
           width: 100%;
-          height: 500px;
+          height: 100%;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -412,7 +411,7 @@ const MumbaiPage = () => {
 
         /* Main Content */
         .main-content {
-          padding: 60px 0;
+          padding: 20px 0;
         }
 
         .content-grid {
@@ -832,11 +831,16 @@ const MumbaiPage = () => {
           }
 
           .hero-section {
-            height: 400px;
+            height: 300px;
           }
 
-          .hero-slide {
-            height: 400px;
+          .main-content {
+            padding: 30px 0;
+          }
+
+          .left-column section {
+            padding: 20px;
+            margin-bottom: 20px;
           }
 
           .package-details {
@@ -864,11 +868,20 @@ const MumbaiPage = () => {
 
         @media (max-width: 480px) {
           .hero-section {
-            height: 300px;
+            height: 250px;
           }
 
-          .hero-slide {
-            height: 300px;
+          .main-content {
+            padding: 20px 0;
+          }
+
+          .container {
+            padding: 0 15px;
+          }
+
+          .left-column section {
+            padding: 15px;
+            margin-bottom: 15px;
           }
 
           .current-price {

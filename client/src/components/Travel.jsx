@@ -161,7 +161,9 @@ const TravelAgency = () => {
                 <div className={`h-48 ${destination.image} flex items-end p-4`}>
                   <div className="text-white">
                     <h3 className="text-xl font-bold">{destination.name}</h3>
-                    <p className="text-sm">Starting from {destination.price}</p>
+                    <a href="https://wa.me/918607998882?text=Hi, I'm interested in this destination. Please share the pricing details." target="_blank" className="bg-orange-500 hover:bg-orange-600 text-white px-3 py-1 rounded text-sm font-semibold transition-colors inline-block">
+                      Price on Request
+                    </a>
                   </div>
                 </div>
               </div>

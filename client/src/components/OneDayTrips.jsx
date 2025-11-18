@@ -39,7 +39,9 @@ const Card = ({ image, title, region, days, price, badge, onClick }) => (
         </button>
         <div className="text-right">
           <div className="text-slate-500 text-xs">Per Person</div>
-          <div className="text-2xl font-extrabold">₹{price}</div>
+          <a href="https://wa.me/918607998882?text=Hi, I'm interested in this trip package. Please share the pricing details." target="_blank" className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-md font-semibold transition-colors inline-block text-center">
+            Price on Request
+          </a>
         </div>
       </div>
       <div className="mt-4 flex items-center gap-6 text-slate-600 text-sm">

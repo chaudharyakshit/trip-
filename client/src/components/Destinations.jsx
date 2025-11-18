@@ -38,10 +38,10 @@ const DestinationCard = ({ image, title, tours }) => {
   }
 
   return (
-    <div className="bg-white rounded-xl shadow-lg border border-slate-200 cursor-pointer relative w-64 h-80 hover:shadow-xl transition-all duration-300">
+    <div className="bg-white rounded-xl shadow-lg border border-slate-200 cursor-pointer relative w-80 h-96 sm:w-64 sm:h-96 hover:shadow-xl transition-all duration-300">
       <div
         ref={boxRef}
-        className="relative h-60 w-full overflow-hidden rounded-t-xl"
+        className="relative h-72 sm:h-72 w-full overflow-hidden rounded-t-xl"
         onMouseEnter={enter}
         onMouseMove={move}
         onMouseLeave={leave}
@@ -57,7 +57,7 @@ const DestinationCard = ({ image, title, tours }) => {
           draggable={false}
         />
       </div>
-      <div className="px-5 py-3 h-20 flex flex-col justify-center">
+      <div className="px-5 py-4 h-24 flex flex-col justify-center">
         <h3 className="text-lg font-bold text-slate-900 mb-1">{title}</h3>
         <p className="text-slate-600 text-sm">Tours ({tours})</p>
       </div>
@@ -196,7 +196,7 @@ export default function TopDestinations() {
   ];
 
   return (
-    <section id="destinations" className="py-14 md:py-20 relative overflow-hidden">
+    <section id="destinations" className="py-20 md:py-32 lg:py-40 relative overflow-hidden min-h-screen">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img 
@@ -219,7 +219,7 @@ export default function TopDestinations() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 relative z-20">
-        <div className="text-center mb-12">
+        <div className="text-center mb-16 md:mb-20">
           <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">Top Indian Destinations</h2>
           <p className="text-slate-600 max-w-2xl mx-auto text-lg">
             Discover the most beautiful and culturally rich destinations across India with our curated travel experiences
@@ -274,7 +274,7 @@ export default function TopDestinations() {
         </div>
 
         {/* View All Button */}
-        <div className="text-center mt-12">
+        <div className="text-center mt-16 md:mt-20">
           <Link 
             to="/destinations" 
             className="bg-slate-900 hover:bg-slate-800 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg inline-block"

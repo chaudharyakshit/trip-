@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import CursorFX from "../../components/CursorFX.jsx";
 
+
 // Import images - Corrected paths (remove "public" from the path)
 import jaipur1 from '/assets/packages-images/jaipur1.png';
 import jaipur2 from '/assets/packages-images/jaipur2.png';
@@ -15,6 +16,7 @@ import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "../../styles/destination-mobile-fix.css";
 
 const JaipurPage = () => {
   const [selectedDate, setSelectedDate] = useState('');
@@ -27,6 +29,9 @@ const JaipurPage = () => {
       {/* Custom Navbar */}
         <CursorFX />
       <Navbar />
+      
+
+      
       {/* Hero Section with Slider - Full Width */}
       <section className="hero-section">
         <Swiper
@@ -210,11 +215,9 @@ const JaipurPage = () => {
           <div className="right-column">
             <div className="booking-widget">
               <div className="price-section">
-                <div className="price-row">
-                  <div className="original-price">₹22475</div>
-                  <div className="current-price">₹20000</div>
-                </div>
-                <div className="price-label">Per Person</div>
+                <a href="https://wa.me/918607998882?text=Hi, I'm interested in the Jaipur tour package. Please share the pricing details." target="_blank" className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold text-lg transition-colors inline-block text-center w-full">
+                  Price on Request
+                </a>
               </div>
 
               <div className="guarantees">
@@ -410,7 +413,7 @@ const JaipurPage = () => {
 
         /* Main Content */
         .main-content {
-          padding: 60px 0;
+          padding: 20px 0;
         }
 
         .content-grid {

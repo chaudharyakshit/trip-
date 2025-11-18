@@ -10,11 +10,13 @@ import CursorFX from "../../components/CursorFX.jsx";
 import konark1 from '/assets/destination-images/Konark, Odisha1.webp';
 import konark2 from '/assets/destination-images/Konark, Odisha2.webp';
 import konark3 from '/assets/destination-images/Konark, Odisha3.webp';
+import headerBanner from '/assets/images/innerpage banner.png';
 
 import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "../../styles/destination-mobile-fix.css";
 
 const KonarkPage = () => {
   const [selectedDate, setSelectedDate] = useState('');
@@ -27,6 +29,17 @@ const KonarkPage = () => {
       {/* Custom Navbar */}
        <CursorFX />
             <Navbar />
+      
+      {/* Header Banner */}
+      <section className="page-header">
+        <img src={headerBanner} alt="Header Banner" className="header-banner-img" />
+        <div className="header-overlay">
+          <div className="header-content">
+            <h1>Konark, Odisha</h1>
+            <p>Discover the magnificent Sun Temple and coastal beauty</p>
+          </div>
+        </div>
+      </section>
       
       {/* Hero Section with Slider - Full Width */}
       <section className="hero-section">
@@ -211,11 +224,9 @@ const KonarkPage = () => {
           <div className="right-column">
             <div className="booking-widget">
               <div className="price-section">
-                <div className="price-row">
-                  <div className="original-price">₹12975</div>
-                  <div className="current-price">₹10475</div>
-                </div>
-                <div className="price-label">Per Person</div>
+                <a href="https://wa.me/918607998882?text=Hi, I'm interested in this tour package. Please share the pricing details." target="_blank" className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold text-lg transition-colors inline-block text-center w-full">
+                  Price on Request
+                </a>
               </div>
 
               <div className="guarantees">
@@ -285,13 +296,58 @@ const KonarkPage = () => {
             </div>
           </div>
         </div>
-        <Footer/>
+       
       </div>
+       <Footer/>
 
       <style jsx>{`
         .inner-page {
           min-height: 100vh;
           background: #f8fafc;
+        }
+
+        /* Header Banner */
+        .page-header {
+          position: relative;
+          width: 100%;
+          height: 300px;
+          overflow: hidden;
+        }
+
+        .header-banner-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        .header-overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: rgba(0, 0, 0, 0.5);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .header-content {
+          text-align: center;
+          color: white;
+        }
+
+        .header-content h1 {
+          font-size: 48px;
+          font-weight: 700;
+          margin: 0 0 15px 0;
+          text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header-content p {
+          font-size: 18px;
+          margin: 0;
+          text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
         }
 
         .container {
@@ -411,7 +467,7 @@ const KonarkPage = () => {
 
         /* Main Content */
         .main-content {
-          padding: 60px 0;
+          padding: 20px 0;
         }
 
         .content-grid {
@@ -809,6 +865,18 @@ const KonarkPage = () => {
         }
 
         @media (max-width: 768px) {
+          .page-header {
+            height: 200px;
+          }
+
+          .header-content h1 {
+            font-size: 32px;
+          }
+
+          .header-content p {
+            font-size: 14px;
+          }
+
           .content-grid {
             grid-template-columns: 1fr;
           }
@@ -862,6 +930,18 @@ const KonarkPage = () => {
         }
 
         @media (max-width: 480px) {
+          .page-header {
+            height: 150px;
+          }
+
+          .header-content h1 {
+            font-size: 24px;
+          }
+
+          .header-content p {
+            font-size: 12px;
+          }
+
           .hero-section {
             height: 300px;
           }

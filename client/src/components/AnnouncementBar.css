@@ -1,0 +1,19 @@
+.breaking-news-scroll {
+  animation: scroll-left 15s linear infinite;
+  white-space: nowrap;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 640px) {
+  .breaking-news-scroll {
+    animation: scroll-left 12s linear infinite;
+  }
+}

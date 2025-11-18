@@ -4,10 +4,10 @@ import '../styles/award-section.css';
 
 export default function AwardSection() {
   return (
-    <section className="award-section relative py-12 md:py-16">
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="award-section relative py-4 md:py-16 lg:py-32">
+      <div className="relative max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         {/* Background image wrapper (parallax-style) */}
-        <div className="award-frame-bg relative h-[380px] md:h-[480px] lg:h-[560px] rounded-[40px] overflow-hidden shadow-2xl">
+        <div className="award-frame-bg relative h-[400px] md:h-[480px] lg:h-[560px] rounded-[20px] md:rounded-[40px] overflow-hidden shadow-2xl">
           {/* Big rounded outer frame + connector lines (no inner card) */}
           <div className="pointer-events-none absolute inset-x-6 md:inset-x-12 lg:inset-x-[72px] top-8 bottom-8">
             <div className="award-frame-outer w-full h-full rounded-[46px] border border-white/40">
@@ -21,7 +21,7 @@ export default function AwardSection() {
 
           {/* Center content directly on background (no glass card) */}
           <div className="absolute inset-0 flex items-center justify-center px-4">
-            <div className="relative max-w-3xl w-full px-6 py-8 md:px-12 md:py-10 text-center text-white">
+            <div className="relative max-w-3xl w-full px-3 py-4 md:px-12 md:py-10 text-center text-white">
               {/* Top badge */}
               <div className="flex flex-col items-center gap-2 mb-4">
                 <div className="inline-flex items-center gap-2 text-sm md:text-base font-medium tracking-[0.15em] uppercase">
@@ -71,10 +71,10 @@ export default function AwardSection() {
                 Nationwide Recognition
               </p>
               <div className="mb-4">
-                <div className="text-[44px] md:text-[64px] lg:text-[80px] leading-none font-extrabold tracking-[0.35em] text-white">
+                <div className="text-[36px] md:text-[64px] lg:text-[80px] leading-none font-extrabold tracking-[0.35em] text-white">
                   BEST
                 </div>
-                <div className="mt-1 text-2xl md:text-3xl lg:text-4xl italic font-medium">
+                <div className="mt-1 text-xl md:text-3xl lg:text-4xl italic font-medium">
                   Travel & Trip Planner
                 </div>
               </div>

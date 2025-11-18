@@ -17,6 +17,7 @@ import AwardSection from './components/AwardSection.jsx'
 import Banner from './components/Banner.jsx'
 import Gallery from './components/Gallery.jsx'
 import TrustedCompanies from './components/TrustedCompanies.jsx'
+import './styles/inner-page-fix.css'
 
 
 // Import all destination pages

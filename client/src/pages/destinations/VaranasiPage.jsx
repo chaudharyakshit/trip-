@@ -15,6 +15,7 @@ import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "../../styles/destination-mobile-fix.css";
 
 const VaranasiPage = () => {
   const [selectedDate, setSelectedDate] = useState('');
@@ -219,11 +220,9 @@ const VaranasiPage = () => {
           <div className="right-column">
             <div className="booking-widget">
               <div className="price-section">
-                <div className="price-row">
-                  <div className="original-price">₹17475</div>
-                  <div className="current-price">₹14975</div>
-                </div>
-                <div className="price-label">Per Person</div>
+                <a href="https://wa.me/918607998882?text=Hi, I'm interested in this tour package. Please share the pricing details." target="_blank" className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold text-lg transition-colors inline-block text-center w-full">
+                  Price on Request
+                </a>
               </div>
 
               <div className="guarantees">
@@ -419,7 +418,7 @@ const VaranasiPage = () => {
 
         /* Main Content */
         .main-content {
-          padding: 60px 0;
+          padding: 20px 0;
         }
 
         .content-grid {

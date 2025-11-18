@@ -15,6 +15,7 @@ import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "../../styles/destination-mobile-fix.css";
 
 const RishikeshPage = () => {
   const [selectedDate, setSelectedDate] = useState('');
@@ -227,11 +228,9 @@ const RishikeshPage = () => {
           <div className="right-column">
             <div className="booking-widget">
               <div className="price-section">
-                <div className="price-row">
-                  <div className="original-price">₹19975</div>
-                  <div className="current-price">₹17475</div>
-                </div>
-                <div className="price-label">Per Person</div>
+                <a href="https://wa.me/918607998882?text=Hi, I'm interested in this tour package. Please share the pricing details." target="_blank" className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold text-lg transition-colors inline-block text-center w-full">
+                  Price on Request
+                </a>
               </div>
 
               <div className="guarantees">
@@ -315,6 +314,8 @@ const RishikeshPage = () => {
           margin: 0 auto;
           padding: 0 20px;
         }
+
+
 
         /* Header Styles - Full Width */
         .header {

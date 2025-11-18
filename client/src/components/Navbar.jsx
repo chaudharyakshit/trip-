@@ -3,8 +3,8 @@ import Topbar from './Topbar'
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
-  const phone = '+918607998882'
-  const whatsapp = 'https://wa.me/918607998882'
+  const phone = '+919523918425'
+  const whatsapp = 'https://wa.me/919523918425'
   const [loginOpen, setLoginOpen] = useState(false)
   const [loginStage, setLoginStage] = useState('initial') // 'initial' | 'chooseRole'
   const [contactOpen, setContactOpen] = useState(false)
@@ -29,7 +29,7 @@ export default function Navbar() {
   const Menu = () => (
     <ul className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4 lg:gap-6 font-semibold text-[14px] md:text-[15px] tracking-tight">
       <li>
-        <a className="text-orange-500 transition-colors duration-300 py-2 pb-2.5 border-b-4 border-orange-500" href="#home">Home</a>
+        <a className="text-orange-500 transition-colors duration-300 py-2 pb-2.5 border-b-4 border-orange-500" href="/">Home</a>
       </li>
       <li className="relative group">
         <a className="flex items-center gap-1 md:gap-1.5 text-slate-900 hover:text-orange-600 transition-colors duration-300 py-2 pb-2.5 border-b-4 border-transparent group-hover:border-orange-600 whitespace-nowrap" href="#destinations">
@@ -81,7 +81,7 @@ export default function Navbar() {
       <div className="w-full pl-3 pr-6 md:pl-4 md:pr-8 lg:pl-6 lg:pr-10">
         <nav className="h-24 lg:h-28 grid grid-cols-[auto_1fr_auto] items-center w-full">
           {/* Logo */}
-          <a className="flex items-center gap-3" href="#home" aria-label="IndiasGoTrip Home">
+          <a className="flex items-center gap-3" href="/" aria-label="IndiasGoTrip Home">
             <img src="/assets/images/Indiasgotrip-logo.png" alt="IndiasGoTrip" className="h-[72px] md:h-[80px] w-auto" />
           </a>
 
@@ -106,7 +106,7 @@ export default function Navbar() {
                 className="flex flex-col items-end leading-tight cursor-pointer"
               >
                 <span className="text-[11px] text-slate-600 font-medium">Need Help?</span>
-                <span className="text-sm font-semibold text-slate-900">+91 86079 98882</span>
+                <span className="text-sm font-semibold text-slate-900">+91 95239 18425</span>
               </button>
 
               {contactOpen && (
@@ -149,7 +149,7 @@ export default function Navbar() {
                     <div className="p-4">
                       <h4 className="text-lg font-bold mb-3">Welcome</h4>
                       <div className="grid gap-3">
-                        <a href="#signup" className="inline-flex items-center justify-center h-11 rounded-xl border border-slate-300 hover:bg-slate-50 font-semibold">
+                        <a href="https://indiasgotrip.com/web_apps/newUserRequest.jsp" target="_blank" className="inline-flex items-center justify-center h-11 rounded-xl border border-slate-300 hover:bg-slate-50 font-semibold">
                           Sign up / Create account
                         </a>
                         <button
@@ -171,8 +171,8 @@ export default function Navbar() {
                         <button className="text-sm text-blue-600 hover:underline" onClick={() => setLoginStage('initial')}>Back</button>
                       </div>
                       <div className="grid gap-3">
-                        <a href="#login-user" className="inline-flex items-center justify-center h-11 rounded-xl bg-blue-600 text-white hover:bg-blue-700 font-semibold">User</a>
-                        <a href="#login-admin" className="inline-flex items-center justify-center h-11 rounded-xl bg-emerald-600 text-white hover:bg-emerald-700 font-semibold">Admin</a>
+                        <a href="https://indiasgotrip.com/web_apps/login.jsp#!" target="_blank" className="inline-flex items-center justify-center h-11 rounded-xl bg-blue-600 text-white hover:bg-blue-700 font-semibold">User</a>
+                        <a href="https://indiasgotrip.com/web_apps/login.jsp#!" target="_blank" className="inline-flex items-center justify-center h-11 rounded-xl bg-emerald-600 text-white hover:bg-emerald-700 font-semibold">Admin</a>
                       </div>
                     </div>
                   )}
@@ -200,11 +200,11 @@ export default function Navbar() {
           <div className="md:hidden py-6 border-t border-slate-200 bg-white/95 backdrop-blur-sm">
             <Menu />
             <div className="mt-6 flex flex-col sm:flex-row items-center gap-4">
-              <a href={`tel:${phone}`} className="text-slate-700 font-medium text-lg">Call: +91 86079 98882</a>
+              <a href={`tel:${phone}`} className="text-slate-700 font-medium text-lg">Call: +91 95239 18425</a>
               <a href={whatsapp} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center h-12 px-6 rounded-full bg-emerald-500 text-white font-semibold text-base hover:bg-emerald-600 transition-colors">
                 WhatsApp
               </a>
-              <a href="#" className="inline-flex items-center justify-center h-12 px-6 rounded-full bg-[rgb(242,138,15)] text-white font-semibold text-base hover:opacity-90 transition-colors">
+              <a href="https://indiasgotrip.com/web_apps/login.jsp#!" target="_blank" className="inline-flex items-center justify-center h-12 px-6 rounded-full bg-[rgb(242,138,15)] text-white font-semibold text-base hover:opacity-90 transition-colors">
                 Login
               </a>
             </div>

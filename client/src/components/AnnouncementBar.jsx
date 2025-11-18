@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import './AnnouncementBar.css'
 
 export default function AnnouncementBar() {
   const [index, setIndex] = useState(0)
@@ -15,7 +16,7 @@ export default function AnnouncementBar() {
   }, [])
 
   return (
-    <div className="w-full text-white select-none relative z-40" style={{ backgroundColor: 'rgb(232, 242, 247)' }}>
+    <div className="w-full text-white select-none relative z-40" style={{ backgroundColor: '#2563eb' }}>
       <div className="relative z-40 w-full px-3 md:px-6 h-14 flex items-center">
         <button
           type="button"
@@ -25,9 +26,11 @@ export default function AnnouncementBar() {
         >
           <svg className="w-4 h-4" viewBox="0 0 20 20" fill="currentColor"><path d="M12.78 15.53a.75.75 0 0 1-1.06 0l-4.5-4.5a.75.75 0 0 1 0-1.06l4.5-4.5a.75.75 0 1 1 1.06 1.06L8.31 10l4.47 4.47a.75.75 0 0 1 0 1.06Z"/></svg>
         </button>
-        <div className="flex-1">
-          <div className="h-14 w-full flex items-center justify-center px-3 text-[17px] md:text-[18px] font-semibold text-white text-center tracking-wide whitespace-nowrap" style={{textShadow:'0 1px 2px rgba(0,0,0,.25)'}}>
-            {messages[index]}
+        <div className="flex-1 overflow-hidden">
+          <div className="breaking-news-scroll">
+            <span className="text-[17px] md:text-[18px] font-semibold text-white tracking-wide" style={{textShadow:'0 1px 2px rgba(0,0,0,.25)'}}>
+              {messages[index]}
+            </span>
           </div>
         </div>
         <button

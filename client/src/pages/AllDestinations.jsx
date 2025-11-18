@@ -231,15 +231,23 @@ const AllDestinations = () => {
       <CursorFX />
       <Navbar />
       
-      <div className="pt-24 pb-8">
-        <div className="max-w-7xl mx-auto px-4">
-          {/* Header */}
-          <div className="text-center mb-8">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">All Destinations</h1>
-            <p className="text-gray-600 text-lg">Discover amazing places across India</p>
+      {/* Header Banner */}
+      <div className="relative h-80 bg-gradient-to-r from-gray-900 to-gray-700 flex items-center justify-center" style={{backgroundImage: 'url(/assets/images/banneralldestination.png)', backgroundSize: 'cover', backgroundPosition: 'center'}}>
+        <div className="absolute inset-0 bg-black opacity-50"></div>
+        <div className="relative z-10 text-center text-white">
+          <h1 className="text-5xl font-bold mb-4">All Destinations</h1>
+          <div className="flex items-center justify-center space-x-2 text-lg">
+            <Link to="/" className="hover:text-orange-400 transition-colors">Home</Link>
+            <span>></span>
+            <span>All Destinations</span>
           </div>
+        </div>
+      </div>
 
-          <div className="flex flex-col lg:flex-row gap-8 h-[calc(100vh-200px)]">
+      <div className="py-8">
+        <div className="max-w-7xl mx-auto px-4">
+
+          <div className="flex flex-col lg:flex-row gap-8 lg:h-[calc(100vh-200px)]">
             {/* Filters Sidebar - Fixed */}
             <div className="lg:w-1/4">
               <div className="bg-white rounded-lg shadow-md p-6">
@@ -307,7 +315,7 @@ const AllDestinations = () => {
                 </p>
               </div>
 
-              <div className="h-full overflow-y-auto pr-2">
+              <div className="lg:h-full lg:overflow-y-auto pr-2">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pb-6">
                   {filteredDestinations.map((destination) => (
                     <div key={destination.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">

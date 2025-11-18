@@ -1,0 +1,42 @@
+/* Mobile spacing fix for all inner pages */
+@media (max-width: 768px) {
+  .hero-section {
+    height: 300px !important;
+  }
+
+  .hero-slide {
+    height: 300px !important;
+  }
+
+  .main-content {
+    padding: 30px 0 !important;
+  }
+
+  .left-column section {
+    padding: 20px !important;
+    margin-bottom: 20px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    height: 250px !important;
+  }
+
+  .hero-slide {
+    height: 250px !important;
+  }
+
+  .main-content {
+    padding: 20px 0 !important;
+  }
+
+  .container {
+    padding: 0 15px !important;
+  }
+
+  .left-column section {
+    padding: 15px !important;
+    margin-bottom: 15px !important;
+  }
+}

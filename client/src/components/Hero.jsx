@@ -57,37 +57,19 @@ export default function Hero() {
   const [swiperRef, setSwiperRef] = useState(null);
   const [activeTab, setActiveTab] = useState('Tours');
   const [showDestinationDropdown, setShowDestinationDropdown] = useState(false);
+  const [destinationSearch, setDestinationSearch] = useState('');
   const [showDateDropdown, setShowDateDropdown] = useState(false);
   const [showCategoryDropdown, setShowCategoryDropdown] = useState(false);
   
-  // Always show search panel by default
-  const [showPanel, setShowPanel] = useState(true);
+  // Show search panel based on scroll
+  const [showPanel, setShowPanel] = useState(false);
 
-  // Destination options based on actual Indian destinations/routes
+  // Destination options - limited to 4 popular destinations
   const destinations = [
     { name: 'Delhi', country: 'India', slug: '/destination/delhi' },
     { name: 'Jaipur', country: 'Rajasthan', slug: '/destination/jaipur-page' },
-    { name: 'Agra', country: 'Uttar Pradesh', slug: '/destination/agra-page' },
     { name: 'Goa', country: 'India', slug: '/destination/goa' },
     { name: 'Kerala', country: 'India', slug: '/destination/kerala' },
-    { name: 'Mumbai', country: 'Maharashtra', slug: '/destination/mumbai' },
-    { name: 'Udaipur', country: 'Rajasthan', slug: '/destination/udaipur' },
-    { name: 'Varanasi', country: 'Uttar Pradesh', slug: '/destination/varanasi' },
-    { name: 'Rishikesh', country: 'Uttarakhand', slug: '/destination/rishikesh' },
-    { name: 'Shimla', country: 'Himachal Pradesh', slug: '/destination/shimla' },
-    { name: 'Ladakh', country: 'Jammu & Kashmir', slug: '/destination/ladakh' },
-    { name: 'Darjeeling', country: 'West Bengal', slug: '/destination/darjeeling' },
-    { name: 'Amritsar', country: 'Punjab', slug: '/destination/amritsar' },
-    { name: 'Coorg', country: 'Karnataka', slug: '/destination/coorg' },
-    { name: 'Khajuraho', country: 'Madhya Pradesh', slug: '/destination/khajuraho' },
-    { name: 'Konark', country: 'Odisha', slug: '/destination/konark' },
-    { name: 'Rann of Kutch', country: 'Gujarat', slug: '/destination/kutch' },
-    { name: 'Sikkim (Gangtok)', country: 'Sikkim', slug: '/destination/sikkim' },
-    { name: 'Pushkar', country: 'Rajasthan', slug: '/destination/pushkar' },
-    { name: 'Mahabalipuram', country: 'Tamil Nadu', slug: '/destination/mahabalipuram' },
-    { name: 'Ajanta & Ellora Caves', country: 'Maharashtra', slug: '/destination/ajanta-ellora' },
-    { name: 'Pune', country: 'Maharashtra', slug: '/destination/pune' },
-    { name: 'Auli', country: 'Uttarakhand', slug: '/destination/auli' },
   ];
 
   const [selectedDestination, setSelectedDestination] = useState(destinations[0]);
@@ -163,13 +145,12 @@ export default function Hero() {
     }
   }, [swiperRef]);
 
-  // Remove the scroll effect that was hiding the panel
-  // useEffect(() => {
-  //   const onScroll = () => setShowPanel(window.scrollY > 10);
-  //   onScroll();
-  //   window.addEventListener('scroll', onScroll, { passive: true });
-  //   return () => window.removeEventListener('scroll', onScroll);
-  // }, []);
+  // Add scroll effect to show/hide panel
+  useEffect(() => {
+    const onScroll = () => setShowPanel(window.scrollY > 50);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   const handleDestinationSelect = (destination) => {
     setSelectedDestination(destination);
@@ -291,7 +272,7 @@ export default function Hero() {
             <div className="search-panel">
               {/* Tabs */}
               <div className="tabs-container">
-                {['Tours','Hotels','Bus','Experience'].map((t) => (
+                {['Tours','Hotels','Bus'].map((t) => (
                   <button
                     key={t}
                     type="button"
@@ -330,16 +311,31 @@ export default function Hero() {
                     </div>
                     {showDestinationDropdown && (
                       <div className="dropdown-menu destination-dropdown">
-                        {destinations.map((destination, index) => (
-                          <div 
-                            key={index}
-                            className="dropdown-item"
-                            onClick={() => handleDestinationSelect(destination)}
-                          >
-                            <div className="dropdown-main-text">{destination.name}</div>
-                            <div className="dropdown-sub-text">{destination.country}</div>
-                          </div>
-                        ))}
+                        <div className="search-input-container">
+                          <input
+                            type="text"
+                            placeholder="Search destinations..."
+                            value={destinationSearch}
+                            onChange={(e) => setDestinationSearch(e.target.value)}
+                            className="destination-search-input"
+                          />
+                        </div>
+                        {destinations
+                          .filter(dest => 
+                            dest.name.toLowerCase().includes(destinationSearch.toLowerCase()) ||
+                            dest.country.toLowerCase().includes(destinationSearch.toLowerCase())
+                          )
+                          .map((destination, index) => (
+                            <div 
+                              key={index}
+                              className="dropdown-item"
+                              onClick={() => handleDestinationSelect(destination)}
+                            >
+                              <div className="dropdown-main-text">{destination.name}</div>
+                              <div className="dropdown-sub-text">{destination.country}</div>
+                            </div>
+                          ))
+                        }
                       </div>
                     )}
                   </div>
