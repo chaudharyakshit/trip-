@@ -212,8 +212,8 @@ const KonarkPage = () => {
             <div className="booking-widget">
               <div className="price-section">
                 <div className="price-row">
-                  <div className="original-price">$519</div>
-                  <div className="current-price">$419</div>
+                  <div className="original-price">₹12975</div>
+                  <div className="current-price">₹10475</div>
                 </div>
                 <div className="price-label">Per Person</div>
               </div>

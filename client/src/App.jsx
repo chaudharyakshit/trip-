@@ -35,6 +35,8 @@ import DarjeelingPage from './pages/destinations/DarjeelingPage.jsx'
 import AmritsarPage from './pages/destinations/AmritsarPage.jsx'
 // import HampiPage from './pages/destinations/HampiPage.jsx'
 // import MysorePage from './pages/destinations/MysorePage.jsx'
+// We route Mysore, Hampi, and Coorg to a common inner page instead of separate components
+import InnerPage1 from './pages/inner-page1.jsx'
 import CoorgPage from './pages/destinations/CoorgPage.jsx'
 import KhajurahoPage from './pages/destinations/KhajurahoPage.jsx'
 import KonarkPage from './pages/destinations/KonarkPage.jsx'
@@ -102,20 +104,21 @@ function App() {
       <Route path="/destination/rishikesh" element={<RishikeshPage />} />
       <Route path="/destination/shimla" element={<ShimlaPage />} />
       <Route path="/destination/ladakh" element={<LadakhPage />} />
-       <Route path="/destination/darjeeling" element={<DarjeelingPage />} />
-       <Route path="/destination/amritsar" element={<AmritsarPage />} />
-      {/* // <Route path="/destination/hampi" element={<HampiPage />} />
-      <Route path="/destination/mysore" element={<MysorePage />} />*/}
-      <Route path="/destination/coorg" element={<CoorgPage />} />
-        <Route path="/destination/khajuraho" element={<KhajurahoPage />} />
-       <Route path="/destination/konark" element={<KonarkPage />} /> 
-       <Route path="/destination/kutch" element={<KutchPage />} />
-       <Route path="/destination/sikkim" element={<SikkimPage />} />
+      <Route path="/destination/darjeeling" element={<DarjeelingPage />} />
+      <Route path="/destination/amritsar" element={<AmritsarPage />} />
+      {/* Mysore, Hampi and Coorg all use the same inner page layout */}
+      <Route path="/destination/mysore" element={<InnerPage1 />} />
+      <Route path="/destination/hampi" element={<InnerPage1 />} />
+      <Route path="/destination/coorg" element={<InnerPage1 />} />
+      <Route path="/destination/khajuraho" element={<KhajurahoPage />} />
+      <Route path="/destination/konark" element={<KonarkPage />} /> 
+      <Route path="/destination/kutch" element={<KutchPage />} />
+      <Route path="/destination/sikkim" element={<SikkimPage />} />
       <Route path="/destination/pushkar" element={<PushkarPage />} />
-       <Route path="/destination/mahabalipuram" element={<MahabalipuramPage />} />
-       <Route path="/destination/ajanta-ellora" element={<AjantaElloraPage />} />
-       <Route path="/destination/pune" element={<PunePage />} />
-       <Route path="/destination/auli" element={<AuliPage />} />  
+      <Route path="/destination/mahabalipuram" element={<MahabalipuramPage />} />
+      <Route path="/destination/ajanta-ellora" element={<AjantaElloraPage />} />
+      <Route path="/destination/pune" element={<PunePage />} />
+      <Route path="/destination/auli" element={<AuliPage />} />  
 
 
       // Package Routes

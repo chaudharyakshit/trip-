@@ -139,7 +139,7 @@ export default function TopDestinations() {
       tours: 9
     },
     {
-      image: "/assets/card-images/Mysore.png",
+      image: "/assets/card-images/mysore.png",
       title: "Mysore, Karnataka",
       tours: 11
     },

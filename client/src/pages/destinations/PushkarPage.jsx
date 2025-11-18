@@ -212,8 +212,8 @@ const PushkarPage = () => {
             <div className="booking-widget">
               <div className="price-section">
                 <div className="price-row">
-                  <div className="original-price">$489</div>
-                  <div className="current-price">$389</div>
+                  <div className="original-price">₹12225</div>
+                  <div className="current-price">₹9725</div>
                 </div>
                 <div className="price-label">Per Person</div>
               </div>

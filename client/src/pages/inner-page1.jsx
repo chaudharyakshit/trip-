@@ -23,7 +23,7 @@ const InnerPage1 = () => {
               <span>3 Destinations</span>
             </div>
             <div className="price-tag">
-              Starting from <strong>$899</strong> per person
+              Starting from <strong>₹22475</strong> per person
             </div>
             <div className="hero-features">
               <div className="feature">
@@ -209,8 +209,8 @@ const InnerPage1 = () => {
             <div className="booking-widget">
               <div className="price-section">
                 <div className="price-row">
-                  <div className="original-price">$899</div>
-                  <div className="current-price">$800</div>
+                  <div className="original-price">₹22475</div>
+                  <div className="current-price">₹20000</div>
                 </div>
                 <div className="price-label">Per Person</div>
               </div>

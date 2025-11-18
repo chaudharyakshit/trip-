@@ -84,7 +84,7 @@ const DehradunPackage = () => {
                       <p className="text-gray-700">03 Days / 02 Nights</p>
                     </div>
                     <div className="text-right">
-                      <div className="text-3xl font-bold text-amber-600">$199</div>
+                      <div className="text-3xl font-bold text-amber-600">₹4975</div>
                       <p className="text-gray-600 text-sm">per person</p>
                     </div>
                   </div>

@@ -39,7 +39,7 @@ const Card = ({ image, title, region, days, price, badge, onClick }) => (
         </button>
         <div className="text-right">
           <div className="text-slate-500 text-xs">Per Person</div>
-          <div className="text-2xl font-extrabold">${price}</div>
+          <div className="text-2xl font-extrabold">₹{price}</div>
         </div>
       </div>
       <div className="mt-4 flex items-center gap-6 text-slate-600 text-sm">
@@ -60,7 +60,7 @@ export default function PopularPackages() {
       title: "Historic Delhi Tour",
       region: "Delhi, India",
       days: "02 Days/01 Night",
-      price: 99,
+      price: 2475,
       badge: "Popular"
     },
     {
@@ -69,7 +69,7 @@ export default function PopularPackages() {
       title: "Mumbai City Experience",
       region: "Mumbai, India",
       days: "03 Days/02 Nights",
-      price: 149,
+      price: 3725,
       badge: "Bestseller"
     },
     {
@@ -78,7 +78,7 @@ export default function PopularPackages() {
       title: "Taj Mahal Special",
       region: "Agra, India",
       days: "01 Day Tour",
-      price: 79,
+      price: 1975,
       badge: "Must Visit"
     },
     {
@@ -87,7 +87,7 @@ export default function PopularPackages() {
       title: "Pink City Heritage",
       region: "Jaipur, India",
       days: "02 Days/01 Night",
-      price: 119,
+      price: 2975,
       badge: "Cultural"
     },
     {
@@ -96,7 +96,7 @@ export default function PopularPackages() {
       title: "Dehradun Hill Station",
       region: "Dehradun, India",
       days: "03 Days/02 Nights",
-      price: 139,
+      price: 3475,
       badge: "Nature"
     }
   ];

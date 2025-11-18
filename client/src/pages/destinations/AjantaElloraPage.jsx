@@ -212,8 +212,8 @@ const AjantaElloraPage = () => {
             <div className="booking-widget">
               <div className="price-section">
                 <div className="price-row">
-                  <div className="original-price">$569</div>
-                  <div className="current-price">$469</div>
+                  <div className="original-price">₹14225</div>
+                  <div className="current-price">₹11725</div>
                 </div>
                 <div className="price-label">Per Person</div>
               </div>

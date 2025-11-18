@@ -13,7 +13,7 @@ export default function PopularPackages() {
     title: "Royal Rajasthan Experience",
     region: "Rajasthan, India",
     days: "04 Days/03 Nights",
-    price: 299,
+    price: 7475,
     image: "../../../assets/card-images/jaipur.png"
   },
   {
@@ -22,7 +22,7 @@ export default function PopularPackages() {
     title: "Taj Mahal Wonder",
     region: "Uttar Pradesh, India",
     days: "03 Days/02 Nights",
-    price: 199,
+    price: 4975,
     image: "../../../assets/card-images/Agra.png"
   },
   {
@@ -31,7 +31,7 @@ export default function PopularPackages() {
     title: "Goa Beach Paradise",
     region: "Goa, India",
     days: "05 Days/04 Nights",
-    price: 349,
+    price: 8725,
     image: "../../../assets/card-images/Goa.png"
   },
   {
@@ -40,7 +40,7 @@ export default function PopularPackages() {
     title: "Kerala Backwaters",
     region: "Kerala, India",
     days: "06 Days/05 Nights",
-    price: 399,
+    price: 9975,
     image: "../../../assets/card-images/Kerala.png"
   },
   {
@@ -49,7 +49,7 @@ export default function PopularPackages() {
     title: "Heritage Capital Tour",
     region: "Delhi, India",
     days: "03 Days/02 Nights",
-    price: 259,
+    price: 6475,
     image: "../../../assets/card-images/Delhi.png"
   },
   {
@@ -58,7 +58,7 @@ export default function PopularPackages() {
     title: "City of Dreams Experience",
     region: "Maharashtra, India",
     days: "04 Days/03 Nights",
-    price: 329,
+    price: 8225,
     image: "../../../assets/card-images/Mumbai.png"
   },
   {
@@ -67,7 +67,7 @@ export default function PopularPackages() {
     title: "City of Lakes Tour",
     region: "Rajasthan, India",
     days: "03 Days/02 Nights",
-    price: 279,
+    price: 6975,
     image: "../../../assets/card-images/udaipur.png"
   },
   {
@@ -76,7 +76,7 @@ export default function PopularPackages() {
     title: "Spiritual Ganga Tour",
     region: "Uttar Pradesh, India",
     days: "03 Days/02 Nights",
-    price: 249,
+    price: 6225,
     image: "../../../assets/card-images/Varanasi.png"
   },
   {
@@ -85,7 +85,7 @@ export default function PopularPackages() {
     title: "Yoga & Adventure Escape",
     region: "Uttarakhand, India",
     days: "03 Days/02 Nights",
-    price: 219,
+    price: 5475,
     image: "../../../assets/card-images/Rishikesh.png"
   },
   {
@@ -94,7 +94,7 @@ export default function PopularPackages() {
     title: "Queen of Hills Getaway",
     region: "Himachal Pradesh, India",
     days: "04 Days/03 Nights",
-    price: 289,
+    price: 7225,
     image: "../../../assets/card-images/Shimla.png"
   },
   {
@@ -103,7 +103,7 @@ export default function PopularPackages() {
     title: "Ladakh Adventure",
     region: "J&K, India",
     days: "07 Days/06 Nights",
-    price: 499,
+    price: 12475,
     image: "../../../assets/card-images/Ladakh.png"
   },
   {
@@ -112,7 +112,7 @@ export default function PopularPackages() {
     title: "Tea Garden Retreat",
     region: "West Bengal, India",
     days: "04 Days/03 Nights",
-    price: 279,
+    price: 6975,
     image: "../../../assets/card-images/darjeeling.png"
   },
   {
@@ -121,7 +121,7 @@ export default function PopularPackages() {
     title: "Golden Temple Journey",
     region: "Punjab, India",
     days: "02 Days/01 Night",
-    price: 199,
+    price: 4975,
     image: "../../../assets/card-images/Amritsar.png"
   },
   // {
@@ -130,7 +130,7 @@ export default function PopularPackages() {
   //   title: "Heritage Ruins Tour",
   //   region: "Karnataka, India",
   //   days: "03 Days/02 Nights",
-  //   price: 249,
+  //   price: 6225,
   //   image: "../../../assets/card-images/Hampi,-Karnataka.png"
   // },
   // {
@@ -139,8 +139,8 @@ export default function PopularPackages() {
   //   title: "Royal Mysore Tour",
   //   region: "Karnataka, India",
   //   days: "03 Days/02 Nights",
-  //   price: 229,
-  //   image: "../../../assets/card-images/Mysore.png"
+  //   price: 5725,
+  //   image: "../../../assets/card-images/mysore.png"
   // },
   {
     slug: "coorg",
@@ -148,7 +148,7 @@ export default function PopularPackages() {
     title: "Coffee Hills Escape",
     region: "Karnataka, India",
     days: "03 Days/02 Nights",
-    price: 239,
+    price: 5975,
     image: "../../../assets/card-images/Coorg,-Karnataka.png"
   },
   {
@@ -157,7 +157,7 @@ export default function PopularPackages() {
     title: "Temple Art Tour",
     region: "Madhya Pradesh, India",
     days: "03 Days/02 Nights",
-    price: 259,
+    price: 6475,
     image: "../../../assets/card-images/Khajuraho,-Madhya-Pradesh.png"
   },
   {
@@ -166,7 +166,7 @@ export default function PopularPackages() {
     title: "Sun Temple Heritage Tour",
     region: "Odisha, India",
     days: "03 Days/02 Nights",
-    price: 239,
+    price: 5975,
     image: "../../../assets/card-images/Konark,-Odisha.png"
   },
   {
@@ -175,7 +175,7 @@ export default function PopularPackages() {
     title: "White Desert Festival",
     region: "Gujarat, India",
     days: "04 Days/03 Nights",
-    price: 349,
+    price: 8725,
     image: "../../../assets/card-images/Rann.png"
   },
   {
@@ -184,7 +184,7 @@ export default function PopularPackages() {
     title: "Mystical Himalayan Tour",
     region: "Sikkim, India",
     days: "05 Days/04 Nights",
-    price: 399,
+    price: 9975,
     image: "../../../assets/card-images/Sikkim.png"
   },
   {
@@ -193,7 +193,7 @@ export default function PopularPackages() {
     title: "Lake & Temple Tour",
     region: "Rajasthan, India",
     days: "02 Days/01 Night",
-    price: 189,
+    price: 4725,
     image: "../../../assets/card-images/Pushkar.png"
   },
   {
@@ -202,7 +202,7 @@ export default function PopularPackages() {
     title: "Shore Temple Tour",
     region: "Tamil Nadu, India",
     days: "02 Days/01 Night",
-    price: 199,
+    price: 4975,
     image: "../../../assets/card-images/Mahabalipuram.png"
   },
   {
@@ -211,7 +211,7 @@ export default function PopularPackages() {
     title: "Ancient Caves Tour",
     region: "Maharashtra, India",
     days: "03 Days/02 Nights",
-    price: 259,
+    price: 6475,
     image: "../../../assets/card-images/Ajanta.png"
   },
   {
@@ -220,7 +220,7 @@ export default function PopularPackages() {
     title: "Cultural Pune Tour",
     region: "Maharashtra, India",
     days: "02 Days/01 Night",
-    price: 179,
+    price: 4475,
     image: "../../../assets/card-images/Pune,-Maharashtra.png"
   },
   {
@@ -229,7 +229,7 @@ export default function PopularPackages() {
     title: "Skiing & Snow Adventure",
     region: "Uttarakhand, India",
     days: "04 Days/03 Nights",
-    price: 369,
+    price: 9225,
     image: "../../../assets/card-images/Auli,-Uttarakhand.png"
   }
 ];
@@ -327,7 +327,7 @@ export default function PopularPackages() {
                       </button>
                     </Link>
                     <p className="text-xl font-bold text-slate-900">
-                      ${pkg.price}
+                      ₹{pkg.price}
                     </p>
                   </div>
                 </div>

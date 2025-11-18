@@ -212,8 +212,8 @@ const DelhiPage = () => {
             <div className="booking-widget">
               <div className="price-section">
                 <div className="price-row">
-                  <div className="original-price">$699</div>
-                  <div className="current-price">$599</div>
+                  <div className="original-price">₹17475</div>
+                  <div className="current-price">₹14975</div>
                 </div>
                 <div className="price-label">Per Person</div>
               </div>

@@ -212,8 +212,8 @@ const AmritsarPage = () => {
             <div className="booking-widget">
               <div className="price-section">
                 <div className="price-row">
-                  <div className="original-price">$549</div>
-                  <div className="current-price">$449</div>
+                  <div className="original-price">₹13725</div>
+                  <div className="current-price">₹11225</div>
                 </div>
                 <div className="price-label">Per Person</div>
               </div>

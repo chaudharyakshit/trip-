@@ -147,10 +147,10 @@ const TravelAgency = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { name: "Paris, France", price: "$1,200", image: "bg-gradient-to-br from-blue-400 to-blue-600" },
-              { name: "Tokyo, Japan", price: "$1,500", image: "bg-gradient-to-br from-orange-400 to-orange-600" },
-              { name: "Bali, Indonesia", price: "$900", image: "bg-gradient-to-br from-green-400 to-green-600" },
-              { name: "New York, USA", price: "$1,400", image: "bg-gradient-to-br from-purple-400 to-purple-600" }
+              { name: "Paris, France", price: "₹30000", image: "bg-gradient-to-br from-blue-400 to-blue-600" },
+              { name: "Tokyo, Japan", price: "₹37500", image: "bg-gradient-to-br from-orange-400 to-orange-600" },
+              { name: "Bali, Indonesia", price: "₹22500", image: "bg-gradient-to-br from-green-400 to-green-600" },
+              { name: "New York, USA", price: "₹35000", image: "bg-gradient-to-br from-purple-400 to-purple-600" }
             ].map((destination, index) => (
               <div 
                 key={index} 

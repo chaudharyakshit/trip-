@@ -212,8 +212,8 @@ const KhajurahoPage = () => {
             <div className="booking-widget">
               <div className="price-section">
                 <div className="price-row">
-                  <div className="original-price">$529</div>
-                  <div className="current-price">$429</div>
+                  <div className="original-price">₹13225</div>
+                  <div className="current-price">₹10725</div>
                 </div>
                 <div className="price-label">Per Person</div>
               </div>

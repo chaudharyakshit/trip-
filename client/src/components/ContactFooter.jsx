@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/Footer.css';
 
 const Footer = () => {
@@ -23,17 +24,17 @@ const Footer = () => {
         <div className="footer-section">
           <h3 className="footer-title">Top Destination</h3>
           <ul className="footer-list">
-            <li>Goa Beach Tour</li>
-            <li>Jaipur Heritage Tour</li>
-            <li>Ladakh Adventure Tour</li>
-            <li>Kerala Backwaters Tour</li>
-            <li>Agra & Taj Mahal Tour</li>
-            <li>Udaipur Lake City Tour</li>
-            <li>Varanasi Spiritual Tour</li>
-            <li>Delhi City Tour</li>
-            <li>Mumbai Gateway Tour</li>
-            <li>Shimla Hill Station Tour</li>
-            <li>Manali Snow Tour</li>
+            <li><Link to="/destination/goa">Goa Beach Tour</Link></li>
+            <li><Link to="/destination/jaipur-page">Jaipur Heritage Tour</Link></li>
+            <li><Link to="/destination/ladakh">Ladakh Adventure Tour</Link></li>
+            <li><Link to="/destination/kerala">Kerala Backwaters Tour</Link></li>
+            <li><Link to="/destination/agra-page">Agra &amp; Taj Mahal Tour</Link></li>
+            <li><Link to="/destination/udaipur">Udaipur Lake City Tour</Link></li>
+            <li><Link to="/destination/varanasi">Varanasi Spiritual Tour</Link></li>
+            <li><Link to="/destination/delhi">Delhi City Tour</Link></li>
+            <li><Link to="/destination/mumbai">Mumbai Gateway Tour</Link></li>
+            <li><Link to="/destination/shimla">Shimla Hill Station Tour</Link></li>
+            <li><Link to="/destination/coorg">Coorg Coffee Hills Tour</Link></li>
           </ul>
         </div>
         

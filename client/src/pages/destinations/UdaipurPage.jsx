@@ -220,8 +220,8 @@ const UdaipurPage = () => {
             <div className="booking-widget">
               <div className="price-section">
                 <div className="price-row">
-                  <div className="original-price">$899</div>
-                  <div className="current-price">$799</div>
+                  <div className="original-price">₹22475</div>
+                  <div className="current-price">₹19975</div>
                 </div>
                 <div className="price-label">Per Person</div>
               </div>

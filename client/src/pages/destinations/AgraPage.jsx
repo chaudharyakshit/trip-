@@ -212,8 +212,8 @@ const AgraPage = () => {
             <div className="booking-widget">
               <div className="price-section">
                 <div className="price-row">
-                  <div className="original-price">$799</div>
-                  <div className="current-price">$699</div>
+                  <div className="original-price">₹19975</div>
+                  <div className="current-price">₹17475</div>
                 </div>
                 <div className="price-label">Per Person</div>
               </div>

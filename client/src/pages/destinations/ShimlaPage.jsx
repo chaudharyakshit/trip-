@@ -220,8 +220,8 @@ const ShimlaPage = () => {
             <div className="booking-widget">
               <div className="price-section">
                 <div className="price-row">
-                  <div className="original-price">$649</div>
-                  <div className="current-price">$549</div>
+                  <div className="original-price">₹16225</div>
+                  <div className="current-price">₹13725</div>
                 </div>
                 <div className="price-label">Per Person</div>
               </div>

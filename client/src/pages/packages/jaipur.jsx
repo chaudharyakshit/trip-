@@ -123,7 +123,7 @@ const JaipurPackage = () => {
                       <p className="text-gray-700">04 Days / 03 Nights</p>
                     </div>
                     <div className="text-right">
-                      <div className="text-3xl font-bold text-amber-600">$299</div>
+                      <div className="text-3xl font-bold text-amber-600">₹7475</div>
                       <p className="text-gray-600 text-sm">per person</p>
                     </div>
                   </div>

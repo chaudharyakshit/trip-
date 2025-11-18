@@ -212,8 +212,8 @@ const MumbaiPage = () => {
             <div className="booking-widget">
               <div className="price-section">
                 <div className="price-row">
-                  <div className="original-price">$749</div>
-                  <div className="current-price">$649</div>
+                  <div className="original-price">₹18725</div>
+                  <div className="current-price">₹16225</div>
                 </div>
                 <div className="price-label">Per Person</div>
               </div>

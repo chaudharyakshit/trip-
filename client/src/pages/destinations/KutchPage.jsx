@@ -212,8 +212,8 @@ const KutchPage = () => {
             <div className="booking-widget">
               <div className="price-section">
                 <div className="price-row">
-                  <div className="original-price">$579</div>
-                  <div className="current-price">$479</div>
+                  <div className="original-price">₹14475</div>
+                  <div className="current-price">₹11975</div>
                 </div>
                 <div className="price-label">Per Person</div>
               </div>

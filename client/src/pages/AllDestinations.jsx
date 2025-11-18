@@ -125,7 +125,7 @@ const AllDestinations = () => {
     },
     {
       id: 'mysore',
-      image: "/assets/card-images/Mysore.png",
+      image: "/assets/card-images/mysore.png",
       title: "Mysore, Karnataka",
       tours: 11,
       state: "Karnataka",

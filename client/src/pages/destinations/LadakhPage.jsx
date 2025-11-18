@@ -236,8 +236,8 @@ const LadakhPage = () => {
             <div className="booking-widget">
               <div className="price-section">
                 <div className="price-row">
-                  <div className="original-price">$1199</div>
-                  <div className="current-price">$999</div>
+                  <div className="original-price">₹29975</div>
+                  <div className="current-price">₹24975</div>
                 </div>
                 <div className="price-label">Per Person</div>
               </div>

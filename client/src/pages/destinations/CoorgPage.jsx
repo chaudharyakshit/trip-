@@ -212,8 +212,8 @@ const CoorgPage = () => {
             <div className="booking-widget">
               <div className="price-section">
                 <div className="price-row">
-                  <div className="original-price">$599</div>
-                  <div className="current-price">$499</div>
+                  <div className="original-price">₹14975</div>
+                  <div className="current-price">₹12475</div>
                 </div>
                 <div className="price-label">Per Person</div>
               </div>

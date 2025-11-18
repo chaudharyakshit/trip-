@@ -15,7 +15,7 @@ export default function AnnouncementBar() {
   }, [])
 
   return (
-    <div className="w-full bg-[#ff7a00] text-white select-none relative z-40">
+    <div className="w-full text-white select-none relative z-40" style={{ backgroundColor: 'rgb(232, 242, 247)' }}>
       <div className="relative z-40 w-full px-3 md:px-6 h-14 flex items-center">
         <button
           type="button"

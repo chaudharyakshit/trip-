@@ -1,12 +1,58 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation, EffectFade } from 'swiper/modules';
+import { useNavigate } from 'react-router-dom';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
 import '../styles/hero.css';
 
+// Helper to build calendar data for any month
+function buildCalendarData(currentMonthDate) {
+  const days = ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'];
+  const year = currentMonthDate.getFullYear();
+  const month = currentMonthDate.getMonth();
+
+  const monthLabel = currentMonthDate.toLocaleDateString('en-US', {
+    month: 'long',
+    year: 'numeric',
+  });
+
+  const firstDayOfMonth = new Date(year, month, 1).getDay();
+  const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+  const weeks = [];
+  let week = [];
+
+  // leading empty cells
+  for (let i = 0; i < firstDayOfMonth; i += 1) {
+    week.push(null);
+  }
+
+  for (let day = 1; day <= daysInMonth; day += 1) {
+    week.push(day);
+    if (week.length === 7) {
+      weeks.push(week);
+      week = [];
+    }
+  }
+
+  if (week.length) {
+    while (week.length < 7) {
+      week.push(null);
+    }
+    weeks.push(week);
+  }
+
+  return {
+    month: monthLabel,
+    days,
+    dates: weeks,
+  };
+}
+
 export default function Hero() {
+  const navigate = useNavigate();
   const videoRef = useRef(null);
   const [swiperRef, setSwiperRef] = useState(null);
   const [activeTab, setActiveTab] = useState('Tours');
@@ -16,18 +62,46 @@ export default function Hero() {
   
   // Always show search panel by default
   const [showPanel, setShowPanel] = useState(true);
-  
-  const [selectedDestination, setSelectedDestination] = useState({ name: 'Bali Paradise', country: 'Indonesia' });
-  const [selectedDate, setSelectedDate] = useState({ date: '21 October', day: 'Tuesday 2025' });
-  const [selectedCategory, setSelectedCategory] = useState({ name: 'Family Tour', type: 'Category' });
 
+  // Destination options based on actual Indian destinations/routes
   const destinations = [
-    { name: 'Bali Paradise', country: 'Indonesia' },
-    { name: 'Paris Getaway', country: 'France' },
-    { name: 'Tokyo Adventure', country: 'Japan' },
-    { name: 'New York City', country: 'USA' },
-    { name: 'Sydney Escape', country: 'Australia' }
+    { name: 'Delhi', country: 'India', slug: '/destination/delhi' },
+    { name: 'Jaipur', country: 'Rajasthan', slug: '/destination/jaipur-page' },
+    { name: 'Agra', country: 'Uttar Pradesh', slug: '/destination/agra-page' },
+    { name: 'Goa', country: 'India', slug: '/destination/goa' },
+    { name: 'Kerala', country: 'India', slug: '/destination/kerala' },
+    { name: 'Mumbai', country: 'Maharashtra', slug: '/destination/mumbai' },
+    { name: 'Udaipur', country: 'Rajasthan', slug: '/destination/udaipur' },
+    { name: 'Varanasi', country: 'Uttar Pradesh', slug: '/destination/varanasi' },
+    { name: 'Rishikesh', country: 'Uttarakhand', slug: '/destination/rishikesh' },
+    { name: 'Shimla', country: 'Himachal Pradesh', slug: '/destination/shimla' },
+    { name: 'Ladakh', country: 'Jammu & Kashmir', slug: '/destination/ladakh' },
+    { name: 'Darjeeling', country: 'West Bengal', slug: '/destination/darjeeling' },
+    { name: 'Amritsar', country: 'Punjab', slug: '/destination/amritsar' },
+    { name: 'Coorg', country: 'Karnataka', slug: '/destination/coorg' },
+    { name: 'Khajuraho', country: 'Madhya Pradesh', slug: '/destination/khajuraho' },
+    { name: 'Konark', country: 'Odisha', slug: '/destination/konark' },
+    { name: 'Rann of Kutch', country: 'Gujarat', slug: '/destination/kutch' },
+    { name: 'Sikkim (Gangtok)', country: 'Sikkim', slug: '/destination/sikkim' },
+    { name: 'Pushkar', country: 'Rajasthan', slug: '/destination/pushkar' },
+    { name: 'Mahabalipuram', country: 'Tamil Nadu', slug: '/destination/mahabalipuram' },
+    { name: 'Ajanta & Ellora Caves', country: 'Maharashtra', slug: '/destination/ajanta-ellora' },
+    { name: 'Pune', country: 'Maharashtra', slug: '/destination/pune' },
+    { name: 'Auli', country: 'Uttarakhand', slug: '/destination/auli' },
   ];
+
+  const [selectedDestination, setSelectedDestination] = useState(destinations[0]);
+
+  const [selectedDate, setSelectedDate] = useState(() => {
+    const now = new Date();
+    return {
+      date: now.toLocaleDateString('en-US', { day: 'numeric', month: 'long' }),
+      day: now.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric' }),
+      jsDate: now,
+    };
+  });
+
+  const [selectedCategory, setSelectedCategory] = useState({ name: 'Family Tour', type: 'Category' });
 
   const categories = [
     { name: 'Family Tour', type: 'Category' },
@@ -37,18 +111,14 @@ export default function Hero() {
     { name: 'Budget', type: 'Economy' }
   ];
 
-  // Calendar data for October 2025
-  const calendarData = {
-    month: 'October 2025',
-    days: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
-    dates: [
-      [null, null, null, 1, 2, 3, 4],
-      [5, 6, 7, 8, 9, 10, 11],
-      [12, 13, 14, 15, 16, 17, 18],
-      [19, 20, 21, 22, 23, 24, 25],
-      [26, 27, 28, 29, 30, 31, null]
-    ]
-  };
+  // Dynamic calendar state (full calendar, not only October)
+  const [currentMonth, setCurrentMonth] = useState(() => {
+    const d = new Date();
+    d.setDate(1);
+    return d;
+  });
+
+  const calendarData = buildCalendarData(currentMonth);
 
   const TabIcon = ({ name }) => {
     switch (name) {
@@ -107,18 +177,36 @@ export default function Hero() {
   };
 
   const handleDateSelect = (day) => {
-    if (day) {
-      const date = new Date(2025, 9, day); // October is month 9 (0-indexed)
-      const dateString = `${day} October`;
-      const dayString = date.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric' });
-      setSelectedDate({ date: dateString, day: dayString });
-      setShowDateDropdown(false);
-    }
+    if (!day) return;
+
+    const date = new Date(currentMonth.getFullYear(), currentMonth.getMonth(), day);
+    const dateString = date.toLocaleDateString('en-US', { day: 'numeric', month: 'long' });
+    const dayString = date.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric' });
+
+    setSelectedDate({
+      date: dateString,
+      day: dayString,
+      jsDate: date,
+    });
+    setShowDateDropdown(false);
   };
 
   const handleCategorySelect = (category) => {
     setSelectedCategory(category);
     setShowCategoryDropdown(false);
+  };
+
+  const handleMonthChange = (offset) => {
+    setCurrentMonth((prev) => {
+      const next = new Date(prev);
+      next.setMonth(prev.getMonth() + offset);
+      return next;
+    });
+  };
+
+  const handleSearch = () => {
+    if (!selectedDestination || !selectedDestination.slug) return;
+    navigate(selectedDestination.slug);
   };
 
   // Close dropdowns when clicking outside
@@ -280,7 +368,21 @@ export default function Hero() {
                     {showDateDropdown && (
                       <div className="dropdown-menu calendar-dropdown">
                         <div className="calendar-header">
+                          <button
+                            type="button"
+                            className="calendar-nav-btn"
+                            onClick={() => handleMonthChange(-1)}
+                          >
+                            ‹
+                          </button>
                           <div className="calendar-month">{calendarData.month}</div>
+                          <button
+                            type="button"
+                            className="calendar-nav-btn"
+                            onClick={() => handleMonthChange(1)}
+                          >
+                            ›
+                          </button>
                         </div>
                         <div className="calendar-grid">
                           {calendarData.days.map((day, index) => (
@@ -340,7 +442,7 @@ export default function Hero() {
                   </div>
 
                   {/* Search Button */}
-                  <button type="button" className="search-button">
+                  <button type="button" className="search-button" onClick={handleSearch}>
                     <svg className="search-icon" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M10 2a8 8 0 1 1-6.32 12.9l-3.02 3.02a1 1 0 0 1-1.41-1.41l3.02-3.02A8 8 0 0 1 10 2Zm0 2a6 6 0 1 0 0 12A6 6 0 0 0 10 4Z"/>
                     </svg>

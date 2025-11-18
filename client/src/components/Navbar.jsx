@@ -134,7 +134,7 @@ export default function Navbar() {
                 aria-haspopup="dialog"
                 aria-expanded={loginOpen}
                 onClick={() => { setLoginOpen((v) => !v); setLoginStage('initial') }}
-                className="inline-flex items-center justify-center h-10 px-6 rounded-full bg-[color:rgb(var(--brand-secondary))] text-white hover:brightness-110 font-semibold text-sm transition-all duration-300 shadow-lg hover:shadow-xl"
+                className="inline-flex items-center justify-center h-10 px-6 rounded-full bg-[rgb(242,138,15)] text-white hover:brightness-110 font-semibold text-sm transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 <svg className="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
@@ -204,7 +204,7 @@ export default function Navbar() {
               <a href={whatsapp} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center h-12 px-6 rounded-full bg-emerald-500 text-white font-semibold text-base hover:bg-emerald-600 transition-colors">
                 WhatsApp
               </a>
-              <a href="#" className="inline-flex items-center justify-center h-12 px-6 rounded-full border-2 border-slate-300 font-semibold text-base hover:bg-slate-50 transition-colors">
+              <a href="#" className="inline-flex items-center justify-center h-12 px-6 rounded-full bg-[rgb(242,138,15)] text-white font-semibold text-base hover:opacity-90 transition-colors">
                 Login
               </a>
             </div>

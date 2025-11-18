@@ -212,8 +212,8 @@ const PunePage = () => {
             <div className="booking-widget">
               <div className="price-section">
                 <div className="price-row">
-                  <div className="original-price">$499</div>
-                  <div className="current-price">$399</div>
+                  <div className="original-price">₹12475</div>
+                  <div className="current-price">₹9975</div>
                 </div>
                 <div className="price-label">Per Person</div>
               </div>

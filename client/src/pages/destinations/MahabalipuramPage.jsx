@@ -212,8 +212,8 @@ const MahabalipuramPage = () => {
             <div className="booking-widget">
               <div className="price-section">
                 <div className="price-row">
-                  <div className="original-price">$539</div>
-                  <div className="current-price">$439</div>
+                  <div className="original-price">₹13475</div>
+                  <div className="current-price">₹10975</div>
                 </div>
                 <div className="price-label">Per Person</div>
               </div>
