@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar.jsx';
 import CursorFX from '../components/CursorFX.jsx';
 import ContactFooter from '../components/ContactFooter.jsx';
+import '../styles/all-destinations.css';
 
 
 const AllDestinations = () => {
@@ -245,18 +246,16 @@ const AllDestinations = () => {
         </div>
       </div>
 
-      <div className="py-8">
-        <div className="max-w-7xl mx-auto px-4">
-
-          <div className="search-panel-container flex flex-col lg:flex-row gap-8 h-[calc(100vh-200px)] sm:h-[calc(100vh-180px)] md:h-[calc(100vh-160px)] lg:h-[calc(100vh-200px)]">
+      <div className="px-2">
+        <div className="flex flex-col lg:flex-row gap-4">
             {/* Filters Sidebar - Fixed */}
             <div className="lg:w-1/4">
-              <div className="search-filters-sidebar bg-white rounded-lg shadow-md p-4 sm:p-5 lg:p-6 max-h-[40vh] lg:max-h-none overflow-y-auto lg:overflow-visible">
+              <div className="bg-white rounded-lg shadow-md p-4 lg:sticky lg:top-4 lg:max-h-[calc(100vh-120px)] overflow-y-auto">
                 <h3 className="text-lg font-semibold mb-4">Filters</h3>
                 
                 {/* Search */}
-                <div className="mb-6">
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Search</label>
+                <div className="mb-4">
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Search</label>
                   <input
                     type="text"
                     placeholder="Search destinations..."
@@ -267,8 +266,8 @@ const AllDestinations = () => {
                 </div>
 
                 {/* State Filter */}
-                <div className="mb-6">
-                  <label className="block text-sm font-medium text-gray-700 mb-2">State</label>
+                <div className="mb-4">
+                  <label className="block text-sm font-medium text-gray-700 mb-1">State</label>
                   <select
                     value={selectedState}
                     onChange={(e) => setSelectedState(e.target.value)}
@@ -281,8 +280,8 @@ const AllDestinations = () => {
                 </div>
 
                 {/* Category Filter */}
-                <div className="mb-6">
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Category</label>
+                <div className="mb-4">
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Category</label>
                   <select
                     value={selectedCategory}
                     onChange={(e) => setSelectedCategory(e.target.value)}
@@ -309,48 +308,45 @@ const AllDestinations = () => {
             </div>
 
             {/* Destinations Grid - Scrollable */}
-            <div className="lg:w-3/4">
-              <div className="search-results-container h-[60vh] sm:h-[65vh] md:h-[70vh] lg:h-full overflow-y-auto pr-2">
-                <div className="search-results-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pb-6">
+            <div className="lg:w-3/4 lg:max-h-[calc(100vh-120px)] lg:overflow-y-auto">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
                   {filteredDestinations.map((destination) => (
                     <div key={destination.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-                      <div className="h-48 overflow-hidden">
+                      <div className="h-40 overflow-hidden">
                         <img
                           src={destination.image}
                           alt={destination.title}
                           className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                         />
                       </div>
-                      <div className="p-4">
-                        <h3 className="text-lg font-semibold text-gray-900 mb-2">{destination.title}</h3>
-                        <div className="flex justify-between items-center mb-3">
-                          <span className="text-sm text-gray-600">{destination.state}</span>
-                          <span className="text-sm bg-blue-100 text-blue-800 px-2 py-1 rounded-full">
+                      <div className="p-3">
+                        <h3 className="text-base font-semibold text-gray-900 mb-1">{destination.title}</h3>
+                        <div className="flex justify-between items-center mb-2">
+                          <span className="text-xs text-gray-600">{destination.state}</span>
+                          <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">
                             {destination.category}
                           </span>
                         </div>
-                        <p className="text-gray-600 text-sm mb-4">{destination.tours} tours available</p>
+                        <p className="text-gray-600 text-xs mb-3">{destination.tours} tours available</p>
                         <Link
                           to={`/destination/${destination.id}`}
-                          className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-md text-center block transition-colors"
+                          className="w-full bg-blue-600 hover:bg-blue-700 text-white py-1.5 px-3 rounded-md text-center block transition-colors text-sm"
                         >
                           Book Now
                         </Link>
                       </div>
                     </div>
                   ))}
-                </div>
-
-                {filteredDestinations.length === 0 && (
-                  <div className="text-center py-12">
-                    <p className="text-gray-500 text-lg">No destinations found matching your filters.</p>
-                  </div>
-                )}
               </div>
+
+              {filteredDestinations.length === 0 && (
+                <div className="text-center py-12">
+                  <p className="text-gray-500 text-lg">No destinations found matching your filters.</p>
+                </div>
+              )}
             </div>
           </div>
         </div>
-      </div>
       
       <ContactFooter />
     </div>
