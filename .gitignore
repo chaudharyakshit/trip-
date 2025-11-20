@@ -1,1 +1,26 @@
 node_modules
+
+# Unused component files
+client/src/components/FeatureStrip.jsx
+client/src/components/PageHeader.jsx
+client/src/components/Travel.jsx
+client/src/components/LazyImage.jsx
+
+# Unused CSS files
+client/src/styles/all-destinations.css
+client/src/styles/base.css
+client/src/styles/blog.css
+client/src/styles/cta-footer.css
+client/src/styles/destinations.css
+client/src/styles/navbar.css
+client/src/styles/PopularPackages.css
+client/src/styles/utilities.css
+
+# Build and conversion scripts (no longer needed)
+update-phone-numbers.js
+update-to-webp.js
+convert-all-images.js
+convert-to-webp.js
+cleanup-unused-files.js
+cleanup-final.js
+client/fix-all-destinations.js
