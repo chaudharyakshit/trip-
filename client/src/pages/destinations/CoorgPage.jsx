@@ -57,15 +57,15 @@ const CoorgPage = () => {
           <div className="left-column">
             {/* About Section */}
             <section className="about-section">
-              <h2>About Tour Package</h2>
+              <h2>Tour 1 – Mysore + Coorg Combo Trip</h2>
               <p>
-                Coorg, often called the 'Scotland of India', is a picturesque hill station nestled in the Western Ghats of Karnataka. Known for its lush coffee plantations, misty hills, and rich Kodava culture, Coorg offers a perfect escape into nature. From exploring sprawling estates and waterfalls to experiencing local traditions and cuisine, this serene destination provides an unforgettable experience of natural beauty and cultural heritage.
+                Experience the perfect blend of royal heritage and natural beauty. This Mysore–Coorg combo tour takes you from the grandeur of Mysore's palaces and gardens to the misty hills, waterfalls, and coffee plantations of Coorg. From cultural exploration to nature activities, this trip is designed for travelers who want both history and adventure in one journey.
               </p>
               
               <div className="package-details">
                 <div className="detail-item">
                   <span className="label">Accommodation</span>
-                  <span className="value">4 Star Resort</span>
+                  <span className="value">4 Star Hotel / Resort</span>
                 </div>
                 <div className="detail-item">
                   <span className="label">Meals</span>
@@ -77,7 +77,7 @@ const CoorgPage = () => {
                 </div>
                 <div className="detail-item">
                   <span className="label">Group Size</span>
-                  <span className="value">10-20</span>
+                  <span className="value">10-20 Travelers</span>
                 </div>
                 <div className="detail-item">
                   <span className="label">Language</span>
@@ -85,11 +85,11 @@ const CoorgPage = () => {
                 </div>
                 <div className="detail-item">
                   <span className="label">Activities</span>
-                  <span className="value">Plantation Tour, Trekking</span>
+                  <span className="value">Palace Visit, Garden Show, Coffee Plantation Tour, Trekking, Sightseeing</span>
                 </div>
                 <div className="detail-item">
                   <span className="label">Age Range</span>
-                  <span className="value">18-60 (Year)</span>
+                  <span className="value">18-60 Years</span>
                 </div>
                 <div className="detail-item">
                   <span className="label">Season</span>
@@ -97,7 +97,7 @@ const CoorgPage = () => {
                 </div>
                 <div className="detail-item">
                   <span className="label">Category</span>
-                  <span className="value">Nature, Adventure, Cultural</span>
+                  <span className="value">Heritage, Nature, Adventure, Cultural</span>
                 </div>
               </div>
             </section>
@@ -107,102 +107,131 @@ const CoorgPage = () => {
               <h2>Explore Locations</h2>
               <div className="locations-grid">
                 <div className="location-card">
+                  <div className="location-icon">🏰</div>
+                  <h3>Mysore Palace</h3>
+                  <span className="duration">(01 Day)</span>
+                </div>
+                <div className="location-card">
+                  <div className="location-icon">🌄</div>
+                  <h3>Chamundi Hills</h3>
+                  <span className="duration">(01 Day)</span>
+                </div>
+                <div className="location-card">
+                  <div className="location-icon">🌸</div>
+                  <h3>Brindavan Gardens</h3>
+                  <span className="duration">(01 Day)</span>
+                </div>
+                <div className="location-card">
                   <div className="location-icon">🏞️</div>
-                  <h3>Abbey Falls</h3>
-                  <span className="duration">(01 Days)</span>
+                  <h3>Abbey Falls – Coorg</h3>
+                  <span className="duration">(01 Day)</span>
                 </div>
                 <div className="location-card">
                   <div className="location-icon">⛰️</div>
-                  <h3>Raja's Seat</h3>
-                  <span className="duration">(01 Days)</span>
+                  <h3>Raja's Seat – Coorg</h3>
+                  <span className="duration">(01 Day)</span>
                 </div>
                 <div className="location-card">
                   <div className="location-icon">🏛️</div>
-                  <h3>Madikeri Fort</h3>
-                  <span className="duration">(01 Days)</span>
+                  <h3>Madikeri Fort – Coorg</h3>
+                  <span className="duration">(01 Day)</span>
                 </div>
               </div>
             </section>
 
             {/* Highlights Section */}
             <section className="highlights-section">
-              <h2>Highlights of the Tour</h2>
+              <h2>Highlights of the Mysore + Coorg Combo Tour</h2>
               <div className="highlights-list">
                 <div className="highlight-item">
                   <span className="check">✓</span>
-                  Coffee Plantation Tour – Explore aromatic coffee estates and learn about coffee making
+                  Mysore Palace – Explore royal corridors, cultural history & architectural brilliance
                 </div>
                 <div className="highlight-item">
                   <span className="check">✓</span>
-                  Abbey Falls – Majestic waterfall amidst coffee and spice plantations
+                  Chamundi Hills – Spiritual visit with panoramic city views
                 </div>
                 <div className="highlight-item">
                   <span className="check">✓</span>
-                  Raja's Seat – Breathtaking sunset point with panoramic valley views
+                  Brindavan Gardens – Enjoy the iconic musical fountain show
                 </div>
                 <div className="highlight-item">
                   <span className="check">✓</span>
-                  Tibetan Monastery – Peaceful Golden Temple with Buddhist culture
+                  Coffee Plantation Tour – Walk through aromatic coffee estates
                 </div>
                 <div className="highlight-item">
                   <span className="check">✓</span>
-                  Coorg Cuisine – Authentic Kodava food and local coffee tasting
+                  Abbey Falls – Stunning waterfall experience in the Western Ghats
+                </div>
+                <div className="highlight-item">
+                  <span className="check">✓</span>
+                  Raja's Seat – Witness one of Coorg's most beautiful sunsets
+                </div>
+                <div className="highlight-item">
+                  <span className="check">✓</span>
+                  Golden Temple (Tibetan Monastery) – Peaceful Tibetan Buddhist culture
+                </div>
+                <div className="highlight-item">
+                  <span className="check">✓</span>
+                  Coorg Cuisine – Taste authentic Kodava foods and local coffee
+                </div>
+                <div className="highlight-item">
+                  <span className="check">✓</span>
+                  Local Shopping – Coffee, spices, chocolates & handmade crafts
                 </div>
               </div>
             </section>
 
             {/* Itinerary Section */}
             <section className="itinerary-section">
-              <h2>Tour Itinerary</h2>
+              <h2>Tour Itinerary (Mysore + Coorg)</h2>
               <div className="itinerary-list">
                 <div className="departure-point">
-                  <span className="location">Coorg, Karnataka</span>
-                  <span className="time">Departure: 6:00 am - 6:30am</span>
+                  <span className="location">Departure: 6:00 am – 6:30 am</span>
                 </div>
                 
                 <div className="day-item completed">
                   <div className="day-header">
-                    <span className="day-number">Day-01</span>
+                    <span className="day-number">Day 01</span>
                     <span className="day-status">✓</span>
                   </div>
-                  <h4>Arrival & Coffee Plantation Tour – Introduction to Coorg's coffee culture</h4>
+                  <h4>Arrival in Mysore – Mysore Palace Tour, Chamundi Hills, Brindavan Gardens evening musical fountain show</h4>
                 </div>
 
                 <div className="day-item completed">
                   <div className="day-header">
-                    <span className="day-number">Day-02</span>
+                    <span className="day-number">Day 02</span>
                     <span className="day-status">✓</span>
                   </div>
-                  <h4>Abbey Falls & Raja's Seat – Natural wonders and sunset views</h4>
+                  <h4>Transfer to Coorg + Coffee Experiences – Scenic drive through Western Ghats, Coffee Plantation Tour</h4>
                 </div>
 
                 <div className="day-item completed">
                   <div className="day-header">
-                    <span className="day-number">Day-03</span>
+                    <span className="day-number">Day 03</span>
                     <span className="day-status">✓</span>
                   </div>
-                  <h4>Trekking & Tibetan Monastery – Adventure and spiritual experience</h4>
+                  <h4>Coorg Sightseeing – Abbey Falls nature walk, Madikeri Fort, Raja's Seat sunset views</h4>
+                </div>
+
+                <div className="day-item completed">
+                  <div className="day-header">
+                    <span className="day-number">Day 04</span>
+                    <span className="day-status">✓</span>
+                  </div>
+                  <h4>Adventure + Culture – Trekking/Nature Trail, Tibetan Monastery (Golden Temple), Local shopping</h4>
+                </div>
+
+                <div className="day-item completed">
+                  <div className="day-header">
+                    <span className="day-number">Day 05</span>
+                    <span className="day-status">✓</span>
+                  </div>
+                  <h4>Local Experiences + Departure – Kodava Cuisine & Cultural Experiences</h4>
                 </div>
 
                 <div className="departure-point">
-                  <span className="location">Madikeri Town</span>
-                  <span className="time">Departure: 10:00 am - 10:30am</span>
-                </div>
-
-                <div className="day-item completed">
-                  <div className="day-header">
-                    <span className="day-number">Day-04</span>
-                    <span className="day-status">✓</span>
-                  </div>
-                  <h4>Local Markets – Shopping for coffee, spices and handicrafts</h4>
-                </div>
-
-                <div className="day-item completed">
-                  <div className="day-header">
-                    <span className="day-number">Day-05</span>
-                    <span className="day-status">✓</span>
-                  </div>
-                  <h4>Kodava Culture – Traditional cuisine and cultural immersion</h4>
+                  <span className="location">Depart from Madikeri Town (10:00 am – 10:30 am)</span>
                 </div>
               </div>
             </section>
@@ -212,7 +241,7 @@ const CoorgPage = () => {
           <div className="right-column">
             <div className="booking-widget">
               <div className="price-section">
-                <a href="https://wa.me/918607998882?text=Hi, I'm interested in this tour package. Please share the pricing details." target="_blank" className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold text-lg transition-colors inline-block text-center w-full">
+                <a href="https://wa.me/919695947578?text=Hi, I'm interested in this tour package. Please share the pricing details." target="_blank" className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold text-lg transition-colors inline-block text-center w-full">
                   Price on Request
                 </a>
               </div>
@@ -284,8 +313,9 @@ const CoorgPage = () => {
             </div>
           </div>
         </div>
+       
       </div>
-      <Footer/>
+       <Footer/>
 
       <style jsx>{`
         .inner-page {

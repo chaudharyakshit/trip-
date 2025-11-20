@@ -7,9 +7,9 @@ import { Autoplay } from "swiper/modules";
 import CursorFX from "../../components/CursorFX.jsx";
 
 // Import images for Hampi
-import hampi1 from '/assets/destination-images/Hampi.webp';
-import hampi2 from '/assets/destination-images/Hampi2.webp';
-import hampi3 from '/assets/destination-images/Hampi3.webp';
+import hampi1 from '/assets/images/Hampi,-Karnataka.webp';
+import hampi2 from '/assets/card-images/Hampi,-Karnataka.webp';
+import hampi3 from '/assets/images/Hampi,-Karnataka.webp';
 
 import "swiper/css";
 import "swiper/css/autoplay";
@@ -220,7 +220,7 @@ const HampiPage = () => {
           <div className="right-column">
             <div className="booking-widget">
               <div className="price-section">
-                <a href="https://wa.me/918607998882?text=Hi, I'm interested in this tour package. Please share the pricing details." target="_blank" className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold text-lg transition-colors inline-block text-center w-full">
+                <a href="https://wa.me/919695947578?text=Hi, I'm interested in this tour package. Please share the pricing details." target="_blank" className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold text-lg transition-colors inline-block text-center w-full">
                   Price on Request
                 </a>
               </div>
@@ -292,8 +292,9 @@ const HampiPage = () => {
             </div>
           </div>
         </div>
-        <Footer/>
+       
       </div>
+       <Footer/>
 
       <style jsx>{`
         .inner-page {

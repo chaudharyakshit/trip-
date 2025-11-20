@@ -1,0 +1,86 @@
+/* Mobile height adjustments for sections */
+
+@media (max-width: 768px) {
+  /* One Day Trips section - reduce excessive spacing */
+  section[class*="py-14"],
+  section[class*="py-20"] {
+    min-height: auto !important;
+    padding: 2rem 1rem !important;
+  }
+  
+  /* Reduce spacing in One Day Trips content */
+  section[class*="py-14"] .max-w-7xl,
+  section[class*="py-20"] .max-w-7xl {
+    padding: 1rem !important;
+  }
+  
+  /* Reduce header margin in One Day Trips */
+  section[class*="py-14"] .text-center.mb-8,
+  section[class*="py-20"] .text-center.mb-8 {
+    margin-bottom: 1.5rem !important;
+  }
+  
+  /* Popular Indian Destinations section */
+  section[class*="overflow-hidden"] {
+    min-height: 100vh !important;
+    padding: 4rem 1rem !important;
+  }
+  
+  /* Ensure content is properly spaced */
+  .max-w-7xl {
+    padding: 2rem 1rem;
+  }
+  
+  /* Increase card/image heights in mobile view */
+  /* One Day Trips cards */
+  .bg-white.rounded-2xl .w-full.h-56 {
+    height: 16rem !important;
+  }
+  
+  /* Popular Destinations cards */
+  .bg-white.rounded-xl.shadow-lg .h-72 {
+    height: 20rem !important;
+  }
+  
+  /* Adjust card container heights accordingly */
+  .bg-white.rounded-xl.shadow-lg.w-80.h-96 {
+    height: 26rem !important;
+  }
+  
+  .bg-white.rounded-xl.shadow-lg.sm\:w-64.sm\:h-96 {
+    height: 26rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  section[class*="py-14"],
+  section[class*="py-20"] {
+    min-height: auto !important;
+    padding: 1.5rem 0.5rem !important;
+  }
+  
+  section[class*="overflow-hidden"] {
+    min-height: 90vh !important;
+    padding: 3rem 0.5rem !important;
+  }
+  
+  /* Further reduce One Day Trips spacing on small screens */
+  section[class*="py-14"] .max-w-7xl,
+  section[class*="py-20"] .max-w-7xl {
+    padding: 0.5rem !important;
+  }
+  
+  /* Further adjustments for very small screens */
+  .bg-white.rounded-2xl .w-full.h-56 {
+    height: 14rem !important;
+  }
+  
+  .bg-white.rounded-xl.shadow-lg .h-72 {
+    height: 18rem !important;
+  }
+  
+  .bg-white.rounded-xl.shadow-lg.w-80.h-96,
+  .bg-white.rounded-xl.shadow-lg.sm\:w-64.sm\:h-96 {
+    height: 24rem !important;
+  }
+}

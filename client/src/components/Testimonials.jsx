@@ -82,8 +82,8 @@ const Testimonials = () => {
                 className="avatar"
               />
               <div>
-                <div className="name">Rohit</div>
-                <div className="role">GoFly Traveler</div>
+                <div className="name">Sakshi</div>
+                <div className="role">IndiasgoTrip Traveler</div>
               </div>
             </div>
             <div className="card-rating-badge">
@@ -122,7 +122,7 @@ const Testimonials = () => {
               />
               <div>
                 <div className="name">Sneha</div>
-                <div className="role">GoFly Traveler</div>
+                <div className="role">IndiasgoTrip Traveler</div>
               </div>
             </div>
             <div className="card-rating-badge">
@@ -161,7 +161,7 @@ const Testimonials = () => {
               />
               <div>
                 <div className="name">Vinay</div>
-                <div className="role">GoFly Traveler</div>
+                <div className="role">IndiasgoTrip Traveler</div>
               </div>
             </div>
             <div className="card-rating-badge">

@@ -18,6 +18,7 @@ import Banner from './components/Banner.jsx'
 import Gallery from './components/Gallery.jsx'
 import TrustedCompanies from './components/TrustedCompanies.jsx'
 import './styles/inner-page-fix.css'
+import './styles/mobile-sections.css'
 
 
 // Import all destination pages
@@ -34,9 +35,9 @@ import ShimlaPage from './pages/destinations/ShimlaPage.jsx'
 import LadakhPage from './pages/destinations/LadakhPage.jsx'
 import DarjeelingPage from './pages/destinations/DarjeelingPage.jsx'
 import AmritsarPage from './pages/destinations/AmritsarPage.jsx'
-// import HampiPage from './pages/destinations/HampiPage.jsx'
+import HampiPage from './pages/destinations/HampiPage.jsx'
 // import MysorePage from './pages/destinations/MysorePage.jsx'
-// We route Mysore, Hampi, and Coorg to a common inner page instead of separate components
+// We route Mysore to a common inner page instead of separate component
 import InnerPage1 from './pages/inner-page1.jsx'
 import CoorgPage from './pages/destinations/CoorgPage.jsx'
 import KhajurahoPage from './pages/destinations/KhajurahoPage.jsx'
@@ -107,10 +108,10 @@ function App() {
       <Route path="/destination/ladakh" element={<LadakhPage />} />
       <Route path="/destination/darjeeling" element={<DarjeelingPage />} />
       <Route path="/destination/amritsar" element={<AmritsarPage />} />
-      {/* Mysore, Hampi and Coorg all use the same inner page layout */}
-      <Route path="/destination/mysore" element={<InnerPage1 />} />
-      <Route path="/destination/hampi" element={<InnerPage1 />} />
-      <Route path="/destination/coorg" element={<InnerPage1 />} />
+      {/* Mysore uses Coorg page for combo tour */}
+      <Route path="/destination/mysore" element={<CoorgPage />} />
+      <Route path="/destination/hampi" element={<HampiPage />} />
+      <Route path="/destination/coorg" element={<CoorgPage />} />
       <Route path="/destination/khajuraho" element={<KhajurahoPage />} />
       <Route path="/destination/konark" element={<KonarkPage />} /> 
       <Route path="/destination/kutch" element={<KutchPage />} />

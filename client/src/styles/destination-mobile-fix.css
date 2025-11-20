@@ -1,6 +1,27 @@
 /* Mobile fixes for destination pages */
 
+/* FINAL SOLUTION: Make hero section fluid and auto-height */
+.inner-page .hero-section {
+  height: auto !important;
+  min-height: auto !important;
+  padding-bottom: 0 !important;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
 
+.inner-page .hero-section .swiper-slide {
+  height: auto !important;
+}
+
+.inner-page .hero-section .swiper-wrapper {
+  height: auto !important;
+}
+
+.inner-page .hero-section img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
 @media (max-width: 768px) {
   .inner-page {
@@ -8,14 +29,9 @@
     background: #f8fafc;
   }
 
-  /* Reduce hero section height on mobile */
-  .hero-section {
-    height: 250px !important;
-    margin-top: 0 !important;
-  }
-
-  .hero-slide {
-    height: 250px !important;
+  .inner-page .hero-section {
+    height: auto !important;
+    min-height: auto !important;
   }
 
   /* Reduce main content padding and gap from hero */
@@ -33,7 +49,18 @@
   /* Target the container that comes after hero */
   .inner-page .hero-section + .container {
     margin-top: 0 !important;
-    padding-top: 15px !important;
+    padding-top: 10px !important;
+  }
+
+  /* Force remove any div spacing after hero */
+  .hero-section + div {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  /* Target any wrapper divs */
+  .inner-page > div:not(.hero-section) {
+    margin-top: 0 !important;
   }
 
   /* Reduce any wrapper spacing */
@@ -73,13 +100,8 @@
 }
 
 @media (max-width: 480px) {
-  /* Further reduce hero height on small mobile */
-  .hero-section {
-    height: 200px !important;
-  }
-
-  .hero-slide {
-    height: 200px !important;
+  .inner-page .hero-section {
+    height: auto !important;
   }
 
   /* Minimal padding for small screens and tighter hero gap */
@@ -116,12 +138,8 @@
 
 /* Fix for extra small screens */
 @media (max-width: 320px) {
-  .hero-section {
-    height: 180px !important;
-  }
-
-  .hero-slide {
-    height: 180px !important;
+  .inner-page .hero-section {
+    height: auto !important;
   }
 
   .inner-page .main-content {

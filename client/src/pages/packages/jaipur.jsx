@@ -123,8 +123,9 @@ const JaipurPackage = () => {
                       <p className="text-gray-700">04 Days / 03 Nights</p>
                     </div>
                     <div className="text-right">
-                      <div className="text-3xl font-bold text-amber-600">₹7475</div>
-                      <p className="text-gray-600 text-sm">per person</p>
+                      <a href="https://wa.me/919695947578?text=Hi, I'm interested in this Jaipur tour package. Please share the pricing details." target="_blank" className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors inline-block text-center">
+                        Price on Request
+                      </a>
                     </div>
                   </div>
 

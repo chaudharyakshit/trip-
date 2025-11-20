@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar.jsx';
 import CursorFX from '../components/CursorFX.jsx';
 import ContactFooter from '../components/ContactFooter.jsx';
 
+
 const AllDestinations = () => {
   const [selectedState, setSelectedState] = useState('All');
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -247,10 +248,10 @@ const AllDestinations = () => {
       <div className="py-8">
         <div className="max-w-7xl mx-auto px-4">
 
-          <div className="flex flex-col lg:flex-row gap-8 lg:h-[calc(100vh-200px)]">
+          <div className="search-panel-container flex flex-col lg:flex-row gap-8 h-[calc(100vh-200px)] sm:h-[calc(100vh-180px)] md:h-[calc(100vh-160px)] lg:h-[calc(100vh-200px)]">
             {/* Filters Sidebar - Fixed */}
             <div className="lg:w-1/4">
-              <div className="bg-white rounded-lg shadow-md p-6">
+              <div className="search-filters-sidebar bg-white rounded-lg shadow-md p-4 sm:p-5 lg:p-6 max-h-[40vh] lg:max-h-none overflow-y-auto lg:overflow-visible">
                 <h3 className="text-lg font-semibold mb-4">Filters</h3>
                 
                 {/* Search */}
@@ -309,14 +310,8 @@ const AllDestinations = () => {
 
             {/* Destinations Grid - Scrollable */}
             <div className="lg:w-3/4">
-              <div className="mb-4 flex justify-between items-center">
-                <p className="text-gray-600">
-                  Showing {filteredDestinations.length} of {destinations.length} destinations
-                </p>
-              </div>
-
-              <div className="lg:h-full lg:overflow-y-auto pr-2">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pb-6">
+              <div className="search-results-container h-[60vh] sm:h-[65vh] md:h-[70vh] lg:h-full overflow-y-auto pr-2">
+                <div className="search-results-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pb-6">
                   {filteredDestinations.map((destination) => (
                     <div key={destination.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
                       <div className="h-48 overflow-hidden">

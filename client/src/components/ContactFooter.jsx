@@ -53,19 +53,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className="footer-section">
-          <h3 className="footer-title">RESOURCES</h3>
-          <ul className="footer-list">
-            <li>About IndiasGoTrip</li>
-            <li>Health & Safety Measure</li>
-            <li>Visa Processing</li>
-            <li>Customize Tour</li>
-            <li>Travel Inspirations</li>
-            <li>Traveler Reviews</li>
-            <li>Terms & Condition</li>
-            <li>Sitemap</li>
-          </ul>
-        </div>
+
 
         <div className="footer-section subscribe-section">
           <h3 className="footer-title">SUBSCRIBE</h3>
@@ -84,12 +72,12 @@ const Footer = () => {
           <h3 className="footer-title">CONTACT US</h3>
           <div className="contact-info">
             <div className="contact-item">
-              <i className="fas fa-phone-alt"></i>
-              <span>+91 95239 18425</span>
+              <i className="fas fa-phone"></i>
+              <span>+91 96959 47578</span>
             </div>
             <div className="contact-item">
               <i className="fas fa-envelope"></i>
-              <span>info@indaisgo.com</span>
+              <span>info@indiasgo.com</span>
             </div>
           </div>
         </div>
@@ -113,7 +101,7 @@ const Footer = () => {
       <div className="footer-bottom">
         <div className="footer-address">
           <h4>IndiasGoTrip</h4>
-          <p>123 MG Road, New Delhi, India</p>
+          <p>Block I-64 FOUNTAIN CHOWK<br/>NEHRU COLONY, DEHRADUN</p>
         </div>
         <p>&copy; {new Date().getFullYear()} IndiasGoTrip. All rights reserved.</p>
       </div>

@@ -361,7 +361,7 @@
   border-radius: 0 0 12px 12px;
   box-shadow: 0 8px 25px -5px rgba(0, 0, 0, 0.2);
   z-index: 40;
-  max-height: 280px;
+  max-height: 200px;
   overflow-y: auto;
 }
 

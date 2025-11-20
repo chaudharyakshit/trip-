@@ -327,7 +327,7 @@ export default function PopularPackages() {
                       </button>
                     </Link>
                     <p className="text-xl font-bold text-slate-900">
-                      <a href="https://wa.me/918607998882?text=Hi, I'm interested in this package. Please share the pricing details." target="_blank" className="bg-orange-500 hover:bg-orange-600 text-white px-3 py-1 rounded text-sm font-semibold transition-colors inline-block">
+                      <a href="https://wa.me/919695947578?text=Hi, I'm interested in this package. Please share the pricing details." target="_blank" className="bg-orange-500 hover:bg-orange-600 text-white px-3 py-1 rounded text-sm font-semibold transition-colors inline-block">
                         Price on Request
                       </a>
                     </p>

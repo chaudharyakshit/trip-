@@ -2,9 +2,9 @@ import React from 'react'
 import './Topbar.css'
 
 export default function Topbar() {
-  const whatsappLink = 'https://wa.me/919523918425'
-  const phoneNumber = '+919523918425'
-  const email = 'info@indaisgo.com'
+  const whatsappLink = 'https://wa.me/919695947578'
+  const phoneNumber = '+919695947578'
+  const email = 'info@indiasgo.com'
 
   return (
     <div className="topbar">

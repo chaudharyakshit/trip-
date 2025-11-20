@@ -187,5 +187,11 @@
   .packages-header h2 {
     font-size: 2rem;
   }
+  
+  /* Increase section height to match Top Indian Destinations */
+  .packages-container {
+    min-height: 100vh;
+    padding: 4rem 2rem;
+  }
 }
 

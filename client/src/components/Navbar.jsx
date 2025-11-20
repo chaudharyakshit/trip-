@@ -3,8 +3,8 @@ import Topbar from './Topbar'
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
-  const phone = '+919523918425'
-  const whatsapp = 'https://wa.me/919523918425'
+  const phone = '+919695947578'
+  const whatsapp = 'https://wa.me/919695947578'
   const [loginOpen, setLoginOpen] = useState(false)
   const [loginStage, setLoginStage] = useState('initial') // 'initial' | 'chooseRole'
   const [contactOpen, setContactOpen] = useState(false)
@@ -106,7 +106,7 @@ export default function Navbar() {
                 className="flex flex-col items-end leading-tight cursor-pointer"
               >
                 <span className="text-[11px] text-slate-600 font-medium">Need Help?</span>
-                <span className="text-sm font-semibold text-slate-900">+91 95239 18425</span>
+                <span className="text-sm font-semibold text-slate-900">+91 96959 47578</span>
               </button>
 
               {contactOpen && (
@@ -172,7 +172,7 @@ export default function Navbar() {
                       </div>
                       <div className="grid gap-3">
                         <a href="https://indiasgotrip.com/web_apps/login.jsp#!" target="_blank" className="inline-flex items-center justify-center h-11 rounded-xl bg-blue-600 text-white hover:bg-blue-700 font-semibold">User</a>
-                        <a href="https://indiasgotrip.com/web_apps/login.jsp#!" target="_blank" className="inline-flex items-center justify-center h-11 rounded-xl bg-emerald-600 text-white hover:bg-emerald-700 font-semibold">Admin</a>
+                        <a href="https://indiasgotrip.com/web_apps/login.jsp#!" target="_blank" className="inline-flex items-center justify-center h-11 rounded-xl bg-[rgb(242,138,15)] text-white hover:brightness-110 font-semibold">Admin</a>
                       </div>
                     </div>
                   )}
@@ -200,7 +200,7 @@ export default function Navbar() {
           <div className="md:hidden py-6 border-t border-slate-200 bg-white/95 backdrop-blur-sm">
             <Menu />
             <div className="mt-6 flex flex-col sm:flex-row items-center gap-4">
-              <a href={`tel:${phone}`} className="text-slate-700 font-medium text-lg">Call: +91 95239 18425</a>
+              <a href={`tel:${phone}`} className="text-slate-700 font-medium text-lg">Call: +91 96959 47578</a>
               <a href={whatsapp} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center h-12 px-6 rounded-full bg-emerald-500 text-white font-semibold text-base hover:bg-emerald-600 transition-colors">
                 WhatsApp
               </a>
