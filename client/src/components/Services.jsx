@@ -1,11 +1,17 @@
 import React from 'react'
+import imgFlights from '../assets/images/vector image flights.jpeg'
+import imgHotels from '../assets/images/hotels.jpeg'
+import imgTours from '../assets/images/tours.jpeg'
+import imgSupport from '../assets/images/support.jpeg'
+import bg4 from '../assets/images/bg4.png'
+import logo from '../assets/images/Indiasgotrip-logo.png'
 
 export default function Services() {
   const items = [
-    { img: '/assets/images/vector image flights.jpeg', title: 'Flights', text: 'Best routes and prices from trusted carriers.' },
-    { img: '/assets/images/hotels.jpeg', title: 'Hotels', text: 'Comfort stays from boutique to luxury.' },
-    { img: '/assets/images/tours.jpeg', title: 'Tours', text: 'Curated itineraries and local experiences.' },
-    { img: '/assets/images/support.jpeg', title: 'Support', text: '24/7 assistance before and during travel.' },
+    { img: imgFlights, title: 'Flights', text: 'Best routes and prices from trusted carriers.' },
+    { img: imgHotels, title: 'Hotels', text: 'Comfort stays from boutique to luxury.' },
+    { img: imgTours, title: 'Tours', text: 'Curated itineraries and local experiences.' },
+    { img: imgSupport, title: 'Support', text: '24/7 assistance before and during travel.' },
   ]
 
   return (
@@ -14,9 +20,9 @@ export default function Services() {
       className="py-14 md:py-20 relative overflow-hidden"
     >
       {/* Background Image (brighter version of Popular Destinations) */}
-      <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 z-0">
         <img
-          src="/assets/images/bg4.png"
+          src={bg4}
           alt="background"
           className="w-full h-full object-cover brightness-125 saturate-150"
         />
@@ -45,7 +51,7 @@ export default function Services() {
                       el.dataset.triedPng = '1'
                       el.src = el.src.replace('.jpg', '.png')
                     } else {
-                      el.src = '/assets/images/Indiasgotrip-logo.png'
+                      el.src = logo
                     }
                   }}
                 />

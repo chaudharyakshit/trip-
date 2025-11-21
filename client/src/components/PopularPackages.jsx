@@ -4,6 +4,35 @@ import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Link } from "react-router-dom";
+import parachute from '../assets/parachute.svg';
+import ring from '../assets/images/ring.svg';
+import passport from '../assets/images/passport.svg';
+import bg4 from '../assets/images/bg4.png';
+import imgJaipur from '../assets/card-images/jaipur.png';
+import imgAgra from '../assets/card-images/Agra.png';
+import imgGoa from '../assets/card-images/Goa.png';
+import imgKerala from '../assets/card-images/Kerala.png';
+import imgDelhi from '../assets/card-images/Delhi.png';
+import imgMumbai from '../assets/card-images/Mumbai.png';
+import imgUdaipur from '../assets/card-images/udaipur.png';
+import imgVaranasi from '../assets/card-images/Varanasi.png';
+import imgRishikesh from '../assets/card-images/Rishikesh.png';
+import imgShimla from '../assets/card-images/Shimla.png';
+import imgLadakh from '../assets/card-images/Ladakh.png';
+import imgDarjeeling from '../assets/card-images/darjeeling.png';
+import imgAmritsar from '../assets/card-images/Amritsar.png';
+import imgCoorg from '../assets/card-images/Coorg,-Karnataka.png';
+import imgKhajuraho from '../assets/card-images/Khajuraho,-Madhya-Pradesh.png';
+import imgKonark from '../assets/card-images/Konark,-Odisha.png';
+import imgKutch from '../assets/card-images/Rann.png';
+import imgSikkim from '../assets/card-images/Sikkim.png';
+import imgPushkar from '../assets/card-images/Pushkar.png';
+import imgMahabalipuram from '../assets/card-images/Mahabalipuram.png';
+import imgAjanta from '../assets/card-images/Ajanta.png';
+import imgPune from '../assets/card-images/Pune,-Maharashtra.png';
+import imgAuli from '../assets/card-images/Auli,-Uttarakhand.png';
+import imgHampi from '../assets/card-images/Hampi,-Karnataka.png';
+import imgMysore from '../assets/card-images/mysore.png';
 
 export default function PopularPackages() {
   const packages = [
@@ -14,7 +43,7 @@ export default function PopularPackages() {
     region: "Rajasthan, India",
     days: "04 Days/03 Nights",
     price: 7475,
-    image: "../../../assets/card-images/jaipur.png"
+    image: imgJaipur
   },
   {
     slug: "agra-page",
@@ -23,7 +52,7 @@ export default function PopularPackages() {
     region: "Uttar Pradesh, India",
     days: "03 Days/02 Nights",
     price: 4975,
-    image: "../../../assets/card-images/Agra.png"
+    image: imgAgra
   },
   {
     slug: "goa",
@@ -32,7 +61,7 @@ export default function PopularPackages() {
     region: "Goa, India",
     days: "05 Days/04 Nights",
     price: 8725,
-    image: "../../../assets/card-images/Goa.png"
+    image: imgGoa
   },
   {
     slug: "kerala",
@@ -41,7 +70,7 @@ export default function PopularPackages() {
     region: "Kerala, India",
     days: "06 Days/05 Nights",
     price: 9975,
-    image: "../../../assets/card-images/Kerala.png"
+    image: imgKerala
   },
   {
     slug: "delhi",
@@ -50,7 +79,7 @@ export default function PopularPackages() {
     region: "Delhi, India",
     days: "03 Days/02 Nights",
     price: 6475,
-    image: "../../../assets/card-images/Delhi.png"
+    image: imgDelhi
   },
   {
     slug: "mumbai",
@@ -59,7 +88,7 @@ export default function PopularPackages() {
     region: "Maharashtra, India",
     days: "04 Days/03 Nights",
     price: 8225,
-    image: "../../../assets/card-images/Mumbai.png"
+    image: imgMumbai
   },
   {
     slug: "udaipur",
@@ -68,7 +97,7 @@ export default function PopularPackages() {
     region: "Rajasthan, India",
     days: "03 Days/02 Nights",
     price: 6975,
-    image: "../../../assets/card-images/udaipur.png"
+    image: imgUdaipur
   },
   {
     slug: "varanasi",
@@ -77,7 +106,7 @@ export default function PopularPackages() {
     region: "Uttar Pradesh, India",
     days: "03 Days/02 Nights",
     price: 6225,
-    image: "../../../assets/card-images/Varanasi.png"
+    image: imgVaranasi
   },
   {
     slug: "rishikesh",
@@ -86,7 +115,7 @@ export default function PopularPackages() {
     region: "Uttarakhand, India",
     days: "03 Days/02 Nights",
     price: 5475,
-    image: "../../../assets/card-images/Rishikesh.png"
+    image: imgRishikesh
   },
   {
     slug: "shimla",
@@ -95,7 +124,7 @@ export default function PopularPackages() {
     region: "Himachal Pradesh, India",
     days: "04 Days/03 Nights",
     price: 7225,
-    image: "../../../assets/card-images/Shimla.png"
+    image: imgShimla
   },
   {
     slug: "ladakh",
@@ -104,7 +133,7 @@ export default function PopularPackages() {
     region: "J&K, India",
     days: "07 Days/06 Nights",
     price: 12475,
-    image: "../../../assets/card-images/Ladakh.png"
+    image: imgLadakh
   },
   {
     slug: "darjeeling",
@@ -113,7 +142,7 @@ export default function PopularPackages() {
     region: "West Bengal, India",
     days: "04 Days/03 Nights",
     price: 6975,
-    image: "../../../assets/card-images/darjeeling.png"
+    image: imgDarjeeling
   },
   {
     slug: "amritsar",
@@ -122,26 +151,26 @@ export default function PopularPackages() {
     region: "Punjab, India",
     days: "02 Days/01 Night",
     price: 4975,
-    image: "../../../assets/card-images/Amritsar.png"
+    image: imgAmritsar
   },
-  // {
-  //   slug: "hampi",
-  //   destination: "Hampi, Karnataka",
-  //   title: "Heritage Ruins Tour",
-  //   region: "Karnataka, India",
-  //   days: "03 Days/02 Nights",
-  //   price: 6225,
-  //   image: "../../../assets/card-images/Hampi,-Karnataka.png"
-  // },
-  // {
-  //   slug: "mysore",
-  //   destination: "Mysore, Karnataka",
-  //   title: "Royal Mysore Tour",
-  //   region: "Karnataka, India",
-  //   days: "03 Days/02 Nights",
-  //   price: 5725,
-  //   image: "../../../assets/card-images/mysore.png"
-  // },
+  {
+    slug: "hampi",
+    destination: "Hampi, Karnataka",
+    title: "Heritage Ruins Tour",
+    region: "Karnataka, India",
+    days: "03 Days/02 Nights",
+    price: 6225,
+    image: imgHampi
+  },
+  {
+    slug: "mysore",
+    destination: "Mysore, Karnataka",
+    title: "Royal Mysore Tour",
+    region: "Karnataka, India",
+    days: "03 Days/02 Nights",
+    price: 5725,
+    image: imgMysore
+  },
   {
     slug: "coorg",
     destination: "Coorg, Karnataka",
@@ -149,7 +178,7 @@ export default function PopularPackages() {
     region: "Karnataka, India",
     days: "03 Days/02 Nights",
     price: 5975,
-    image: "../../../assets/card-images/Coorg,-Karnataka.png"
+    image: imgCoorg
   },
   {
     slug: "khajuraho",
@@ -158,7 +187,7 @@ export default function PopularPackages() {
     region: "Madhya Pradesh, India",
     days: "03 Days/02 Nights",
     price: 6475,
-    image: "../../../assets/card-images/Khajuraho,-Madhya-Pradesh.png"
+    image: imgKhajuraho
   },
   {
     slug: "konark",
@@ -167,7 +196,7 @@ export default function PopularPackages() {
     region: "Odisha, India",
     days: "03 Days/02 Nights",
     price: 5975,
-    image: "../../../assets/card-images/Konark,-Odisha.png"
+    image: imgKonark
   },
   {
     slug: "kutch",
@@ -176,7 +205,7 @@ export default function PopularPackages() {
     region: "Gujarat, India",
     days: "04 Days/03 Nights",
     price: 8725,
-    image: "../../../assets/card-images/Rann.png"
+    image: imgKutch
   },
   {
     slug: "sikkim",
@@ -185,7 +214,7 @@ export default function PopularPackages() {
     region: "Sikkim, India",
     days: "05 Days/04 Nights",
     price: 9975,
-    image: "../../../assets/card-images/Sikkim.png"
+    image: imgSikkim
   },
   {
     slug: "pushkar",
@@ -194,7 +223,7 @@ export default function PopularPackages() {
     region: "Rajasthan, India",
     days: "02 Days/01 Night",
     price: 4725,
-    image: "../../../assets/card-images/Pushkar.png"
+    image: imgPushkar
   },
   {
     slug: "mahabalipuram",
@@ -203,7 +232,7 @@ export default function PopularPackages() {
     region: "Tamil Nadu, India",
     days: "02 Days/01 Night",
     price: 4975,
-    image: "../../../assets/card-images/Mahabalipuram.png"
+    image: imgMahabalipuram
   },
   {
     slug: "ajanta-ellora",
@@ -212,7 +241,7 @@ export default function PopularPackages() {
     region: "Maharashtra, India",
     days: "03 Days/02 Nights",
     price: 6475,
-    image: "../../../assets/card-images/Ajanta.png"
+    image: imgAjanta
   },
   {
     slug: "pune",
@@ -221,7 +250,7 @@ export default function PopularPackages() {
     region: "Maharashtra, India",
     days: "02 Days/01 Night",
     price: 4475,
-    image: "../../../assets/card-images/Pune,-Maharashtra.png"
+    image: imgPune
   },
   {
     slug: "auli",
@@ -230,7 +259,7 @@ export default function PopularPackages() {
     region: "Uttarakhand, India",
     days: "04 Days/03 Nights",
     price: 9225,
-    image: "../../../assets/card-images/Auli,-Uttarakhand.png"
+    image: imgAuli
   }
 ];
 
@@ -243,7 +272,7 @@ export default function PopularPackages() {
    <div className="absolute inset-0 z-[1]">
 
         <img 
-          src="/assets/images/bg4.png" 
+          src={bg4} 
           alt="background" 
           className="w-full h-full object-cover brightness-110 saturate-125"
         />
@@ -254,31 +283,21 @@ export default function PopularPackages() {
       {/* === Decorative SVGs with High Visibility === */}
       {/* Parachute - Top Left */}
       <div className="absolute top-8 left-6 z-10">
-        <img 
-          src="/assets/parachute.svg" 
-          alt="parachute" 
+        <img
+          src={parachute}
+          alt="parachute"
           className="w-32 h-32 opacity-100 drop-shadow-2xl animate-float"
         />
       </div>
 
       {/* Ring/Lifebuoy - Bottom Right */}
    <div className="absolute bottom-0 left-9 z-40">
-
-
-        <img 
-          src="/assets/images/ring.svg" 
-          alt="ring" 
-          className="w-28 h-28 opacity-100 drop-shadow-2xl animate-bounce-slow"
-        />
+        <img src={ring} alt="ring" className="w-28 h-28 opacity-100 drop-shadow-2xl animate-bounce-slow" />
       </div>
 
       {/* Passport - Top Right */}
       <div className="absolute top-16 right-12 z-10">
-        <img 
-          src="/assets/images/passport.svg" 
-          alt="passport" 
-          className="w-32 h-32 opacity-100 drop-shadow-2xl animate-pulse"
-        />
+        <img src={passport} alt="passport" className="w-32 h-32 opacity-100 drop-shadow-2xl animate-pulse" />
       </div>
 
       {/* === Section Content === */}

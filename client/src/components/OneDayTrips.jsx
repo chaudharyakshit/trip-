@@ -5,6 +5,13 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 import { useNavigate } from 'react-router-dom'
 
+import imgDelhi from '../assets/card-images/Delhi.png'
+import imgMumbai from '../assets/card-images/Mumbai.png'
+import imgAgra from '../assets/card-images/Agra.png'
+import imgJaipur from '../assets/card-images/jaipur.png'
+import parachute from '../assets/parachute.svg'
+import imgRishikesh from '../assets/card-images/Rishikesh.png'
+
 const Card = ({ image, title, region, days, price, badge, onClick }) => (
   <div className="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden cursor-pointer" onClick={onClick}>
     <div className="relative group">
@@ -58,7 +65,7 @@ export default function PopularPackages() {
   const packages = [
     {
       id: 'delhi',
-      image: "../../../public/assets/card-images/Delhi.png",
+      image: imgDelhi,
       title: "Historic Delhi Tour",
       region: "Delhi, India",
       days: "02 Days/01 Night",
@@ -67,7 +74,7 @@ export default function PopularPackages() {
     },
     {
       id: 'mumbai',
-      image: "../../../public/assets/card-images/Mumbai.png",
+      image: imgMumbai,
       title: "Mumbai City Experience",
       region: "Mumbai, India",
       days: "03 Days/02 Nights",
@@ -76,7 +83,7 @@ export default function PopularPackages() {
     },
     {
       id: 'agra',
-      image: "../../../public/assets/card-images/Agra.png",
+      image: imgAgra,
       title: "Taj Mahal Special",
       region: "Agra, India",
       days: "01 Day Tour",
@@ -85,7 +92,7 @@ export default function PopularPackages() {
     },
     {
       id: 'jaipur',
-      image: "../../../public/assets/card-images/jaipur.png",
+      image: imgJaipur,
       title: "Pink City Heritage",
       region: "Jaipur, India",
       days: "02 Days/01 Night",
@@ -94,7 +101,7 @@ export default function PopularPackages() {
     },
     {
       id: 'dehradun',
-      image: "https://s7ap1.scene7.com/is/image/incredibleindia/mountains-dehradun-uttrakhand-city-1-hero?qlt=82&ts=1742155351343",
+      image: imgRishikesh,
       title: "Dehradun Hill Station",
       region: "Dehradun, India",
       days: "03 Days/02 Nights",
@@ -114,7 +121,7 @@ export default function PopularPackages() {
       <div className="absolute inset-0 -z-10 overflow-hidden">
         {/* Left parachute */}
         <div className="absolute left-0 top-1/4 animate-bounce">
-          <img src="/assets/parachute.svg" alt="Parachute" className="w-24 h-24" />
+          <img src={parachute} alt="Parachute" className="w-24 h-24" />
         </div>
         
         {/* Right rotating circle */}

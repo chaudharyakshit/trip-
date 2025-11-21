@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { FaPhone, FaEnvelope, FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import '../styles/Footer.css';
-import logo from '/assets/images/Indiasgotrip-logo.png';
+import logo from '../assets/images/Indiasgotrip-logo.png';
 
 const Footer = () => {
   const [email, setEmail] = useState({ firstName: '', lastName: '', email: '' });
@@ -72,11 +73,11 @@ const Footer = () => {
           <h3 className="footer-title">CONTACT US</h3>
           <div className="contact-info">
             <div className="contact-item">
-              <i className="fas fa-phone"></i>
+              <FaPhone />
               <span>+91 96959 47578</span>
             </div>
             <div className="contact-item">
-              <i className="fas fa-envelope"></i>
+              <FaEnvelope />
               <span>info@indiasgo.com</span>
             </div>
           </div>
@@ -86,13 +87,13 @@ const Footer = () => {
           <h3 className="footer-title">FOLLOW US</h3>
           <div className="social-links">
             <a href="https://www.facebook.com/share/17fuQ8xYnP/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-              <i className="fab fa-facebook-f"></i>
+              <FaFacebookF />
             </a>
             <a href="https://www.instagram.com/indiasgotrip/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-              <i className="fab fa-instagram"></i>
+              <FaInstagram />
             </a>
             <a href="https://www.linkedin.com/company/indiasgo1/?viewAsMember=true" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-              <i className="fab fa-linkedin-in"></i>
+              <FaLinkedinIn />
             </a>
           </div>
         </div>

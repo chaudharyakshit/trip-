@@ -7,9 +7,9 @@ import { Autoplay } from "swiper/modules";
 import CursorFX from "../../components/CursorFX.jsx";
 
 // Import images for Darjeeling
-import darjeeling1 from '/assets/destination-images/Darjeeling1.webp';
-import darjeeling2 from '/assets/destination-images/Darjeeling2.webp';
-import darjeeling3 from '/assets/destination-images/Darjeeling3.webp';
+import darjeeling1 from '../../assets/destination-images/Darjeeling1.webp';
+import darjeeling2 from '../../assets/destination-images/Darjeeling2.webp';
+import darjeeling3 from '../../assets/destination-images/Darjeeling3.webp';
 
 import "swiper/css";
 import "swiper/css/autoplay";

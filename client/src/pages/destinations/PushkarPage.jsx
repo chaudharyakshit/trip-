@@ -7,9 +7,9 @@ import { Autoplay } from "swiper/modules";
 import CursorFX from "../../components/CursorFX.jsx";
 
 // Import images for Pushkar
-import pushkar1 from '/assets/destination-images/Pushkar, Rajasthan1.webp';
-import pushkar2 from '/assets/destination-images/Pushkar, Rajasthan2.webp';
-import pushkar3 from '/assets/destination-images/Pushkar, Rajasthan3.webp';
+import pushkar1 from '../../assets/destination-images/Pushkar, Rajasthan1.webp';
+import pushkar2 from '../../assets/destination-images/Pushkar, Rajasthan2.webp';
+import pushkar3 from '../../assets/destination-images/Pushkar, Rajasthan3.webp';
 
 import "swiper/css";
 import "swiper/css/autoplay";

@@ -7,9 +7,9 @@ import { Autoplay } from "swiper/modules";
 import CursorFX from "../../components/CursorFX.jsx";
 
 // Import images for Kutch
-import kutch1 from '/assets/destination-images/Rann of Kutch, Gujarat.webp';
-import kutch2 from '/assets/destination-images/Rann of Kutch, Gujarat1.webp';
-import kutch3 from '/assets/destination-images/Rann of Kutch, Gujarat2.webp';
+import kutch1 from '../../assets/destination-images/Rann of Kutch, Gujarat.webp';
+import kutch2 from '../../assets/destination-images/Rann of Kutch, Gujarat1.webp';
+import kutch3 from '../../assets/destination-images/Rann of Kutch, Gujarat2.webp';
 
 import "swiper/css";
 import "swiper/css/autoplay";
@@ -530,8 +530,6 @@ const KutchPage = () => {
         .highlight-item .check {
           color: #10b981;
           font-weight: bold;
-          margin-top: 2px;
-          flex-shrink: 0;
         }
 
         /* Itinerary Styles */

@@ -7,9 +7,9 @@ import { Autoplay } from "swiper/modules";
 import CursorFX from "../../components/CursorFX.jsx";
 
 // Import images for Ladakh
-import ladakh1 from '/assets/destination-images/Ladakh1.webp';
-import ladakh2 from '/assets/destination-images/Ladakh2.webp';
-import ladakh3 from '/assets/destination-images/Ladakh3.webp';
+import ladakh1 from '../../assets/destination-images/Ladakh1.webp';
+import ladakh2 from '../../assets/destination-images/Ladakh2.webp';
+import ladakh3 from '../../assets/destination-images/Ladakh3.webp';
 
 import "swiper/css";
 import "swiper/css/autoplay";

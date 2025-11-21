@@ -3,15 +3,13 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../../components/Navbar.jsx";
 import CursorFX from "../../components/CursorFX.jsx";
+import jaipur1 from "../../assets/packages-images/jaipur1.png";
+import jaipur2 from "../../assets/packages-images/jaipur2.png";
+import jaipur3 from "../../assets/packages-images/jaipur3.png";
 
 const JaipurPackage = () => {
   // === Hero Slider Logic ===
-  const slides = [
-   "../../../public/assets/packages-images/jaipur1.png",
-    "../../../public/assets/packages-images/jaipur2.png",
-    "../../../public/assets/packages-images/jaipur3.png"
-  
-  ];
+  const slides = [jaipur1, jaipur2, jaipur3];
 
   const [current, setCurrent] = useState(0);
 
@@ -122,15 +120,15 @@ const JaipurPackage = () => {
                       </h4>
                       <p className="text-gray-700">04 Days / 03 Nights</p>
                     </div>
-                    <div className="text-right">
-                      <a href="https://wa.me/919695947578?text=Hi, I'm interested in this Jaipur tour package. Please share the pricing details." target="_blank" className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors inline-block text-center">
+                    <div className="w-full sm:text-right">
+                      <a href="https://wa.me/919695947578?text=Hi, I'm interested in this Jaipur tour package. Please share the pricing details." target="_blank" className="bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 rounded-full font-semibold transition-colors inline-block text-center w-full sm:w-auto">
                         Price on Request
                       </a>
                     </div>
                   </div>
 
                   <div className="mt-6 flex flex-col sm:flex-row gap-4">
-                    <button className="bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 rounded-full font-semibold transition-colors">
+                    <button className="bg-[color:rgb(var(--brand-secondary))] hover:bg-blue-700 text-white px-8 py-3 rounded-full font-semibold transition-colors">
                       Book Now
                     </button>
                     <button className="border border-amber-500 text-amber-600 hover:bg-amber-50 px-8 py-3 rounded-full font-semibold transition-colors">

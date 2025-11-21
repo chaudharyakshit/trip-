@@ -7,9 +7,9 @@ import { Autoplay } from "swiper/modules";
 import CursorFX from "../../components/CursorFX.jsx";
 
 // Import images for Delhi
-import delhi1 from '/assets/destination-images/Delhi1.webp';
-import delhi2 from '/assets/destination-images/Delhi2.webp';
-import delhi3 from '/assets/destination-images/Delhi3.webp';
+import delhi1 from '../../assets/destination-images/Delhi1.webp';
+import delhi2 from '../../assets/destination-images/Delhi2.webp';
+import delhi3 from '../../assets/destination-images/Delhi3.webp';
 
 import "swiper/css";
 import "swiper/css/autoplay";

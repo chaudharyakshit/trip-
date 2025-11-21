@@ -1,13 +1,20 @@
 import React from "react";
 import "../styles/TrustedCompanies.css";
 
+import vistara from '../assets/images/vistara.png';
+import spicejet from '../assets/images/spicejet.png';
+import taj from '../assets/images/taj.png';
+import truejet from '../assets/images/truejet.png';
+import thelalit from '../assets/images/thelalit.png';
+import sarovar from '../assets/images/sarovar.png';
+
 const logos = [
-  "/assets/images/vistara.png",
-  "/assets/images/spicejet.png",
-  "/assets/images/taj.png",
-  "/assets/images/truejet.png",
-  "/assets/images/thelalit.png",
-  "/assets/images/sarovar.png",
+  vistara,
+  spicejet,
+  taj,
+  truejet,
+  thelalit,
+  sarovar,
 ];
 
 const TrustedCompanies = () => {

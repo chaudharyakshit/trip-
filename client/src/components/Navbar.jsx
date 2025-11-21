@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import Topbar from './Topbar'
+import logo from '../assets/images/Indiasgotrip-logo.png';
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
@@ -82,7 +83,7 @@ export default function Navbar() {
         <nav className="h-24 lg:h-28 grid grid-cols-[auto_1fr_auto] items-center w-full">
           {/* Logo */}
           <a className="flex items-center gap-3" href="/" aria-label="IndiasGoTrip Home">
-            <img src="/assets/images/Indiasgotrip-logo.png" alt="IndiasGoTrip" className="h-[72px] md:h-[80px] w-auto" />
+            <img src={logo} alt="IndiasGoTrip" className="h-[72px] md:h-[80px] w-auto" />
           </a>
 
           <div className="hidden md:flex items-center justify-center">

@@ -7,9 +7,9 @@ import { Autoplay } from "swiper/modules";
 import CursorFX from "../../components/CursorFX.jsx";
 
 // Import images for Sikkim
-import sikkim1 from '/assets/destination-images/Sikkim (Gangtok)1.webp';
-import sikkim2 from '/assets/destination-images/Sikkim (Gangtok)2.webp';
-import sikkim3 from '/assets/destination-images/Sikkim (Gangtok)3.webp';
+import sikkim1 from '../../assets/destination-images/Sikkim (Gangtok)1.webp';
+import sikkim2 from '../../assets/destination-images/Sikkim (Gangtok)2.webp';
+import sikkim3 from '../../assets/destination-images/Sikkim (Gangtok)3.webp';
 
 import "swiper/css";
 import "swiper/css/autoplay";

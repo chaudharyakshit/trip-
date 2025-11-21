@@ -7,9 +7,9 @@ import { Autoplay } from "swiper/modules";
 import CursorFX from "../../components/CursorFX.jsx";
 
 // Import images for Shimla
-import shimla1 from '/assets/destination-images/Shimla1.webp';
-import shimla2 from '/assets/destination-images/Shimla2.webp';
-import shimla3 from '/assets/destination-images/Shimla3.webp';
+import shimla1 from '../../assets/destination-images/Shimla1.webp';
+import shimla2 from '../../assets/destination-images/Shimla2.webp';
+import shimla3 from '../../assets/destination-images/Shimla3.webp';
 
 import "swiper/css";
 import "swiper/css/autoplay";
@@ -531,6 +531,7 @@ const ShimlaPage = () => {
           display: flex;
           align-items: flex-start;
           gap: 12px;
+          margin-bottom: 12px;
           color: #475569;
           line-height: 1.5;
           font-size: 15px;

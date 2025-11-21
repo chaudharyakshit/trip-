@@ -7,9 +7,9 @@ import { Autoplay } from "swiper/modules";
 import CursorFX from "../../components/CursorFX.jsx";
 
 // Import images for Khajuraho
-import khajuraho1 from '/assets/destination-images/Khajuraho, Madhya Pradesh1.webp';
-import khajuraho2 from '/assets/destination-images/Khajuraho, Madhya Pradesh2.webp';
-import khajuraho3 from '/assets/destination-images/Khajuraho, Madhya Pradesh3.webp';
+import khajuraho1 from '../../assets/destination-images/Khajuraho, Madhya Pradesh1.webp';
+import khajuraho2 from '../../assets/destination-images/Khajuraho, Madhya Pradesh2.webp';
+import khajuraho3 from '../../assets/destination-images/Khajuraho, Madhya Pradesh3.webp';
 
 import "swiper/css";
 import "swiper/css/autoplay";

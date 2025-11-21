@@ -7,10 +7,10 @@ import { Autoplay } from "swiper/modules";
 import CursorFX from "../../components/CursorFX.jsx";
 
 // Import images for Konark
-import konark1 from '/assets/destination-images/Konark, Odisha1.webp';
-import konark2 from '/assets/destination-images/Konark, Odisha2.webp';
-import konark3 from '/assets/destination-images/Konark, Odisha3.webp';
-import headerBanner from '/assets/images/innerpage banner.png';
+import konark1 from '../../assets/destination-images/Konark, Odisha1.webp';
+import konark2 from '../../assets/destination-images/Konark, Odisha2.webp';
+import konark3 from '../../assets/destination-images/Konark, Odisha3.webp';
+import headerBanner from '../../assets/images/innerpage banner.png';
 
 import "swiper/css";
 import "swiper/css/autoplay";
@@ -587,8 +587,6 @@ const KonarkPage = () => {
         .highlight-item .check {
           color: #10b981;
           font-weight: bold;
-          margin-top: 2px;
-          flex-shrink: 0;
         }
 
         /* Itinerary Styles */

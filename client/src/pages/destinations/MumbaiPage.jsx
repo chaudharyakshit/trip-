@@ -7,9 +7,9 @@ import { Autoplay } from "swiper/modules";
 import CursorFX from "../../components/CursorFX.jsx";
 
 // Import images for Mumbai
-import mumbai1 from '/assets/destination-images/Mumbai1.webp';
-import mumbai2 from '/assets/destination-images/Mumbai2.webp';
-import mumbai3 from '/assets/destination-images/Mumbai3.webp';
+import mumbai1 from '../../assets/destination-images/Mumbai1.webp';
+import mumbai2 from '../../assets/destination-images/Mumbai2.webp';
+import mumbai3 from '../../assets/destination-images/Mumbai3.webp';
 
 import "swiper/css";
 import "swiper/css/autoplay";

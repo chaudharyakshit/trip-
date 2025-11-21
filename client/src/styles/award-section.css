@@ -7,7 +7,7 @@
 /* Background image sits on the rounded container, not as an <img> */
 .award-frame-bg {
   position: relative;
-  background-image: url('/assets/images/home2-award-banner-bg.jpg');
+  background-image: url('../assets/images/home2-award-banner-bg.jpg');
   background-size: cover;
   background-position: center center;
   /* Simple parallax-like feel */

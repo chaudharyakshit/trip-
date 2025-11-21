@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/Banner.css';
 
+import banner1 from '../assets/images/banner1.png';
+import banner2 from '../assets/images/banner2.png';
+import banner3 from '../assets/images/banner3.png';
+
 const Banner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [touchStart, setTouchStart] = useState(null);
@@ -8,17 +12,17 @@ const Banner = () => {
 
   const slides = [
     {
-      image: '/assets/images/banner1.png',
+      image: banner1,
       title: 'Discover Amazing Destinations',
       subtitle: 'Explore the world with our exclusive travel packages and create unforgettable memories'
     },
     {
-      image: '/assets/images/banner2.png',
+      image: banner2,
       title: 'Luxury Travel Experiences',
       subtitle: 'Indulge in premium accommodations and personalized service'
     },
     {
-      image: '/assets/images/banner3.png',
+      image: banner3,
       title: 'Adventure Awaits You',
       subtitle: 'Embark on thrilling journeys to the most exotic locations'
     },

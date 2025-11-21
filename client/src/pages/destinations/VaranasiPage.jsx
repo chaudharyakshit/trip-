@@ -7,9 +7,9 @@ import { Autoplay } from "swiper/modules";
 import CursorFX from "../../components/CursorFX.jsx";
 
 // Import images for Varanasi
-import varanasi1 from '/assets/destination-images/Varanasi1.webp';
-import varanasi2 from '/assets/destination-images/Varanasi2.webp';
-import varanasi3 from '/assets/destination-images/Varanasi3.webp';
+import varanasi1 from '../../assets/destination-images/Varanasi1.webp';
+import varanasi2 from '../../assets/destination-images/Varanasi2.webp';
+import varanasi3 from '../../assets/destination-images/Varanasi3.webp';
 
 import "swiper/css";
 import "swiper/css/autoplay";

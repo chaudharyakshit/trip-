@@ -2,8 +2,8 @@ import React, { useState, useEffect, useRef } from "react";
 import "../styles/services.css";
 
 // Import images
-import sikkimImage from "../../public/assets/card-images/sikkim.png";
-import darjeeling from "../../public/assets/card-images/darjeeling.png";
+import sikkimImage from "../assets/card-images/Sikkim.png";
+import darjeeling from "../assets/card-images/darjeeling.png";
 
 // SVG Icons
 const HotelIcon = () => (

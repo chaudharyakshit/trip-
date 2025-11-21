@@ -7,9 +7,9 @@ import { Autoplay } from "swiper/modules";
 import CursorFX from "../../components/CursorFX.jsx";
 
 // Import images for Goa
-import goa1 from '/assets/destination-images/Goa1.webp';
-import goa2 from '/assets/destination-images/Goa2.webp';
-import goa3 from '/assets/destination-images/Goa3.webp';
+import goa1 from '../../assets/destination-images/Goa1.webp';
+import goa2 from '../../assets/destination-images/Goa2.webp';
+import goa3 from '../../assets/destination-images/Goa3.webp';
 
 import "swiper/css";
 import "swiper/css/autoplay";

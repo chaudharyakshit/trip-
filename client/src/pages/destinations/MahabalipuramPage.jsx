@@ -7,9 +7,9 @@ import { Autoplay } from "swiper/modules";
 import CursorFX from "../../components/CursorFX.jsx";
 
 // Import images for Mahabalipuram
-import mahabalipuram1 from '/assets/destination-images/Mahabalipuram, Tamil Nadu1.webp';
-import mahabalipuram2 from '/assets/destination-images/Mahabalipuram, Tamil Nadu2.webp';
-import mahabalipuram3 from '/assets/destination-images/Mahabalipuram, Tamil Nadu3.webp';
+import mahabalipuram1 from '../../assets/destination-images/Mahabalipuram, Tamil Nadu1.webp';
+import mahabalipuram2 from '../../assets/destination-images/Mahabalipuram, Tamil Nadu2.webp';
+import mahabalipuram3 from '../../assets/destination-images/Mahabalipuram, Tamil Nadu3.webp';
 
 import "swiper/css";
 import "swiper/css/autoplay";
@@ -530,8 +530,6 @@ const MahabalipuramPage = () => {
         .highlight-item .check {
           color: #10b981;
           font-weight: bold;
-          margin-top: 2px;
-          flex-shrink: 0;
         }
 
         /* Itinerary Styles */

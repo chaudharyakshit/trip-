@@ -7,9 +7,9 @@ import { Autoplay } from "swiper/modules";
 import CursorFX from "../../components/CursorFX.jsx";
 
 // Import images for Hampi
-import hampi1 from '/assets/images/Hampi,-Karnataka.webp';
-import hampi2 from '/assets/card-images/Hampi,-Karnataka.webp';
-import hampi3 from '/assets/images/Hampi,-Karnataka.webp';
+import hampi1 from '../../assets/images/Hampi,-Karnataka.webp';
+import hampi2 from '../../assets/card-images/Hampi,-Karnataka.webp';
+import hampi3 from '../../assets/images/Hampi,-Karnataka.webp';
 
 import "swiper/css";
 import "swiper/css/autoplay";

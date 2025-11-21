@@ -7,9 +7,9 @@ import { Autoplay } from "swiper/modules";
 import CursorFX from "../../components/CursorFX.jsx";
 
 // Import images for Kerala
-import kerala1 from '/assets/destination-images/Kerala.webp';
-import kerala2 from '/assets/destination-images/Kerala2.webp';
-import kerala3 from '/assets/destination-images/Kerala3.webp';
+import kerala1 from '../../assets/destination-images/Kerala.webp';
+import kerala2 from '../../assets/destination-images/Kerala2.webp';
+import kerala3 from '../../assets/destination-images/Kerala3.webp';
 
 import "swiper/css";
 import "swiper/css/autoplay";

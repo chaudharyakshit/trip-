@@ -4,8 +4,34 @@ import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar.jsx';
 import CursorFX from '../components/CursorFX.jsx';
 import ContactFooter from '../components/ContactFooter.jsx';
-import '../styles/all-destinations.css';
+import '../styles/destinations.css';
 
+import imgJaipur from '../assets/card-images/jaipur.png';
+import imgAgra from '../assets/card-images/Agra.png';
+import imgGoa from '../assets/card-images/Goa.png';
+import imgKerala from '../assets/card-images/Kerala.png';
+import imgDelhi from '../assets/card-images/Delhi.png';
+import imgMumbai from '../assets/card-images/Mumbai.png';
+import imgUdaipur from '../assets/card-images/udaipur.png';
+import imgVaranasi from '../assets/card-images/Varanasi.png';
+import imgRishikesh from '../assets/card-images/Rishikesh.png';
+import imgShimla from '../assets/card-images/Shimla.png';
+import imgLadakh from '../assets/card-images/Ladakh.png';
+import imgDarjeeling from '../assets/card-images/darjeeling.png';
+import imgAmritsar from '../assets/card-images/Amritsar.png';
+import imgHampi from '../assets/card-images/Hampi,-Karnataka.png';
+import imgMysore from '../assets/card-images/mysore.png';
+import imgCoorg from '../assets/card-images/Coorg,-Karnataka.png';
+import imgKhajuraho from '../assets/card-images/Khajuraho,-Madhya-Pradesh.png';
+import imgKonark from '../assets/card-images/Konark,-Odisha.png';
+import imgKutch from '../assets/card-images/Rann.png';
+import imgSikkim from '../assets/card-images/Sikkim.png';
+import imgPushkar from '../assets/card-images/Pushkar.png';
+import imgMahabalipuram from '../assets/card-images/Mahabalipuram.png';
+import imgAjanta from '../assets/card-images/Ajanta.png';
+import imgPune from '../assets/card-images/Pune,-Maharashtra.png';
+import imgAuli from '../assets/card-images/Auli,-Uttarakhand.png';
+import bannerImage from '../assets/images/banneralldestination.png';
 
 const AllDestinations = () => {
   const [selectedState, setSelectedState] = useState('All');
@@ -15,7 +41,7 @@ const AllDestinations = () => {
   const destinations = [
     {
       id: 'jaipur-page',
-      image: "/assets/card-images/jaipur.png",
+      image: imgJaipur,
       title: "Jaipur, Rajasthan",
       tours: 15,
       state: "Rajasthan",
@@ -23,7 +49,7 @@ const AllDestinations = () => {
     },
     {
       id: 'agra-page',
-      image: "/assets/card-images/Agra.png",
+      image: imgAgra,
       title: "Agra, Uttar Pradesh",
       tours: 12,
       state: "Uttar Pradesh",
@@ -31,7 +57,7 @@ const AllDestinations = () => {
     },
     {
       id: 'goa',
-      image: "/assets/card-images/Goa.png",
+      image: imgGoa,
       title: "Goa",
       tours: 20,
       state: "Goa",
@@ -39,7 +65,7 @@ const AllDestinations = () => {
     },
     {
       id: 'kerala',
-      image: "/assets/card-images/Kerala.png",
+      image: imgKerala,
       title: "Kerala",
       tours: 18,
       state: "Kerala",
@@ -47,7 +73,7 @@ const AllDestinations = () => {
     },
     {
       id: 'delhi',
-      image: "/assets/card-images/Delhi.png",
+      image: imgDelhi,
       title: "Delhi",
       tours: 25,
       state: "Delhi",
@@ -55,7 +81,7 @@ const AllDestinations = () => {
     },
     {
       id: 'mumbai',
-      image: "/assets/card-images/Mumbai.png",
+      image: imgMumbai,
       title: "Mumbai, Maharashtra",
       tours: 22,
       state: "Maharashtra",
@@ -63,7 +89,7 @@ const AllDestinations = () => {
     },
     {
       id: 'udaipur',
-      image: "/assets/card-images/udaipur.png",
+      image: imgUdaipur,
       title: "Udaipur, Rajasthan",
       tours: 14,
       state: "Rajasthan",
@@ -71,7 +97,7 @@ const AllDestinations = () => {
     },
     {
       id: 'varanasi',
-      image: "/assets/card-images/Varanasi.png",
+      image: imgVaranasi,
       title: "Varanasi, Uttar Pradesh",
       tours: 16,
       state: "Uttar Pradesh",
@@ -79,7 +105,7 @@ const AllDestinations = () => {
     },
     {
       id: 'rishikesh',
-      image: "/assets/card-images/Rishikesh.png",
+      image: imgRishikesh,
       title: "Rishikesh, Uttarakhand",
       tours: 13,
       state: "Uttarakhand",
@@ -87,7 +113,7 @@ const AllDestinations = () => {
     },
     {
       id: 'shimla',
-      image: "/assets/card-images/Shimla.png",
+      image: imgShimla,
       title: "Shimla, Himachal Pradesh",
       tours: 11,
       state: "Himachal Pradesh",
@@ -95,7 +121,7 @@ const AllDestinations = () => {
     },
     {
       id: 'ladakh',
-      image: "/assets/card-images/Ladakh.png",
+      image: imgLadakh,
       title: "Ladakh, Jammu & Kashmir",
       tours: 10,
       state: "Jammu & Kashmir",
@@ -103,7 +129,7 @@ const AllDestinations = () => {
     },
     {
       id: 'darjeeling',
-      image: "/assets/card-images/darjeeling.png",
+      image: imgDarjeeling,
       title: "Darjeeling, West Bengal",
       tours: 12,
       state: "West Bengal",
@@ -111,7 +137,7 @@ const AllDestinations = () => {
     },
     {
       id: 'amritsar',
-      image: "/assets/card-images/Amritsar.png",
+      image: imgAmritsar,
       title: "Amritsar, Punjab",
       tours: 14,
       state: "Punjab",
@@ -119,7 +145,7 @@ const AllDestinations = () => {
     },
     {
       id: 'hampi',
-      image: "/assets/card-images/Hampi,-Karnataka.png",
+      image: imgHampi,
       title: "Hampi, Karnataka",
       tours: 9,
       state: "Karnataka",
@@ -127,7 +153,7 @@ const AllDestinations = () => {
     },
     {
       id: 'mysore',
-      image: "/assets/card-images/mysore.png",
+      image: imgMysore,
       title: "Mysore, Karnataka",
       tours: 11,
       state: "Karnataka",
@@ -135,7 +161,7 @@ const AllDestinations = () => {
     },
     {
       id: 'coorg',
-      image: "/assets/card-images/Coorg,-Karnataka.png",
+      image: imgCoorg,
       title: "Coorg, Karnataka",
       tours: 8,
       state: "Karnataka",
@@ -143,7 +169,7 @@ const AllDestinations = () => {
     },
     {
       id: 'khajuraho',
-      image: "/assets/card-images/Khajuraho,-Madhya-Pradesh.png",
+      image: imgKhajuraho,
       title: "Khajuraho, Madhya Pradesh",
       tours: 7,
       state: "Madhya Pradesh",
@@ -151,7 +177,7 @@ const AllDestinations = () => {
     },
     {
       id: 'konark',
-      image: "/assets/card-images/Konark,-Odisha.png",
+      image: imgKonark,
       title: "Konark, Odisha",
       tours: 6,
       state: "Odisha",
@@ -159,7 +185,7 @@ const AllDestinations = () => {
     },
     {
       id: 'kutch',
-      image: "/assets/card-images/Rann.png",
+      image: imgKutch,
       title: "Rann of Kutch, Gujarat",
       tours: 8,
       state: "Gujarat",
@@ -167,7 +193,7 @@ const AllDestinations = () => {
     },
     {
       id: 'sikkim',
-      image: "/assets/card-images/Sikkim.png",
+      image: imgSikkim,
       title: "Sikkim (Gangtok)",
       tours: 10,
       state: "Sikkim",
@@ -175,7 +201,7 @@ const AllDestinations = () => {
     },
     {
       id: 'pushkar',
-      image: "/assets/card-images/Pushkar.png",
+      image: imgPushkar,
       title: "Pushkar, Rajasthan",
       tours: 9,
       state: "Rajasthan",
@@ -183,7 +209,7 @@ const AllDestinations = () => {
     },
     {
       id: 'mahabalipuram',
-      image: "/assets/card-images/Mahabalipuram.png",
+      image: imgMahabalipuram,
       title: "Mahabalipuram, Tamil Nadu",
       tours: 7,
       state: "Tamil Nadu",
@@ -191,7 +217,7 @@ const AllDestinations = () => {
     },
     {
       id: 'ajanta-ellora',
-      image: "/assets/card-images/Ajanta.png",
+      image: imgAjanta,
       title: "Ajanta & Ellora Caves",
       tours: 8,
       state: "Maharashtra",
@@ -199,7 +225,7 @@ const AllDestinations = () => {
     },
     {
       id: 'pune',
-      image: "/assets/card-images/Pune,-Maharashtra.png",
+      image: imgPune,
       title: "Pune, Maharashtra",
       tours: 15,
       state: "Maharashtra",
@@ -207,7 +233,7 @@ const AllDestinations = () => {
     },
     {
       id: 'auli',
-      image: "/assets/card-images/Auli,-Uttarakhand.png",
+      image: imgAuli,
       title: "Auli, Uttarakhand",
       tours: 6,
       state: "Uttarakhand",
@@ -234,13 +260,13 @@ const AllDestinations = () => {
       <Navbar />
       
       {/* Header Banner */}
-      <div className="relative h-80 bg-gradient-to-r from-gray-900 to-gray-700 flex items-center justify-center" style={{backgroundImage: 'url(/assets/images/banneralldestination.png)', backgroundSize: 'cover', backgroundPosition: 'center'}}>
+      <div className="relative h-80 bg-gradient-to-r from-gray-900 to-gray-700 flex items-center justify-center" style={{backgroundImage: `url(${bannerImage})`, backgroundSize: 'cover', backgroundPosition: 'center'}}>
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="relative z-10 text-center text-white">
           <h1 className="text-5xl font-bold mb-4">All Destinations</h1>
           <div className="flex items-center justify-center space-x-2 text-lg">
             <Link to="/" className="hover:text-orange-400 transition-colors">Home</Link>
-            <span>></span>
+            <span>{'>'}</span>
             <span>All Destinations</span>
           </div>
         </div>

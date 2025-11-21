@@ -7,9 +7,9 @@ import { Autoplay } from "swiper/modules";
 import CursorFX from "../../components/CursorFX.jsx";
 
 // Import images for Rishikesh
-import rishikesh1 from '/assets/destination-images/Rishikesh1.webp';
-import rishikesh2 from '/assets/destination-images/Rishikesh2.webp';
-import rishikesh3 from '/assets/destination-images/Rishikesh3.webp';
+import rishikesh1 from '../../assets/destination-images/Rishikesh1.webp';
+import rishikesh2 from '../../assets/destination-images/Rishikesh2.webp';
+import rishikesh3 from '../../assets/destination-images/Rishikesh3.webp';
 
 import "swiper/css";
 import "swiper/css/autoplay";
@@ -540,6 +540,7 @@ const RishikeshPage = () => {
           display: flex;
           align-items: flex-start;
           gap: 12px;
+          margin-bottom: 12px;
           color: #475569;
           line-height: 1.5;
           font-size: 15px;

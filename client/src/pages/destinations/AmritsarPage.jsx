@@ -7,9 +7,9 @@ import { Autoplay } from "swiper/modules";
 import CursorFX from "../../components/CursorFX.jsx";
 
 // Import images for Amritsar
-import amritsar1 from '/assets/destination-images/Amritsar1.webp';
-import amritsar2 from '/assets/destination-images/Amritsar2.webp';
-import amritsar3 from '/assets/destination-images/Amritsar3.webp';
+import amritsar1 from '../../assets/destination-images/Amritsar1.webp';
+import amritsar2 from '../../assets/destination-images/Amritsar2.webp';
+import amritsar3 from '../../assets/destination-images/Amritsar3.webp';
 
 import "swiper/css";
 import "swiper/css/autoplay";

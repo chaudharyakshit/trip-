@@ -7,9 +7,9 @@ import { Autoplay } from "swiper/modules";
 import CursorFX from "../../components/CursorFX.jsx";
 
 // Import images for Udaipur
-import udaipur1 from '/assets/destination-images/Udaipur1.webp';
-import udaipur2 from '/assets/destination-images/Udaipur2.webp';
-import udaipur3 from '/assets/destination-images/Udaipur3.webp';
+import udaipur1 from '../../assets/destination-images/Udaipur1.webp';
+import udaipur2 from '../../assets/destination-images/Udaipur2.webp';
+import udaipur3 from '../../assets/destination-images/Udaipur3.webp';
 
 import "swiper/css";
 import "swiper/css/autoplay";

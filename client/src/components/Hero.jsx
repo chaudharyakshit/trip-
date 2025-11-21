@@ -7,6 +7,10 @@ import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
 import '../styles/hero.css';
 
+import heroVideo from '../assets/images/HERO VIDEO.mp4.webm';
+import hero1 from '../assets/images/hero 1.jpg.jpeg';
+import hero2 from '../assets/images/hero 2.jpg.jpeg';
+
 // Helper to build calendar data for any month
 function buildCalendarData(currentMonthDate) {
   const days = ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'];
@@ -218,24 +222,34 @@ export default function Hero() {
         >
           <SwiperSlide>
             <div className="slide-video-container">
-              <video ref={videoRef} className="background-video" muted playsInline>
-                <source src="/assets/images/HERO%20VIDEO.mp4.mp4" type="video/mp4" />
-                <source src="/assets/images/HERO%20VIDEO.mp4" type="video/mp4" />
+              <video
+                ref={videoRef}
+                className="background-video"
+                muted
+                playsInline
+                autoPlay
+                loop
+                preload="metadata"
+                onLoadedMetadata={() => {
+                  try { videoRef.current && videoRef.current.play().catch(() => {}); } catch (_) {}
+                }}
+              >
+                <source src={heroVideo} type="video/webm" />
               </video>
               <div className="video-overlay"></div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <picture>
-              <source srcSet="/assets/images/hero%201.jpg.jpeg" type="image/jpeg" />
-              <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?q=80&w=2000&auto=format&fit=crop" alt="Hero 1" className="background-image" />
+              <source srcSet={hero1} type="image/jpeg" />
+              <img src={hero1} alt="Hero 1" className="background-image" />
             </picture>
             <div className="image-overlay" />
           </SwiperSlide>
           <SwiperSlide>
             <picture>
-              <source srcSet="/assets/images/hero%202.jpg.jpeg" type="image/jpeg" />
-              <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=2000&auto=format&fit=crop" alt="Hero 2" className="background-image" />
+              <source srcSet={hero2} type="image/jpeg" />
+              <img src={hero2} alt="Hero 2" className="background-image" />
             </picture>
             <div className="image-overlay" />
           </SwiperSlide>

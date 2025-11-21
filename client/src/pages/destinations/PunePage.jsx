@@ -7,9 +7,9 @@ import { Autoplay } from "swiper/modules";
 import CursorFX from "../../components/CursorFX.jsx";
 
 // Import images for Pune
-import pune1 from '/assets/destination-images/Pune, Maharashtra1.webp';
-import pune2 from '/assets/destination-images/Pune, Maharashtra2.webp';
-import pune3 from '/assets/destination-images/Pune, Maharashtra3.webp';
+import pune1 from '../../assets/destination-images/Pune, Maharashtra1.webp';
+import pune2 from '../../assets/destination-images/Pune, Maharashtra2.webp';
+import pune3 from '../../assets/destination-images/Pune, Maharashtra3.webp';
 
 import "swiper/css";
 import "swiper/css/autoplay";

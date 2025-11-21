@@ -7,9 +7,9 @@ import { Autoplay } from "swiper/modules";
 import CursorFX from "../../components/CursorFX.jsx";
 
 // Import images for Auli
-import auli1 from '/assets/destination-images/Auli, Uttarakhand1.webp';
-import auli2 from '/assets/destination-images/Auli, Uttarakhand2.webp';
-import auli3 from '/assets/destination-images/Auli, Uttarakhand3.webp';
+import auli1 from '../../assets/destination-images/Auli, Uttarakhand1.webp';
+import auli2 from '../../assets/destination-images/Auli, Uttarakhand2.webp';
+import auli3 from '../../assets/destination-images/Auli, Uttarakhand3.webp';
 
 import "swiper/css";
 import "swiper/css/autoplay";

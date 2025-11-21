@@ -16,7 +16,7 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-image: url('../../public/assets/images/bg.png'), linear-gradient(180deg, #FFF2E2 0%, #FFF2E2 100%);
+  background-image: url('../assets/images/bg.png'), linear-gradient(180deg, #FFF2E2 0%, #FFF2E2 100%);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

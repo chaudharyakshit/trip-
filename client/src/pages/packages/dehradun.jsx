@@ -3,13 +3,13 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../../components/Navbar.jsx";
 import CursorFX from "../../components/CursorFX.jsx";
+import dehradun1 from "../../assets/packages-images/Dehradun-1.png";
+import dehradun2 from "../../assets/packages-images/Dehradun-2.png";
+import dehradun3 from "../../assets/packages-images/Dehradun-3.png";
+import mumbai1 from "../../assets/packages-images/Mumbai-1.png";
 
 const DehradunPackage = () => {
-  const slides = [
-     "../../../public/assets/packages-images/dehradun-1.png",
-    "../../../public/assets/packages-images/dehradun-2.png",
-    "../../../public/assets/packages-images/dehradun-3.png",
-  ];
+  const slides = [dehradun1, dehradun2, dehradun3];
 
   const [current, setCurrent] = useState(0);
 
@@ -83,15 +83,15 @@ const DehradunPackage = () => {
                       <h4 className="text-xl font-bold text-gray-900">Dehradun Nature Escape</h4>
                       <p className="text-gray-700">03 Days / 02 Nights</p>
                     </div>
-                    <div className="text-right">
-                      <a href="https://wa.me/919695947578?text=Hi, I'm interested in this Dehradun tour package. Please share the pricing details." target="_blank" className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors inline-block text-center">
+                    <div className="w-full sm:text-right">
+                      <a href="https://wa.me/919695947578?text=Hi, I'm interested in this Dehradun tour package. Please share the pricing details." target="_blank" className="bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 rounded-full font-semibold transition-colors inline-block text-center w-full sm:w-auto">
                         Price on Request
                       </a>
                     </div>
                   </div>
 
                   <div className="mt-6 flex flex-col sm:flex-row gap-4">
-                    <button className="bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 rounded-full font-semibold transition-colors">
+                    <button className="bg-[color:rgb(var(--brand-secondary))] hover:bg-blue-700 text-white px-8 py-3 rounded-full font-semibold transition-colors">
                       Book Now
                     </button>
                     <button className="border border-amber-500 text-amber-600 hover:bg-amber-50 px-8 py-3 rounded-full font-semibold transition-colors">
@@ -129,7 +129,7 @@ const DehradunPackage = () => {
                 >
                   <div className="flex items-center gap-4">
                     <img
-                      src="/assets/packages-images/mumbai1.png"
+                      src={mumbai1}
                       alt="Mumbai"
                       className="w-16 h-16 rounded-lg object-cover"
                     />

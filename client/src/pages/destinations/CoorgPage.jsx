@@ -7,9 +7,9 @@ import { Autoplay } from "swiper/modules";
 import CursorFX from "../../components/CursorFX.jsx";
 
 // Import images for Coorg
-import coorg1 from '/assets/destination-images/Coorg1.webp';
-import coorg2 from '/assets/destination-images/Coorg2.webp';
-import coorg3 from '/assets/destination-images/Coorg3.webp';
+import coorg1 from '../../assets/destination-images/Coorg1.webp';
+import coorg2 from '../../assets/destination-images/Coorg2.webp';
+import coorg3 from '../../assets/destination-images/Coorg3.webp';
 
 import "swiper/css";
 import "swiper/css/autoplay";
@@ -560,8 +560,6 @@ const CoorgPage = () => {
         .highlight-item .check {
           color: #10b981;
           font-weight: bold;
-          margin-top: 2px;
-          flex-shrink: 0;
         }
 
         /* Itinerary Styles */

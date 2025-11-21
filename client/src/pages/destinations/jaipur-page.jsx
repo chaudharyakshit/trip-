@@ -8,9 +8,9 @@ import CursorFX from "../../components/CursorFX.jsx";
 
 
 // Import images - Corrected paths (remove "public" from the path)
-import jaipur1 from '/assets/packages-images/jaipur1.png';
-import jaipur2 from '/assets/packages-images/jaipur2.png';
-import jaipur3 from '/assets/packages-images/jaipur3.png';
+import jaipur1 from '../../assets/packages-images/jaipur1.png';
+import jaipur2 from '../../assets/packages-images/jaipur2.png';
+import jaipur3 from '../../assets/packages-images/jaipur3.png';
 
 import "swiper/css";
 import "swiper/css/autoplay";

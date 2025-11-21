@@ -7,9 +7,9 @@ import { Autoplay } from "swiper/modules";
 import CursorFX from "../../components/CursorFX.jsx";
 
 // Import images for Ajanta Ellora
-import ajanta1 from '/assets/destination-images/Ajanta & Ellora Caves, Maharashtra1.webp';
-import ajanta2 from '/assets/destination-images/Ajanta & Ellora Caves, Maharashtra2.webp';
-import ajanta3 from '/assets/destination-images/Ajanta & Ellora Caves, Maharashtra3.webp';
+import ajanta1 from '../../assets/destination-images/Ajanta & Ellora Caves, Maharashtra1.webp';
+import ajanta2 from '../../assets/destination-images/Ajanta & Ellora Caves, Maharashtra2.webp';
+import ajanta3 from '../../assets/destination-images/Ajanta & Ellora Caves, Maharashtra3.webp';
 
 import "swiper/css";
 import "swiper/css/autoplay";

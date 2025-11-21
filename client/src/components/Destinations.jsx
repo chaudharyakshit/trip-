@@ -5,6 +5,36 @@ import { Link } from 'react-router-dom';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
+import imgJaipur from '../assets/card-images/jaipur.png';
+import imgAgra from '../assets/card-images/Agra.png';
+import imgGoa from '../assets/card-images/Goa.png';
+import imgKerala from '../assets/card-images/Kerala.png';
+import imgDelhi from '../assets/card-images/Delhi.png';
+import imgMumbai from '../assets/card-images/Mumbai.png';
+import imgUdaipur from '../assets/card-images/udaipur.png';
+import imgVaranasi from '../assets/card-images/Varanasi.png';
+import imgRishikesh from '../assets/card-images/Rishikesh.png';
+import imgShimla from '../assets/card-images/Shimla.png';
+import imgLadakh from '../assets/card-images/Ladakh.png';
+import imgDarjeeling from '../assets/card-images/darjeeling.png';
+import imgAmritsar from '../assets/card-images/Amritsar.png';
+import imgHampi from '../assets/card-images/Hampi,-Karnataka.png';
+import imgMysore from '../assets/card-images/mysore.png';
+import imgCoorg from '../assets/card-images/Coorg,-Karnataka.png';
+import imgKhajuraho from '../assets/card-images/Khajuraho,-Madhya-Pradesh.png';
+import imgKonark from '../assets/card-images/Konark,-Odisha.png';
+import imgKutch from '../assets/card-images/Rann.png';
+import imgSikkim from '../assets/card-images/Sikkim.png';
+import imgPushkar from '../assets/card-images/Pushkar.png';
+import imgMahabalipuram from '../assets/card-images/Mahabalipuram.png';
+import imgAjanta from '../assets/card-images/Ajanta.png';
+import imgPune from '../assets/card-images/Pune,-Maharashtra.png';
+import imgAuli from '../assets/card-images/Auli,-Uttarakhand.png';
+import bg4 from '../assets/images/bg4.png';
+import parachute from '../assets/parachute.svg';
+import ring from '../assets/images/ring.svg';
+import passport from '../assets/images/passport.svg';
+
 const DestinationCard = ({ image, title, tours }) => {
   const imgRef = useRef(null)
   const boxRef = useRef(null)
@@ -69,127 +99,127 @@ export default function TopDestinations() {
 
   const destinations = [
     {
-      image: "/assets/card-images/jaipur.png",
+      image: imgJaipur,
       title: "Jaipur, Rajasthan",
       tours: 15
     },
     {
-      image: "/assets/card-images/Agra.png",
+      image: imgAgra,
       title: "Agra, Uttar Pradesh",
       tours: 12
     },
     {
-      image: "/assets/card-images/Goa.png",
+      image: imgGoa,
       title: "Goa",
       tours: 20
     },
     {
-      image: "/assets/card-images/Kerala.png",
+      image: imgKerala,
       title: "Kerala",
       tours: 18
     },
     {
-      image: "/assets/card-images/Delhi.png",
+      image: imgDelhi,
       title: "Delhi",
       tours: 25
     },
     {
-      image: "/assets/card-images/Mumbai.png",
+      image: imgMumbai,
       title: "Mumbai, Maharashtra",
       tours: 22
     },
     {
-      image: "/assets/card-images/udaipur.png",
+      image: imgUdaipur,
       title: "Udaipur, Rajasthan",
       tours: 14
     },
     {
-      image: "/assets/card-images/Varanasi.png",
+      image: imgVaranasi,
       title: "Varanasi, Uttar Pradesh",
       tours: 16
     },
     {
-      image: "/assets/card-images/Rishikesh.png",
+      image: imgRishikesh,
       title: "Rishikesh, Uttarakhand",
       tours: 13
     },
     {
-      image: "/assets/card-images/Shimla.png",
+      image: imgShimla,
       title: "Shimla, Himachal Pradesh",
       tours: 11
     },
     {
-      image: "/assets/card-images/Ladakh.png",
+      image: imgLadakh,
       title: "Ladakh, Jammu & Kashmir",
       tours: 10
     },
     {
-      image: "/assets/card-images/darjeeling.png",
+      image: imgDarjeeling,
       title: "Darjeeling, West Bengal",
       tours: 12
     },
     {
-      image: "/assets/card-images/Amritsar.png",
+      image: imgAmritsar,
       title: "Amritsar, Punjab",
       tours: 14
     },
     {
-      image: "/assets/card-images/Hampi,-Karnataka.png",
+      image: imgHampi,
       title: "Hampi, Karnataka",
       tours: 9
     },
     {
-      image: "/assets/card-images/mysore.png",
+      image: imgMysore,
       title: "Mysore, Karnataka",
       tours: 11
     },
     {
-      image: "/assets/card-images/Coorg,-Karnataka.png",
+      image: imgCoorg,
       title: "Coorg, Karnataka",
       tours: 8
     },
     {
-      image: "/assets/card-images/Khajuraho,-Madhya-Pradesh.png",
+      image: imgKhajuraho,
       title: "Khajuraho, Madhya Pradesh",
       tours: 7
     },
     {
-      image: "/assets/card-images/Konark,-Odisha.png",
+      image: imgKonark,
       title: "Konark, Odisha",
       tours: 6
     },
     {
-      image: "/assets/card-images/Rann.png",
+      image: imgKutch,
       title: "Rann of Kutch, Gujarat",
       tours: 8
     },
     {
-      image: "/assets/card-images/Sikkim.png",
+      image: imgSikkim,
       title: "Sikkim (Gangtok)",
       tours: 10
     },
     {
-      image: "/assets/card-images/Pushkar.png",
+      image: imgPushkar,
       title: "Pushkar, Rajasthan",
       tours: 9
     },
     {
-      image: "/assets/card-images/Mahabalipuram.png",
+      image: imgMahabalipuram,
       title: "Mahabalipuram, Tamil Nadu",
       tours: 7
     },
     {
-      image: "/assets/card-images/Ajanta.png",
+      image: imgAjanta,
       title: "Ajanta & Ellora Caves",
       tours: 8
     },
     {
-      image: "/assets/card-images/Pune,-Maharashtra.png",
+      image: imgPune,
       title: "Pune, Maharashtra",
       tours: 15
     },
     {
-      image: "/assets/card-images/Auli,-Uttarakhand.png",
+      image: imgAuli,
       title: "Auli, Uttarakhand",
       tours: 6
     }
@@ -200,7 +230,7 @@ export default function TopDestinations() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="/assets/images/bg4.png" 
+          src={bg4} 
           alt="background" 
           className="w-full h-full object-cover"
         />
@@ -209,13 +239,13 @@ export default function TopDestinations() {
 
       {/* Decorative SVGs */}
       <div className="absolute top-10 left-10 z-10 opacity-100 drop-shadow-2xl animate-pulse">
-        <img src="/assets/parachute.svg" alt="decoration" className="w-24 h-24" />
+        <img src={parachute} alt="decoration" className="w-24 h-24" />
       </div>
       <div className="absolute bottom-20 right-12 z-10 opacity-100 drop-shadow-2xl animate-bounce" style={{ animationDelay: '0.5s' }}>
-        <img src="/assets/images/ring.svg" alt="decoration" className="w-32 h-32" />
+        <img src={ring} alt="decoration" className="w-32 h-32" />
       </div>
       <div className="absolute top-1/2 right-20 z-10 opacity-100 drop-shadow-2xl">
-        <img src="/assets/images/passport.svg" alt="decoration" className="w-28 h-28" />
+        <img src={passport} alt="decoration" className="w-28 h-28" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 relative z-20">

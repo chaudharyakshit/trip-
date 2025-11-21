@@ -7,9 +7,9 @@ import { Autoplay } from "swiper/modules";
 import CursorFX from "../../components/CursorFX.jsx";
 
 // Import images for Agra
-import agra1 from '/assets/packages-images/agra1.png';
-import agra2 from '/assets/packages-images/agra2.png';
-import agra3 from '/assets/packages-images/agra3.png';
+import agra1 from '../../assets/packages-images/agra1.png';
+import agra2 from '../../assets/packages-images/agra2.png';
+import agra3 from '../../assets/packages-images/agra3.png';
 
 import "swiper/css";
 import "swiper/css/autoplay";
