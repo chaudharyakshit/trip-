@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FaPhone, FaEnvelope, FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import { FaEnvelope, FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import '../styles/Footer.css';
 import logo from '../assets/images/Indiasgotrip-logo.png';
 
@@ -73,12 +73,16 @@ const Footer = () => {
           <h3 className="footer-title">CONTACT US</h3>
           <div className="contact-info">
             <div className="contact-item">
-              <FaPhone />
-              <span>+91 96959 47578</span>
+              <span className="contact-icon">
+                <svg className="phone-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                  <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.24.2 2.45.57 3.57a1 1 0 01-.24 1.01l-2.21 2.21z"/>
+                </svg>
+              </span>
+              <span className="contact-text">+91 96959 47578</span>
             </div>
             <div className="contact-item">
-              <FaEnvelope />
-              <span>info@indiasgo.com</span>
+              <span className="contact-icon"><FaEnvelope /></span>
+              <span className="contact-text">info@indiasgo.com</span>
             </div>
           </div>
         </div>
@@ -104,7 +108,10 @@ const Footer = () => {
           <h4>IndiasGoTrip</h4>
           <p>Block I-64 FOUNTAIN CHOWK<br/>NEHRU COLONY, DEHRADUN</p>
         </div>
-        <p>&copy; {new Date().getFullYear()} IndiasGoTrip. All rights reserved.</p>
+        <div className="footer-credits">
+          <p className="copyright">&copy; {new Date().getFullYear()} All Rights Reserved</p>
+          <p className="designer">Designed by <a href="/" className="designer-link">IndiasGoTrip <img src={logo} alt="IndiasGoTrip" className="designer-inline-logo"/></a></p>
+        </div>
       </div>
     </footer>
   );

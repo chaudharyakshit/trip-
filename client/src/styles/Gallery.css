@@ -1,7 +1,7 @@
 .gallery-section {
-  padding: 120px 0;
+  padding: 80px 0;
   background: #ffffff;
-  min-height: 100vh;
+  min-height: auto;
   display: flex;
   align-items: center;
 }

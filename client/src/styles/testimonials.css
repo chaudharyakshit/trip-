@@ -1,6 +1,6 @@
 .testimonials-section {
-  min-height: 90vh;
-  padding: 96px 16px 112px;
+  min-height: auto;
+  padding: 60px 16px 80px;
   /* Soft blue vertical gradient + grid watermark with more visible BG */
   background-image: linear-gradient(
       to bottom,
