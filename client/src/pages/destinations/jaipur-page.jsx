@@ -308,8 +308,8 @@ const JaipurPage = () => {
                 <div className="price-display">
                   <div className="starting-from">Starting From</div>
                   <div className="price-row">
-                    <span className="original-price">$899</span>
-                    <span className="current-price">$800</span>
+                    <span className="original-price"></span>
+                    <span className="current-price"></span>
                   </div>
                   <div className="price-label">per person</div>
                 </div>
