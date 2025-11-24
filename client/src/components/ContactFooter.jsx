@@ -16,7 +16,7 @@ const Footer = () => {
     <footer id="contact" className="footer">
       <div className="footer-container">
         <div className="footer-logo">
-          <h2>IndiasGoTrip</h2>
+          {/* <h2>IndiasGoTrip</h2> */}
           <img src={logo} alt="IndiasGoTrip Logo" className="footer-logo-img" />
         </div>
 

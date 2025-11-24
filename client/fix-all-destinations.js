@@ -15,20 +15,43 @@ files.forEach(file => {
   const filePath = path.join(destinationsDir, file);
   let content = fs.readFileSync(filePath, 'utf8');
   
-  // Check if import already exists
-  if (!content.includes('destination-mobile-fix.css')) {
-    // Add import after swiper imports
-    content = content.replace(
-      /import "swiper\/css\/navigation";/,
-      `import "swiper/css/navigation";\n${cssImport}`
-    );
-    
-    // Write back to file
-    fs.writeFileSync(filePath, content, 'utf8');
-    console.log(`Updated: ${file}`);
-  } else {
+  // Skip if import already exists
+  if (content.includes('destination-mobile-fix.css')) {
     console.log(`Already updated: ${file}`);
+    return;
   }
+
+  // Try to find the last Swiper CSS import (covers variations like autoplay, pagination, navigation)
+  const swiperImportRegex = /^import\s+["']swiper\/css(?:[^"']*)["'];\s*$/gim;
+  let lastMatchIndex = -1;
+  let match;
+  while ((match = swiperImportRegex.exec(content)) !== null) {
+    lastMatchIndex = match.index + match[0].length;
+  }
+
+  if (lastMatchIndex !== -1) {
+    // Insert cssImport after the last swiper import
+    content = content.slice(0, lastMatchIndex) + '\n' + cssImport + content.slice(lastMatchIndex);
+    fs.writeFileSync(filePath, content, 'utf8');
+    console.log(`Updated (inserted after last swiper import): ${file}`);
+    return;
+  }
+
+  // Fallback: insert after the first import statement
+  const firstImportRegex = /^import\s.+;\s*$/m;
+  const firstImportMatch = content.match(firstImportRegex);
+  if (firstImportMatch) {
+    const insertPos = content.indexOf(firstImportMatch[0]) + firstImportMatch[0].length;
+    content = content.slice(0, insertPos) + '\n' + cssImport + content.slice(insertPos);
+    fs.writeFileSync(filePath, content, 'utf8');
+    console.log(`Updated (fallback after first import): ${file}`);
+    return;
+  }
+
+  // If no import found, prepend the css import at the top
+  content = cssImport + '\n' + content;
+  fs.writeFileSync(filePath, content, 'utf8');
+  console.log(`Updated (prepended import): ${file}`);
 });
 
 console.log('All destination pages updated!');
