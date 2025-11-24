@@ -1204,10 +1204,10 @@ const JaipurPage = () => {
           }
 
           .original-price {
-            font-size: 18px;
+            font-size: 17px;
           }
         }
-      `}</style>
+      `}  </style>
     </div>
   );
 };
