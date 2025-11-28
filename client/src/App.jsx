@@ -21,6 +21,7 @@ import './styles/inner-page-fix.css'
 import './styles/mobile-sections.css'
 
 
+
 // Import all destination pages
 import JaipurPage from './pages/destinations/jaipur-page.jsx'
 import AgraPage from './pages/destinations/AgraPage.jsx'
@@ -90,6 +91,9 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
+   
+      
+
      
            <Route path="/destinations" element={<AllDestinations />} />
 

@@ -5,7 +5,7 @@ export default function Blog() {
   { 
     title: 'Best time to visit Kerala', 
     text: 'Weather, seasons, and festivals to plan your perfect trip.', 
-    img: 'https://media.istockphoto.com/id/472909442/photo/backwaters-of-kerala.jpg?s=2048x2048&w=is&k=20&c=ruTvmL4tcs9TlSvAmrWGQYJY-xYfnGuMOrCup0VRpwU=' 
+    img: 'https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' 
   },
   { 
     title: 'Goa beyond beaches', 

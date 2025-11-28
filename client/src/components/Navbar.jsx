@@ -150,9 +150,14 @@ export default function Navbar() {
                     <div className="p-4">
                       <h4 className="text-lg font-bold mb-3">Welcome</h4>
                       <div className="grid gap-3">
-                        <a href="https://indiasgotrip.com/web_apps/newUserRequest.jsp" target="_blank" className="inline-flex items-center justify-center h-11 rounded-xl border border-slate-300 hover:bg-slate-50 font-semibold">
-                          Sign up / Create account
-                        </a>
+                        <button
+ onClick={() => { window.location.assign("https://indiasgotrip.com/web_apps/newUserRequest.jsp"); }}
+
+  className="inline-flex items-center justify-center h-11 rounded-xl border border-slate-300 hover:bg-slate-50 font-semibold w-full"
+>
+  Sign up / Create account
+</button>
+
                         <button
                           type="button"
                           onClick={() => setLoginStage('chooseRole')}
@@ -172,8 +177,14 @@ export default function Navbar() {
                         <button className="text-sm text-blue-600 hover:underline" onClick={() => setLoginStage('initial')}>Back</button>
                       </div>
                       <div className="grid gap-3">
-                        <a href="https://indiasgotrip.com/web_apps/login.jsp#!" target="_blank" className="inline-flex items-center justify-center h-11 rounded-xl bg-blue-600 text-white hover:bg-blue-700 font-semibold">User</a>
-                        <a href="https://indiasgotrip.com/web_apps/login.jsp#!" target="_blank" className="inline-flex items-center justify-center h-11 rounded-xl bg-[rgb(242,138,15)] text-white hover:brightness-110 font-semibold">Admin</a>
+                      <button
+onClick={() => { window.location.assign("https://indiasgotrip.com/web_apps/login.jsp"); }}
+
+  className="inline-flex items-center justify-center h-11 rounded-xl bg-blue-600 text-white hover:bg-blue-700 font-semibold w-full"
+>
+  User
+</button>
+
                       </div>
                     </div>
                   )}
@@ -202,12 +213,18 @@ export default function Navbar() {
             <Menu />
             <div className="mt-6 flex flex-col sm:flex-row items-center gap-4">
               <a href={`tel:${phone}`} className="text-slate-700 font-medium text-lg">Call: +91 96959 47578</a>
-              <a href={whatsapp} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center h-12 px-6 rounded-full bg-emerald-500 text-white font-semibold text-base hover:bg-emerald-600 transition-colors">
+              <a href={whatsapp}  rel="noreferrer" className="inline-flex items-center justify-center h-12 px-6 rounded-full bg-emerald-500 text-white font-semibold text-base hover:bg-emerald-600 transition-colors">
                 WhatsApp
               </a>
-              <a href="https://indiasgotrip.com/web_apps/login.jsp#!" target="_blank" className="inline-flex items-center justify-center h-12 px-6 rounded-full bg-[rgb(242,138,15)] text-white font-semibold text-base hover:opacity-90 transition-colors">
-                Login
-              </a>
+           <button
+onClick={() => { window.location.assign("https://indiasgotrip.com/web_apps/login.jsp"); }}
+
+  className="inline-flex items-center justify-center h-12 px-6 rounded-full bg-[rgb(242,138,15)] text-white font-semibold text-base hover:opacity-90 transition-colors w-full"
+>
+  Login
+</button>
+
+            
             </div>
           </div>
         )}
