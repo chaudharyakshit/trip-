@@ -286,7 +286,7 @@ export default function Hero() {
             <div className="search-panel">
               {/* Tabs */}
               <div className="tabs-container">
-                {['Tours','Hotels','Bus'].map((t) => (
+                {['Tours','Hotels','Bus','Flights'].map((t) => (
                   <button
                     key={t}
                     type="button"
