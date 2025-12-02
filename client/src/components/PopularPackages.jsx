@@ -1,8 +1,7 @@
 import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import "swiper/css";
-import "swiper/css/pagination";
 import { Link } from "react-router-dom";
 import parachute from '../assets/parachute.svg';
 import ring from '../assets/images/ring.svg';
@@ -313,17 +312,17 @@ export default function PopularPackages() {
         </div>
 
         <Swiper
-          modules={[Autoplay, Pagination]}
+          modules={[Autoplay]}
           autoplay={{ delay: 4000, disableOnInteraction: false }}
           loop
           spaceBetween={30}
-          pagination={{ clickable: true }}
+          /* Pagination removed to hide the pagination bullets for this slider */
           breakpoints={{
             0: { slidesPerView: 1 },
             768: { slidesPerView: 2 },
             1024: { slidesPerView: 3 },
           }}
-          className="pb-12"
+          className="popular-swiper pb-12"
         >
           {packages.map((pkg, index) => (
             <SwiperSlide key={index}>
@@ -400,6 +399,10 @@ export default function PopularPackages() {
         }
         img {
           image-rendering: -webkit-optimize-contrast;
+        }
+        /* Hide Swiper pagination bullets specifically for the Popular Packages section */
+        .popular-swiper .swiper-pagination {
+          display: none !important;
         }
       `}</style>
     </section>

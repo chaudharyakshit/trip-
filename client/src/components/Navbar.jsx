@@ -80,7 +80,7 @@ export default function Navbar() {
   return (
     <header className="navbar sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-md">
       <div className="w-full pl-3 pr-6 md:pl-4 md:pr-8 lg:pl-6 lg:pr-10">
-        <nav className="h-24 lg:h-28 grid grid-cols-[auto_1fr_auto] items-center w-full">
+        <nav className="h-24 lg:h-28 w-full flex items-center justify-between md:grid md:grid-cols-[auto_1fr_auto] md:items-center">
           {/* Logo */}
           <a className="flex items-center gap-3" href="/" aria-label="IndiasGoTrip Home">
             <img src={logo} alt="IndiasGoTrip" className="h-[72px] md:h-[80px] w-auto" />
