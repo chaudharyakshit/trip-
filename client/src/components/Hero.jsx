@@ -286,18 +286,25 @@ export default function Hero() {
             <div className="search-panel">
               {/* Tabs */}
               <div className="tabs-container">
-                {['Tours','Hotels','Bus','Flights'].map((t) => (
-                  <button
-                    key={t}
-                    type="button"
-                    onClick={() => setActiveTab(t)}
-                    className={`tab-button ${activeTab === t ? 'tab-active' : 'tab-inactive'}`}
-                  >
-                    <TabIcon name={t} />
-                    {t}
-                  </button>
-                ))}
-              </div>
+  {['Tours','Hotels','Bus','Flights'].map((t) => (
+    <button
+      key={t}
+      type="button"
+      onClick={() => {
+        if (t === 'Flights') {
+          navigate("/flights");   
+        } else {
+          setActiveTab(t);        
+        }
+      }}
+      className={`tab-button ${activeTab === t ? 'tab-active' : 'tab-inactive'}`}
+    >
+      <TabIcon name={t} />
+      {t}
+    </button>
+  ))}
+</div>
+
 
               {/* Search content */}
               <div className="search-content">
