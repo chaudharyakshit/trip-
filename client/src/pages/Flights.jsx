@@ -1,5 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/Flights.css';
+import imgMumbai from '../assets/images/Mumbai.webp';
+import imgGoa from '../assets/images/Goa.webp';
+import imgJaipur from '../assets/images/jaipur.webp';
+import imgVaranasi from '../assets/images/Varanasi.webp';
+import imgLeh from '../assets/images/Ladakh.webp';
+import imgKutch from '../assets/images/Rann-of-Kutch,-Gujarat.webp';
+import ContactFooter from '../components/ContactFooter.jsx';
 import { 
   FaPlane, 
   FaStar, 
@@ -34,15 +41,17 @@ const Flights = () => {
   const [cabinClass, setCabinClass] = useState('economy');
   const [activeRoute, setActiveRoute] = useState('DEL-MUM');
   const [showPassengerDropdown, setShowPassengerDropdown] = useState(false);
+  const [fromInput, setFromInput] = useState('Delhi (DEL)');
+  const [toInput, setToInput] = useState('Mumbai (BOM)');
 
   // Popular routes with images
   const popularRoutes = [
-    { id: 'DEL-MUM', from: 'Delhi', to: 'Mumbai', code: 'DEL → BOM', price: '₹4,500', image: 'mumbai', tag: 'Business Hub' },
-    { id: 'DEL-BLR', from: 'Delhi', to: 'Bangalore', code: 'DEL → BLR', price: '₹5,200', image: 'bangalore', tag: 'Tech City' },
-    { id: 'DEL-HYD', from: 'Delhi', to: 'Hyderabad', code: 'DEL → HYD', price: '₹4,800', image: 'hyderabad', tag: 'Pearl City' },
-    { id: 'DEL-CCU', from: 'Delhi', to: 'Kolkata', code: 'DEL → CCU', price: '₹4,300', image: 'kolkata', tag: 'City of Joy' },
-    { id: 'DEL-JAI', from: 'Delhi', to: 'Jaipur', code: 'DEL → JAI', price: '₹3,500', image: 'jaipur', tag: 'Pink City' },
-    { id: 'DEL-GOI', from: 'Delhi', to: 'Goa', code: 'DEL → GOI', price: '₹6,500', image: 'goa', tag: 'Beach Paradise' },
+    { id: 'DEL-MUM', from: 'Delhi', to: 'Mumbai', code: 'DEL → BOM', price: 'Price on request', image: imgMumbai, tag: 'Business Hub' },
+    { id: 'DEL-VNS', from: 'Delhi', to: 'Varanasi', code: 'DEL → VNS', price: 'Price on request', image: imgVaranasi, tag: 'Spiritual City' },
+    { id: 'DEL-LEH', from: 'Delhi', to: 'Leh', code: 'DEL → IXL', price: 'Price on request', image: imgLeh, tag: 'Mountain Retreat' },
+    { id: 'DEL-AHD', from: 'Delhi', to: 'Ahmedabad', code: 'DEL → AMD', price: 'Price on request', image: imgKutch, tag: 'Gateway to Kutch' },
+    { id: 'DEL-JAI', from: 'Delhi', to: 'Jaipur', code: 'DEL → JAI', price: 'Price on request', image: imgJaipur, tag: 'Pink City' },
+    { id: 'DEL-GOI', from: 'Delhi', to: 'Goa', code: 'DEL → GOI', price: 'Price on request', image: imgGoa, tag: 'Beach Paradise' },
   ];
 
   // Flight data
@@ -206,7 +215,7 @@ const Flights = () => {
             className={`route-card ${activeRoute === route.id ? 'active' : ''}`}
             onClick={() => setActiveRoute(route.id)}
             style={{ 
-              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url(https://source.unsplash.com/400x300/?${route.image},india,city)`
+              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url(${route.image ? route.image : `https://source.unsplash.com/400x300/?${route.image || 'travel'},india,city`})`
             }}
           >
             <div className="route-tag">{route.tag}</div>
@@ -222,7 +231,14 @@ const Flights = () => {
                 {route.tag.includes('City') && <FaCity />}
               </div>
             </div>
-            <button className="route-book-btn">
+            <button
+              className="route-book-btn"
+              onClick={(e) => {
+                e.stopPropagation();
+                const msg = encodeURIComponent(`Hi, I'm interested in flights from ${route.from} to ${route.to}. Please share the pricing details.`);
+                window.open(`https://wa.me/919695947578?text=${msg}`, '_blank');
+              }}
+            >
               Book Now <FaArrowRight />
             </button>
           </div>
@@ -250,7 +266,12 @@ const Flights = () => {
           <label>FROM</label>
           <div className="input-with-icon">
             <FaPlane className="field-icon takeoff" />
-            <input type="text" placeholder="City or airport" defaultValue="Delhi (DEL)" />
+            <input
+              type="text"
+              placeholder="City or airport"
+              value={fromInput}
+              onChange={(e) => setFromInput(e.target.value)}
+            />
             <span className="field-hint">Indira Gandhi International</span>
           </div>
         </div>
@@ -263,7 +284,12 @@ const Flights = () => {
           <label>TO</label>
           <div className="input-with-icon">
             <FaPlane className="field-icon landing" />
-            <input type="text" placeholder="City or airport" defaultValue="Mumbai (BOM)" />
+            <input
+              type="text"
+              placeholder="City or airport"
+              value={toInput}
+              onChange={(e) => setToInput(e.target.value)}
+            />
             <span className="field-hint">Chhatrapati Shivaji Maharaj</span>
           </div>
         </div>
@@ -273,8 +299,8 @@ const Flights = () => {
           <div className="date-input">
             <FaCalendarAlt className="field-icon" />
             <div className="date-display">
-              <span className="date-day">Tue</span>
-              <span className="date-date">15 Oct</span>
+              <span className="date-day">y</span>
+              <span className="date-date">y</span>
             </div>
             <button className="date-picker-btn">Change</button>
           </div>
@@ -285,8 +311,8 @@ const Flights = () => {
           <div className={`date-input ${tripType === 'oneway' ? 'disabled' : ''}`}>
             <FaCalendarAlt className="field-icon" />
             <div className="date-display">
-              <span className="date-day">Tue</span>
-              <span className="date-date">22 Oct</span>
+              <span className="date-day">z</span>
+              <span className="date-date">z</span>
             </div>
             <button className="date-picker-btn" disabled={tripType === 'oneway'}>Change</button>
           </div>
@@ -402,7 +428,13 @@ const Flights = () => {
         </div>
       </div>
 
-      <button className="search-button">
+      <button
+        className="search-button"
+        onClick={() => {
+          const msg = encodeURIComponent(`Hi, I want to search flights from ${fromInput} to ${toInput}`);
+          window.open(`https://wa.me/919695947578?text=${msg}`, '_blank');
+        }}
+      >
         <FaSearch />
         SEARCH FLIGHTS
       </button>
@@ -482,7 +514,7 @@ const Flights = () => {
 
       <div className="flight-footer">
         <div className="price-section">
-          <div className="price">₹{flight.price}</div>
+          <div className="price">Price on request</div>
           <div className="price-details">
             <span className="price-note">per person</span>
             <span className="price-savings">Save ₹500</span>
@@ -490,14 +522,71 @@ const Flights = () => {
         </div>
         <div className="footer-right">
           <button className="view-details-btn">View Details</button>
-          <button className="select-flight">
+          <button
+            className="select-flight"
+            onClick={(e) => {
+              e.stopPropagation();
+              const msg = encodeURIComponent(`Hi, I'm interested in this flight: ${flight.airline} ${flight.departure.code} -> ${flight.arrival.code}. Please share pricing and availability.`);
+              window.open(`https://wa.me/919695947578?text=${msg}`, '_blank');
+            }}
+          >
             Book Now <FaChevronRight />
           </button>
         </div>
       </div>
     </div>
   );
+    return (  
+      <div className="flights-container">
+        <HeroSection />
+        
+        <div className="main-container">
+          <div className="search-container">
+            <FlightSearchForm />
+          </div>
 
+          <PopularRoutes />
+
+          <div className="results-container">
+            <div className="results-header">
+              <div className="header-left">
+                  <h2>
+                    <FaPlane /> Delhi to Mumbai Flights
+                    <span className="date-range"> • y - z • {passengers.adults + passengers.children} Traveller(s)</span>
+                  </h2>
+                  <p className="results-count">Showing 4 out of 124 flights</p>
+                </div>
+              <div className="results-controls">
+                <button className="filter-btn">
+                  <FaFilter /> FILTERS
+                </button>
+                <button className="sort-btn">
+                  <FaSortAmountDown /> SORT BY: <span>Price <FaChevronDown /></span>
+                </button>
+              </div>
+            </div>
+
+            <div className="flights-grid">
+              {flightsData.map(flight => (
+                <FlightCard key={flight.id} flight={flight} />
+              ))}
+            </div>
+
+            <div className="results-footer">
+              <div className="footer-left">
+                <p>Fares are round trip per adult including all taxes and fees</p>
+                <p className="disclaimer">*Additional baggage charges may apply</p>
+              </div>
+              <div className="footer-right">
+                <button className="show-more">LOAD MORE FLIGHTS</button>
+                <button className="need-help">Need Help?</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <ContactFooter />
+      </div>
+    );
   return (
     <div className="flights-container">
       <HeroSection />
@@ -512,12 +601,12 @@ const Flights = () => {
         <div className="results-container">
           <div className="results-header">
             <div className="header-left">
-              <h2>
-                <FaPlane /> Delhi to Mumbai Flights
-                <span className="date-range"> • Tue, 15 Oct - Tue, 22 Oct • {passengers.adults + passengers.children} Traveller(s)</span>
-              </h2>
-              <p className="results-count">Showing 4 out of 124 flights</p>
-            </div>
+                <h2>
+                  <FaPlane /> Delhi to Mumbai Flights
+                  <span className="date-range"> • y - z • {passengers.adults + passengers.children} Traveller(s)</span>
+                </h2>
+                <p className="results-count">Showing 4 out of 124 flights</p>
+              </div>
             <div className="results-controls">
               <button className="filter-btn">
                 <FaFilter /> FILTERS
@@ -546,6 +635,7 @@ const Flights = () => {
           </div>
         </div>
       </div>
+      <ContactFooter />
     </div>
   );
 };

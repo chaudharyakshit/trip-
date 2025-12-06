@@ -319,9 +319,7 @@ export default function Hero() {
                         setShowCategoryDropdown(false);
                       }}
                     >
-                      <svg className="field-icon" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7Zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5Z"/>
-                      </svg>
+                      {/* field icon removed to avoid large overlay symbols */}
                       <div className="field-text">
                         <div className="field-main-text">{selectedDestination.name}</div>
                         <div className="field-sub-text">{selectedDestination.country}</div>
@@ -371,9 +369,7 @@ export default function Hero() {
                         setShowCategoryDropdown(false);
                       }}
                     >
-                      <svg className="field-icon" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M7 2a1 1 0 0 1 1 1v1h8V3a1 1 0 1 1 2 0v1h1a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1V3a1 1 0 0 1 1-1Zm12 9H5v7h14v-7Z"/>
-                      </svg>
+                      {/* date icon removed to avoid large overlay symbols */}
                       <div className="field-text">
                         <div className="field-main-text">{selectedDate.date}</div>
                         <div className="field-sub-text">{selectedDate.day}</div>
@@ -431,9 +427,7 @@ export default function Hero() {
                         setShowDateDropdown(false);
                       }}
                     >
-                      <svg className="field-icon" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 3c4.418 0 8 2.239 8 5v10a1 1 0 0 1-1.555.832L12 15.5l-6.445 3.332A1 1 0 0 1 4 18V8c0-2.761 3.582-5 8-5Z"/>
-                      </svg>
+                      {/* category icon removed to avoid large overlay symbols */}
                       <div className="field-text">
                         <div className="field-main-text">{selectedCategory.name}</div>
                         <div className="field-sub-text">{selectedCategory.type}</div>

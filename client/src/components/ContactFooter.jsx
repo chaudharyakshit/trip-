@@ -21,36 +21,24 @@ const Footer = () => {
         </div>
 
         <div className="footer-section">
-          <h3 className="footer-title">TOP DESTINATION</h3>
+          <h3 className="footer-title">LANDING SECTIONS</h3>
           <ul className="footer-list">
-            <li>Goa Beach Tour</li>
-            <li>Jaipur Heritage Tour</li>
-            <li>Ladakh Adventure Tour</li>
-            <li>Kerala Backwaters Tour</li>
-            <li>Agra & Taj Mahal Tour</li>
-            <li>Udaipur Lake City Tour</li>
-            <li>Varanasi Spiritual Tour</li>
-            <li>Delhi City Tour</li>
-            <li>Mumbai Gateway Tour</li>
-            <li>Shimla Hill Station Tour</li>
-            <li>Coorg Coffee Hills Tour</li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#popular-destinations">Popular Destinations</a></li>
+            <li><a href="#popular-searches">Popular Searches</a></li>
+            <li><a href="#packages">Packages</a></li>
           </ul>
         </div>
 
         <div className="footer-section">
-          <h3 className="footer-title">POPULAR SEARCH</h3>
+          <h3 className="footer-title">EXPLORE</h3>
           <ul className="footer-list">
-            <li>Adventure Tours</li>
-            <li>Himalayan Trekking</li>
-            <li>India Holiday Packages</li>
-            <li>Flights And Hotels</li>
-            <li>Honeymoon Packages</li>
-            <li>Rajasthan Tour Package</li>
-            <li>Thar Desert Safari</li>
-            <li>Weekend Getaways</li>
-            <li>Summer Hill Stations</li>
-            <li>Wildlife Safari India</li>
-            <li>Golden Triangle Tours</li>
+            <li><a href="#how-it-works">How it works</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><Link to="/destinations">All Destinations</Link></li>
           </ul>
         </div>
 
